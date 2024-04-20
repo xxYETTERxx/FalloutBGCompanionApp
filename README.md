@@ -18,24 +18,24 @@ Welcome to the companion app for **Fallout: The Board Game**. This project aims 
 To get started with the project, clone the repository to your local machine:
 
 
-git clone https://github.com/xxYETTERxx/FalloutBGCompanionApp.git
+**git clone https://github.com/xxYETTERxx/FalloutBGCompanionApp.git**
 
 
 ## Installation
 Ensure you have Node.js and npm installed. To set up the project, run:
 
-npm install
+**npm install**
 
 ## Usage
 To run the app in development mode, use the following command:
 
-npm start
-
+**npm start
+**
 This will start a development server. Open http://localhost:3000 in your browser to view the app.
 
 To build the project for production, run:
 
-npm run build
+**npm run build**
 
 ## Contributing
 Contributions are welcome! If you'd like to contribute, please follow these steps:
