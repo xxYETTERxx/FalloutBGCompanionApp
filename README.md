@@ -41,10 +41,15 @@ To build the project for production, run:
 Contributions are welcome! If you'd like to contribute, please follow these steps:
 
 Fork the repository.
+
 Create a new branch (git checkout -b my-feature).
+
 Commit your changes (git commit -m 'Add new feature').
+
 Push to your branch (git push origin my-feature).
+
 Create a Pull Request to merge your changes into the main repository.
+
 
 ## License
 This project is licensed under the MIT License.
