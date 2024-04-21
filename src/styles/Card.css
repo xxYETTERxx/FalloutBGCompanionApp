@@ -1,0 +1,15 @@
+.card-wrapper {
+    position: relative; /* Relative positioning for overlay effects */
+  }
+  
+  .option-overlay {
+    position: absolute; /* Absolute positioning for precise placement */
+    background-color: rgba(0, 0, 0, 0.2); /* Transparent overlay */
+    border: 2px solid transparent; /* Invisible border initially */
+    transition: all 0.3s; /* Smooth transition */
+  }
+  
+  .option-overlay:hover {
+    background-color: rgba(0, 0, 255, 0.3); /* Highlight effect on hover */
+    border: 2px solid blue; /* Blue border on hover */
+  }

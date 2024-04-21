@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Card from './components/Card'; // Adjust the import path based on your project structure
+import EncounterDeck from './components/EncounterDeck';
 
-function App() {
+// Main component
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      {/* Example usage of the Card component with a specific card number */}
+      {/*<Card cardNumber={"004"} /> { This will display the card with number 1 and its corresponding image */}
+      {/*<Card cardNumber={"001"} /> {/* This will display the card with number 1 and its corresponding image */}
+      <EncounterDeck /> {/* Include the EncounterDeck component */}
     </div>
   );
-}
+};
 
 export default App;
+
