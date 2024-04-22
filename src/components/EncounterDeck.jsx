@@ -1,26 +1,46 @@
-import React, { useState } from 'react';
-import { encounterDeckData }  from './encounterDeckData';
-import Card from './Card'; // Reference to your Card component
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { encounterDeck as initialDeck } from '../data/Decks';
+import { shuffleDeck } from '../functions/cardFunctions'; // Importing shuffleDeck
 
-// Component for managing the encounter deck and drawing cards
-const EncounterDeck = () => {
-  const [currentCardIndex, setCurrentCardIndex] = useState(0); // Track the current card index
+const EncounterDeckContext = createContext();
 
-  const drawNextCard = () => {
-    // Advance to the next card, loop back if at the end
-    setCurrentCardIndex((prevIndex) => (prevIndex + 1) % encounterDeckData.length);
-  };
+export const EncounterDeckProvider = ({ children }) => {
+    const [encounterDeck, setEncounterDeck] = useState([]);
 
-  const currentCard = encounterDeckData[currentCardIndex]; // Get the current card data
-  console.log(currentCard);
+    useEffect(() => {
+        console.log('EncounterDeckProvider initialized'); // Ensure this is logged
+        const shuffledDeck = shuffleDeck(initialDeck);
+        
+        setEncounterDeck(shuffledDeck); // Set the shuffled deck at initialization
+        
+        console.log("shuffled deck", shuffledDeck);
+        
+    }, []); // This effect runs only once
 
-  return (
-    <div>
-      <h2>Encounter Deck</h2>
-      <Card cardNumber={currentCard.cardNumber} /> {/* Display the current card */}
-      <button onClick={drawNextCard}>Draw Next Card</button> {/* Button to draw the next card */}
-    </div>
-  );
+    useEffect(() => {
+        console.log("Updated encounterDeck:", encounterDeck); // Check if the state is updating after set
+    }, [encounterDeck]); // Runs every time encounterDeck changes
+
+    const drawCard = () => {
+        if (encounterDeck.length === 0) {
+            return null;
+        }
+        const [drawnCard, ...remainingDeck] = encounterDeck;
+        setEncounterDeck(remainingDeck);
+        return drawnCard;
+    };
+
+    return (
+        <EncounterDeckContext.Provider value={{ encounterDeck, setEncounterDeck, drawCard }}>
+            {children}
+        </EncounterDeckContext.Provider>
+    );
 };
 
-export default EncounterDeck;
+export const useEncounterDeck = () => {
+    const context = useContext(EncounterDeckContext);
+    if (!context) {
+        throw new Error('useEncounterDeck must be used within an EncounterDeckProvider');
+    }
+    return context;
+};
