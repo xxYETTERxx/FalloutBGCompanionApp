@@ -23,3 +23,10 @@ export const discardCard = (deck, card) => {
     deck = deck.filter((c) => c !== card); // Trash (remove) the current card
     return [...deck, card]; // Appends the card to the end of the deck
 };
+
+export const stageCard = (existingArray, newCard) => {
+    if (existingArray.includes(newCard)) {
+        return existingArray; // No duplicates allowed
+    }
+    return [...existingArray, newCard]; // Return the array with the new card added
+};

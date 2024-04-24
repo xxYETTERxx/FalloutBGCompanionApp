@@ -1,15 +1,20 @@
 import React from 'react';
 import cardData from '../data/cardData';
-import { discardCard, addCard } from '../functions/cardFunctions'; // Remove unnecessary imports
-import { EncounterDeckProvider, useEncounterDeck } from './EncounterDeck';
+import { discardCard, addCard, stageCard } from '../functions/cardFunctions'; // Remove unnecessary imports
+import { useEncounterDeck } from './EncounterDeck';
 import '../styles/Card.css';
 
 const Card = ({ cardNumber }) => {
     const { encounterDeck, setEncounterDeck } = useEncounterDeck(); // Ensure proper destructuring
+    const { playerCount } = useEncounterDeck();
+    const { stagedCards, setStagedCards } = useEncounterDeck();
 
-    if (typeof setEncounterDeck !== 'function') {
-        throw new Error("setEncounterDeck is not a function");
-    }
+    const removeCardFromStaged = (cardNumber) => {
+        setStagedCards((prevStagedCards) => {
+          return prevStagedCards.filter((card) => card !== cardNumber); // Filter out the specific card
+        });
+      };
+
 
     const cardInfo = cardData[cardNumber]; // Get data for the given card
     if (!cardInfo) {
@@ -22,6 +27,7 @@ const Card = ({ cardNumber }) => {
     switch (deckName) {
         case 'encounterDeck':
             return encounterDeck;
+        case 'settlementDeck':
         default:
             return null; // Handle unknown deck names
     }
@@ -39,16 +45,22 @@ const Card = ({ cardNumber }) => {
                 const updatedDeck = discardCard(deck, cardNumber); // Discard to the bottom of the deck
                 setEncounterDeck(updatedDeck); // Update the state with the new deck
                 console.log(`Discarded card ${cardNumber} into ${action.deck}.`);
+                removeCardFromStaged(cardNumber);
                 break;
 
-            case 'addAndTrash':
-                const newDeck = addCard(getDeckByName(action.deck), action.addCardID, 4); // Add specific card to the deck
+            case 'add':
+                const newDeck = addCard(getDeckByName(action.deck), action.addCardID, playerCount); // Add specific card to the deck
                 console.log("newDeck: ", newDeck);
                 const finalDeck = newDeck.filter((c) => c !== cardNumber); // Trash (remove) the current card
                 setEncounterDeck(finalDeck); // Update the state
                 console.log(`Added card ${action.addCardID} and trashed card ${cardNumber}.`);
+                removeCardFromStaged(cardNumber);
                 break;
 
+            case 'stage':
+                setStagedCards(stageCard(stagedCards,action.cardID));
+                setStagedCards(removeCardFromStaged(cardNumber));
+                break;
             default:
                 console.log(`Unknown action type for hover area ${index + 1}.`);
                 break;
