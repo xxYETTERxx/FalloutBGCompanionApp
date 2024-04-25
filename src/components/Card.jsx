@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cardData from '../data/cardData';
 import { discardCard, addCard, stageCard } from '../functions/cardFunctions'; // Remove unnecessary imports
 import { useEncounterDeck } from './EncounterDeck';
 import '../styles/Card.css';
 
 const Card = ({ cardNumber }) => {
+    const [isFocused, setIsFocused] = useState(false);
     const { encounterDeck, setEncounterDeck } = useEncounterDeck(); // Ensure proper destructuring
     const { playerCount } = useEncounterDeck();
     const { stagedCards, setStagedCards } = useEncounterDeck();
+
+    const toggleFocus = (e) => {
+        e.preventDefault();
+        setIsFocused((prev)=> !prev);
+    }
 
     const removeCardFromStaged = (cardNumber) => {
         setStagedCards((prevStagedCards) => {
@@ -21,7 +27,11 @@ const Card = ({ cardNumber }) => {
         return <div>Error: Card data not found for card {cardNumber}</div>; // Handle missing card data
     }
 
+
+
     const { hoverAreas, imagePath, actions } = cardInfo; // Get hover areas and actions
+
+    const cardClass = isFocused ? 'card-wrapper focused' : 'card-wrapper'; // Apply focused class
     
     const getDeckByName = (deckName) => {
     switch (deckName) {
@@ -57,6 +67,13 @@ const Card = ({ cardNumber }) => {
                 removeCardFromStaged(cardNumber);
                 break;
 
+            case 'trash':
+                const newTDeck = getDeckByName(action.deck).filter((c) => c !== cardNumber); // Trash (remove) the current card
+                setEncounterDeck(newTDeck);
+                removeCardFromStaged(cardNumber);
+                break;
+
+
             case 'stage':
                 setStagedCards(stageCard(stagedCards,action.cardID));
                 setStagedCards(removeCardFromStaged(cardNumber));
@@ -68,11 +85,11 @@ const Card = ({ cardNumber }) => {
     };
 
     return (
-        <div className="card-wrapper">
+        <div className={cardClass} onContextMenu={toggleFocus}>
             <img
                 src={imagePath}
-                alt={`Card ${cardNumber}`}
-                style={{ width: '600px', height: 'auto' }}
+                alt={`Card}${cardNumber}`}
+                style={{ width: '100%', height: '80vh' }} // Adjust size when focused 
             />
             {hoverAreas.map((area, index) => (
                 <div

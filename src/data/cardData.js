@@ -1,3 +1,5 @@
+import { addCard } from '../functions/cardFunctions';
+
 // cardData.js
 const cardData = {
     '001': {
@@ -81,19 +83,45 @@ const cardData = {
     },
     'E01': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '23%', width: '100%', height: '9%' }, // Area for the first option
+            { top: '41%', width: '100%', height: '9%' }, // Area for the second option
+            { top: '73%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E01.png`)
+          imagePath : require(`../images/encounter_deck/E01.png`),
+          actions: [
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'add',
+                deck: 'encounterDeck',
+                addCardID: '162',
+            },
+        ],
     },
     'E02': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '26%', width: '100%', height: '9%' }, // Area for the first option
+            { top: '45%', width: '100%', height: '8%' }, // Area for the second option
+
           ],
-          imagePath : require(`../images/encounter_deck/E02.png`)
+          imagePath : require(`../images/encounter_deck/E02.png`),
+          actions: [
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'add',
+                deck: 'encounterDeck',
+                addCardID: '214',
+            },
+        ],
     },
     'E03': {
         hoverAreas: [
@@ -120,107 +148,286 @@ const cardData = {
     },
     'E04': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '26%', width: '100%', height: '8%' }, // Area for the first option
+            { top: '47%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '71%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E04.png`)
+          imagePath : require(`../images/encounter_deck/E04.png`),
+          actions: [
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+        ],
     },
     'E05': {
       hoverAreas: [
             { top: '21%', width: '100%', height: '8%' }, // Area for the first option
             { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '71%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E05.png`)
+          imagePath : require(`../images/encounter_deck/E05.png`),
+          actions: [
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'add',
+                deck: 'encounterDeck',
+                addCardID: '163',
+            },
+        ],
     },
     'E06': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '26%', width: '100%', height: '8%' }, // Area for the first option
+            { top: '47%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '67%', width: '100%', height: '9%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E06.png`)
+          imagePath : require(`../images/encounter_deck/E06.png`),
+          actions: [
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+        ],
     },
     'E07': {
       hoverAreas: [
             { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '50%', width: '100%', height: '8%' }, // Area for the second option
           ],
-          imagePath : require(`../images/encounter_deck/E07.png`)
+          imagePath : require(`../images/encounter_deck/E07.png`),
+          actions: [
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'add',
+                deck: 'encounterDeck',
+                addCardID: '160'
+            },
+        ],
     },
     'E08': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '26%', width: '100%', height: '8%' }, // Area for the first option
+            { top: '52%', width: '100%', height: '21%' }, // Area for the second option
+            { top: '74%', width: '100%', height: '20%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E08.png`)
+          imagePath : require(`../images/encounter_deck/E08.png`),
+          actions: [
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'trash',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+        ],
     },
     'E09': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '26%', width: '100%', height: '8%' }, // Area for the first option
+            { top: '59%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E09.png`)
+          imagePath : require(`../images/encounter_deck/E09.png`),
+          actions: [
+            {
+                type: 'add',
+                deck: 'encounterDeck',
+                addCardID: '005'
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+        ],
     },
     'E10': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '27%', width: '100%', height: '10%' }, // Area for the first option
+            { top: '60%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '81%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E10.png`)
+          imagePath : require(`../images/encounter_deck/E10.png`),
+          actions: [
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+        ],
     },
     'E11': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '22%', width: '100%', height: '8%' }, // Area for the first option
+            { top: '55%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '77%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E11.png`)
+          imagePath : require(`../images/encounter_deck/E11.png`),
+          actions: [
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+        ],
     },
     'E12': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '23%', width: '100%', height: '8%' }, // Area for the first option
+            { top: '55%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '76%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E12.png`)
+          imagePath : require(`../images/encounter_deck/E12.png`),
+          actions: [
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'add',
+                deck: 'encounterDeck',
+                addCardID: '002'
+            },
+            {
+                type: 'add',
+                deck: 'encounterDeck',
+                addCardID: '003'
+            },
+        ],
     },
     'E13': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '23%', width: '100%', height: '8%' }, // Area for the first option
+            { top: '46%', width: '100%', height: '10%' }, // Area for the second option
+            { top: '71%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E13.png`)
+          imagePath : require(`../images/encounter_deck/E13.png`),
+          actions: [
+            {
+                type: 'add',
+                deck: 'encounterDeck',
+                addCardID: '004'
+            },
+            {
+                type: 'add',
+                deck: 'encounterDeck',
+                addCardID: '004'
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+        ],
     },
     'E14': {
       hoverAreas: [
             { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '67%', width: '100%', height: '17%' }, // Area for the second option
+            { top: '86%', width: '100%', height: '13%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E14.png`)
+          imagePath : require(`../images/encounter_deck/E14.png`),
+          actions: [
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'add',
+                deck: 'encounterDeck',
+                addCard: '001'
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+        ],
     },
     'E15': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '28%', width: '100%', height: '8%' }, // Area for the first option
+            { top: '57%', width: '100%', height: '18%' }, // Area for the second option
+            { top: '76%', width: '100%', height: '18%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E15.png`)
+          imagePath : require(`../images/encounter_deck/E15.png`),
+          actions: [
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'trash',
+                deck: 'encounterDeck',
+            },
+        ],
     },
     'E16': {
       hoverAreas: [
             { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '60%', width: '100%', height: '8%' }, // Area for the second option
           ],
-          imagePath : require(`../images/encounter_deck/E16.png`)
+          imagePath : require(`../images/encounter_deck/E16.png`),
+          actions: [
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            },
+            {
+                type: 'discard',
+                deck: 'encounterDeck',
+            }
+        ],
     },
     'S01': {
       hoverAreas: [
