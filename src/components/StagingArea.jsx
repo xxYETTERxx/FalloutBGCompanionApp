@@ -4,15 +4,12 @@ import Card from './Card'; // Importing other required components
 import '../styles/StagingArea.css'; // Importing CSS
 import {  useEncounterDeck } from './EncounterDeck';
 
-const StagingArea = () => {
+const StagingArea = ({ onCardFocus }) => {
     const { stagedCards } = useEncounterDeck();
 
     const [drawnCard, setDrawnCard] = useState(null); // State to track the last drawn card
     const DrawCardButton = ({ setDrawnCard }) => {
     const { drawEncounter, drawSettlement } = useEncounterDeck();
-    const [zoomLevel, setZoomLevel] = useState(1); // State for zoom
-    const [isScrolling, setIsScrolling] = useState(false); // State for scrolling
-    const [scrollPosition, setScrollPosition] = useState({ x: 0, y: 0 }); 
    
     const handleDraw = () => {
         const drawnCard = drawEncounter(); // Draw a card from the deck
@@ -34,8 +31,8 @@ const StagingArea = () => {
        
         <div className="staging-area"> {/* Ensure context access */}
             {stagedCards.map((card) => (
-                <div key={card} className="staged-card">
-                    <Card cardNumber={card} /> {/* Render the card */}
+                <div key={card} onContextMenu={() => onCardFocus(card)}>
+                    <Card cardNumber={card} onCardFocus={onCardFocus}/> {/* Render the card */}
                 </div>
             ))}
             <div>

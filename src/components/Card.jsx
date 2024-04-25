@@ -4,7 +4,7 @@ import { discardCard, addCard, stageCard } from '../functions/cardFunctions'; //
 import { useEncounterDeck } from './EncounterDeck';
 import '../styles/Card.css';
 
-const Card = ({ cardNumber }) => {
+const Card = ({ cardNumber, onCardFocus }) => {
     const [isFocused, setIsFocused] = useState(false);
     const { encounterDeck, setEncounterDeck } = useEncounterDeck(); // Ensure proper destructuring
     const { playerCount } = useEncounterDeck();
@@ -30,8 +30,6 @@ const Card = ({ cardNumber }) => {
 
 
     const { hoverAreas, imagePath, actions } = cardInfo; // Get hover areas and actions
-
-    const cardClass = isFocused ? 'card-wrapper focused' : 'card-wrapper'; // Apply focused class
     
     const getDeckByName = (deckName) => {
     switch (deckName) {
@@ -76,7 +74,7 @@ const Card = ({ cardNumber }) => {
 
             case 'stage':
                 setStagedCards(stageCard(stagedCards,action.cardID));
-                setStagedCards(removeCardFromStaged(cardNumber));
+                removeCardFromStaged(cardNumber);
                 break;
             default:
                 console.log(`Unknown action type for hover area ${index + 1}.`);
@@ -85,7 +83,13 @@ const Card = ({ cardNumber }) => {
     };
 
     return (
-        <div className={cardClass} onContextMenu={toggleFocus}>
+        <div className= "card-wrapper"
+            onContextMenu={(e) => {
+                e.preventDefault();
+                onCardFocus(cardNumber);
+            }}
+            >
+
             <img
                 src={imagePath}
                 alt={`Card}${cardNumber}`}

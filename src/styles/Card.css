@@ -1,5 +1,6 @@
 .card-wrapper {
     position: relative; /* Relative positioning for overlay effects */
+    
   }
   
   .option-overlay {
@@ -13,3 +14,10 @@
     background-color: rgba(0, 0, 255, 0.3); /* Highlight effect on hover */
     border: 2px solid blue; /* Blue border on hover */
   }
+
+
+  .card-wrapper img {
+    /* Ensure images scale properly */
+    width: 100%; /* Set to full width */
+    height: auto; /* Maintain aspect ratio */
+}

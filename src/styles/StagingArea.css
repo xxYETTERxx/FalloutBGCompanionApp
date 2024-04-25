@@ -2,13 +2,14 @@
     border: 10px solid silver; 
     padding: 20px;
     /*background: url('../images/fallout_logo.png') no-repeat center center; */
-    height: 90vh;
+    height: 85vh;
     width: 100vw;
     box-sizing: border-box;
     background-size: contain;
     border-radius: 15px;
     background-color: #e8e8e8;
-    display: flex; 
+    display: flex;;
+    overflow: hidden;
     flex-direction: row; 
     justify-content: space-around; 
     align-items: center; 
