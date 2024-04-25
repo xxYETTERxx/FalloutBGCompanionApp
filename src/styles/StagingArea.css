@@ -1,23 +1,28 @@
+
 .staging-area {
+    display: flex;
     border: 10px solid silver; 
     padding: 20px;
     /*background: url('../images/fallout_logo.png') no-repeat center center; */
-    height: 85vh;
+    height: 75vh;
     width: 100vw;
     justify-content: center;
     box-sizing: border-box;
     background-size: contain;
     border-radius: 15px;
     background-color: #e8e8e8;
-    display: flex;;
-    overflow: hidden;
-    flex-direction: row; 
     align-items: center; 
 }
 
 
+.button-area{
+    display:flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-top: 1px solid silver;
+}
 
-.card-wrapper img {
+.card-wrapper{
     width: 100%; /* Ensure images fill the container */
     height: auto; /* Maintain aspect ratio */
 }

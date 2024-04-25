@@ -96,7 +96,7 @@ const Card = ({ cardNumber, onCardFocus }) => {
             <img
                 src={imagePath}
                 alt={`Card}${cardNumber}`}
-                style={{ width:'500px', height:'auto' }}
+                style={{ width:'420px', height:'auto', }}
            
             />
             {hoverAreas.map((area, index) => (
