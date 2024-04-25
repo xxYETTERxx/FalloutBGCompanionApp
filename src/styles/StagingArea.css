@@ -4,6 +4,7 @@
     /*background: url('../images/fallout_logo.png') no-repeat center center; */
     height: 85vh;
     width: 100vw;
+    justify-content: center;
     box-sizing: border-box;
     background-size: contain;
     border-radius: 15px;
@@ -11,6 +12,12 @@
     display: flex;;
     overflow: hidden;
     flex-direction: row; 
-    justify-content: space-around; 
     align-items: center; 
+}
+
+
+
+.card-wrapper img {
+    width: 100%; /* Ensure images fill the container */
+    height: auto; /* Maintain aspect ratio */
 }

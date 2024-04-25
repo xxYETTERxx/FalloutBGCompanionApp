@@ -5,7 +5,7 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
     const { setPlayerCount, playerCount, setStagedCards } = useEncounterDeck();
 
      const scenarios = {
-        scenario1: ['E01','E02', 'E03', 'E04', 'E05', 'E06'],
+        scenario1: ['E10','E09', 'E11', 'E12', 'E13', 'E06', 'E07', 'E08', 'E15', 'E16'],
         scenario2: ['003', '005'],
     };
 

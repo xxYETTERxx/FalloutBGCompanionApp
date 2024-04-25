@@ -39,7 +39,7 @@ const StagingArea = ({ onCardFocus }) => {
                 {drawnCard && <Card cardNumber={drawnCard} />} {/* Conditionally render drawn card */}
             </div>
             <div>
-                <DrawCardButton setDrawnCard={setDrawnCard} /> {/* Draw card button */}
+                {/* <DrawCardButton setDrawnCard={setDrawnCard} /> {/* Draw card button */}
             </div>
             
         </div>

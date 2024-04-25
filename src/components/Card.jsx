@@ -78,8 +78,11 @@ const Card = ({ cardNumber, onCardFocus }) => {
                 break;
             default:
                 console.log(`Unknown action type for hover area ${index + 1}.`);
-                break;
+            
+          
+    
         }
+        onCardFocus(null);
     };
 
     return (
@@ -93,7 +96,8 @@ const Card = ({ cardNumber, onCardFocus }) => {
             <img
                 src={imagePath}
                 alt={`Card}${cardNumber}`}
-                style={{ width: '100%', height: '80vh' }} // Adjust size when focused 
+                style={{ width:'500px', height:'auto' }}
+           
             />
             {hoverAreas.map((area, index) => (
                 <div
