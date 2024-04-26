@@ -1,0 +1,7 @@
+.quest-marker {
+    width: 200px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    cursor: crosshair; /* Change cursor to indicate it's interactive */
+    top:80%;
+    left:80%;
+}

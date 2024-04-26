@@ -3,26 +3,47 @@
     display: flex;
     border: 10px solid silver; 
     padding: 20px;
-    /*background: url('../images/fallout_logo.png') no-repeat center center; */
+    background: url('../images/misc_assets/logo.webp') no-repeat center center;
     height: 75vh;
     width: 100vw;
     justify-content: center;
     box-sizing: border-box;
-    background-size: contain;
+    background-size:cover;
     border-radius: 15px;
     background-color: #e8e8e8;
     align-items: center; 
 }
 
+.quest-marker{
+    justify-content: right;
+}
 
 .button-area{
     display:flex;
-    justify-content: space-around;
+    justify-content: center space-around;
+    width: 85vw;
     padding: 10px;
-    border-top: 1px solid silver;
+}
+
+.utility-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Place buttons in the bottom right corner */
+    align-items: flex-end;
+    padding: 10px; /* Extra padding */
 }
 
 .card-wrapper{
     width: 100%; /* Ensure images fill the container */
     height: auto; /* Maintain aspect ratio */
+}
+
+.quest-marker-button, .undo {
+    background-color: antiquewhite;
+    border: 2px solid black;
+    height: 50px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px; /* Add space between buttons */
 }

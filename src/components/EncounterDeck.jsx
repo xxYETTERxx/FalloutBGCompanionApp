@@ -8,8 +8,16 @@ const EncounterDeckContext = createContext();
 export const EncounterDeckProvider = ({ children }) => {
     const [encounterDeck, setEncounterDeck] = useState([]);
     const [settlementDeck, setSettlementDeck] = useState([]);
+    const [vault7Deck, setVault7Deck] = useState([]);
+    const [vault44Deck, setVault44Deck] = useState([]);
+    const [vault84Deck, setVault84Deck] = useState([]);
+    const [vault109Deck, setVault109Deck] = useState([]);
     const [playerCount, setPlayerCount] = useState(1);
     const [stagedCards, setStagedCards] = useState([]);
+    const [vault7Active, setVault7Active] = useState(false);
+    const [vault44Active, setVault44Active] = useState(false);
+    const [vault84Active, setVault84Active] = useState(false);
+    const [vault109Active, setVault109Active] = useState(false);
 
     console.log("Encounter Deck Initialized");
 
@@ -35,23 +43,47 @@ export const EncounterDeckProvider = ({ children }) => {
         console.log("Updated stagedCards:", stagedCards); // Check if the state is updating after set
     }, [stagedCards]); // Runs every time encounterDeck changes
 
-    const drawEncounter = () => {
-        if (encounterDeck.length === 0) {
-            return null;
+    const drawCard = (deckType) => {
+        
+        switch(deckType){
+            case 'encounter':
+                const [drawnCard, ...remainingDeck] = encounterDeck;
+                setEncounterDeck(remainingDeck);
+                return drawnCard;
+
+            case 'settlement':
+                const [drawnSCard, ...remainingSDeck] = settlementDeck;
+                setSettlementDeck(remainingSDeck);
+                return drawnSCard;
+
+            case 'vault7':
+                const [drawnV7Card, ...remainingV7Deck] = vault7Deck;
+                setVault7Deck(remainingV7Deck);
+                return drawnV7Card;
+
+            case 'vault44':
+                const [drawnV44Card, ...remainingV44Deck] = vault44Deck;
+                setVault44Deck(remainingV44Deck);
+                return drawnV44Card;
+
+            case 'vault84':
+                const [drawnV84Card, ...remainingV84Deck] = vault84Deck;
+                setVault84Deck(remainingV84Deck);
+                return drawnV84Card;
+
+            case 'vault109':
+                const [drawnV109Card, ...remainingV109Deck] = vault109Deck;
+                setVault109Deck(remainingV109Deck);
+                return drawnV109Card;    
+                
+            default:
+                console.log("invalid deck type");
+                
         }
-        const [drawnCard, ...remainingDeck] = encounterDeck;
-        setEncounterDeck(remainingDeck);
-        return drawnCard;
+    
+        
     };
 
-     const drawSettlement = () => {
-        if (settlementDeck.length === 0) {
-            return null;
-        }
-        const [drawnCard, ...remainingDeck] = encounterDeck;
-        setEncounterDeck(remainingDeck);
-        return drawnCard;
-    };
 
     return (
         <EncounterDeckContext.Provider value={{ 
@@ -59,11 +91,14 @@ export const EncounterDeckProvider = ({ children }) => {
             setEncounterDeck,
             settlementDeck, 
             setSettlementDeck, 
-            drawEncounter, 
-            drawSettlement, 
+            drawCard,
             playerCount, 
             setPlayerCount,
             stagedCards,
+            vault109Active,
+            vault44Active,
+            vault84Active,
+            vault7Active,
             setStagedCards }}>
             {children}
         </EncounterDeckContext.Provider>
