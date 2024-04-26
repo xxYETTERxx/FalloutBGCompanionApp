@@ -19,7 +19,6 @@ export const EncounterDeckProvider = ({ children }) => {
     const [vault84Active, setVault84Active] = useState(false);
     const [vault109Active, setVault109Active] = useState(false);
 
-    console.log("Encounter Deck Initialized");
 
     useEffect(() => {
        

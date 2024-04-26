@@ -3,10 +3,11 @@ import cardData from '../data/cardData';
 import { discardCard, addCard, stageCard } from '../functions/cardFunctions'; // Remove unnecessary imports
 import { useEncounterDeck } from './EncounterDeck';
 import '../styles/Card.css';
+import { settlementDeck } from '../data/Decks';
 
 const Card = ({ cardNumber, onCardFocus }) => {
     const [isFocused, setIsFocused] = useState(false);
-    const { encounterDeck, setEncounterDeck } = useEncounterDeck(); // Ensure proper destructuring
+    const { encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck } = useEncounterDeck(); // Ensure proper destructuring
     const { playerCount } = useEncounterDeck();
     const { stagedCards, setStagedCards } = useEncounterDeck();
 
@@ -36,6 +37,7 @@ const Card = ({ cardNumber, onCardFocus }) => {
         case 'encounterDeck':
             return encounterDeck;
         case 'settlementDeck':
+            return settlementDeck;
         default:
             return null; // Handle unknown deck names
     }
@@ -48,32 +50,43 @@ const Card = ({ cardNumber, onCardFocus }) => {
 
         const deck = getDeckByName(action.deck);
 
+
         switch (action.type) {
             case 'discard':
                 const updatedDeck = discardCard(deck, cardNumber); // Discard to the bottom of the deck
-                setEncounterDeck(updatedDeck); // Update the state with the new deck
+                if (action.deck == 'encounterDeck') setEncounterDeck(updatedDeck); // Update the state with the new deck
+                if (action.deck == 'settlementDeck') setSettlementDeck(updatedDeck);
                 console.log(`Discarded card ${cardNumber} into ${action.deck}.`);
                 removeCardFromStaged(cardNumber);
                 break;
 
             case 'add':
-                const newDeck = addCard(getDeckByName(action.deck), action.addCardID, playerCount); // Add specific card to the deck
-                console.log("newDeck: ", newDeck);
-                const finalDeck = newDeck.filter((c) => c !== cardNumber); // Trash (remove) the current card
-                setEncounterDeck(finalDeck); // Update the state
-                console.log(`Added card ${action.addCardID} and trashed card ${cardNumber}.`);
+                const newDeck = getDeckByName(action.deck).filter((c) => c !== cardNumber); // Trash (remove) the current card
+                const finalDeck = addCard(getDeckByName(action.deck), action.addCardID, playerCount); // Add specific card to the deck
+                if (action.deck == 'encounterDeck') setEncounterDeck(finalDeck); // Update the state with the new deck
+                if (action.deck == 'settlementDeck') setSettlementDeck(finalDeck);
                 removeCardFromStaged(cardNumber);
                 break;
 
             case 'trash':
+                if (!action.deck){
+                    removeCardFromStaged(cardNumber);
+                    break;
+                }
                 const newTDeck = getDeckByName(action.deck).filter((c) => c !== cardNumber); // Trash (remove) the current card
-                setEncounterDeck(newTDeck);
+                if (action.deck == 'encounterDeck') setEncounterDeck(newTDeck); // Update the state with the new deck
+                if (action.deck == 'settlementDeck') setSettlementDeck(newTDeck);
                 removeCardFromStaged(cardNumber);
                 break;
 
 
             case 'stage':
-                setStagedCards(stageCard(stagedCards,action.cardID));
+                setStagedCards([...stagedCards, ...action.cards]);
+                if (action.type2 == 'add'){
+                    const finalDeck = addCard(getDeckByName(action.deck), action.addCardID, playerCount); // Add specific card to the deck
+                    if (action.deck == 'encounterDeck') setEncounterDeck(finalDeck); // Update the state with the new deck
+                    if (action.deck == 'settlementDeck') setSettlementDeck(finalDeck);
+                } 
                 removeCardFromStaged(cardNumber);
                 break;
             default:

@@ -83,7 +83,7 @@ const StagingArea = ({ onCardFocus,  }) => {
                 </div>    
         </div>
         {renderedMarkers.map((markerId, index) => (
-                <QuestMarkers 
+                <QuestMarkers className='quest-marker'
                     key={index} 
                     markerId={markerId}
                     onRemove={() => removeMarker(index)}
