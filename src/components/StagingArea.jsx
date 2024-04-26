@@ -5,6 +5,7 @@ import '../styles/StagingArea.css'; // Importing CSS
 import {  useEncounterDeck } from './EncounterDeck';
 import DrawCardButton from './DrawCardButton'; // Import draw card button
 import QuestMarkers from './QuestMarkers';
+import { number } from 'prop-types';
 
 const StagingArea = ({ onCardFocus,  }) => {
     const { stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active   } = useEncounterDeck();
@@ -12,6 +13,33 @@ const StagingArea = ({ onCardFocus,  }) => {
     const [currentMarkerIndex, setCurrentMarkerIndex] = useState(0); // To track current index
     const [renderedMarkers, setRenderedMarkers] = useState([]); 
 
+    //temp
+    const generateNumberArray = (start, end) => {
+        const arr = [];
+        for (let i = start; i <= end; i++) {
+            // Convert number to a three-digit string with leading zeros
+            const formattedNumber = i.toString().padStart(3, '0');
+            arr.push(formattedNumber); // Add the formatted string to the array
+        }
+        return arr;
+    };
+    
+    const numberArray = generateNumberArray(1, 244); // Array from '001' to '244'
+    
+    const [testNumber, setTestNumber] = useState(0);
+    
+    const testingF = () => {
+        setTestNumber(testNumber+1);
+        onCardFocus(numberArray[testNumber]);
+    }
+    const testingR = () => {
+        setTestNumber(testNumber-1);
+        onCardFocus(numberArray[testNumber]);
+    }
+
+    //testing complete
+    
+    
     const createMarker = () => {
         const token = questMarkers[currentMarkerIndex];
         const nextIndex = (currentMarkerIndex + 1) % questMarkers.length;
@@ -78,8 +106,10 @@ const StagingArea = ({ onCardFocus,  }) => {
                     </>
                 )}
                 <div className='utility-buttons'> 
-                    <button className='quest-marker-button' onClick={createMarker}>Quest Marker</button>
-                    <button className='undo'>Undo</button>
+                    <button className='button-84' onClick={createMarker}>Quest Marker</button>
+                    <button className='button-84'>Undo</button>
+                    <button className='button-84' onClick={testingF}>TEST FWD</button>
+                    <button className='button-84' onClick={testingR}>TEST RVS</button>
                 </div>    
         </div>
         {renderedMarkers.map((markerId, index) => (

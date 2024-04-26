@@ -4,10 +4,11 @@ import { discardCard, addCard, stageCard } from '../functions/cardFunctions'; //
 import { useEncounterDeck } from './EncounterDeck';
 import '../styles/Card.css';
 import { settlementDeck } from '../data/Decks';
+import { act } from 'react-dom/test-utils';
 
 const Card = ({ cardNumber, onCardFocus }) => {
     const [isFocused, setIsFocused] = useState(false);
-    const { encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck } = useEncounterDeck(); // Ensure proper destructuring
+    const { encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, vault7Deck, setVault7Deck, vault44Deck, setVault44Deck, vault84Deck, setVault84Deck, vault109Deck, setVault109Deck } = useEncounterDeck(); // Ensure proper destructuring
     const { playerCount } = useEncounterDeck();
     const { stagedCards, setStagedCards } = useEncounterDeck();
 
@@ -38,6 +39,14 @@ const Card = ({ cardNumber, onCardFocus }) => {
             return encounterDeck;
         case 'settlementDeck':
             return settlementDeck;
+        case 'vault7Deck':
+            return vault7Deck;
+        case 'vault44Deck':
+            return vault44Deck;
+        case 'vault84Deck':
+            return vault84Deck;
+        case 'vault109Deck':
+            return vault109Deck;    
         default:
             return null; // Handle unknown deck names
     }
@@ -49,51 +58,114 @@ const Card = ({ cardNumber, onCardFocus }) => {
         if (!action) return; // If no action, do nothing
 
         const deck = getDeckByName(action.deck);
+        
+        for(const type of action.type){
 
+            switch (type) {
+                case 'discard':
+                    const updatedDeck = discardCard(deck, cardNumber); // Discard to the bottom of the deck
+                    switch (action.deck){
+                        case 'encounterDeck':
+                            setEncounterDeck(updatedDeck);
+                            break;
+                        case 'settementDeck':
+                            setSettlementDeck(updatedDeck);
+                            break;
+                        default:
+                            break;
+                    }
+                    console.log(`Discarded card ${cardNumber} into ${action.deck}.`);
+                    removeCardFromStaged(cardNumber);
+                    break;
 
-        switch (action.type) {
-            case 'discard':
-                const updatedDeck = discardCard(deck, cardNumber); // Discard to the bottom of the deck
-                if (action.deck == 'encounterDeck') setEncounterDeck(updatedDeck); // Update the state with the new deck
-                if (action.deck == 'settlementDeck') setSettlementDeck(updatedDeck);
-                console.log(`Discarded card ${cardNumber} into ${action.deck}.`);
-                removeCardFromStaged(cardNumber);
-                break;
+                case 'add':
+                    let i =0;
+                    let currentDeck; 
+            
+                    if (action.addDeck.length > 1){  
+                        console.log('dualrunning');
+                        for(const cardID of action.addCardIDS){
+                            console.log();
+                            currentDeck = getDeckByName(action.addDeck[i]);
+                            currentDeck = addCard(currentDeck, cardID, playerCount); // Add specific card to the deck 
+                            console.log("currentDeck: ", currentDeck);                                  
+                            
+                            switch (action.addDeck[i]){
+                                
+                            case 'encounterDeck':
+                                setEncounterDeck(currentDeck);
+                                console.log(action.addDeck[i]);
+                                break;
+                            case 'settlementDeck':
+                                setSettlementDeck(currentDeck);
+                                console.log(action.addDeck[i]);
+                                break;
+                            }
+                            i++;
 
-            case 'add':
-                const newDeck = getDeckByName(action.deck).filter((c) => c !== cardNumber); // Trash (remove) the current card
-                const finalDeck = addCard(getDeckByName(action.deck), action.addCardID, playerCount); // Add specific card to the deck
-                if (action.deck == 'encounterDeck') setEncounterDeck(finalDeck); // Update the state with the new deck
-                if (action.deck == 'settlementDeck') setSettlementDeck(finalDeck);
-                removeCardFromStaged(cardNumber);
-                break;
-
-            case 'trash':
-                if (!action.deck){
+                        }
+                    }
+                    else{
+                    
+                    let currentDeck = getDeckByName(action.addDeck[0]);
+                    console.log('singlerunning');
+                    for(const cardID of action.addCardIDS){
+                        console.log(action.addDeck[0]);
+                        
+                        currentDeck = addCard(currentDeck, cardID, playerCount); // Add specific card to the deck
+                    }                                   
+                    switch (action.addDeck[0]){
+                        case 'encounterDeck':
+                            setEncounterDeck(currentDeck);
+                            break;
+                        case 'settlementDeck':
+                            setSettlementDeck(currentDeck);
+                            break;
+                    }
                     removeCardFromStaged(cardNumber);
                     break;
                 }
-                const newTDeck = getDeckByName(action.deck).filter((c) => c !== cardNumber); // Trash (remove) the current card
-                if (action.deck == 'encounterDeck') setEncounterDeck(newTDeck); // Update the state with the new deck
-                if (action.deck == 'settlementDeck') setSettlementDeck(newTDeck);
+
+                case 'trash':
+                    if (!action.deck){
+                        removeCardFromStaged(cardNumber);
+                        break;
+                    }
+                    const newTDeck = getDeckByName(action.deck).filter((c) => c !== cardNumber); // Trash (remove) the current card
+                
+                  
+                    switch (action.deck){
+                            case 'encounterDeck':
+                                setEncounterDeck(newTDeck);
+                                break;
+                            case 'settlementDeck':
+                                setSettlementDeck(newTDeck);
+                                break;
+                            case 'encounterDeck':
+                                setEncounterDeck(newTDeck);
+                                break;
+                            case 'settlementDeck':
+                                setSettlementDeck(newTDeck);
+                                break;
+                            case 'encounterDeck':
+                                setEncounterDeck(newTDeck);
+                                break;
+                            case 'settlementDeck':
+                                setSettlementDeck(newTDeck);
+                                break;
+                    }
+                    
                 removeCardFromStaged(cardNumber);
                 break;
 
 
-            case 'stage':
-                setStagedCards([...stagedCards, ...action.cards]);
-                if (action.type2 == 'add'){
-                    const finalDeck = addCard(getDeckByName(action.deck), action.addCardID, playerCount); // Add specific card to the deck
-                    if (action.deck == 'encounterDeck') setEncounterDeck(finalDeck); // Update the state with the new deck
-                    if (action.deck == 'settlementDeck') setSettlementDeck(finalDeck);
-                } 
-                removeCardFromStaged(cardNumber);
-                break;
-            default:
-                console.log(`Unknown action type for hover area ${index + 1}.`);
-            
-          
-    
+                case 'stage':
+                    setStagedCards([...stagedCards, ...action.cards]);
+                    removeCardFromStaged(cardNumber);
+                    break;
+                default:
+                    console.log(`Unknown action type for hover area ${index + 1}.`);
+            }
         }
         onCardFocus(null);
     };
