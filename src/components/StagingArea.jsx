@@ -7,13 +7,13 @@ import DrawCardButton from './DrawCardButton'; // Import draw card button
 import QuestMarkers from './QuestMarkers';
 import { number } from 'prop-types';
 
-const StagingArea = ({ onCardFocus,  }) => {
+const StagingArea = ({ onCardFocus }) => {
     const { stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active   } = useEncounterDeck();
     const [ questMarkers,  ] = useState(['Y','LB','B','P','R','O']);
     const [currentMarkerIndex, setCurrentMarkerIndex] = useState(0); // To track current index
     const [renderedMarkers, setRenderedMarkers] = useState([]); 
 
-    //temp
+    //testing
     const generateNumberArray = (start, end) => {
         const arr = [];
         for (let i = start; i <= end; i++) {
@@ -36,7 +36,17 @@ const StagingArea = ({ onCardFocus,  }) => {
         setTestNumber(testNumber-1);
         onCardFocus(numberArray[testNumber]);
     }
-
+    
+    const [inputText, setInputText] = useState('');
+    const handleChange = (event) => {
+        setInputText(event.target.value);
+    }
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevents the default behavior of the Enter key (e.g., adding new lines)
+            onCardFocus(inputText);
+        }
+    };
     //testing complete
     
     
@@ -85,7 +95,7 @@ const StagingArea = ({ onCardFocus,  }) => {
                     <>
                         <DrawCardButton
                             type="vault44"
-                            onClick={() => console.log("Vault 1 button clicked")} // Placeholder
+                            onClick={() => onCardFocus(drawCard('vault44'))} // Placeholder
                         />
                     </>
                 )}    
@@ -93,7 +103,7 @@ const StagingArea = ({ onCardFocus,  }) => {
                     <>
                         <DrawCardButton
                             type="vault84"
-                            onClick={() => console.log("Vault 1 button clicked")} // Placeholder
+                            onClick={() => onCardFocus(drawCard('vault84'))} // Placeholder
                         />
                     </>
                 )}    
@@ -110,6 +120,12 @@ const StagingArea = ({ onCardFocus,  }) => {
                     <button className='button-84'>Undo</button>
                     <button className='button-84' onClick={testingF}>TEST FWD</button>
                     <button className='button-84' onClick={testingR}>TEST RVS</button>
+                    <input
+                        type="text" // Specifies a text input field
+                        value={inputText} // Binds the state variable to the input field
+                        onChange={handleChange} // Updates state when the input changes
+                        onKeyDown={handleKeyDown}
+                    />
                 </div>    
         </div>
         {renderedMarkers.map((markerId, index) => (

@@ -42,6 +42,31 @@ export const EncounterDeckProvider = ({ children }) => {
         console.log("Updated stagedCards:", stagedCards); // Check if the state is updating after set
     }, [stagedCards]); // Runs every time encounterDeck changes
 
+    useEffect(() => {
+        console.log("Updated vault7Deck:", vault7Deck); // Check if the state is updating after set
+        if (vault7Deck.length > 0) setVault7Active(true);
+        else setVault7Active(false);
+    }, [vault7Deck]); // Runs every time encounterDeck changes
+
+    useEffect(() => {
+        console.log("Updated vault44Deck:", vault44Deck); // Check if the state is updating after set
+        if (vault44Deck.length > 0) setVault44Active(true);
+        else setVault44Active(false);
+    }, [vault44Deck]); // Runs every time encounterDeck changes
+
+    useEffect(() => {
+        console.log("Updated vault84Deck:", vault84Deck, vault84Deck.length); // Check if the state is updating after set
+        if (vault84Deck.length > 0) setVault84Active(true);
+        else setVault84Active(false);
+    }, [vault84Deck]); // Runs every time encounterDeck changes
+
+    useEffect(() => {
+        console.log("Updated vault109Deck:", vault109Deck); // Check if the state is updating after set
+        if (vault109Deck.length > 0) setVault109Active(true);
+        else setVault109Active(false);
+    }, [vault109Deck]); // Runs every time encounterDeck changes
+
+
     const drawCard = (deckType) => {
         
         switch(deckType){
@@ -94,6 +119,10 @@ export const EncounterDeckProvider = ({ children }) => {
             playerCount, 
             setPlayerCount,
             stagedCards,
+            setVault7Deck,
+            setVault44Deck,
+            setVault84Deck,
+            setVault109Deck,
             vault109Active,
             vault44Active,
             vault84Active,

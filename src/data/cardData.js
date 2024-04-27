@@ -545,7 +545,8 @@ const cardData = {
           actions: [
             {
                 type: ['stage','add'],
-                addDeck: ['encounter'],
+                addDeck: ['settlementDeck','encounterDeck'],
+                addCardIDS:['026','027'],
                 cards: ['025','130']
             },
             {
@@ -671,6 +672,528 @@ const cardData = {
             }
         ],
     },
+    '066': {
+        hoverAreas: [
+              { top: '49%', width: '100%', height: '13%' }, // Area for the first option
+              { top: '76%', width: '100%', height: '20%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/066.png`),
+            actions: [
+              {
+                  type: ['trash'],
+              },
+              {
+                  type: ['trash'],
+              }
+          ],
+      },
+    '067': {
+        hoverAreas: [
+              { top: '51%', width: '100%', height: '11%' }, // Area for the first option
+              { top: '82%', width: '100%', height: '15%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/067.png`),
+            actions: [
+              {
+                  type: ['stage'],
+                  cards: ['068']
+              },
+              {
+                  type: ['stage'],
+                  cards: ['069']
+              }
+          ],
+      },
+      '068': {
+        hoverAreas: [
+              { top: '55%', width: '100%', height: '11%' }, // Area for the first option
+              { top: '85%', width: '100%', height: '15%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/068.png`),
+            actions: [
+              {
+                  type: ['trash','createDeck'],
+                  deckType: 'vault84Deck',
+                  startCards  : ['071'],
+
+              },
+              {
+                type: ['trash','createDeck'],
+                deckType: 'vault84Deck',
+                startCards  : ['071'],
+
+              },
+          ],
+      },
+      '069': {
+        hoverAreas: [
+              { top: '42%', width: '100%', height: '11%' }, // Area for the first option
+              { top: '68%', width: '100%', height: '15%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/069.png`),
+            actions: [
+                {
+                    type: ['trash','createDeck'],
+                    deckType: 'vault84Deck',
+                    startCards  : ['070'],
+    
+                },
+                {
+                    type: ['trash','createDeck'],
+                    deckType: 'vault84Deck',
+                    startCards: ['070'],
+    
+                },
+          ],
+      },
+      '070': {
+        hoverAreas: [
+              { top: '33%', width: '100%', height: '31%' }, // Area for the first option
+              { top: '65%', width: '100%', height: '8%' }, // Area for the second option
+              { top: '79%', width: '100%', height: '13%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/070.png`),
+            actions: [
+                {
+                    type: ['buildVault'],
+                    deckType: 'vault84Deck',
+                    addCardIDS: ['072','073','074','075','076','077','078','079']
+                },
+                {
+                    type: ['trash','add'],
+                    addDeck: ['vault84Deck'],
+                    addCardIDS: ['070'],
+    
+                },
+                {
+                    type: ['trash','add'],
+                    addDeck: ['vault84Deck'],
+                    addCardIDS: ['070'],
+    
+                },
+          ],
+      },
+      '071': {
+        hoverAreas: [
+              { top: '47%', width: '100%', height: '23%' }, // Area for the first option
+              { top: '78%', width: '100%', height: '20%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/071.png`),
+            actions: [
+                {
+                    type: ['buildVault'],
+                    deckType: 'vault84Deck',
+                    addCardIDS: ['072','073','074','075','076','077','078','079']
+                },
+                {
+                    type: ['trash','add'],
+                    addDeck: ['vault84Deck'],
+                    addCardIDS: ['071'],
+    
+                },
+          ],
+      },
+      '072': {
+        hoverAreas: [
+              { top: '35%', width: '100%', height: '8%' }, // Area for the first option
+              { top: '63%', width: '100%', height: '20%' }, // Area for the second option
+              { top: '84%', width: '100%', height: '16%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/072.png`),
+            actions: [
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+          ],
+      },
+      '073': {
+        hoverAreas: [
+              { top: '47%', width: '100%', height: '14%' }, // Area for the first option
+              { top: '69%', width: '100%', height: '11%' }, // Area for the second option
+              { top: '80%', width: '100%', height: '18%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/073.png`),
+            actions: [
+                {
+                    type: ['stage','checkLast'],
+                    cards: ['083'],
+                    deckName: 'vault84Deck'
+                },
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+          ],
+      },
+      '074': {
+        hoverAreas: [
+            { top: '43%', width: '100%', height: '23%' }, // Area for the first option
+            { top: '76%', width: '100%', height: '11%' }, // Area for the second option
+            { top: '87%', width: '100%', height: '11%' }, // Area for the second option
+          ],
+          imagePath : require(`../images/library_deck/074.png`),
+          actions: [
+              {
+                  type: ['trash','checkLast'],
+                  deckName: 'vault84Deck'
+              },
+              {
+                  type: ['trash','checkLast'],
+                  deckName: 'vault84Deck'
+              },
+              {
+                  type: ['trash','checkLast'],
+                  deckName: 'vault84Deck'
+              },
+        ],
+      },
+      '075': {
+        hoverAreas: [
+              { top: '41%', width: '100%', height: '14%' }, // Area for the first option
+              { top: '61%', width: '100%', height: '18%' }, // Area for the second option
+              { top: '80%', width: '100%', height: '10%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/075.png`),
+            actions: [
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+          ],
+      },
+      '076': {
+        hoverAreas: [
+              { top: '48%', width: '100%', height: '14%' }, // Area for the first option
+              { top: '72%', width: '100%', height: '18%' }, // Area for the second option
+             
+            ],
+            imagePath : require(`../images/library_deck/076.png`),
+            actions: [
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+          ],
+      },
+      '077': {
+        hoverAreas: [
+              { top: '46%', width: '100%', height: '14%' }, // Area for the first option
+              { top: '71%', width: '100%', height: '16%' }, // Area for the second option
+              { top: '87%', width: '100%', height: '10%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/077.png`),
+            actions: [
+                {
+                    type: ['stage','checkLast'],
+                    deckName: 'vault84Deck',
+                    cards: ['085']
+                },
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+          ],
+      },
+      '078': {
+        hoverAreas: [
+              { top: '42%', width: '100%', height: '18%' }, // Area for the first option
+              { top: '61%', width: '100%', height: '22%' }, // Area for the second option
+              { top: '83%', width: '100%', height: '10%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/078.png`),
+            actions: [
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+          ],
+      },
+      '079': {
+        hoverAreas: [
+              { top: '45%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '65%', width: '100%', height: '14%' }, // Area for the second option
+              { top: '80%', width: '100%', height: '12%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/079.png`),
+            actions: [
+                {
+                    type: ['stage','checkLast'],
+                    deckName: 'vault84Deck',
+                    cards: ['082']
+                },
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+                {
+                    type: ['trash','checkLast'],
+                    deckName: 'vault84Deck'
+                },
+          ],
+      },
+      '080': {
+        hoverAreas: [
+              { top: '40%', width: '100%', height: '50%' }, // Area for the first option
+            ],
+            imagePath : require(`../images/library_deck/080.png`),
+            actions: [
+                {
+                    type: ['trash'],
+                    deckName: 'vault84Deck'
+                }
+            ]
+      },
+      '081': {
+        hoverAreas: [
+              { top: '57%', width: '100%', height: '50%' }, // Area for the first option
+            ],
+            imagePath : require(`../images/library_deck/081.png`),
+            actions: [
+                {
+                    type: ['trash'],
+                    deckName: 'vault84Deck'
+                }
+            ]
+      },
+      '082': {
+        hoverAreas: [
+            { top: '48%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '74%', width: '100%', height: '14%' }, // Area for the second option
+          ],
+          imagePath : require(`../images/library_deck/082.png`),
+          actions: [
+              {
+                  type: ['trash','add'],
+                  addDeck: ['encounterDeck'],
+                  addCardIDS: ['086','087']
+              },
+              {
+                type: ['trash','add'],
+                addDeck: ['encounterDeck'],
+                addCardIDS: ['086','087']
+              },
+        ],
+      },
+      '083': {
+        hoverAreas: [
+            { top: '48%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '72%', width: '100%', height: '14%' }, // Area for the second option
+          ],
+          imagePath : require(`../images/library_deck/083.png`),
+          actions: [
+              {
+                  type: ['trash','add'],
+                  addDeck: ['encounterDeck'],
+                  addCardIDS: ['088','089']
+              },
+              {
+                type: ['trash','add'],
+                addDeck: ['encounterDeck'],
+                addCardIDS: ['088','089']
+            },
+        ],
+      },
+      '084': {
+        hoverAreas: [
+            { top: '48%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '72%', width: '100%', height: '14%' }, // Area for the second option
+          ],
+          imagePath : require(`../images/library_deck/084.png`),
+          actions: [
+              {
+                  type: ['trash','add'],
+                  addDeck: ['encounterDeck'],
+                  addCardIDS: ['088','089']
+              },
+              {
+                type: ['trash','add'],
+                addDeck: ['encounterDeck'],
+                addCardIDS: ['088','089']
+            },
+        ],
+      },
+    '130': {
+        hoverAreas: [
+              { top: '40%', width: '100%', height: '10%' }, // Area for the first option
+              { top: '63%', width: '100%', height: '10%' }, // Area for the second option
+              { top: '90%', width: '100%', height: '10%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/130.png`),
+            actions: [
+              {
+                  type: ['stage'],
+                  cards:['131']
+              },
+              {
+                  type: ['stage'],
+                  cards: ['132']
+              },
+              {
+                type: ['stage'],
+                cards: ['133']
+              }
+          ],
+      },
+      '131': {
+        hoverAreas: [
+              { top: '50%', width: '100%', height: '15%' }, // Area for the first option
+            ],
+            imagePath : require(`../images/library_deck/131.png`),
+            actions: [
+              {
+                  type: ['stage'],
+                  cards:['131']
+              },
+              {
+                  type: ['stage'],
+                  cards: ['132']
+              },
+              {
+                type: ['stage'],
+                cards: ['133']
+              }
+          ],
+      },
+    '134': {
+        hoverAreas: [
+              { top: '52%', width: '100%', height: '11%' }, // Area for the first option
+              { top: '82%', width: '100%', height: '15%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/134.png`),
+            actions: [
+              {
+                  type: ['stage'],
+                  cards:['137']
+              },
+              {
+                  type: ['stage'],
+                  cards: ['136']
+              }
+          ],
+      },
+      '136': {
+        hoverAreas: [
+              { top: '48%', width: '100%', height: '13%' }, // Area for the first option
+              { top: '75%', width: '100%', height: '15%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/136.png`),
+            actions: [
+              {
+                  type: ['stage'],
+                  cards:['137']
+              },
+              {
+                  type: ['trash']
+              }
+          ],
+      },
+      '137': {
+        hoverAreas: [
+              { top: '52%', width: '100%', height: '11%' }, // Area for the first option
+              { top: '78%', width: '100%', height: '17%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/137.png`),
+            actions: [
+              {
+                  type: ['stage'],
+                  cards:['138']
+              },
+              {
+                  type: ['stage'],
+                  cards: ['139']
+              }
+          ],
+      },
+      '138': {
+        hoverAreas: [
+              { top: '61%', width: '100%', height: '9%' }, // Area for the first option
+              { top: '85%', width: '100%', height: '15%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/138.png`),
+            actions: [
+              {
+                  type: ['add'],
+                  addDeck: ['encounterDeck'],
+                  addCardIDS: ['140']
+              },
+              {
+                type: ['add'],
+                addDeck: ['encounterDeck'],
+                addCardIDS: ['140']
+            },
+          ],
+      },
+      '139': {
+        hoverAreas: [
+              { top: '65%', width: '100%', height: '10%' }, // Area for the first option
+              { top: '90%', width: '100%', height: '10%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/139.png`),
+            actions: [
+                {
+                    type: ['add'],
+                    addDeck: ['encounterDeck'],
+                    addCardIDS: ['140']
+                },
+                {
+                    type: ['add'],
+                    addDeck: ['encounterDeck'],
+                    addCardIDS: ['140']
+                },
+          ],
+      },
+      '140': {
+        hoverAreas: [
+              { top: '30%', width: '100%', height: '11%' }, // Area for the first option
+              { top: '55%', width: '100%', height: '10%' }, // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/140.png`),
+            actions: [
+              {
+                  type: ['trash'],
+              },
+              {
+                  type: ['trash'],
+              }
+          ],
+      },
     '244(1)': {
       hoverAreas: [
             { top: '21%', width: '100%', height: '8%' }, // Area for the first option
