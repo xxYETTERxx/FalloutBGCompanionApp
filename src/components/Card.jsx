@@ -113,11 +113,12 @@ const Card = ({ cardNumber, onCardFocus }) => {
                         }
                     }
                     else{
+                        currentDeck = getDeckByName(action.addDeck[0]);
                     if(action.addDeck.length == 1){
                         console.log('singlerunning');
                         for(const cardID of action.addCardIDS){
                             console.log(action.addDeck[0]);
-                            currentDeck = getDeckByName(action.addDeck[0]);
+                            //currentDeck = getDeckByName(action.addDeck[0]);
                             currentDeck = addCard(currentDeck, cardID, playerCount); // Add specific card to the deck
                             console.log(currentDeck);
                         }                                   

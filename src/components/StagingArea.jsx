@@ -8,7 +8,7 @@ import QuestMarkers from './QuestMarkers';
 import { number } from 'prop-types';
 
 const StagingArea = ({ onCardFocus }) => {
-    const { stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active   } = useEncounterDeck();
+    const { stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active, setStagedCards   } = useEncounterDeck();
     const [ questMarkers,  ] = useState(['Y','LB','B','P','R','O']);
     const [currentMarkerIndex, setCurrentMarkerIndex] = useState(0); // To track current index
     const [renderedMarkers, setRenderedMarkers] = useState([]); 
@@ -31,22 +31,28 @@ const StagingArea = ({ onCardFocus }) => {
     const testingF = () => {
         setTestNumber(testNumber+1);
         onCardFocus(numberArray[testNumber]);
-    }
+    };
     const testingR = () => {
         setTestNumber(testNumber-1);
         onCardFocus(numberArray[testNumber]);
-    }
+    };
     
     const [inputText, setInputText] = useState('');
     const handleChange = (event) => {
         setInputText(event.target.value);
-    }
+    };
+    
+
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             event.preventDefault(); // Prevents the default behavior of the Enter key (e.g., adding new lines)
             onCardFocus(inputText);
         }
     };
+
+    const setInputCard = () => {
+        setStagedCards([...stagedCards, inputText]);
+    }
     //testing complete
     
     
@@ -61,6 +67,7 @@ const StagingArea = ({ onCardFocus }) => {
         const updatedMarkers = renderedMarkers.filter((_, i) => i !== index); // Remove by index
         setRenderedMarkers(updatedMarkers); // Update the state
     };
+
 
     return (
        <div>
@@ -119,7 +126,7 @@ const StagingArea = ({ onCardFocus }) => {
                     <button className='button-84' onClick={createMarker}>Quest Marker</button>
                     <button className='button-84'>Undo</button>
                     <button className='button-84' onClick={testingF}>TEST FWD</button>
-                    <button className='button-84' onClick={testingR}>TEST RVS</button>
+                    <button className='button-84' onClick={setInputCard}>Stage Card</button>
                     <input
                         type="text" // Specifies a text input field
                         value={inputText} // Binds the state variable to the input field
