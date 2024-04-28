@@ -5,6 +5,7 @@ import '../styles/StagingArea.css'; // Importing CSS
 import {  useEncounterDeck } from './EncounterDeck';
 import DrawCardButton from './DrawCardButton'; // Import draw card button
 import QuestMarkers from './QuestMarkers';
+import PlayerInventory from './PlayerInventory';
 import { number } from 'prop-types';
 
 const StagingArea = ({ onCardFocus }) => {
@@ -135,7 +136,10 @@ const StagingArea = ({ onCardFocus }) => {
                         onChange={handleChange} // Updates state when the input changes
                         onKeyDown={handleKeyDown}
                     />
-                </div>    
+                </div>
+                <div>
+                    {/* <PlayerInventory/>    */} 
+                </div>   
         </div>
         {renderedMarkers.map((markerId, index) => (
                 <QuestMarkers className='quest-marker'

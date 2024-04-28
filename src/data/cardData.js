@@ -46,8 +46,7 @@ const cardData = {
                 deck: 'encounterDeck',
             },
             {
-                type: ['trash','add'],
-                deck: 'encounterDeck', 
+                type: ['add'],
                 addDeck: ['encounterDeck'],
                 addCardIDS: ['002']             
             },
@@ -151,50 +150,6 @@ const cardData = {
             { top: '65%', width: '100%', height: '8%' }, // Area for the third option
           ],
           imagePath : require(`../images/library_deck/007.png`),
-          actions: [
-            {
-                type: ['discard'],
-                deck: 'settlementDeck',
-            },
-            {
-                type: ['discard'],
-                deck: 'settlementDeck',
-            },
-            {
-                type: ['discard'],
-                deck: 'settlementDeck'             
-            },
-        ],
-    },
-    '008': {
-      hoverAreas: [
-            { top: '23%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '43%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '63%', width: '100%', height: '7%' }, // Area for the third option
-          ],
-          imagePath : require(`../images/library_deck/008.png`),
-          actions: [
-            {
-                type: ['discard'],
-                deck: 'settlementDeck',
-            },
-            {
-                type: ['discard'],
-                deck: 'settlementDeck',
-            },
-            {
-                type: ['discard'],
-                deck: 'settlementDeck'             
-            },
-        ],
-    },
-    '008': {
-      hoverAreas: [
-            { top: '23%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '43%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '63%', width: '100%', height: '7%' }, // Area for the third option
-          ],
-          imagePath : require(`../images/library_deck/008.png`),
           actions: [
             {
                 type: ['discard'],
@@ -714,6 +669,157 @@ const cardData = {
                 addDeck: ['settlementDeck']
             },
               
+          ],
+      },
+      '032': {
+        hoverAreas: [
+              { top: '51%', width: '100%', height: '11%' }, // Area for the first option
+              { top: '78%', width: '100%', height: '14%' } // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/032.png`),
+            actions: [
+              {
+                  type: ['stage'],
+                  cards: ['034','067'],
+              },
+              {
+                type: ['stage'],
+                cards: ['034','067'],
+              }
+               
+          ],
+      },
+      '033': {
+        hoverAreas: [
+              { top: '51%', width: '100%', height: '11%' }, // Area for the first option
+              { top: '78%', width: '100%', height: '14%' } // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/033.png`),
+            actions: [
+              {
+                  type: ['stage'],
+                  cards: ['034','117'],
+              },
+              {
+                type: ['stage'],
+                cards: ['034','101'],
+              }
+               
+          ],
+      },
+      '034': {
+        hoverAreas: [
+              { top: '45%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '76%', width: '100%', height: '14%' } // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/034.png`),
+            actions: [
+              {
+                  type: ['stage','add'],
+                  cards: ['035','037','141'],
+                  addDeck: ['settlementDeck'],
+                  addCardIDS: ['038']
+              },
+              {
+                type: ['stage','add'],
+                cards: ['036','037','134'],
+                addDeck: ['settlementDeck'],
+                addCardIDS: ['038']
+                }
+               
+          ],
+      },
+      '035': {
+        hoverAreas: [
+              { top: '44%', width: '100%', height: '11%' }, // Area for the first option
+              { top: '71%', width: '100%', height: '14%' } // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/035.png`),
+            actions: [
+              {
+                  type: ['stage'],
+                  cards: ['039','150'],
+              },
+              {
+                type: ['stage'],
+                cards: ['040','112']
+              }
+               
+          ],
+      },
+      '036': {
+        hoverAreas: [
+              { top: '44%', width: '100%', height: '11%' }, // Area for the first option
+              { top: '71%', width: '100%', height: '14%' } // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/036.png`),
+            actions: [
+              {
+                  type: ['stage'],
+                  cards: ['039','112'],
+              },
+              {
+                type: ['stage'],
+                cards: ['040','150']
+              }
+               
+          ],
+      },
+      '037': {
+        hoverAreas: [
+              { top: '51%', width: '100%', height: '8%' }, // Area for the first option
+              { top: '78%', width: '100%', height: '14%' } // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/037.png`),
+            actions: [
+              {
+                  type: ['stage'],
+                  cards: ['157'],
+              },
+              {
+                type: ['stage'],
+                cards: ['041'],
+              }
+               
+          ],
+      },
+      '038': {
+        hoverAreas: [
+              { top: '34%', width: '100%', height: '14%' }, // Area for the first option
+              { top: '48%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '67%', width: '100%', height: '14%' }, // Area for the first option
+              { top: '90%', width: '100%', height: '10%' } // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/038.png`),
+            actions: [
+              {
+                  type: ['trash'],
+                  deck: 'settlementDeck'
+              },
+              {
+                type: ['add'],
+                addDeck: ['encounterDeck'],
+                addCardIDS: ['001']
+              }
+               
+          ],
+      },
+      '039': {
+        hoverAreas: [
+              { top: '35%', width: '100%', height: '11%' }, // Area for the first option
+              { top: '78%', width: '100%', height: '14%' } // Area for the second option
+            ],
+            imagePath : require(`../images/library_deck/039.png`),
+            actions: [
+              {
+                  type: ['stage'],
+                  cards: ['034','067'],
+              },
+              {
+                type: ['stage'],
+                cards: ['034','067'],
+              }
+               
           ],
       },
     '066': {
@@ -1870,25 +1976,28 @@ const cardData = {
     },
     'E05': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '71%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '28%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '48%', width: '100%', height: '10%' }, // Area for the second option
+            { top: '59%', width: '100%', height: '10%' }, // Area for the second option
+            { top: '80%', width: '100%', height: '13%' }, // Area for the third option
           ],
           imagePath : require(`../images/encounter_deck/E05.png`),
           actions: [
             {
-                type: ['discard'],
-                deck: 'encounterDeck',
+                type: ['trash']
             },
             {
-                type: ['discard'],
-                deck: 'encounterDeck',
-            },
-            {
-                type: ['trash','add'],
-                deck: 'encounterDeck',
+                type: ['add'],
                 addDeck: ['settlementDeck'],
-                addCardIDS: ['163'],
+                addCardIDS: ['163']
+            },
+            {
+                type: ['trash']
+            },
+            {
+                type: ['add'],
+                addDeck: ['settlementDeck'],
+                addCardIDS: ['163']
             },
         ],
     },
@@ -1930,8 +2039,7 @@ const cardData = {
                 deck: 'encounterDeck',
             },
             {
-                type: ['trash','add'],
-                deck: 'encounterDeck',
+                type: ['add'],
                 addDeck: ['encounterDeck'],
                 addCardIDS: ['160']
             },
@@ -1950,8 +2058,7 @@ const cardData = {
                 deck: 'encounterDeck',
             },
             {
-                type: ['trash'],
-                deck: 'encounterDeck',
+                type: ['trash']
             },
             {
                 type: ['discard'],
@@ -1967,8 +2074,7 @@ const cardData = {
           imagePath : require(`../images/encounter_deck/E09.png`),
           actions: [
             {
-                type: ['trash','add'],
-                deck: 'encounterDeck',
+                type: ['add'],
                 addDeck: ['settlementDeck'],
                 addCardIDS: ['005']
             },
@@ -2035,14 +2141,12 @@ const cardData = {
                 deck: 'encounterDeck',
             },
             {
-                type: ['trash','add'],
-                deck: 'encounterDeck',
+                type: ['add'],
                 addDeck: ['encounterDeck'],
                 addCardIDS: ['002']
             },
             {
-                type: ['trash','add'],
-                deck: 'encounterDeck',
+                type: ['add'],
                 addDeck: ['encounterDeck'],
                 addCardIDS: ['003']
             },
@@ -2087,8 +2191,7 @@ const cardData = {
                 deck: 'encounterDeck',
             },
             {
-                type: ['trash','add'],
-                deck: 'encounterDeck',
+                type: ['add'],
                 addDeck: ['encounterDeck'],
                 addCardIDS: ['001']
             },

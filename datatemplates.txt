@@ -1,0 +1,24 @@
+//add template
+{
+    type: ['add'],
+    addDeck: ['encounterDeck'],
+    addCardIDS: ['001']
+}
+   
+ //stage template
+ {
+    type: ['stage'],
+    cards: ['033','067']
+ }
+//discard
+{
+    type: ['discard'],
+    deck: 'encounterDeck',
+}
+
+//trash
+{
+    type: ['trash'],
+    deck: 'settlementDeck',
+}
+**deck only necessary if 

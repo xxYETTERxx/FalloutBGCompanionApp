@@ -114,7 +114,7 @@ const Card = ({ cardNumber, onCardFocus }) => {
                     }
                     else{
                         currentDeck = getDeckByName(action.addDeck[0]);
-                    if(action.addDeck.length == 1){
+                   
                         console.log('singlerunning');
                         for(const cardID of action.addCardIDS){
                             console.log(action.addDeck[0]);
@@ -128,10 +128,6 @@ const Card = ({ cardNumber, onCardFocus }) => {
                             case 'settlementDeck':
                                 setSettlementDeck(currentDeck);
                                 break;
-                        }
-                    }
-                    else{
-                        switch (action.addDeck[0]){
                             case 'vault84Deck':
                                 setVault84Deck(action.addCardIDS);
                                 break;
@@ -144,19 +140,17 @@ const Card = ({ cardNumber, onCardFocus }) => {
                             case 'vault7Deck':
                                 setVault7Deck(action.addCardsIDS);
                                 break;
-                        }
+                         }
 
                     }
                     removeCardFromStaged(cardNumber);
                     break;
-                }
 
                 case 'trash':
                     if (!action.deck){
                         removeCardFromStaged(cardNumber);
                         break;
                     }
-                    if(getDeckByName(action.deck.length) > 0){
                     const newTDeck = getDeckByName(action.deck).filter((c) => c !== cardNumber); // Trash (remove) the current card
                 
                   
@@ -177,10 +171,10 @@ const Card = ({ cardNumber, onCardFocus }) => {
                                 setVault84Deck(newTDeck);
                                 break;
                             case 'set':
-                                setSettlementDeck(newTDeck);
+                                setVault109Deck(newTDeck);
                                 break;
                         }
-                    }
+
                     
                     
                 removeCardFromStaged(cardNumber);
