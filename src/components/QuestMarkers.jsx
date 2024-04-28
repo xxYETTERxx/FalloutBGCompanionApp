@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import '../styles/QuestMarkers.css'; // Import CSS for styling
 
 const QuestMarkers = ({ markerId, onRemove }) => {
     const [position, setPosition] = useState({ x: 0, y: 0 }); // Initial position
@@ -59,7 +58,7 @@ const QuestMarkers = ({ markerId, onRemove }) => {
 
         case 'P':
         markerImage = require('../images/misc_assets/PQmark.png');
-        rotation = -208;
+   
         break;
 
         case 'O':
@@ -68,7 +67,7 @@ const QuestMarkers = ({ markerId, onRemove }) => {
 
         case 'R':
         markerImage = require('../images/misc_assets/RQmark.png');
-        rotation = -155;
+
         break;
     }
 
@@ -86,10 +85,11 @@ return (
             
             style={{
                 position: 'absolute', // Ensure it can be positioned absolutely
+                width: '200px',
+                height: 'auto',
                 left: `${position.x}px`, // Use position state for left
                 top: `${position.y}px`, // Use position state for top
                 cursor: 'move', // Change cursor to indicate dragging
-                 transform: `rotate(${rotation}deg)` // Apply the rotation
             }}
         />
     );

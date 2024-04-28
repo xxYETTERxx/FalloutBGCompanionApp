@@ -118,9 +118,8 @@ const Card = ({ cardNumber, onCardFocus }) => {
                         console.log('singlerunning');
                         for(const cardID of action.addCardIDS){
                             console.log(action.addDeck[0]);
-                            //currentDeck = getDeckByName(action.addDeck[0]);
                             currentDeck = addCard(currentDeck, cardID, playerCount); // Add specific card to the deck
-                            console.log(currentDeck);
+                            console.log("currentDeck: ",currentDeck);
                         }                                   
                         switch (action.addDeck[0]){
                             case 'encounterDeck':
@@ -135,6 +134,12 @@ const Card = ({ cardNumber, onCardFocus }) => {
                         switch (action.addDeck[0]){
                             case 'vault84Deck':
                                 setVault84Deck(action.addCardIDS);
+                                break;
+                            case 'vault7Deck':
+                                setVault7Deck(action.addCardsIDS);
+                                break;
+                            case 'vault109Deck':
+                                setVault109Deck(action.addCardsIDS);
                                 break;
                             case 'vault7Deck':
                                 setVault7Deck(action.addCardsIDS);
@@ -194,13 +199,13 @@ const Card = ({ cardNumber, onCardFocus }) => {
                             console.log(actions.deckType);
                             break;
                         case 'vault7Deck':
-                            setVault7Deck(action.startCards[0]);
+                            setVault7Deck(action.startCards);
                             break;
                         case 'vault44Deck':
-                            setVault44Deck(action.startCards[0]);
+                            setVault44Deck(action.startCards);
                             break;
                         case 'vault109Deck':
-                        setVault109Deck(action.startCards[0]);
+                        setVault109Deck(action.startCards);
                         break;
                         default:
                             console.log("invalid Decktype");
@@ -240,9 +245,33 @@ const Card = ({ cardNumber, onCardFocus }) => {
                     break;
                 
                     case 'checkLast':
-                        const tempDeck = action.deckName;
-                        console.log("LastCard: ", tempDeck);
-                        console.log("InsideLastCard",getDeckByName(action.deckName));
+                        switch(action.deckType){
+                            case 'vault84Deck':
+                                console.log(vault84Deck);
+                                break;
+                            case 'vault7Deck':
+                                const startV7Deck = action.addCardIDS;
+                                const shuffleV7Deck = shuffleDeck(startV7Deck);
+                                const gameV7Deck = shuffleV7Deck.slice(0,playerCount);
+                                setVault7Deck(gameV7Deck);
+                                break;
+                            case 'vault44Deck':
+                                const startV44Deck = action.addCardIDS;
+                                const shuffleV44Deck = shuffleDeck(startV44Deck);
+                              
+                                const gameV44Deck = shuffleV44Deck.slice(0,playerCount);
+                                
+                                setVault44Deck(gameV44Deck);
+                                break;
+                            case 'vault109Deck':
+                                const startV109Deck = action.addCardIDS;
+                                const shuffleV109Deck = shuffleDeck(startV109Deck);
+                                const gameV109Deck = shuffleV109Deck.slice(0,playerCount);
+                                setVault109Deck(gameV109Deck);
+                                break;
+                            default:
+                                console.log('no type');
+                        }
                     break;
                     //if(getDeckByName(action.deck).length == 0)
                     default:

@@ -10,7 +10,9 @@ export function shuffleDeck(deck){
 };
 
 export function addCard(deck, card, numberOfPlayers){
-    console.log("deck passed in: ", deck)
+
+    const deckSize = numberOfPlayers;
+    if (deck.length < numberOfPlayers) deckSize = deck.length;
     const smallerDeck = deck.slice(0, numberOfPlayers); // Draw a smaller deck based on the number of players
     const newDeck = [card, ...smallerDeck]; // Add the new card to the front
     const shuffledNewDeck = shuffleDeck(newDeck); // Shuffle the smaller deck with the new card

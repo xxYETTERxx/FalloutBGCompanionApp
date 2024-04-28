@@ -46,6 +46,7 @@ const StagingArea = ({ onCardFocus }) => {
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
             event.preventDefault(); // Prevents the default behavior of the Enter key (e.g., adding new lines)
+            setTestNumber(parseInt(inputText, 10));
             onCardFocus(inputText);
         }
     };
@@ -118,14 +119,15 @@ const StagingArea = ({ onCardFocus }) => {
                     <>
                         <DrawCardButton
                             type="vault109"
-                            onClick={() => console.log("Vault 1 button clicked")} // Placeholder
+                            onClick={() => onCardFocus(drawCard('vault109'))} // Placeholder
                         />
                     </>
                 )}
                 <div className='utility-buttons'> 
                     <button className='button-84' onClick={createMarker}>Quest Marker</button>
                     <button className='button-84'>Undo</button>
-                    <button className='button-84' onClick={testingF}>TEST FWD</button>
+                    <button className='button-84' onClick={testingF}>Fwd</button>
+                    <button className='button-84' onClick={testingR}>Bkwd</button>
                     <button className='button-84' onClick={setInputCard}>Stage Card</button>
                     <input
                         type="text" // Specifies a text input field
@@ -137,7 +139,7 @@ const StagingArea = ({ onCardFocus }) => {
         </div>
         {renderedMarkers.map((markerId, index) => (
                 <QuestMarkers className='quest-marker'
-                    key={index} 
+                    key={markerId} 
                     markerId={markerId}
                     onRemove={() => removeMarker(index)}
                 />
