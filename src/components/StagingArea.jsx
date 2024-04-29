@@ -6,7 +6,6 @@ import {  useEncounterDeck } from './EncounterDeck';
 import DrawCardButton from './DrawCardButton'; // Import draw card button
 import QuestMarkers from './QuestMarkers';
 import PlayerInventory from './PlayerInventory';
-import { number } from 'prop-types';
 
 const StagingArea = ({ onCardFocus }) => {
     const { stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active, setStagedCards   } = useEncounterDeck();
