@@ -12,7 +12,16 @@ const StagingArea = ({ onCardFocus }) => {
     const { stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active, setStagedCards   } = useEncounterDeck();
     const [ questMarkers,  ] = useState(['Y','LB','B','P','R','O']);
     const [currentMarkerIndex, setCurrentMarkerIndex] = useState(0); // To track current index
-    const [renderedMarkers, setRenderedMarkers] = useState([]); 
+    const [renderedMarkers, setRenderedMarkers] = useState([]);
+    const [playerInventoryActive, setPlayerInventoryActive] = useState(false);
+    
+    const players = [1, 2, 3, 4]; // Example player identifiers
+    const [playerCards, setPlayerCards] = useState({
+    1: ['001', '002'], // Example card sets for each player
+    2: ['003', '004'],
+    3: ['005', '006'],
+    4: ['007', '008'],
+  });
 
     //testing
     const generateNumberArray = (start, end) => {
@@ -138,7 +147,7 @@ const StagingArea = ({ onCardFocus }) => {
                     />
                 </div>
                 <div>
-                    {/* <PlayerInventory/>    */} 
+                    <PlayerInventory players={players} playerCards={playerCards}/>
                 </div>   
         </div>
         {renderedMarkers.map((markerId, index) => (

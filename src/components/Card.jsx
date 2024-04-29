@@ -8,7 +8,7 @@ import { act } from 'react-dom/test-utils';
 
 const Card = ({ cardNumber, onCardFocus }) => {
     const [isFocused, setIsFocused] = useState(false);
-    const { encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, vault7Deck, setVault7Deck, vault44Deck, setVault44Deck, vault84Deck, setVault84Deck, vault109Deck, setVault109Deck } = useEncounterDeck(); // Ensure proper destructuring
+    const { encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, vault7Deck, setVault7Deck, vault44Deck, setVault44Deck, vault84Deck, setVault84Deck, vault109Deck, setVault109Deck, hasBeenDrawn74, setHasBeenDrawn74 } = useEncounterDeck(); // Ensure proper destructuring
     const { playerCount } = useEncounterDeck();
     const { stagedCards, setStagedCards } = useEncounterDeck();
 
@@ -34,27 +34,22 @@ const Card = ({ cardNumber, onCardFocus }) => {
     const { hoverAreas, imagePath, actions } = cardInfo; // Get hover areas and actions
     
     const getDeckByName = (deckName) => {
+    console.log("deckbynamedebug: ",deckName);
     switch (deckName) {
         case 'encounterDeck':
             return encounterDeck;
-            break;
         case 'settlementDeck':
             return settlementDeck;
-            break;
         case 'vault7Deck':
             return vault7Deck;
-            break;
         case 'vault44Deck':
             return vault44Deck;
-            break;
         case 'vault84Deck':
             return vault84Deck;
-            break;
         case 'vault109Deck':
-            return vault109Deck;
-            break;    
+            return vault109Deck;    
         default:
-            console.log("Invalid DeckByNameEntry");
+            console.log("Invalid DeckByNameEntry:", deckName);
             return null; // Handle unknown deck names
     }
 };
@@ -63,20 +58,24 @@ const Card = ({ cardNumber, onCardFocus }) => {
     const handleHoverClick = (index) => {
         const action = actions[index]; // Get the action based on hover area index
         if (!action) return; // If no action, do nothing
-
-        const deck = getDeckByName(action.deck);
         
         for(const type of action.type){
 
             switch (type) {
                 case 'discard':
-                    const updatedDeck = discardCard(deck, cardNumber); // Discard to the bottom of the deck
+                    const updatedDeck = discardCard(action.type, cardNumber); // Discard to the bottom of the deck
                     switch (action.deck){
                         case 'encounterDeck':
                             setEncounterDeck(updatedDeck);
                             break;
                         case 'settementDeck':
                             setSettlementDeck(updatedDeck);
+                            break;
+                        case 'vault84Deck':
+                            setVault84Deck(updatedDeck);
+                            break;
+                        case 'vault109Deck':
+                            setVault109Deck(updatedDeck);
                             break;
                         default:
                             break;
@@ -92,10 +91,10 @@ const Card = ({ cardNumber, onCardFocus }) => {
                     if (action.addDeck.length > 1){  
                         console.log('dualrunning');
                         for(const cardID of action.addCardIDS){
-                            console.log();
+    
                             currentDeck = getDeckByName(action.addDeck[i]);
                             currentDeck = addCard(currentDeck, cardID, playerCount); // Add specific card to the deck 
-                            console.log("currentDeck: ", currentDeck);                                  
+                                                 
                             
                             switch (action.addDeck[i]){
                                 
@@ -114,12 +113,12 @@ const Card = ({ cardNumber, onCardFocus }) => {
                     }
                     else{
                         currentDeck = getDeckByName(action.addDeck[0]);
+                        console.log(action.addDeck[0]);
                    
                         console.log('singlerunning');
                         for(const cardID of action.addCardIDS){
-                            console.log(action.addDeck[0]);
+                            console.log("currentDeck:",currentDeck);
                             currentDeck = addCard(currentDeck, cardID, playerCount); // Add specific card to the deck
-                            console.log("currentDeck: ",currentDeck);
                         }                                   
                         switch (action.addDeck[0]){
                             case 'encounterDeck':
@@ -129,16 +128,16 @@ const Card = ({ cardNumber, onCardFocus }) => {
                                 setSettlementDeck(currentDeck);
                                 break;
                             case 'vault84Deck':
-                                setVault84Deck(action.addCardIDS);
+                                setVault84Deck(currentDeck);
                                 break;
                             case 'vault7Deck':
-                                setVault7Deck(action.addCardsIDS);
+                                setVault7Deck(currentDeck);
                                 break;
                             case 'vault109Deck':
-                                setVault109Deck(action.addCardsIDS);
+                                setVault109Deck(currentDeck);
                                 break;
                             case 'vault7Deck':
-                                setVault7Deck(action.addCardsIDS);
+                                setVault7Deck(currentDeck);
                                 break;
                          }
 
@@ -187,10 +186,10 @@ const Card = ({ cardNumber, onCardFocus }) => {
                     break;
               
                 case 'createDeck':
+                    console.log("creating Deck");
                     switch(action.deckType){
                         case 'vault84Deck':
                             setVault84Deck(action.startCards);
-                            console.log(actions.deckType);
                             break;
                         case 'vault7Deck':
                             setVault7Deck(action.startCards);
@@ -199,8 +198,8 @@ const Card = ({ cardNumber, onCardFocus }) => {
                             setVault44Deck(action.startCards);
                             break;
                         case 'vault109Deck':
-                        setVault109Deck(action.startCards);
-                        break;
+                            setVault109Deck(action.startCards);
+                            break;
                         default:
                             console.log("invalid Decktype");
                             break;
@@ -241,33 +240,28 @@ const Card = ({ cardNumber, onCardFocus }) => {
                     case 'checkLast':
                         switch(action.deckType){
                             case 'vault84Deck':
-                                console.log(vault84Deck);
-                                break;
-                            case 'vault7Deck':
-                                const startV7Deck = action.addCardIDS;
-                                const shuffleV7Deck = shuffleDeck(startV7Deck);
-                                const gameV7Deck = shuffleV7Deck.slice(0,playerCount);
-                                setVault7Deck(gameV7Deck);
-                                break;
-                            case 'vault44Deck':
-                                const startV44Deck = action.addCardIDS;
-                                const shuffleV44Deck = shuffleDeck(startV44Deck);
-                              
-                                const gameV44Deck = shuffleV44Deck.slice(0,playerCount);
-                                
-                                setVault44Deck(gameV44Deck);
-                                break;
-                            case 'vault109Deck':
-                                const startV109Deck = action.addCardIDS;
-                                const shuffleV109Deck = shuffleDeck(startV109Deck);
-                                const gameV109Deck = shuffleV109Deck.slice(0,playerCount);
-                                setVault109Deck(gameV109Deck);
+                                if(vault84Deck.length == 0){
+                                    if(hasBeenDrawn74) setVault84Deck(['081']);
+                                    else setVault84Deck(['080']);
+                                }
                                 break;
                             default:
                                 console.log('no type');
                         }
                     break;
-                    //if(getDeckByName(action.deck).length == 0)
+
+                    case 'vault84Special':
+                        setHasBeenDrawn74(true);
+                        break;
+                    case 'vault109Special':
+                        const cardNumbersToRemove = ['086', '088', '090', '092'];
+                        console.log("109special:",getDeckByName(action.deck));                              
+                        const new2Deck = getDeckByName(action.deck).filter(
+                        (card) => !cardNumbersToRemove.includes(card)
+                        );
+                        console.log("New Deck:", new2Deck);    
+                        setVault109Deck(new2Deck);
+                        break;
                     default:
                     console.log(`Unknown action type for hover area ${index + 1}.`);
                 }
