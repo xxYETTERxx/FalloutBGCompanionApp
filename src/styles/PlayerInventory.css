@@ -1,0 +1,39 @@
+.player-inventory-overlay {
+    position: fixed; /* Fixed to screen position */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: white; /* Text color */
+    z-index: 1000; /* High z-index to overlay over staging area */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .player-buttons {
+    display: flex;
+    gap: 10px; /* Space between player buttons */
+  }
+  
+  .player-cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px; /* Space between card components */
+  }
+  
+  

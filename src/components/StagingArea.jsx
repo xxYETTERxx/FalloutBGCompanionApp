@@ -16,12 +16,16 @@ const StagingArea = ({ onCardFocus }) => {
     
     const players = [1, 2, 3, 4]; // Example player identifiers
     const [playerCards, setPlayerCards] = useState({
-    1: ['001', '002'], // Example card sets for each player
+    1: ['001', '002','054','090','101','086','015'], // Example card sets for each player
     2: ['003', '004'],
     3: ['005', '006'],
     4: ['007', '008'],
   });
 
+    const togglePlayerInventory = () => {
+        setPlayerInventoryActive((prevState) => !prevState);
+    };
+    
     //testing
     const generateNumberArray = (start, end) => {
         const arr = [];
@@ -87,8 +91,16 @@ const StagingArea = ({ onCardFocus }) => {
                     <Card cardNumber={card} onCardFocus={onCardFocus}/> {/* Render the card */}
                 </div>
             ))}
-          
-            
+            {/* Conditionally render PlayerInventory as an overlay */}
+            {playerInventoryActive && (
+                <PlayerInventory
+                players={players}
+                playerCards={playerCards}
+                setPlayerCards={setPlayerCards} // Pass set function to update the state
+                onClose={togglePlayerInventory}
+              />
+            )}
+                    
                 
             </div>
             <div className="button-area"> {/* Inline button area below the play area */}
@@ -146,8 +158,9 @@ const StagingArea = ({ onCardFocus }) => {
                     />
                 </div>
                 <div>
-                    <PlayerInventory players={players} playerCards={playerCards}/>
-                </div>   
+                    <button className='button-84' onClick={togglePlayerInventory}>Player Inventory</button>
+                </div>
+                   
         </div>
         {renderedMarkers.map((markerId, index) => (
                 <QuestMarkers className='quest-marker'
