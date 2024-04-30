@@ -3,12 +3,13 @@ import cardData from '../data/cardData';
 import { discardCard, addCard, stageCard, shuffleDeck } from '../functions/cardFunctions'; // Remove unnecessary imports
 import { useEncounterDeck } from './EncounterDeck';
 import '../styles/Card.css';
+import { setPlayerCards } from './StagingArea';
 import { settlementDeck } from '../data/Decks';
 import { act } from 'react-dom/test-utils';
 
 const Card = ({ cardNumber, onCardFocus }) => {
     const [isFocused, setIsFocused] = useState(false);
-    const { encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, vault7Deck, setVault7Deck, vault44Deck, setVault44Deck, vault84Deck, setVault84Deck, vault109Deck, setVault109Deck, hasBeenDrawn74, setHasBeenDrawn74 } = useEncounterDeck(); // Ensure proper destructuring
+    const { encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, vault7Deck, setVault7Deck, vault44Deck, setVault44Deck, vault84Deck, setVault84Deck, vault109Deck, setVault109Deck, hasBeenDrawn74, setHasBeenDrawn74, specialStarDeck, setSpecialStarDeck, specialShieldDeck, setSpecialShieldDeck } = useEncounterDeck(); // Ensure proper destructuring
     const { playerCount } = useEncounterDeck();
     const { stagedCards, setStagedCards } = useEncounterDeck();
 
@@ -47,7 +48,11 @@ const Card = ({ cardNumber, onCardFocus }) => {
         case 'vault84Deck':
             return vault84Deck;
         case 'vault109Deck':
-            return vault109Deck;    
+            return vault109Deck;
+        case 'specialStarDeck':
+            return specialStarDeck;
+        case 'specialShieldDeck':
+            return specialShieldDeck;       
         default:
             console.log("Invalid DeckByNameEntry:", deckName);
             return null; // Handle unknown deck names
@@ -138,6 +143,12 @@ const Card = ({ cardNumber, onCardFocus }) => {
                                 break;
                             case 'vault7Deck':
                                 setVault7Deck(currentDeck);
+                                break;
+                            case 'specialStarDeck':
+                                setSpecialStarDeck(currentDeck);
+                                break;
+                            case 'specialShieldDeck':
+                                setSpecialShieldDeck(currentDeck);
                                 break;
                          }
 
@@ -262,6 +273,13 @@ const Card = ({ cardNumber, onCardFocus }) => {
                         console.log("New Deck:", new2Deck);    
                         setVault109Deck(new2Deck);
                         break;
+                    case 'specialShieldAction':
+                        setSpecialStarDeck([]);
+                        break;
+                    case 'specialStarAction':
+                        setSpecialShieldDeck([]);
+                        break;
+
                     default:
                     console.log(`Unknown action type for hover area ${index + 1}.`);
                 }

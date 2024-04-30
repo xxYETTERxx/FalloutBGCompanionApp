@@ -8,7 +8,7 @@ import QuestMarkers from './QuestMarkers';
 import PlayerInventory from './PlayerInventory';
 
 const StagingArea = ({ onCardFocus }) => {
-    const { stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active, setStagedCards   } = useEncounterDeck();
+    const { stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active, specialStarActive, specialShieldActive, setStagedCards   } = useEncounterDeck();
     const [ questMarkers,  ] = useState(['Y','LB','B','P','R','O']);
     const [currentMarkerIndex, setCurrentMarkerIndex] = useState(0); // To track current index
     const [renderedMarkers, setRenderedMarkers] = useState([]);
@@ -144,6 +144,23 @@ const StagingArea = ({ onCardFocus }) => {
                         />
                     </>
                 )}
+                {specialStarActive && ( /* Conditional rendering for vault buttons */
+                    <>
+                        <DrawCardButton
+                            type="specialStar"
+                            onClick={() => onCardFocus(drawCard('specialStar'))} // Placeholder
+                        />
+                    </>
+                )}
+                {specialShieldActive && ( /* Conditional rendering for vault buttons */
+                    <>
+                        <DrawCardButton
+                            type="specialShield"
+                            onClick={() => onCardFocus(drawCard('specialShield'))} // Placeholder
+                        />
+                    </>
+                )}
+
                 <div className='utility-buttons'> 
                     <button className='button-84' onClick={createMarker}>Quest Marker</button>
                     <button className='button-84'>Undo</button>

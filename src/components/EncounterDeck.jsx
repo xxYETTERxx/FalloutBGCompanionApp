@@ -12,12 +12,16 @@ export const EncounterDeckProvider = ({ children }) => {
     const [vault44Deck, setVault44Deck] = useState([]);
     const [vault84Deck, setVault84Deck] = useState([]);
     const [vault109Deck, setVault109Deck] = useState([]);
+    const [specialStarDeck, setSpecialStarDeck] = useState([]);
+    const [specialShieldDeck, setSpecialShieldDeck] = useState([]);
     const [playerCount, setPlayerCount] = useState(1);
     const [stagedCards, setStagedCards] = useState([]);
     const [vault7Active, setVault7Active] = useState(false);
     const [vault44Active, setVault44Active] = useState(false);
     const [vault84Active, setVault84Active] = useState(false);
     const [vault109Active, setVault109Active] = useState(false);
+    const [specialShieldActive, setSpecialShieldActive] = useState(false);
+    const [specialStarActive, setSpecialStarActive] = useState(false);
     const [hasBeenDrawn74, setHasBeenDrawn74] = useState(false);
 
 
@@ -56,7 +60,7 @@ export const EncounterDeckProvider = ({ children }) => {
     }, [vault44Deck]); 
 
     useEffect(() => {
-        console.log("Updated vault84Deck:", vault84Deck, vault84Deck.length); // Check if the state is updating after set
+        console.log("Updated vault84Deck:", vault84Deck); // Check if the state is updating after set
         if (vault84Deck.length > 0) setVault84Active(true);
         else setVault84Active(false);
     }, [vault84Deck]); 
@@ -66,6 +70,16 @@ export const EncounterDeckProvider = ({ children }) => {
         if (vault109Deck.length > 0) setVault109Active(true);
         else setVault109Active(false);
     }, [vault109Deck]); // Runs every time encounterDeck changes
+    useEffect(() => {
+        console.log("Updated Star Deck:", specialStarDeck); // Check if the state is updating after set
+        if (specialStarDeck.length > 0) setSpecialStarActive(true);
+        else setSpecialStarActive(false);
+    }, [specialStarDeck]); // Runs every time encounterDeck changes
+    useEffect(() => {
+        console.log("Updated Shield Deck:", specialShieldDeck); // Check if the state is updating after set
+        if (specialShieldDeck.length > 0) setSpecialShieldActive(true);
+        else setSpecialShieldActive(false);
+    }, [specialShieldDeck]); // Runs every time encounterDeck changes
 
 
     const drawCard = (deckType) => {
@@ -99,7 +113,17 @@ export const EncounterDeckProvider = ({ children }) => {
             case 'vault109':
                 const [drawnV109Card, ...remainingV109Deck] = vault109Deck;
                 setVault109Deck(remainingV109Deck);
-                return drawnV109Card;    
+                return drawnV109Card;
+            
+            case 'specialStar':
+                const [drawnStarCard, ...remainingStarDeck] = specialStarDeck;
+                setSpecialStarDeck(remainingStarDeck);
+                return drawnStarCard;
+            
+            case 'specialShield':
+                const [drawnShieldCard, ...remainingShieldDeck] = specialShieldDeck;
+                setSpecialShieldDeck(remainingShieldDeck);
+                return drawnShieldCard;    
                 
             default:
                 console.log("invalid deck type");
@@ -132,9 +156,15 @@ export const EncounterDeckProvider = ({ children }) => {
             vault44Active,
             vault84Active,
             vault7Active,
+            specialShieldActive,
+            specialStarActive,
             setStagedCards,
             hasBeenDrawn74,
-            setHasBeenDrawn74
+            setHasBeenDrawn74,
+            specialStarDeck,
+            setSpecialStarDeck,
+            specialShieldDeck,
+            setSpecialShieldDeck
              }}>
             {children}
         </EncounterDeckContext.Provider>
