@@ -23,6 +23,15 @@ export const EncounterDeckProvider = ({ children }) => {
     const [specialShieldActive, setSpecialShieldActive] = useState(false);
     const [specialStarActive, setSpecialStarActive] = useState(false);
     const [hasBeenDrawn74, setHasBeenDrawn74] = useState(false);
+    const [systemMessage, setSystemMessage] = useState('');
+    const [history, setHistory] = useState([]);
+    const players = [1, 2, 3, 4]; // Example player identifiers
+    const [playerCards, setPlayerCards] = useState({
+    1: ['001', '002','054','090','101','086','015'], // Example card sets for each player
+    2: ['003', '004'],
+    3: ['005', '006'],
+    4: ['007', '008'],
+  });
 
 
 
@@ -32,9 +41,48 @@ export const EncounterDeckProvider = ({ children }) => {
         setEncounterDeck(shuffledEDeck); // Set the shuffled deck at initializatio
         const shuffledSDeck = shuffleDeck(initialSDeck);
         setSettlementDeck(shuffledSDeck);
-        
-
     }, []); // This effect runs only once
+
+
+
+    const storeHistory = () =>{
+        console.log("storing Action");
+        const prevState = [{
+            storedEncounterDeck : encounterDeck,
+            storedStagedCards: stagedCards,
+            storedSettlementDeck: settlementDeck,
+            storedVault7Deck: vault7Deck,
+            storedVault84Deck: vault84Deck,
+            storedVault109Deck: vault109Deck,
+            //storedPlayersCards: playerCards,
+            storedSpecialStarDeck: specialStarDeck,
+            storedSpecialShieldDeck: specialShieldDeck,            
+        }];
+        
+        let newHistory = [...history, ...prevState];
+        setHistory(newHistory);
+    };
+
+    const restoreHistory  = () =>{
+        console.log("restoring History");
+        if (history.length === 0){
+            console.log("No history stored");
+            return;
+        }
+            const prevState = history[history.length - 1]; // Get the last state to restore
+            const newHistory = history.slice(0, history.length - 1);
+
+            setEncounterDeck(prevState.storedEncounterDeck);
+            setStagedCards(prevState.storedStagedCards);
+            setSettlementDeck(prevState.storedSettlementDeck);
+            setVault7Deck(prevState.storedVault7Deck);
+            setVault84Deck(prevState.storedVault84Deck);
+            setVault109Deck(prevState.storedVault109Deck);
+            setSpecialStarDeck(prevState.storedSpecialStarDeck);
+            setSpecialShieldDeck(prevState.storedSpecialShieldDeck);
+            //setPlayerCards(prevState.storedPlayersCards);
+            setHistory(newHistory);
+    }
 
     useEffect(() => {
         console.log("Updated encounterDeck:", encounterDeck); // Check if the state is updating after set
@@ -165,7 +213,9 @@ export const EncounterDeckProvider = ({ children }) => {
             specialStarDeck,
             setSpecialStarDeck,
             specialShieldDeck,
-            setSpecialShieldDeck
+            setSpecialShieldDeck,
+            storeHistory,
+            restoreHistory
              }}>
             {children}
         </EncounterDeckContext.Provider>
