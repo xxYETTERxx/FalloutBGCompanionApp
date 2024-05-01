@@ -6,13 +6,15 @@ import {  useEncounterDeck } from './EncounterDeck';
 import DrawCardButton from './DrawCardButton'; // Import draw card button
 import QuestMarkers from './QuestMarkers';
 import PlayerInventory from './PlayerInventory';
+import { encounterDeck } from '../data/Decks';
 
 const StagingArea = ({ onCardFocus }) => {
-    const { stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active, specialStarActive, specialShieldActive, setStagedCards   } = useEncounterDeck();
+    const { stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active, specialStarActive, specialShieldActive, setStagedCards, vault7Deck, vault84Deck, vault109Deck, specialStarDeck, specialShieldDeck, settlementDeck, encounterDeck, setSettlementDeck, setEncounterDeck, setVault84Deck, setVault109Deck, setVault7Deck, setSpecialStarDeck, setSpecialShieldDeck } = useEncounterDeck();
     const [ questMarkers,  ] = useState(['Y','LB','B','P','R','O']);
     const [currentMarkerIndex, setCurrentMarkerIndex] = useState(0); // To track current index
     const [renderedMarkers, setRenderedMarkers] = useState([]);
     const [playerInventoryActive, setPlayerInventoryActive] = useState(false);
+    const [history, setHistory] = useState([]);
     
     const players = [1, 2, 3, 4]; // Example player identifiers
     const [playerCards, setPlayerCards] = useState({
@@ -25,6 +27,44 @@ const StagingArea = ({ onCardFocus }) => {
     const togglePlayerInventory = () => {
         setPlayerInventoryActive((prevState) => !prevState);
     };
+
+    const storeHistory = () =>{
+        const prevState = [{
+            storedEncounterDeck : encounterDeck,
+            storedStagedCards: stagedCards,
+            storedSettlementDeck: settlementDeck,
+            storedVault7Deck: vault7Deck,
+            storedVault84Deck: vault84Deck,
+            storedVault109Deck: vault109Deck,
+            storedPlayersCards: playerCards,
+            storedSpecialStarDeck: specialStarDeck,
+            storedSpecialShieldDeck: specialShieldDeck,            
+        }];
+        
+        let newHistory = [...history, ...prevState];
+        setHistory(newHistory);
+    };
+
+    const restoreHistory  = () =>{
+        if (history.length === 0){
+            console.log("No history stored");
+            return;
+        }
+
+            const prevState = history[history.length - 1]; // Get the last state to restore
+            const newHistory = history.slice(0, history.length - 1);
+
+            setEncounterDeck(prevState.storedEncounterDeck);
+            setStagedCards(prevState.storedStagedCards);
+            setSettlementDeck(prevState.storedSettlementDeck);
+            setVault7Deck(prevState.storedVault7Deck);
+            setVault84Deck(prevState.storedVault84Deck);
+            setVault109Deck(prevState.storedVault109Deck);
+            setSpecialStarDeck(prevState.storedSpecialStarDeck);
+            setSpecialShieldDeck(prevState.storedSpecialShieldDeck);
+            setPlayerCards(prevState.storedPlayersCards);
+            setHistory(newHistory);
+    }
     
     //testing
     const generateNumberArray = (start, end) => {
@@ -88,7 +128,7 @@ const StagingArea = ({ onCardFocus }) => {
         <div className="staging-area"> {/* Ensure context access */}
             {stagedCards.map((card) => (
                 <div style={{padding:'10px'}} key={card} onContextMenu={() => onCardFocus(card)}>
-                    <Card cardNumber={card} onCardFocus={onCardFocus}/> {/* Render the card */}
+                    <Card cardNumber={card} onCardFocus={onCardFocus} storeHistory={storeHistory}/> {/* Render the card */}
                 </div>
             ))}
             {/* Conditionally render PlayerInventory as an overlay */}
@@ -163,7 +203,7 @@ const StagingArea = ({ onCardFocus }) => {
 
                 <div className='utility-buttons'> 
                     <button className='button-84' onClick={createMarker}>Quest Marker</button>
-                    <button className='button-84'>Undo</button>
+                    <button className='button-84'onClick={restoreHistory}>Undo</button>
                     <button className='button-84' onClick={testingF}>Fwd</button>
                     <button className='button-84' onClick={testingR}>Bkwd</button>
                     <button className='button-84' onClick={setInputCard}>Stage Card</button>

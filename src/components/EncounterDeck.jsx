@@ -25,6 +25,7 @@ export const EncounterDeckProvider = ({ children }) => {
     const [hasBeenDrawn74, setHasBeenDrawn74] = useState(false);
 
 
+
     useEffect(() => {
        
         const shuffledEDeck = shuffleDeck(initialEDeck);   

@@ -3,13 +3,12 @@ import cardData from '../data/cardData';
 import { discardCard, addCard, stageCard, shuffleDeck } from '../functions/cardFunctions'; // Remove unnecessary imports
 import { useEncounterDeck } from './EncounterDeck';
 import '../styles/Card.css';
-import { setPlayerCards } from './StagingArea';
 import { settlementDeck } from '../data/Decks';
 import { act } from 'react-dom/test-utils';
 
 const Card = ({ cardNumber, onCardFocus }) => {
     const [isFocused, setIsFocused] = useState(false);
-    const { encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, vault7Deck, setVault7Deck, vault44Deck, setVault44Deck, vault84Deck, setVault84Deck, vault109Deck, setVault109Deck, hasBeenDrawn74, setHasBeenDrawn74, specialStarDeck, setSpecialStarDeck, specialShieldDeck, setSpecialShieldDeck } = useEncounterDeck(); // Ensure proper destructuring
+    const { drawCard, encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, vault7Deck, setVault7Deck, vault44Deck, setVault44Deck, vault84Deck, setVault84Deck, vault109Deck, setVault109Deck, hasBeenDrawn74, setHasBeenDrawn74, specialStarDeck, setSpecialStarDeck, specialShieldDeck, setSpecialShieldDeck } = useEncounterDeck(); // Ensure proper destructuring
     const { playerCount } = useEncounterDeck();
     const { stagedCards, setStagedCards } = useEncounterDeck();
 
@@ -61,6 +60,7 @@ const Card = ({ cardNumber, onCardFocus }) => {
 
 
     const handleHoverClick = (index) => {
+        //storeHistory();
         const action = actions[index]; // Get the action based on hover area index
         if (!action) return; // If no action, do nothing
         
@@ -141,8 +141,8 @@ const Card = ({ cardNumber, onCardFocus }) => {
                             case 'vault109Deck':
                                 setVault109Deck(currentDeck);
                                 break;
-                            case 'vault7Deck':
-                                setVault7Deck(currentDeck);
+                            case 'vault44Deck':
+                                setVault44Deck(currentDeck);
                                 break;
                             case 'specialStarDeck':
                                 setSpecialStarDeck(currentDeck);
@@ -278,6 +278,29 @@ const Card = ({ cardNumber, onCardFocus }) => {
                         break;
                     case 'specialStarAction':
                         setSpecialShieldDeck([]);
+                        break;
+                    case 'vault4Special':
+                        setVault7Deck([]);
+                        break;
+                    case 'deck224Special':
+                        onCardFocus(drawCard('encounter'));
+                        break;
+                    
+                    case 'multiAdd':
+                        let newDeck;
+                        switch(action.card){
+                            case '240':
+                                newDeck = shuffleDeck(['240(1)','240(2)','240(3)']);
+                                onCardFocus(newDeck[0]);
+                                console.log(newDeck[0]);
+                                break;
+
+                            case '244':
+                                newDeck = shuffleDeck(['244(1)','244(2)','244(3)']);
+                                onCardFocus(newDeck[0]);
+                                console.log(newDeck[0]);
+                                break;
+                            }
                         break;
 
                     default:
