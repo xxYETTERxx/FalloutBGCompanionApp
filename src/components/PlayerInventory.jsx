@@ -2,10 +2,11 @@
 import React, { useState } from 'react';
 import Card from './Card'; // Component for individual cards
 import '../styles/PlayerInventory.css'; // Ensure proper overlay styles
+import { useEncounterDeck } from './EncounterDeck';
 
 const PlayerInventory = ({ players, playerCards, setPlayerCards, onClose }) => {
   const [selectedPlayer, setSelectedPlayer] = useState(null); // State for the selected player
-
+  const {storeHistory} = useEncounterDeck();
   const handlePlayerSelect = (player) => {
     setSelectedPlayer(player);
   };
@@ -13,6 +14,7 @@ const PlayerInventory = ({ players, playerCards, setPlayerCards, onClose }) => {
   const handleCardClick = ( player, cardNumber) => {
 
      setPlayerCards((prevPlayerCards) => {
+        storeHistory();
         const updatedCards = { ...prevPlayerCards };
         updatedCards[player] = updatedCards[player].filter((card) => card !== cardNumber);
         return updatedCards; // Return the updated cards without the one that was right-clicked

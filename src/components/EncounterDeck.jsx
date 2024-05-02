@@ -54,7 +54,7 @@ export const EncounterDeckProvider = ({ children }) => {
             storedVault7Deck: vault7Deck,
             storedVault84Deck: vault84Deck,
             storedVault109Deck: vault109Deck,
-            //storedPlayersCards: playerCards,
+            storedPlayersCards: playerCards,
             storedSpecialStarDeck: specialStarDeck,
             storedSpecialShieldDeck: specialShieldDeck,            
         }];
@@ -80,7 +80,7 @@ export const EncounterDeckProvider = ({ children }) => {
             setVault109Deck(prevState.storedVault109Deck);
             setSpecialStarDeck(prevState.storedSpecialStarDeck);
             setSpecialShieldDeck(prevState.storedSpecialShieldDeck);
-            //setPlayerCards(prevState.storedPlayersCards);
+            setPlayerCards(prevState.storedPlayersCards);
             setHistory(newHistory);
     }
 
@@ -215,7 +215,10 @@ export const EncounterDeckProvider = ({ children }) => {
             specialShieldDeck,
             setSpecialShieldDeck,
             storeHistory,
-            restoreHistory
+            restoreHistory,
+            playerCards,
+            players,
+            setPlayerCards
              }}>
             {children}
         </EncounterDeckContext.Provider>
