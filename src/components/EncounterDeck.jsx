@@ -26,12 +26,12 @@ export const EncounterDeckProvider = ({ children }) => {
     const [hasBeenDrawn74, setHasBeenDrawn74] = useState(false);
     const [systemMessage, setSystemMessage] = useState('');
     const [history, setHistory] = useState([]);
-    const players = [1, 2, 3, 4]; // Example player identifiers
+    const [players, setPlayers] = useState(['Nathan','Andy','Pam','Nick']); // Example player identifiers
     const [playerCards, setPlayerCards] = useState({
-    1: [], // Example card sets for each player
-    2: [],
-    3: [],
-    4: [],
+    'Nathan': [], // Example card sets for each player
+    'Andy': [],
+    'Pam': [],
+    'Nick': [],
   });
     const [showOverlay, setShowOverlay] = useState(false);
     const [overlayContent, setOverlayContent] = useState(null);
@@ -248,7 +248,9 @@ export const EncounterDeckProvider = ({ children }) => {
             showOverlay,
             overlayContent,
             setShowOverlay,
-            promptPlayerForCard
+            promptPlayerForCard,
+            setPlayers,
+            players
              }}>
             {children}
         </EncounterDeckContext.Provider>

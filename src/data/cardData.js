@@ -629,8 +629,7 @@ const cardData = {
     },
     '030': {
       hoverAreas: [
-            { top: '44%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '68%', width: '100%', height: '15%' }, // Area for the second option
+            { top: '99%', width: '100%', height: '1%' } // Area for the second option
           ],
           imagePath : require(`../images/library_deck/030.png`),
           actions: [
@@ -1923,11 +1922,13 @@ const cardData = {
             imagePath : require(`../images/library_deck/096.png`),
             actions: [
               {
-                  type: ['trash']
-              },
-              {
-                type: ['trash']
-              }
+                type: ['stage'],
+                cards:['097']
+            },
+            {
+                type: ['stage'],
+                cards: ['098']
+            }
           ],
       },
       '097': {
@@ -2740,7 +2741,7 @@ const cardData = {
             imagePath : require(`../images/library_deck/141.png`),
             actions: [
                 {
-                    type: ['stage'],
+                    type: ['keep','stage'],
                     cards: ['142']
                 },
                 {
@@ -2757,7 +2758,7 @@ const cardData = {
             imagePath : require(`../images/library_deck/142.png`),
             actions: [
                 {
-                    type: ['stage'],
+                    type: ['keep','stage'],
                     cards: ['143']
                 },
                 {
@@ -2774,15 +2775,15 @@ const cardData = {
             imagePath : require(`../images/library_deck/143.png`),
             actions: [
                 {
-                    type: ['stage','add'],
+                    type: ['keep','stage','add'],
                     addDeck:['encounterDeck'],
-                    addCardID:['144'],
+                    addCardIDS:['144'],
                     cards: ['146']
                 },
                 {
                     type: ['stage','add'],
                     addDeck:['encounterDeck'],
-                    addCardID:['145'],
+                    addCardIDS:['145'],
                     cards: ['146']
                 },
           ],
@@ -2823,36 +2824,31 @@ const cardData = {
       },
       '146': {
         hoverAreas: [
-              { top: '48%', width: '100%', height: '18%' }, // Area for the first option
-              { top: '81%', width: '100%', height: '18%' } // Area for the second option
+              { top: '53%', width: '100%', height: '13%' }, // Area for the first option
+              { top: '85%', width: '100%', height: '15%' } // Area for the second option
             ],
             imagePath : require(`../images/library_deck/146.png`),
             actions: [
                 {
-                    type: ['stage'],
-                    cards: ['142']
+                    type: ['keep','stage'],
+                    cards: ['147']
                 },
                 {
                     type: ['stage'],
-                    cards: ['142']
+                    cards: ['147']
                 }
           ],
       },
       '147': {
         hoverAreas: [
-              { top: '48%', width: '100%', height: '18%' }, // Area for the first option
-              { top: '81%', width: '100%', height: '18%' } // Area for the second option
+              { top: '52%', width: '100%', height: '18%' } // Area for the first option
             ],
             imagePath : require(`../images/library_deck/147.png`),
             actions: [
                 {
-                    type: ['stage'],
-                    cards: ['142']
-                },
-                {
-                    type: ['stage'],
-                    cards: ['142']
+                    type: ['trash']
                 }
+
           ],
       },
       '148': {
@@ -2873,9 +2869,14 @@ const cardData = {
       },
       '149': {
         hoverAreas: [
-              { top: '47%', width: '100%', height: '20%' }, // Area for the first option
+              { top: '99%', width: '100%', height: '1%' }, // Area for the first option
             ],
             imagePath : require(`../images/library_deck/149.png`),
+            actions: [
+              {
+                  type: ['trash'],
+              },
+            ],
       },
       '150': {
         hoverAreas: [

@@ -78,8 +78,7 @@ const StagingArea = ({ onCardFocus }) => {
         const updatedMarkers = renderedMarkers.filter((_, i) => i !== index); // Remove by index
         setRenderedMarkers(updatedMarkers); // Update the state
     };
-
-    console.log("showoverlay: ", showOverlay);
+    
     return (
        <div>
         {showOverlay && (
