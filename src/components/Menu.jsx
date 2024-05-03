@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useEncounterDeck } from './EncounterDeck';
-import { discardCard, addCard, shuffleDeck } from '../functions/cardFunctions';
+import { addCard, shuffleDeck } from '../functions/cardFunctions';
 
 const Menu = ({ onScenarioSelect, onScenarioSet }) => {
-    const { setPlayerCount, playerCount, setStagedCards, encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, setPlayers, players } = useEncounterDeck();
+    const { setPlayerCount, playerCount, setStagedCards, encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, setPlayers } = useEncounterDeck();
     const [playerInputs, setPlayerInputs] = useState([]);
 
      const scenarios = {
@@ -16,7 +16,6 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
         ThePittExpanded:['056'],
         TheCommonWealthExpanded:['014'],
         FarHarborExpanded:['029','030'],
-        RiseOfTheMaster:['166'],
         NewCalifornia:['184']
     };
 
@@ -110,7 +109,9 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
                 newDeck = shuffleDeck(['244(1)','244(2)','244(3)']);
                 currentDeck = addCard(currentDeck, newDeck[0], playerCount); // Add specific card to the deck
                 setSettlementDeck(currentDeck);
-                break;        
+                break;
+            default:
+                console.log("scenario not found");        
         }
         
         setStagedCards(initialCards);
@@ -118,7 +119,8 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
         }
 
         return (
-            <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+                <p className='font-serif text-xl'>You may require cards: 104, 204-213 and 238</p>
     <div className="w-full max-w-6xl p-8 bg-white shadow-lg rounded-lg text-center">
         <h1 className="text-2xl font-bold mb-4">Choose Scenario</h1>
         {/* Adjust the grid-cols to change number of columns */}
