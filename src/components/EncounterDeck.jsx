@@ -26,13 +26,8 @@ export const EncounterDeckProvider = ({ children }) => {
     const [hasBeenDrawn74, setHasBeenDrawn74] = useState(false);
     const [systemMessage, setSystemMessage] = useState('');
     const [history, setHistory] = useState([]);
-    const [players, setPlayers] = useState(['Nathan','Andy','Pam','Nick']); // Example player identifiers
-    const [playerCards, setPlayerCards] = useState({
-    'Nathan': [], // Example card sets for each player
-    'Andy': [],
-    'Pam': [],
-    'Nick': [],
-  });
+    const [players, setPlayers] = useState([]); // Example player identifiers
+    const [playerCards, setPlayerCards] = useState([[],[],[],[]]);
     const [showOverlay, setShowOverlay] = useState(false);
     const [overlayContent, setOverlayContent] = useState(null);
 
@@ -54,7 +49,7 @@ export const EncounterDeckProvider = ({ children }) => {
             <p>Select a player to keep the card:</p>
             {players.map((player, index) => (
               <button key={index} onClick={() => handleKeepCard(player, cardNumber)}>
-                Player {index + 1}
+                {players[index]}
               </button>
             ))}
             <div> <button className="cancel-button" onClick={() => setShowOverlay(false)}>Cancel</button></div>
@@ -64,8 +59,14 @@ export const EncounterDeckProvider = ({ children }) => {
       };
       
       const handleKeepCard = (player, cardNumber) => {
+        console.log("player:",player);
         setPlayerCards(prev => {
-          const updatedCards = {...prev};
+          const updatedCards = [...prev];
+          console.log("updatedCard:",updatedCards)
+          if (!updatedCards[player]) {
+            // Initialize the array if it does not exist
+            updatedCards[player] = [];
+        }
           updatedCards[player] = [...updatedCards[player], cardNumber];
           return updatedCards;
         });
@@ -250,7 +251,6 @@ export const EncounterDeckProvider = ({ children }) => {
             setShowOverlay,
             promptPlayerForCard,
             setPlayers,
-            players
              }}>
             {children}
         </EncounterDeckContext.Provider>

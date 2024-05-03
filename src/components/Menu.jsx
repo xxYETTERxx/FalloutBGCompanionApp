@@ -55,6 +55,7 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
 
     const handleScenarioClick = (scenarioKey) => {
         const initialCards = scenarios[scenarioKey];
+        setPlayers(playerInputs);
         let currentDeck;
         let currentDeck2;
         let newDeck;

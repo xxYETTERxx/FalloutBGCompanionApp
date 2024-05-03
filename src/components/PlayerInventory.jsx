@@ -11,7 +11,7 @@ const PlayerInventory = ({ players, playerCards, setPlayerCards, onClose, onCard
     setSelectedPlayer(player);
   };
 
-  const handleCardClick = ( player, cardNumber) => {
+  /* const handleCardClick = ( player, cardNumber) => {
 
      setPlayerCards((prevPlayerCards) => {
         storeHistory();
@@ -19,7 +19,7 @@ const PlayerInventory = ({ players, playerCards, setPlayerCards, onClose, onCard
         updatedCards[player] = updatedCards[player].filter((card) => card !== cardNumber);
         return updatedCards; // Return the updated cards without the one that was right-clicked
       });
-    };
+    }; */
 
 
 
@@ -32,7 +32,7 @@ const PlayerInventory = ({ players, playerCards, setPlayerCards, onClose, onCard
       <div className="player-buttons">
         {players.map((player, index) => (
           <button className="button-84" key={index} onClick={() => handlePlayerSelect(player)}>
-            Player {index + 1}
+            {players[index]}
           </button>
         ))}
       </div>
@@ -43,7 +43,7 @@ const PlayerInventory = ({ players, playerCards, setPlayerCards, onClose, onCard
           {playerCards[selectedPlayer]?.map((cardNumber) => (
             <div 
             key={cardNumber} 
-            onClick={(event) => handleCardClick(selectedPlayer, cardNumber)} // Attach right-click handler
+            //onClick={(event) => handleCardClick(selectedPlayer, cardNumber)} // Attach right-click handler
           >
             <Card cardNumber={cardNumber} onCardFocus={onCardFocus} isDisabled={true}/>
             </div>

@@ -21,6 +21,7 @@ const StagingArea = ({ onCardFocus }) => {
         setPlayerInventoryActive((prevState) => !prevState);
     };
     
+    console.log(players)
 
 
     //testing
@@ -78,7 +79,7 @@ const StagingArea = ({ onCardFocus }) => {
         const updatedMarkers = renderedMarkers.filter((_, i) => i !== index); // Remove by index
         setRenderedMarkers(updatedMarkers); // Update the state
     };
-    
+
     return (
        <div>
         {showOverlay && (
