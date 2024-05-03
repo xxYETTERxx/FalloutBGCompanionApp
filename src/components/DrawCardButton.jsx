@@ -10,7 +10,8 @@ const DrawCardButton = ({ type, onClick }) => {
         vault84: require('../images/misc_assets/vault_84.png'),
         vault109: require('../images/misc_assets/vault_109.png'),
         specialStar: require('../images/misc_assets/specialStar.png'),
-        specialShield: require('../images/misc_assets/specialShield.png')
+        specialShield: require('../images/misc_assets/specialShield.png'),
+        //activation: require('')
     };
 
     return (

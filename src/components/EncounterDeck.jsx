@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { encounterDeck as initialEDeck } from '../data/Decks';
 import { settlementDeck as initialSDeck } from '../data/Decks';
 import { shuffleDeck } from '../functions/cardFunctions'; // Importing shuffleDeck
+import '../styles/StagingArea.css'; // Importing CSS
 
 const EncounterDeckContext = createContext();
 
@@ -27,13 +28,15 @@ export const EncounterDeckProvider = ({ children }) => {
     const [history, setHistory] = useState([]);
     const players = [1, 2, 3, 4]; // Example player identifiers
     const [playerCards, setPlayerCards] = useState({
-    1: ['001', '002','054','090','101','086','015'], // Example card sets for each player
-    2: ['003', '004'],
-    3: ['005', '006'],
-    4: ['007', '008'],
+    1: [], // Example card sets for each player
+    2: [],
+    3: [],
+    4: [],
   });
+    const [showOverlay, setShowOverlay] = useState(false);
+    const [overlayContent, setOverlayContent] = useState(null);
 
-
+    
 
     useEffect(() => {
        
@@ -43,10 +46,33 @@ export const EncounterDeckProvider = ({ children }) => {
         setSettlementDeck(shuffledSDeck);
     }, []); // This effect runs only once
 
-
+    const promptPlayerForCard = (cardNumber) => {
+        // Assume we have a modal or overlay component that can be rendered
+        // This could be a simple prompt or a more complex UI element
+        setOverlayContent(
+          <div className="overlay-content">
+            <p>Select a player to keep the card:</p>
+            {players.map((player, index) => (
+              <button key={index} onClick={() => handleKeepCard(player, cardNumber)}>
+                Player {index + 1}
+              </button>
+            ))}
+            <div> <button className="cancel-button" onClick={() => setShowOverlay(false)}>Cancel</button></div>
+          </div>
+        );
+        setShowOverlay(true);  // Assuming you have state to show/hide an overlay
+      };
+      
+      const handleKeepCard = (player, cardNumber) => {
+        setPlayerCards(prev => {
+          const updatedCards = {...prev};
+          updatedCards[player] = [...updatedCards[player], cardNumber];
+          return updatedCards;
+        });
+        setShowOverlay(false); // Hide the selection overlay after assigning the card
+      };
 
     const storeHistory = () =>{
-        console.log("storing Action");
         const prevState = [{
             storedEncounterDeck : encounterDeck,
             storedStagedCards: stagedCards,
@@ -64,7 +90,6 @@ export const EncounterDeckProvider = ({ children }) => {
     };
 
     const restoreHistory  = () =>{
-        console.log("restoring History");
         if (history.length === 0){
             console.log("No history stored");
             return;
@@ -218,7 +243,12 @@ export const EncounterDeckProvider = ({ children }) => {
             restoreHistory,
             playerCards,
             players,
-            setPlayerCards
+            setPlayerCards,
+            setOverlayContent,
+            showOverlay,
+            overlayContent,
+            setShowOverlay,
+            promptPlayerForCard
              }}>
             {children}
         </EncounterDeckContext.Provider>

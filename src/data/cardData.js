@@ -553,7 +553,7 @@ const cardData = {
           imagePath : require(`../images/library_deck/026.png`),
           actions: [
             {
-                type: ['trash'],
+                type: ['keep','trash'],
                 deck: 'settlementDeck'
               
             },
@@ -578,7 +578,7 @@ const cardData = {
           imagePath : require(`../images/library_deck/027.png`),
           actions: [
             {
-                type: ['trash'],
+                type: ['keep','trash'],
                 deck: 'encounterDeck'
               
             },
@@ -1461,7 +1461,7 @@ const cardData = {
                     deckType: 'vault84Deck'
                 },
                 {
-                    type: ['trash','checkLast'],
+                    type: ['keep','trash','checkLast'],
                     deckType: 'vault84Deck'
                 },
                 {
@@ -1484,7 +1484,7 @@ const cardData = {
                     deckType: 'vault84Deck'
                 },
                 {
-                    type: ['trash','checkLast'],
+                    type: ['keep','trash','checkLast'],
                     deckType: 'vault84Deck'
                 },
                 {
@@ -1506,7 +1506,7 @@ const cardData = {
                   deckType: 'vault84Deck'
               },
               {
-                  type: ['checkLast'],
+                  type: ['keep','trash','checkLast'],
                   deckType: 'vault84Deck'
               },
               {
@@ -1528,7 +1528,7 @@ const cardData = {
                     deckType: 'vault84Deck'
                 },
                 {
-                    type: ['checkLast'],
+                    type: ['keep','checkLast'],
                     deckType: 'vault84Deck'
                 },
                 {
@@ -1546,11 +1546,11 @@ const cardData = {
             imagePath : require(`../images/library_deck/076.png`),
             actions: [
                 {
-                    type: ['checkLast'],
+                    type: ['checkLast','trash'],
                     deckType: 'vault84Deck'
                 },
                 {
-                    type: ['checkLast'],
+                    type: ['keep','checkLast'],
                     deckType: 'vault84Deck'
                 },
           ],
@@ -1569,8 +1569,8 @@ const cardData = {
                     cards: ['085']
                 },
                 {
-                    type: ['checkLast'],
-                    deckType: 'vault84Deck'
+                  type: ['keep','checkLast'],
+                  deckType: 'vault84Deck'
                 },
                 {
                     type: ['checkLast'],
@@ -1592,7 +1592,7 @@ const cardData = {
                     deckType: 'vault84Deck'
                 },
                 {
-                    type: ['checkLast'],
+                    type: ['keep','checkLast'],
                     deckType: 'vault84Deck'
                 },
                 {
@@ -1615,7 +1615,7 @@ const cardData = {
                     cards: ['082']
                 },
                 {
-                    type: ['trash','checkLast'],
+                    type: ['keep','checkLast'],
                     deckType: 'vault84Deck'
                 },
                 {
@@ -2603,8 +2603,8 @@ const cardData = {
       },
     '134': {
         hoverAreas: [
-              { top: '52%', width: '100%', height: '11%' }, // Area for the first option
-              { top: '82%', width: '100%', height: '15%' }, // Area for the second option
+              { top: '53%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '80%', width: '100%', height: '15%' }, // Area for the second option
             ],
             imagePath : require(`../images/library_deck/134.png`),
             actions: [

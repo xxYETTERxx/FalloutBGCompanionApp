@@ -4,7 +4,7 @@ import Card from './Card'; // Component for individual cards
 import '../styles/PlayerInventory.css'; // Ensure proper overlay styles
 import { useEncounterDeck } from './EncounterDeck';
 
-const PlayerInventory = ({ players, playerCards, setPlayerCards, onClose }) => {
+const PlayerInventory = ({ players, playerCards, setPlayerCards, onClose, onCardFocus }) => {
   const [selectedPlayer, setSelectedPlayer] = useState(null); // State for the selected player
   const {storeHistory} = useEncounterDeck();
   const handlePlayerSelect = (player) => {
@@ -31,7 +31,7 @@ const PlayerInventory = ({ players, playerCards, setPlayerCards, onClose }) => {
       {/* Player selection buttons */}
       <div className="player-buttons">
         {players.map((player, index) => (
-          <button key={index} onClick={() => handlePlayerSelect(player)}>
+          <button className="button-84" key={index} onClick={() => handlePlayerSelect(player)}>
             Player {index + 1}
           </button>
         ))}
@@ -45,7 +45,7 @@ const PlayerInventory = ({ players, playerCards, setPlayerCards, onClose }) => {
             key={cardNumber} 
             onClick={(event) => handleCardClick(selectedPlayer, cardNumber)} // Attach right-click handler
           >
-            <Card cardNumber={cardNumber} />
+            <Card cardNumber={cardNumber} onCardFocus={onCardFocus} isDisabled={true}/>
             </div>
           ))}
         </div>

@@ -30,7 +30,7 @@ const App = () => {
                         top: '50%',
                         left: '50%',
                         transform: 'translate(-50%, -50%)', // Center the card
-                        zIndex: 9999, // Ensure it overlaps everything
+                        zIndex: 999, // Ensure it overlaps everything
                         backgroundColor: 'white', // Optional: Background color
                         border: '1px solid black', // Optional: Border for emphasis
                         overflow: 'hidden'

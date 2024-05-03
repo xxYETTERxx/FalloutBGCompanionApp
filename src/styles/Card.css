@@ -1,6 +1,7 @@
 .card-wrapper {
     position: relative; /* Relative positioning for overlay effects */
     
+    
   }
   
   .option-overlay {
@@ -19,4 +20,17 @@
     /* Ensure images scale properly */
     width: 100%; /* Set to full width */
     height: auto; /* Maintain aspect ratio */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; 
 }

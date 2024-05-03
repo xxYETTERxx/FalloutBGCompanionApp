@@ -6,24 +6,23 @@ import {  useEncounterDeck } from './EncounterDeck';
 import DrawCardButton from './DrawCardButton'; // Import draw card button
 import QuestMarkers from './QuestMarkers';
 import PlayerInventory from './PlayerInventory';
-import { encounterDeck } from '../data/Decks';
 
 const StagingArea = ({ onCardFocus }) => {
     
     
-    const { players, playerCards, setPlayerCards, stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active, specialStarActive, specialShieldActive, setStagedCards, storeHistory, restoreHistory} = useEncounterDeck();
+    const { setShowOverlay, showOverlay, overlayContent, players, playerCards, setPlayerCards, stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active, specialStarActive, specialShieldActive, setStagedCards, storeHistory, restoreHistory} = useEncounterDeck();
     const [ questMarkers,  ] = useState(['Y','LB','B','P','R','O']);
     const [currentMarkerIndex, setCurrentMarkerIndex] = useState(0); // To track current index
     const [renderedMarkers, setRenderedMarkers] = useState([]);
     const [playerInventoryActive, setPlayerInventoryActive] = useState(false);
-    const [history, setHistory] = useState([]);
     
     
-
     const togglePlayerInventory = () => {
         setPlayerInventoryActive((prevState) => !prevState);
     };
     
+
+
     //testing
     const generateNumberArray = (start, end) => {
         const arr = [];
@@ -80,9 +79,15 @@ const StagingArea = ({ onCardFocus }) => {
         setRenderedMarkers(updatedMarkers); // Update the state
     };
 
-
+    console.log("showoverlay: ", showOverlay);
     return (
        <div>
+        {showOverlay && (
+            <div className="overlay">
+                {overlayContent}
+                <button onClick={() => setShowOverlay(false)}>Cancel</button>
+            </div>
+            )}
         <div className="staging-area"> {/* Ensure context access */}
             {stagedCards.map((card) => (
                 <div style={{padding:'10px'}} key={card} onContextMenu={() => onCardFocus(card)}>
@@ -96,6 +101,7 @@ const StagingArea = ({ onCardFocus }) => {
                 playerCards={playerCards}
                 setPlayerCards={setPlayerCards} // Pass set function to update the state
                 onClose={togglePlayerInventory}
+                onCardFocus={onCardFocus}
               />
             )}
                     
@@ -129,7 +135,7 @@ const StagingArea = ({ onCardFocus }) => {
                 {vault109Active && ( /* Conditional rendering for vault buttons */
                     <>
                         <DrawCardButton
-                            type="vault09"
+                            type="vault109"
                             onClick={() => {onCardFocus(drawCard('vault109'));storeHistory();}} // Placeholder
                         />
                     </>
@@ -163,7 +169,8 @@ const StagingArea = ({ onCardFocus }) => {
                     <button className='button-84' onClick={createMarker}>Quest Marker</button>
                     <button className='button-84'onClick={restoreHistory}>Undo</button>
                     <button className='button-84' onClick={testingF}>Fwd</button>
-                    <button className='button-84' onClick={testingR}>Bkwd</button>
+                    {/* <button className='button-84' onClick={testingR}>Bkwd</button> */}
+                    <button className='button-84' onClick={togglePlayerInventory}>Player Inventory</button>
                     <button className='button-84' onClick={setInputCard}>Stage Card</button>
                     <input
                         type="text" // Specifies a text input field
@@ -172,10 +179,7 @@ const StagingArea = ({ onCardFocus }) => {
                         onKeyDown={handleKeyDown}
                     />
                 </div>
-                <div>
-                    <button className='button-84' onClick={togglePlayerInventory}>Player Inventory</button>
-                </div>
-                   
+                
         </div>
         {renderedMarkers.map((markerId, index) => (
                 <QuestMarkers className='quest-marker'

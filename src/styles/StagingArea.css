@@ -18,6 +18,8 @@
     justify-content: right;
 }
 
+
+
 .button-area{
     display:flex;
     justify-content: center space-around;
@@ -102,4 +104,56 @@
   .button-84 {
     height: 48px;
   }
+}
+
+/* Overlay styles to darken the background and center content */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050; /* High z-index to ensure it appears above other elements */
+}
+
+/* Styles for the overlay content box */
+.overlay-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between buttons */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Styles for individual buttons */
+.overlay-content button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for buttons */
+.overlay-content button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Cancel button with a more distinct style */
+.cancel-button {
+  background-color: #dc3545; /* Bootstrap danger red */
+}
+
+.cancel-button:hover {
+  background-color: #c82333; /* Darker red on hover */
 }
