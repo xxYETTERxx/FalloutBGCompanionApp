@@ -47,5 +47,17 @@ Create a Pull Request to merge your changes into the main repository.
 License
 This project is licensed under the MIT License.
 
+## Planned Features
+Digital Activation Deck
+Optional Activation Deck rebalance based on player count
+Responsive design (mobile, ipad)
+saved sessions
+shared sessions (mobile, laptop)
+
+## Notes
+There are a few cards that can not be implemented digitally. Set aside 104, 204-213 in case they come up during game play
+
+
+
 ## Acknowledgments
 Special thanks to the developers of Fallout: The Board Game and the open-source community for their invaluable resources.
