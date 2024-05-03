@@ -13,6 +13,9 @@ Welcome to the companion app for **Fallout: The Board Game**. This project aims 
 
 ## Features
 - **Deck Management**: Digitally replace the library and encounter/settlement/vault decks for quicker playtime.
+- **Quest Markers**: Create digital questmarkers that match the physical markers for the board
+- **Player Inventory**: Keep track of the 'Take' cards throughout a campaign
+-  **Undo**: Every action is tracked from the start of the game till the end
 
 ## Getting Started
 To get started with the project, clone the repository to your local machine:
@@ -56,6 +59,7 @@ shared sessions (mobile, laptop)
 
 ## Notes
 There are a few cards that can not be implemented digitally. Set aside 104, 204-213 in case they come up during game play
+There still is a lot of testing required
 
 
 
