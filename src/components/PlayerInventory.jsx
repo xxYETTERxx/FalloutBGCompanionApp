@@ -11,6 +11,7 @@ const PlayerInventory = ({ players, playerCards, setPlayerCards, onClose, onCard
     setSelectedPlayer(player);
   };
 
+  //function to delete card from inventory
   /* const handleCardClick = ( player, cardNumber) => {
 
      setPlayerCards((prevPlayerCards) => {

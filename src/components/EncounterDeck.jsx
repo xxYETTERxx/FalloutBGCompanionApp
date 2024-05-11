@@ -30,7 +30,7 @@ export const EncounterDeckProvider = ({ children }) => {
     const [playerCards, setPlayerCards] = useState([[],[],[],[]]);
     const [showOverlay, setShowOverlay] = useState(false);
     const [overlayContent, setOverlayContent] = useState(null);
-
+    const [ debug, setDebug ] = useState(true);
     
 
     useEffect(() => {
@@ -59,10 +59,8 @@ export const EncounterDeckProvider = ({ children }) => {
       };
       
       const handleKeepCard = (player, cardNumber) => {
-        console.log("player:",player);
         setPlayerCards(prev => {
           const updatedCards = [...prev];
-          console.log("updatedCard:",updatedCards)
           if (!updatedCards[player]) {
             // Initialize the array if it does not exist
             updatedCards[player] = [];
@@ -109,52 +107,51 @@ export const EncounterDeckProvider = ({ children }) => {
             setPlayerCards(prevState.storedPlayersCards);
             setHistory(newHistory);
     }
+        useEffect(() => {
+            console.log("Updated encounterDeck:", encounterDeck); // Check if the state is updating after set
+        }, [encounterDeck]); 
 
-    useEffect(() => {
-        console.log("Updated encounterDeck:", encounterDeck); // Check if the state is updating after set
-    }, [encounterDeck]); 
+        useEffect(() => {
+            console.log("Updated settlementDeck:", settlementDeck); // Check if the state is updating after set
+        }, [settlementDeck]); 
 
-    useEffect(() => {
-        console.log("Updated settlementDeck:", settlementDeck); // Check if the state is updating after set
-    }, [settlementDeck]); 
+        useEffect(() => {
+            console.log("Updated stagedCards:", stagedCards); // Check if the state is updating after set
+        }, [stagedCards]); 
 
-    useEffect(() => {
-        console.log("Updated stagedCards:", stagedCards); // Check if the state is updating after set
-    }, [stagedCards]); 
+        useEffect(() => {
+            console.log("Updated vault7Deck:", vault7Deck); // Check if the state is updating after set
+            if (vault7Deck.length > 0) setVault7Active(true);
+            else setVault7Active(false);
+        }, [vault7Deck]); 
 
-    useEffect(() => {
-        console.log("Updated vault7Deck:", vault7Deck); // Check if the state is updating after set
-        if (vault7Deck.length > 0) setVault7Active(true);
-        else setVault7Active(false);
-    }, [vault7Deck]); 
+        useEffect(() => {
+            console.log("Updated vault44Deck:", vault44Deck); // Check if the state is updating after set
+            if (vault44Deck.length > 0) setVault44Active(true);
+            else setVault44Active(false);
+        }, [vault44Deck]); 
 
-    useEffect(() => {
-        console.log("Updated vault44Deck:", vault44Deck); // Check if the state is updating after set
-        if (vault44Deck.length > 0) setVault44Active(true);
-        else setVault44Active(false);
-    }, [vault44Deck]); 
+        useEffect(() => {
+            console.log("Updated vault84Deck:", vault84Deck); // Check if the state is updating after set
+            if (vault84Deck.length > 0) setVault84Active(true);
+            else setVault84Active(false);
+        }, [vault84Deck]); 
 
-    useEffect(() => {
-        console.log("Updated vault84Deck:", vault84Deck); // Check if the state is updating after set
-        if (vault84Deck.length > 0) setVault84Active(true);
-        else setVault84Active(false);
-    }, [vault84Deck]); 
-
-    useEffect(() => {
-        console.log("Updated vault109Deck:", vault109Deck); // Check if the state is updating after set
-        if (vault109Deck.length > 0) setVault109Active(true);
-        else setVault109Active(false);
-    }, [vault109Deck]); // Runs every time encounterDeck changes
-    useEffect(() => {
-        console.log("Updated Star Deck:", specialStarDeck); // Check if the state is updating after set
-        if (specialStarDeck.length > 0) setSpecialStarActive(true);
-        else setSpecialStarActive(false);
-    }, [specialStarDeck]); // Runs every time encounterDeck changes
-    useEffect(() => {
-        console.log("Updated Shield Deck:", specialShieldDeck); // Check if the state is updating after set
-        if (specialShieldDeck.length > 0) setSpecialShieldActive(true);
-        else setSpecialShieldActive(false);
-    }, [specialShieldDeck]); // Runs every time encounterDeck changes
+        useEffect(() => {
+            console.log("Updated vault109Deck:", vault109Deck); // Check if the state is updating after set
+            if (vault109Deck.length > 0) setVault109Active(true);
+            else setVault109Active(false);
+        }, [vault109Deck]); // Runs every time encounterDeck changes
+        useEffect(() => {
+            console.log("Updated Star Deck:", specialStarDeck); // Check if the state is updating after set
+            if (specialStarDeck.length > 0) setSpecialStarActive(true);
+            else setSpecialStarActive(false);
+        }, [specialStarDeck]); // Runs every time encounterDeck changes
+        useEffect(() => {
+            console.log("Updated Shield Deck:", specialShieldDeck); // Check if the state is updating after set
+            if (specialShieldDeck.length > 0) setSpecialShieldActive(true);
+            else setSpecialShieldActive(false);
+        }, [specialShieldDeck]); // Runs every time encounterDeck changes
 
 
     const drawCard = (deckType) => {

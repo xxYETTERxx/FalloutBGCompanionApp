@@ -10,12 +10,6 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
     const { playerCount } = useEncounterDeck();
     const { stagedCards, setStagedCards } = useEncounterDeck();
 
-   
-
-    const toggleFocus = (e) => {
-        e.preventDefault();
-            setIsFocused((prev)=> !prev);
-    }
     const removeCardFromStaged = (cardNumber) => {
         setStagedCards((prevStagedCards) => {
           return prevStagedCards.filter((card) => card !== cardNumber); // Filter out the specific card

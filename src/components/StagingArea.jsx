@@ -20,9 +20,6 @@ const StagingArea = ({ onCardFocus }) => {
     const togglePlayerInventory = () => {
         setPlayerInventoryActive((prevState) => !prevState);
     };
-    
-    console.log(players)
-
 
     //testing
     const generateNumberArray = (start, end) => {
