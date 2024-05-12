@@ -32,8 +32,6 @@
 .utility-buttons {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Place buttons in the bottom right corner */
-    align-items: flex-end;
     padding: 10px; /* Extra padding */
 }
 

@@ -14,6 +14,6 @@ def convert_images(directory, output_directory, target_size=(400, 600)):
             output_path = os.path.join(output_directory, filename.split('.')[0] + '.webp')
             img.save(output_path, 'webp')
 
-directory = './src/images/library_deck'
-output_directory = './src/images/library_deck/webp'
+directory = './src/images/encounter_deck'
+output_directory = './src/images/encounter_deck/webp'
 convert_images(directory, output_directory)

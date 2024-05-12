@@ -3587,7 +3587,7 @@ const cardData = {
             imagePath : require(`../images/library_deck/184.png`),
             actions: [
               {
-                  type: ['stage','multiAdd'],
+                  type: ['multiAdd','stage'],
                   cards: ['185'],
                   card: '244'
               },
@@ -3612,7 +3612,7 @@ const cardData = {
             imagePath : require(`../images/library_deck/186.png`),
             actions: [
               {
-                  type: ['stage','multiAdd'],
+                  type: ['multiAdd','stage'],
                   cards: ['187'],
                   card: '240'
               },

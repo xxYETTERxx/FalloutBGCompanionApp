@@ -5,7 +5,7 @@ import { useEncounterDeck } from './EncounterDeck';
 import '../styles/Card.css';
 
 const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
-    const [isFocused, setIsFocused] = useState(false);
+    const [isFocused, setIsFocused] = useState();
     const { showMessage, promptPlayerForCard, drawCard, encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, vault7Deck, setVault7Deck, vault44Deck, setVault44Deck, vault84Deck, setVault84Deck, vault109Deck, setVault109Deck, hasBeenDrawn74, setHasBeenDrawn74, specialStarDeck, setSpecialStarDeck, specialShieldDeck, setSpecialShieldDeck, storeHistory } = useEncounterDeck(); // Ensure proper destructuring
     const { playerCount } = useEncounterDeck();
     const { stagedCards, setStagedCards } = useEncounterDeck();
@@ -109,24 +109,6 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                                 case 'settlementDeck':
                                     setSettlementDeck(currentDeck);
                                     break;
-                                case 'vault84Deck':
-                                    setVault84Deck(currentDeck);
-                                    break;
-                                case 'vault7Deck':
-                                    setVault7Deck(currentDeck);
-                                    break;
-                                case 'vault109Deck':
-                                    setVault109Deck(currentDeck);
-                                    break;
-                                case 'vault44Deck':
-                                    setVault44Deck(currentDeck);
-                                    break;
-                                case 'specialStarDeck':
-                                    setSpecialStarDeck(currentDeck);
-                                    break;
-                                case 'specialShieldDeck':
-                                    setSpecialShieldDeck(currentDeck);
-                                    break;
                                 }
                                 showMessage(action.addCardsIDS[i] + " added to " + action.addDeck[i]);
                                 i++;
@@ -174,7 +156,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                     case 'trash':
                         if (!action.deck){
                             removeCardFromStaged(cardNumber);
-                            showMessage({cardNumber} + " Trashed");
+                            showMessage(cardNumber + " Trashed");
                             break;
                         }
                         const newTDeck = getDeckByName(action.deck).filter((c) => c !== cardNumber); // Trash (remove) the current card
@@ -204,7 +186,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                         
                         
                     removeCardFromStaged(cardNumber);
-                    showMessage({cardNumber} + " Trashed");
+                    showMessage(cardNumber + " Trashed");
                     break;
 
 
@@ -295,12 +277,12 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                             const new2Deck = getDeckByName(action.deck).filter(
                             (card) => !cardNumbersToRemove.includes(card)
                             );
-                            break;
-                         
+                            showMessage("Appropriate cards removed from Vault 109 Deck");                         
                             setVault109Deck(new2Deck);
                             break;
                         case 'specialShieldAction':
                             setSpecialStarDeck([]);
+
                             break;
                         case 'specialStarAction':
                             setSpecialShieldDeck([]);
@@ -314,6 +296,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
 
                         case 'keep':
                             promptPlayerForCard(cardNumber);
+                            showMessage(cardNumber + " added to players hand")
                             break;
 
                         case 'multiAdd':
@@ -321,14 +304,15 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                             switch(action.card){
                                 case '240':
                                     newDeck = shuffleDeck(['240(1)','240(2)','240(3)']);
-                                    onCardFocus(newDeck[0]);
-                                   
+                                    setStagedCards([...stagedCards, newDeck[0]]);
+                                    showMessage("Resolve 240 immidiately");
                                     break;
+
 
                                 case '244':
                                     newDeck = shuffleDeck(['244(1)','244(2)','244(3)']);
-                                    onCardFocus(newDeck[0]);
-                                 
+                                    setStagedCards([...stagedCards, newDeck[0]]);
+                                    showMessage("Resolve 244 immidiately");
                                     break;
                                 }
                             break;
