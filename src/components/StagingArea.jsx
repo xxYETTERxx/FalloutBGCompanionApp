@@ -87,7 +87,7 @@ const StagingArea = ({ onCardFocus }) => {
             )}
         <div className="staging-area"> {/* Ensure context access */}
             {stagedCards.map((card) => (
-                <div style={{padding:'10px'}} key={card} onContextMenu={() => onCardFocus(card)}>
+                <div className='p-2.5' key={card} onContextMenu={() => onCardFocus(card)}>
                     <Card cardNumber={card} onCardFocus={onCardFocus} /> {/* Render the card */}
                 </div>
             ))}

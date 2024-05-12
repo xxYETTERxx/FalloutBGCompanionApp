@@ -7,7 +7,7 @@ const cardData = {
             { top: '53%', width: '100%', height: '9%' }, // Area for the second option
             { top: '69%', width: '100%', height: '15%' }, // Area for the third option
           ],
-          imagePath : require(`../images/library_deck/001.png`),
+          imagePath : require(`../images/library_deck/webp/001.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -4150,24 +4150,7 @@ const cardData = {
               }
           ],
       },
-      '225': {
-        hoverAreas: [
-              { top: '41%', width: '100%', height: '21%' }, // Area for the second option
-              { top: '73%', width: '100%', height: '24%' } // Area for the second option
-             
-            ],
-            imagePath : require(`../images/library_deck/225.png`),
-            actions: [
-              {
-                    type: ['trash']
-              },
-              {
-                type: ['keep','add'],
-                addDeck:['encounterDeck'],
-                addCardIDS: ['224']
-              }
-          ],
-      },
+      
       '226': {
         hoverAreas: [
               { top: '48%', width: '100%', height: '10%' }, // Area for the first option

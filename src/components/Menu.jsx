@@ -54,7 +54,18 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
 
     const handleScenarioClick = (scenarioKey) => {
         const initialCards = scenarios[scenarioKey];
-        setPlayers(playerInputs);
+        if(playerInputs[0] != ''){
+            console.log(playerInputs);
+            setPlayers(playerInputs);
+        }
+        else{
+            const defNames = [];
+            for(let i = 0; i < playerCount; i++){
+                defNames.push("Player " + (i + 1));
+            }
+            console.log("default names:", defNames);
+            setPlayers(defNames);
+        }
         let currentDeck;
         let currentDeck2;
         let newDeck;
@@ -86,6 +97,8 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
                 newDeck = shuffleDeck(['244(1)','244(2)','244(3)']);
                 currentDeck = addCard(currentDeck, newDeck[0], playerCount); // Add specific card to the deck
                 setSettlementDeck(currentDeck);
+                break;
+            case 'ThePitt':                
                 break;
             case 'ThePittExpanded':
                 newDeck = shuffleDeck(['243(1)','243(2)']);
