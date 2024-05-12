@@ -24,14 +24,24 @@ export const EncounterDeckProvider = ({ children }) => {
     const [specialShieldActive, setSpecialShieldActive] = useState(false);
     const [specialStarActive, setSpecialStarActive] = useState(false);
     const [hasBeenDrawn74, setHasBeenDrawn74] = useState(false);
-    const [systemMessage, setSystemMessage] = useState('');
     const [history, setHistory] = useState([]);
     const [players, setPlayers] = useState([]); // Example player identifiers
     const [playerCards, setPlayerCards] = useState([[],[],[],[]]);
     const [showOverlay, setShowOverlay] = useState(false);
     const [overlayContent, setOverlayContent] = useState(null);
+    const [message, setMessage] = useState(null); // Stores the current message
+    const [isMessageVisible, setIsMessageVisible] = useState(false);
     const [ debug, setDebug ] = useState(true);
     
+    const showMessage = (msg) => {
+        setMessage(msg);
+        setIsMessageVisible(true);
+        setTimeout(() => {
+            setIsMessageVisible(false); // Hide the message after 2 seconds
+            setMessage(null); // Reset message state
+        }, 2000);
+    };
+
 
     useEffect(() => {
        
@@ -106,6 +116,8 @@ export const EncounterDeckProvider = ({ children }) => {
             setSpecialShieldDeck(prevState.storedSpecialShieldDeck);
             setPlayerCards(prevState.storedPlayersCards);
             setHistory(newHistory);
+            showMessage("Undo");
+
     }
         useEffect(() => {
             console.log("Updated encounterDeck:", encounterDeck); // Check if the state is updating after set
@@ -248,6 +260,9 @@ export const EncounterDeckProvider = ({ children }) => {
             setShowOverlay,
             promptPlayerForCard,
             setPlayers,
+            showMessage,
+            message,
+            isMessageVisible
              }}>
             {children}
         </EncounterDeckContext.Provider>

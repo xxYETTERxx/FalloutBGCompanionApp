@@ -134,7 +134,7 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
         return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
                 <p className='font-serif text-xl'>You may require cards: 104, 204-213 and 238</p>
-    <div className="w-full max-w-6xl p-8 bg-white shadow-lg rounded-lg text-center">
+    <div className="w-full max-w-8xl max-h-8xl p-8 bg-white shadow-lg rounded-lg text-center">
         <h1 className="text-2xl font-bold mb-4">Choose Scenario</h1>
         {/* Adjust the grid-cols to change number of columns */}
         <div className="grid grid-cols-5 gap-4 mb-6">
@@ -142,7 +142,7 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
                 <button
                     key={scenarioKey}
                     onClick={() => handleScenarioClick(scenarioKey)}
-                    className="h-60 w-60 flex flex-col items-center justify-center bg-cover bg-center rounded-lg shadow hover:bg-opacity-90"
+                    className="h-60 w-75 flex flex-col items-center justify-center bg-cover bg-center rounded-lg shadow hover:bg-opacity-90"
                     style={{ backgroundImage: `url(${require(`../images/misc_assets/${scenarioImages[scenarioKey]}`)})` }}
                 >
                     <span className="top-0 w-full bg-black bg-opacity-50 text-white text-lg font-semibold text-center py-1">

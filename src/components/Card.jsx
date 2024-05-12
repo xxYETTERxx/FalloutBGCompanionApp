@@ -6,7 +6,7 @@ import '../styles/Card.css';
 
 const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
     const [isFocused, setIsFocused] = useState(false);
-    const { promptPlayerForCard, drawCard, encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, vault7Deck, setVault7Deck, vault44Deck, setVault44Deck, vault84Deck, setVault84Deck, vault109Deck, setVault109Deck, hasBeenDrawn74, setHasBeenDrawn74, specialStarDeck, setSpecialStarDeck, specialShieldDeck, setSpecialShieldDeck, storeHistory } = useEncounterDeck(); // Ensure proper destructuring
+    const { showMessage, promptPlayerForCard, drawCard, encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, vault7Deck, setVault7Deck, vault44Deck, setVault44Deck, vault84Deck, setVault84Deck, vault109Deck, setVault109Deck, hasBeenDrawn74, setHasBeenDrawn74, specialStarDeck, setSpecialStarDeck, specialShieldDeck, setSpecialShieldDeck, storeHistory } = useEncounterDeck(); // Ensure proper destructuring
     const { playerCount } = useEncounterDeck();
     const { stagedCards, setStagedCards } = useEncounterDeck();
 
@@ -84,8 +84,8 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                                 console.log("discard deck not found");
                                 break;
                         }
-                        console.log(`Discarded card ${cardNumber} into ${action.deck}.`);
                         removeCardFromStaged(cardNumber);
+                        showMessage(cardNumber + " discarded into " + action.deck);
                         break;
 
                     case 'add':
@@ -108,12 +108,30 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                                     break;
                                 case 'settlementDeck':
                                     setSettlementDeck(currentDeck);
-                                    
+                                    break;
+                                case 'vault84Deck':
+                                    setVault84Deck(currentDeck);
+                                    break;
+                                case 'vault7Deck':
+                                    setVault7Deck(currentDeck);
+                                    break;
+                                case 'vault109Deck':
+                                    setVault109Deck(currentDeck);
+                                    break;
+                                case 'vault44Deck':
+                                    setVault44Deck(currentDeck);
+                                    break;
+                                case 'specialStarDeck':
+                                    setSpecialStarDeck(currentDeck);
+                                    break;
+                                case 'specialShieldDeck':
+                                    setSpecialShieldDeck(currentDeck);
                                     break;
                                 }
+                                showMessage(action.addCardsIDS[i] + " added to " + action.addDeck[i]);
                                 i++;
-
                             }
+
                         }
                         else{
                             currentDeck = getDeckByName(action.addDeck[0]);
@@ -147,6 +165,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                                     setSpecialShieldDeck(currentDeck);
                                     break;
                             }
+                            showMessage(action.addCardIDS + " added to " + action.addDeck[0]);
 
                         }
                         removeCardFromStaged(cardNumber);
@@ -155,6 +174,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                     case 'trash':
                         if (!action.deck){
                             removeCardFromStaged(cardNumber);
+                            showMessage({cardNumber} + " Trashed");
                             break;
                         }
                         const newTDeck = getDeckByName(action.deck).filter((c) => c !== cardNumber); // Trash (remove) the current card
@@ -184,12 +204,14 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                         
                         
                     removeCardFromStaged(cardNumber);
+                    showMessage({cardNumber} + " Trashed");
                     break;
 
 
                     case 'stage':
                         setStagedCards([...stagedCards, ...action.cards]);
                         removeCardFromStaged(cardNumber);
+                        showMessage(action.cards +" Staged");
                         break;
                 
                     case 'createDeck':
@@ -242,14 +264,21 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                                 setVault109Deck(gameV109Deck);
                                 break;
                         }
+                        showMessage(action.deckType + " Built");
                         break;
                     
                         case 'checkLast':
                             switch(action.deckType){
                                 case 'vault84Deck':
                                     if(vault84Deck.length == 0){
-                                        if(hasBeenDrawn74) setVault84Deck(['081']);
-                                        else setVault84Deck(['080']);
+                                        if(hasBeenDrawn74){ 
+                                            setVault84Deck(['081']);
+                                            showMessage("081 Added to Vault 84 Deck");
+                                        }
+                                        else{
+                                            setVault84Deck(['080']);
+                                            showMessage("080 Added to Vault 84 Deck");
+                                        }
                                     }
                                     break;
                                 default:

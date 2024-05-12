@@ -6,6 +6,7 @@ import {  useEncounterDeck } from './EncounterDeck';
 import DrawCardButton from './DrawCardButton'; // Import draw card button
 import QuestMarkers from './QuestMarkers';
 import PlayerInventory from './PlayerInventory';
+import MessageDisplay from './MessageDisplay';
 
 const StagingArea = ({ onCardFocus }) => {
     
@@ -77,6 +78,7 @@ const StagingArea = ({ onCardFocus }) => {
         setRenderedMarkers(updatedMarkers); // Update the state
     };
 
+
     return (
        <div>
         {showOverlay && (
@@ -104,7 +106,7 @@ const StagingArea = ({ onCardFocus }) => {
                     
                 
             </div>
-            <div className="button-area"> {/* Inline button area below the play area */}
+            <div className="button-area flex flex-row"> {/* Inline button area below the play area */}
             <DrawCardButton
                     type="encounter"
                     onClick={() => {onCardFocus(drawCard('encounter'));storeHistory();}} // Placeholder
@@ -176,7 +178,9 @@ const StagingArea = ({ onCardFocus }) => {
                         onKeyDown={handleKeyDown}
                     />
                 </div>
+            
                 
+                <MessageDisplay />
         </div>
         {renderedMarkers.map((markerId, index) => (
                 <QuestMarkers className='quest-marker'
