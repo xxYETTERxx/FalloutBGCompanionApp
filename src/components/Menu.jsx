@@ -53,6 +53,10 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
     };
 
     const handleScenarioClick = (scenarioKey) => {
+        if (playerCount === 0){
+            alert("You must enter the numer of players");
+            return;
+        }
         const initialCards = scenarios[scenarioKey];
         if(playerInputs[0] != ''){
             console.log(playerInputs);
@@ -134,7 +138,7 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
         return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
                 <p className='font-serif text-xl'>You may require cards: 104, 204-213 and 238</p>
-    <div className="w-full max-w-8xl max-h-8xl p-8 bg-white shadow-lg rounded-lg text-center">
+    <div className="p-8 bg-white shadow-lg rounded-lg text-center">
         <h1 className="text-2xl font-bold mb-4">Choose Scenario</h1>
         {/* Adjust the grid-cols to change number of columns */}
         <div className="grid grid-cols-5 gap-4 mb-6">

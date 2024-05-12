@@ -15,7 +15,7 @@ export const EncounterDeckProvider = ({ children }) => {
     const [vault109Deck, setVault109Deck] = useState([]);
     const [specialStarDeck, setSpecialStarDeck] = useState([]);
     const [specialShieldDeck, setSpecialShieldDeck] = useState([]);
-    const [playerCount, setPlayerCount] = useState(1);
+    const [playerCount, setPlayerCount] = useState(0);
     const [stagedCards, setStagedCards] = useState([]);
     const [vault7Active, setVault7Active] = useState(false);
     const [vault44Active, setVault44Active] = useState(false);

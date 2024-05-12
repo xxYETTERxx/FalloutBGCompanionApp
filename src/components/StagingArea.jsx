@@ -61,6 +61,7 @@ const StagingArea = ({ onCardFocus }) => {
     };
 
     const setInputCard = () => {
+        if (inputText)
         setStagedCards([...stagedCards, inputText]);
     }
     //testing complete
@@ -90,7 +91,7 @@ const StagingArea = ({ onCardFocus }) => {
         <div className="staging-area"> {/* Ensure context access */}
             {stagedCards.map((card) => (
                 <div className='p-2.5' key={card} onContextMenu={() => onCardFocus(card)}>
-                    <Card cardNumber={card} onCardFocus={onCardFocus} /> {/* Render the card */}
+                    <Card cardNumber={card} onCardFocus={onCardFocus}/> {/* Render the card */}
                 </div>
             ))}
             {/* Conditionally render PlayerInventory as an overlay */}
@@ -167,11 +168,11 @@ const StagingArea = ({ onCardFocus }) => {
                 <div className='utility-buttons'> 
                     <button className='button-84' onClick={createMarker}>Quest Marker</button>
                     <button className='button-84'onClick={restoreHistory}>Undo</button>
-                    <button className='button-84' onClick={testingF}>Fwd</button>
                     {/* <button className='button-84' onClick={testingR}>Bkwd</button> */}
                     <button className='button-84' onClick={togglePlayerInventory}>Player Inventory</button>
                     <button className='button-84' onClick={setInputCard}>Stage Card</button>
                     <input
+                        className ="border-solid"
                         type="text" // Specifies a text input field
                         value={inputText} // Binds the state variable to the input field
                         onChange={handleChange} // Updates state when the input changes

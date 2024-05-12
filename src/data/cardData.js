@@ -2904,8 +2904,11 @@ const cardData = {
                   cards: ['153']
               },
               {
-                  type: ['stage'],
-                  cards: ['152']
+                type: ['stage','add'],
+                addCardIDS:['154'],
+                deck: 'settlementDeck',
+                addDeck: ['settlementDeck'],
+                cards: ['153']
               }
           ],
       },
@@ -2928,18 +2931,13 @@ const cardData = {
       },
       '153': {
         hoverAreas: [
-              { top: '47%', width: '100%', height: '11%' }, // Area for the first option
-              { top: '75%', width: '100%', height: '15%' }, // Area for the second option
+              { top: '99%', width: '100%', height: '1%' } // Area for the first option
+
             ],
             imagePath : require(`../images/library_deck/153.webp`),
             actions: [
               {
-                  type: ['stage'],
-                  cards: ['151']
-              },
-              {
-                  type: ['stage'],
-                  cards: ['152']
+                  type: ['trash']     
               }
           ],
       },
@@ -3582,7 +3580,8 @@ const cardData = {
       },
       '184': {
         hoverAreas: [
-              { top: '38%', width: '100%', height: '10%' } // Area for the first option
+              { top: '38%', width: '100%', height: '10%' }, // Area for the first option
+              { top: '98%', width: '100%', height: '2%' } // Area for the first option
             ],
             imagePath : require(`../images/library_deck/184.webp`),
             actions: [
@@ -3591,6 +3590,11 @@ const cardData = {
                   cards: ['185'],
                   card: '244'
               },
+              {
+                
+                  type: ['trash']
+    
+              }
           ],
       },
       '185': {
@@ -3612,7 +3616,7 @@ const cardData = {
             imagePath : require(`../images/library_deck/186.webp`),
             actions: [
               {
-                  type: ['stage','multiAdd'],
+                  type: ['multiAdd'],
                   cards: ['187'],
                   card: '240'
               },
