@@ -7,7 +7,7 @@ const cardData = {
             { top: '53%', width: '100%', height: '9%' }, // Area for the second option
             { top: '69%', width: '100%', height: '15%' }, // Area for the third option
           ],
-          imagePath : require(`../images/library_deck/webp/001.webp`),
+          imagePath : require(`../images/library_deck/001.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -29,7 +29,7 @@ const cardData = {
             { top: '54%', width: '100%', height: '18%' }, // Area for the second option
             { top: '79%', width: '100%', height: '15%' }, // Area for the third option
           ],
-          imagePath : require(`../images/library_deck/002.png`),
+          imagePath : require(`../images/library_deck/002.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -52,7 +52,7 @@ const cardData = {
             { top: '53%', width: '100%', height: '18%' }, // Area for the second option
             { top: '79%', width: '100%', height: '15%' }, // Area for the third option
           ],
-          imagePath : require(`../images/library_deck/003.png`),
+          imagePath : require(`../images/library_deck/003.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -75,7 +75,7 @@ const cardData = {
             { top: '67%', width: '100%', height: '11%' }, // Area for the third option
             { top: '78%', width: '100%', height: '11%' }, // Area for the third option
           ],
-          imagePath : require(`../images/library_deck/004.png`),
+          imagePath : require(`../images/library_deck/004.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -101,7 +101,7 @@ const cardData = {
             { top: '66%', width: '100%', height: '12%' }, // Area for the second option
             { top: '85%', width: '100%', height: '14%' }, // Area for the third option
           ],
-          imagePath : require(`../images/library_deck/005.png`),
+          imagePath : require(`../images/library_deck/005.webp`),
           actions: [
             {
                 type: ['add'],
@@ -126,7 +126,7 @@ const cardData = {
             { top: '67%', width: '100%', height: '11%' }, // Area for the third option
             { top: '78%', width: '100%', height: '12%' }, // Area for the third option
           ],
-          imagePath : require(`../images/library_deck/006.png`),
+          imagePath : require(`../images/library_deck/006.webp`),
           actions: [
             {
                 type: ['trash'],
@@ -152,7 +152,7 @@ const cardData = {
             { top: '54%', width: '100%', height: '12%' }, // Area for the second option
             { top: '73%', width: '100%', height: '15%' }, // Area for the third option
           ],
-          imagePath : require(`../images/library_deck/007.png`),
+          imagePath : require(`../images/library_deck/007.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -174,7 +174,7 @@ const cardData = {
             { top: '70%', width: '100%', height: '10%' }, // Area for the third option
             { top: '80%', width: '100%', height: '13%' }, // Area for the third option
           ],
-          imagePath : require(`../images/library_deck/008.png`),
+          imagePath : require(`../images/library_deck/008.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -200,7 +200,7 @@ const cardData = {
             { top: '54%', width: '100%', height: '14%' }, // Area for the second option
             { top: '75%', width: '100%', height: '16%' }, // Area for the third option
           ],
-          imagePath : require(`../images/library_deck/009.png`),
+          imagePath : require(`../images/library_deck/009.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -221,7 +221,7 @@ const cardData = {
             { top: '31%', width: '100%', height: '15%' }, // Area for the first option
             { top: '54%', width: '100%', height: '13%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/010.png`),
+          imagePath : require(`../images/library_deck/010.webp`),
           actions: [
             {
                 type: ['trash'],
@@ -239,7 +239,7 @@ const cardData = {
             { top: '53%', width: '100%', height: '15%' }, // Area for the second option
      
           ],
-          imagePath : require(`../images/library_deck/011.png`),
+          imagePath : require(`../images/library_deck/011.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -258,7 +258,7 @@ const cardData = {
             { top: '63%', width: '100%', height: '7%' }, // Area for the third option
             { top: '71%', width: '100%', height: '11%' }, // Area for the third option
           ],
-          imagePath : require(`../images/library_deck/012.png`),
+          imagePath : require(`../images/library_deck/012.webp`),
           actions: [
             {
                 type: ['trash']
@@ -284,7 +284,7 @@ const cardData = {
             { top: '59%', width: '100%', height: '13%' }, // Area for the third option
             { top: '80%', width: '100%', height: '15%' }, // Area for the third option
           ],
-          imagePath : require(`../images/library_deck/013.png`),
+          imagePath : require(`../images/library_deck/013.webp`),
           actions: [
             {
                 type: ['trash']
@@ -310,7 +310,7 @@ const cardData = {
             { top: '82%', width: '100%', height: '15%' }, // Area for the second option
   
           ],
-          imagePath : require(`../images/library_deck/014.png`),
+          imagePath : require(`../images/library_deck/014.webp`),
           actions: [
             {
                 type: ['stage','add'],
@@ -331,7 +331,7 @@ const cardData = {
             { top: '51%', width: '100%', height: '10%' }, // Area for the first option
             { top: '85%', width: '100%', height: '12%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/015.png`),
+          imagePath : require(`../images/library_deck/015.webp`),
           actions: [
              {
                 type: ['stage'],
@@ -349,7 +349,7 @@ const cardData = {
             { top: '65%', width: '100%', height: '11%' }, // Area for the first option
             { top: '90%', width: '100%', height: '11%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/016.png`),
+          imagePath : require(`../images/library_deck/016.webp`),
           actions: [
             {
                 type: ['stage'],
@@ -370,7 +370,7 @@ const cardData = {
             { top: '78%', width: '100%', height: '7%' }, // Area for the third option
             { top: '85%', width: '100%', height: '15%' }, // Area for the third option
           ],
-          imagePath : require(`../images/library_deck/017.png`),
+          imagePath : require(`../images/library_deck/017.webp`),
           actions: [
             {
                 type: ['add'],
@@ -399,7 +399,7 @@ const cardData = {
             { top: '56%', width: '100%', height: '11%' }, // Area for the first option
             { top: '84%', width: '100%', height: '14%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/018.png`),
+          imagePath : require(`../images/library_deck/018.webp`),
           actions: [
              {
                 type: ['stage'],
@@ -418,7 +418,7 @@ const cardData = {
             { top: '60%', width: '100%', height: '15%' }, // Area for the first option
             { top: '90%', width: '100%', height: '10%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/019.png`),
+          imagePath : require(`../images/library_deck/019.webp`),
           actions: [
             {
                 type: ['stage','trash','add'],
@@ -437,7 +437,7 @@ const cardData = {
             { top: '51%', width: '100%', height: '11%' }, // Area for the first option
             { top: '82%', width: '100%', height: '15%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/020.png`),
+          imagePath : require(`../images/library_deck/020.webp`),
           actions: [
             {
                 type: ['stage'],
@@ -454,7 +454,7 @@ const cardData = {
             { top: '49%', width: '100%', height: '11%' }, // Area for the first option
             { top: '75%', width: '100%', height: '20%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/021.png`),
+          imagePath : require(`../images/library_deck/021.webp`),
           actions: [
             {
                 type: ['stage'],
@@ -476,7 +476,7 @@ const cardData = {
             { top: '74%', width: '100%', height: '9%' }, // Area for the third option
             { top: '91%', width: '100%', height: '9%' }, // Area for the third option
           ],
-          imagePath : require(`../images/library_deck/022.png`),
+          imagePath : require(`../images/library_deck/022.webp`),
           actions: [
             {
                 type: ['trash'],
@@ -510,7 +510,7 @@ const cardData = {
             { top: '54%', width: '100%', height: '11%' }, // Area for the first option
             { top: '89%', width: '100%', height: '10%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/023.png`),
+          imagePath : require(`../images/library_deck/023.webp`),
           actions: [
             {
                 type: ['stage','add'],
@@ -528,7 +528,7 @@ const cardData = {
       hoverAreas: [
             { top: '64%', width: '100%', height: '10%' } // Area for the first option
           ],
-          imagePath : require(`../images/library_deck/024.png`),
+          imagePath : require(`../images/library_deck/024.webp`),
           actions: [
             {
                 type: ['trash']
@@ -540,7 +540,7 @@ const cardData = {
             { top: '64%', width: '100%', height: '9%' }, // Area for the first option
             { top: '88%', width: '100%', height: '11%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/025.png`),
+          imagePath : require(`../images/library_deck/025.webp`),
           actions: [
             {
                 type: ['trash'],
@@ -556,7 +556,7 @@ const cardData = {
             { top: '57%', width: '100%', height: '15%' }, // Area for the second option
             { top: '78%', width: '100%', height: '17%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/026.png`),
+          imagePath : require(`../images/library_deck/026.webp`),
           actions: [
             {
                 type: ['keep']
@@ -579,7 +579,7 @@ const cardData = {
             { top: '54%', width: '100%', height: '12%' }, // Area for the second option
             { top: '72%', width: '100%', height: '17%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/027.png`),
+          imagePath : require(`../images/library_deck/027.webp`),
           actions: [
             {
                 type: ['keep']
@@ -600,7 +600,7 @@ const cardData = {
       hoverAreas: [
             { top: '88%', width: '100%', height: '11%' } // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/028.png`),
+          imagePath : require(`../images/library_deck/028.webp`),
           actions: [
             {
                 type: ['trash']
@@ -613,7 +613,7 @@ const cardData = {
             { top: '45%', width: '100%', height: '11%' }, // Area for the first option
             { top: '75%', width: '100%', height: '15%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/029.png`),
+          imagePath : require(`../images/library_deck/029.webp`),
           actions: [
             {
                 type: ['stage'],
@@ -629,7 +629,7 @@ const cardData = {
       hoverAreas: [
             { top: '99%', width: '100%', height: '1%' } // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/030.png`),
+          imagePath : require(`../images/library_deck/030.webp`),
           actions: [
             {
                 type: ['trash']
@@ -643,7 +643,7 @@ const cardData = {
               { top: '67%', width: '100%', height: '11%' }, // Area for the second option
               { top: '86%', width: '100%', height: '11%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/031.png`),
+            imagePath : require(`../images/library_deck/031.webp`),
             actions: [
               {
                   type: ['add'],
@@ -673,7 +673,7 @@ const cardData = {
               { top: '51%', width: '100%', height: '11%' }, // Area for the first option
               { top: '78%', width: '100%', height: '14%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/032.png`),
+            imagePath : require(`../images/library_deck/032.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -691,7 +691,7 @@ const cardData = {
               { top: '51%', width: '100%', height: '11%' }, // Area for the first option
               { top: '78%', width: '100%', height: '14%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/033.png`),
+            imagePath : require(`../images/library_deck/033.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -709,7 +709,7 @@ const cardData = {
               { top: '45%', width: '100%', height: '12%' }, // Area for the first option
               { top: '76%', width: '100%', height: '14%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/034.png`),
+            imagePath : require(`../images/library_deck/034.webp`),
             actions: [
               {
                   type: ['stage','add'],
@@ -731,7 +731,7 @@ const cardData = {
               { top: '44%', width: '100%', height: '11%' }, // Area for the first option
               { top: '71%', width: '100%', height: '14%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/035.png`),
+            imagePath : require(`../images/library_deck/035.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -749,7 +749,7 @@ const cardData = {
               { top: '44%', width: '100%', height: '11%' }, // Area for the first option
               { top: '71%', width: '100%', height: '14%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/036.png`),
+            imagePath : require(`../images/library_deck/036.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -767,7 +767,7 @@ const cardData = {
               { top: '51%', width: '100%', height: '8%' }, // Area for the first option
               { top: '78%', width: '100%', height: '14%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/037.png`),
+            imagePath : require(`../images/library_deck/037.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -787,7 +787,7 @@ const cardData = {
               { top: '67%', width: '100%', height: '15%' }, // Area for the first option
               { top: '89%', width: '100%', height: '1%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/038.png`),
+            imagePath : require(`../images/library_deck/038.webp`),
             actions: [
               {
                   type: ['trash']
@@ -813,7 +813,7 @@ const cardData = {
               { top: '41%', width: '100%', height: '11%' }, // Area for the first option
               { top: '68%', width: '100%', height: '14%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/039.png`),
+            imagePath : require(`../images/library_deck/039.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -831,7 +831,7 @@ const cardData = {
               { top: '44%', width: '100%', height: '11%' }, // Area for the first option
               { top: '71%', width: '100%', height: '14%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/040.png`),
+            imagePath : require(`../images/library_deck/040.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -849,7 +849,7 @@ const cardData = {
               { top: '61%', width: '100%', height: '10%' }, // Area for the first option
               { top: '85%', width: '100%', height: '14%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/041.png`),
+            imagePath : require(`../images/library_deck/041.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -866,7 +866,7 @@ const cardData = {
         hoverAreas: [
               { top: '50%', width: '100%', height: '11%' }, // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/042.png`),
+            imagePath : require(`../images/library_deck/042.webp`),
             actions: [
               {
                   type: ['trash']
@@ -877,7 +877,7 @@ const cardData = {
         hoverAreas: [
               { top: '75%', width: '100%', height: '14%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/043.png`),
+            imagePath : require(`../images/library_deck/043.webp`),
             actions: [
               {
                 type: ['trash']
@@ -890,7 +890,7 @@ const cardData = {
               { top: '52%', width: '100%', height: '18%' }, // Area for the first option
               { top: '86%', width: '100%', height: '13%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/044.png`),
+            imagePath : require(`../images/library_deck/044.webp`),
             actions: [
               {
                   type: ['stage','add'],
@@ -910,7 +910,7 @@ const cardData = {
               { top: '55%', width: '100%', height: '12%' }, // Area for the first option
               { top: '86%', width: '100%', height: '13%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/045.png`),
+            imagePath : require(`../images/library_deck/045.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -930,7 +930,7 @@ const cardData = {
               { top: '72%', width: '100%', height: '14%' }, // Area for the first option
               { top: '86%', width: '100%', height: '14%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/046.png`),
+            imagePath : require(`../images/library_deck/046.webp`),
             actions: [
               {
                 type: ['add'],
@@ -961,7 +961,7 @@ const cardData = {
               { top: '67%', width: '100%', height: '15%' }, // Area for the second option
               { top: '89%', width: '100%', height: '10%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/047.png`),
+            imagePath : require(`../images/library_deck/047.webp`),
             actions: [
               {
                   type: ['trash']
@@ -982,7 +982,7 @@ const cardData = {
               { top: '58%', width: '100%', height: '15%' }, // Area for the first option
               { top: '88%', width: '100%', height: '11%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/048.png`),
+            imagePath : require(`../images/library_deck/048.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1000,7 +1000,7 @@ const cardData = {
               { top: '42%', width: '100%', height: '12%' }, // Area for the first option
               { top: '70%', width: '100%', height: '15%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/049.png`),
+            imagePath : require(`../images/library_deck/049.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1020,7 +1020,7 @@ const cardData = {
               { top: '58%', width: '100%', height: '12%' }, // Area for the first option
               { top: '86%', width: '100%', height: '13%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/050.png`),
+            imagePath : require(`../images/library_deck/050.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1040,7 +1040,7 @@ const cardData = {
               { top: '44%', width: '100%', height: '11%' }, // Area for the first option
               { top: '78%', width: '100%', height: '16%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/051.png`),
+            imagePath : require(`../images/library_deck/051.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1057,7 +1057,7 @@ const cardData = {
               { top: '48%', width: '100%', height: '11%' }, // Area for the first option
               { top: '78%', width: '100%', height: '13%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/052.png`),
+            imagePath : require(`../images/library_deck/052.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1077,7 +1077,7 @@ const cardData = {
               { top: '77%', width: '100%', height: '12%' }, // Area for the second option
               { top: '90%', width: '100%', height: '11%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/053.png`),
+            imagePath : require(`../images/library_deck/053.webp`),
             actions: [
               {
                 type: ['add'],
@@ -1104,7 +1104,7 @@ const cardData = {
         hoverAreas: [
               { top: '89%', width: '100%', height: '10%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/054.png`),
+            imagePath : require(`../images/library_deck/054.webp`),
             actions: [
               {
                 type: ['stage'],
@@ -1117,7 +1117,7 @@ const cardData = {
         hoverAreas: [
               { top: '90%', width: '100%', height: '10%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/055.png`),
+            imagePath : require(`../images/library_deck/055.webp`),
             actions: [
               {
                 type: ['trash']
@@ -1130,7 +1130,7 @@ const cardData = {
               { top: '45%', width: '100%', height: '13%' }, // Area for the first option
               { top: '71%', width: '100%', height: '16%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/056.png`),
+            imagePath : require(`../images/library_deck/056.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1148,7 +1148,7 @@ const cardData = {
               { top: '52%', width: '100%', height: '10%' }, // Area for the first option
               { top: '78%', width: '100%', height: '16%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/057.png`),
+            imagePath : require(`../images/library_deck/057.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1166,7 +1166,7 @@ const cardData = {
               { top: '41%', width: '100%', height: '13%' }, // Area for the first option
               { top: '67%', width: '100%', height: '16%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/058.png`),
+            imagePath : require(`../images/library_deck/058.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1184,7 +1184,7 @@ const cardData = {
               { top: '45%', width: '100%', height: '20%' }, // Area for the first option
               { top: '83%', width: '100%', height: '16%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/059.png`),
+            imagePath : require(`../images/library_deck/059.webp`),
             actions: [
               {
                   type: ['stage','add'],
@@ -1204,7 +1204,7 @@ const cardData = {
               { top: '47%', width: '100%', height: '18%' }, // Area for the first option
               { top: '78%', width: '100%', height: '18%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/060.png`),
+            imagePath : require(`../images/library_deck/060.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1222,7 +1222,7 @@ const cardData = {
               { top: '41%', width: '100%', height: '13%' }, // Area for the first option
               { top: '71%', width: '100%', height: '16%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/061.png`),
+            imagePath : require(`../images/library_deck/061.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1240,7 +1240,7 @@ const cardData = {
               { top: '48%', width: '100%', height: '13%' }, // Area for the first option
               { top: '77%', width: '100%', height: '16%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/062.png`),
+            imagePath : require(`../images/library_deck/062.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1261,7 +1261,7 @@ const cardData = {
               { top: '80%', width: '100%', height: '9%' }, // Area for the second option
               { top: '89%', width: '100%', height: '10%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/063.png`),
+            imagePath : require(`../images/library_deck/063.webp`),
             actions: [
                 {
                     type: ['add'],
@@ -1292,7 +1292,7 @@ const cardData = {
               { top: '48%', width: '100%', height: '11%' }, // Area for the first option
               { top: '87%', width: '100%', height: '12%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/064.png`),
+            imagePath : require(`../images/library_deck/064.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1309,7 +1309,7 @@ const cardData = {
               { top: '57%', width: '100%', height: '11%' }, // Area for the first option
               { top: '80%', width: '100%', height: '15%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/065.png`),
+            imagePath : require(`../images/library_deck/065.webp`),
             actions: [
               {
                   type: ['trash']
@@ -1325,7 +1325,7 @@ const cardData = {
               { top: '49%', width: '100%', height: '13%' }, // Area for the first option
               { top: '76%', width: '100%', height: '20%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/066.png`),
+            imagePath : require(`../images/library_deck/066.webp`),
             actions: [
               {
                   type: ['trash'],
@@ -1340,7 +1340,7 @@ const cardData = {
               { top: '51%', width: '100%', height: '11%' }, // Area for the first option
               { top: '79%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/067.png`),
+            imagePath : require(`../images/library_deck/067.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1357,7 +1357,7 @@ const cardData = {
               { top: '55%', width: '100%', height: '11%' }, // Area for the first option
               { top: '85%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/068.png`),
+            imagePath : require(`../images/library_deck/068.webp`),
             actions: [
               {
                   type: ['add'],
@@ -1378,7 +1378,7 @@ const cardData = {
               { top: '44%', width: '100%', height: '7%' }, // Area for the first option
               { top: '67%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/069.png`),
+            imagePath : require(`../images/library_deck/069.webp`),
             actions: [
                 {
                     type: ['add'],
@@ -1400,7 +1400,7 @@ const cardData = {
               { top: '65%', width: '100%', height: '8%' }, // Area for the second option
               { top: '79%', width: '100%', height: '13%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/070.png`),
+            imagePath : require(`../images/library_deck/070.webp`),
             actions: [
                 {
                     type: ['buildVault'],
@@ -1426,7 +1426,7 @@ const cardData = {
               { top: '47%', width: '100%', height: '23%' }, // Area for the first option
               { top: '78%', width: '100%', height: '20%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/071.png`),
+            imagePath : require(`../images/library_deck/071.webp`),
             actions: [
                 {
                     type: ['buildVault'],
@@ -1447,7 +1447,7 @@ const cardData = {
               { top: '63%', width: '100%', height: '20%' }, // Area for the second option
               { top: '84%', width: '100%', height: '16%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/072.png`),
+            imagePath : require(`../images/library_deck/072.webp`),
             actions: [
                 {
                     type: ['trash','checkLast'],
@@ -1469,7 +1469,7 @@ const cardData = {
               { top: '69%', width: '100%', height: '11%' }, // Area for the second option
               { top: '80%', width: '100%', height: '18%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/073.png`),
+            imagePath : require(`../images/library_deck/073.webp`),
             actions: [
                 {
                     type: ['stage','checkLast'],
@@ -1492,7 +1492,7 @@ const cardData = {
             { top: '76%', width: '100%', height: '11%' }, // Area for the second option
             { top: '87%', width: '100%', height: '11%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/074.png`),
+          imagePath : require(`../images/library_deck/074.webp`),
           actions: [
               {
                   type: ['checkLast','vault84Special'],
@@ -1514,7 +1514,7 @@ const cardData = {
               { top: '61%', width: '100%', height: '18%' }, // Area for the second option
               { top: '80%', width: '100%', height: '10%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/075.png`),
+            imagePath : require(`../images/library_deck/075.webp`),
             actions: [
                 {
                     type: ['checkLast'],
@@ -1536,7 +1536,7 @@ const cardData = {
               { top: '72%', width: '100%', height: '18%' }, // Area for the second option
              
             ],
-            imagePath : require(`../images/library_deck/076.png`),
+            imagePath : require(`../images/library_deck/076.webp`),
             actions: [
                 {
                     type: ['checkLast','trash'],
@@ -1554,7 +1554,7 @@ const cardData = {
               { top: '71%', width: '100%', height: '16%' }, // Area for the second option
               { top: '87%', width: '100%', height: '10%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/077.png`),
+            imagePath : require(`../images/library_deck/077.webp`),
             actions: [
                 {
                     type: ['stage','checkLast'],
@@ -1577,7 +1577,7 @@ const cardData = {
               { top: '61%', width: '100%', height: '22%' }, // Area for the second option
               { top: '83%', width: '100%', height: '10%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/078.png`),
+            imagePath : require(`../images/library_deck/078.webp`),
             actions: [
                 {
                     type: ['stage','checkLast'],
@@ -1600,7 +1600,7 @@ const cardData = {
               { top: '65%', width: '100%', height: '14%' }, // Area for the second option
               { top: '80%', width: '100%', height: '12%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/079.png`),
+            imagePath : require(`../images/library_deck/079.webp`),
             actions: [
                 {
                     type: ['stage','checkLast'],
@@ -1621,7 +1621,7 @@ const cardData = {
         hoverAreas: [
               { top: '40%', width: '100%', height: '50%' }, // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/080.png`),
+            imagePath : require(`../images/library_deck/080.webp`),
             actions: [
                 {
                     type: ['trash'],
@@ -1633,7 +1633,7 @@ const cardData = {
         hoverAreas: [
               { top: '57%', width: '100%', height: '50%' }, // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/081.png`),
+            imagePath : require(`../images/library_deck/081.webp`),
             actions: [
                 {
                     type: ['trash'],
@@ -1646,7 +1646,7 @@ const cardData = {
             { top: '48%', width: '100%', height: '12%' }, // Area for the first option
             { top: '74%', width: '100%', height: '14%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/082.png`),
+          imagePath : require(`../images/library_deck/082.webp`),
           actions: [
               {
                 type: ['add'],
@@ -1665,7 +1665,7 @@ const cardData = {
             { top: '48%', width: '100%', height: '12%' }, // Area for the first option
             { top: '72%', width: '100%', height: '14%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/083.png`),
+          imagePath : require(`../images/library_deck/083.webp`),
           actions: [
               {
                   type: ['add'],
@@ -1684,7 +1684,7 @@ const cardData = {
             { top: '51%', width: '100%', height: '12%' }, // Area for the first option
             { top: '74%', width: '100%', height: '14%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/084.png`),
+          imagePath : require(`../images/library_deck/084.webp`),
           actions: [
               {
                 type: ['add'],
@@ -1703,7 +1703,7 @@ const cardData = {
             { top: '44%', width: '100%', height: '11%' }, // Area for the first option
             { top: '70%', width: '100%', height: '11%' } // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/085.png`),
+          imagePath : require(`../images/library_deck/085.webp`),
           actions: [
             {
                 type: ['add'],
@@ -1723,7 +1723,7 @@ const cardData = {
             { top: '67%', width: '100%', height: '11%' }, // Area for the second option
             { top: '85%', width: '100%', height: '13%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/086.png`),
+          imagePath : require(`../images/library_deck/086.webp`),
           actions: [
               {
                   type: ['add'],
@@ -1747,7 +1747,7 @@ const cardData = {
             { top: '50%', width: '100%', height: '10%' }, // Area for the first option
             { top: '74%', width: '100%', height: '10%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/087.png`),
+          imagePath : require(`../images/library_deck/087.webp`),
           actions: [
               {
                   type: ['trash']
@@ -1763,7 +1763,7 @@ const cardData = {
             { top: '70%', width: '100%', height: '12%' }, // Area for the second option
             { top: '88%', width: '100%', height: '12%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/088.png`),
+          imagePath : require(`../images/library_deck/088.webp`),
           actions: [
               {
                   type: ['add'],
@@ -1787,7 +1787,7 @@ const cardData = {
             { top: '43%', width: '100%', height: '15%' }, // Area for the first option
             { top: '70%', width: '100%', height: '14%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/089.png`),
+          imagePath : require(`../images/library_deck/089.webp`),
           actions: [
               {
                   type: ['trash']
@@ -1804,7 +1804,7 @@ const cardData = {
             { top: '57%', width: '100%', height: '23%' }, // Area for the second option
             { top: '88%', width: '100%', height: '10%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/090.png`),
+          imagePath : require(`../images/library_deck/090.webp`),
           actions: [
               {
                   type: ['add'],
@@ -1828,7 +1828,7 @@ const cardData = {
             { top: '50%', width: '100%', height: '13%' }, // Area for the first option
             { top: '71%', width: '100%', height: '13%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/091.png`),
+          imagePath : require(`../images/library_deck/091.webp`),
           actions: [
               {
                   type: ['trash']
@@ -1843,7 +1843,7 @@ const cardData = {
             { top: '40%', width: '100%', height: '20%' }, // Area for the first option
             { top: '68%', width: '100%', height: '16%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/092.png`),
+          imagePath : require(`../images/library_deck/092.webp`),
           actions: [
               {
                   type: ['add'],
@@ -1862,7 +1862,7 @@ const cardData = {
             { top: '46%', width: '100%', height: '14%' }, // Area for the first option
             { top: '68%', width: '100%', height: '22%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/093.png`),
+          imagePath : require(`../images/library_deck/093.webp`),
           actions: [
               {
                   type: ['trash']
@@ -1879,7 +1879,7 @@ const cardData = {
               { top: '44%', width: '100%', height: '11%' }, // Area for the first option
               { top: '70%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/094.png`),
+            imagePath : require(`../images/library_deck/094.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1896,7 +1896,7 @@ const cardData = {
               { top: '44%', width: '100%', height: '16%' }, // Area for the first option
               { top: '82%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/095.png`),
+            imagePath : require(`../images/library_deck/095.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1913,7 +1913,7 @@ const cardData = {
               { top: '48%', width: '100%', height: '13%' }, // Area for the first option
               { top: '81%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/096.png`),
+            imagePath : require(`../images/library_deck/096.webp`),
             actions: [
               {
                 type: ['stage'],
@@ -1929,7 +1929,7 @@ const cardData = {
         hoverAreas: [
               { top: '80%', width: '100%', height: '15%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/097.png`),
+            imagePath : require(`../images/library_deck/097.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1942,7 +1942,7 @@ const cardData = {
               { top: '62%', width: '100%', height: '11%' }, // Area for the first option
               { top: '84%', width: '100%', height: '16%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/098.png`),
+            imagePath : require(`../images/library_deck/098.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -1957,7 +1957,7 @@ const cardData = {
         hoverAreas: [
               { top: '44%', width: '100%', height: '11%' }, // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/099.png`),
+            imagePath : require(`../images/library_deck/099.webp`),
             actions: [
               {
                   type: ['trash']
@@ -1969,7 +1969,7 @@ const cardData = {
               { top: '35%', width: '100%', height: '13%' }, // Area for the first option
              
             ],
-            imagePath : require(`../images/library_deck/100.png`),
+            imagePath : require(`../images/library_deck/100.webp`),
             actions: [
               {
                   type: ['trash']
@@ -1982,7 +1982,7 @@ const cardData = {
             { top: '48%', width: '100%', height: '12%' }, // Area for the first option
             { top: '74%', width: '100%', height: '14%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/101.png`),
+          imagePath : require(`../images/library_deck/101.webp`),
           actions: [
             {
                 type: ['stage','add'],
@@ -2003,7 +2003,7 @@ const cardData = {
             { top: '54%', width: '100%', height: '12%' }, // Area for the first option
             { top: '85%', width: '100%', height: '14%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/102.png`),
+          imagePath : require(`../images/library_deck/102.webp`),
           actions: [
               {
                 type: ['stage'],
@@ -2021,7 +2021,7 @@ const cardData = {
             { top: '48%', width: '100%', height: '18%' }, // Area for the second option
             { top: '66%', width: '100%', height: '14%' } // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/103.png`),
+          imagePath : require(`../images/library_deck/103.webp`),
           actions: [
             {
                 type: ['add'],
@@ -2044,7 +2044,7 @@ const cardData = {
             { top: '55%', width: '100%', height: '6%' }, // Area for the first option
             { top: '84%', width: '100%', height: '14%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/104.png`),
+          imagePath : require(`../images/library_deck/104.webp`),
           actions: [
               {
                 type: ['stage','add'],
@@ -2067,7 +2067,7 @@ const cardData = {
             { top: '53%', width: '100%', height: '15%' }, // Area for the second option
             { top: '75%', width: '100%', height: '16%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/105.png`),
+          imagePath : require(`../images/library_deck/105.webp`),
           actions: [
               {
                 type: ['trash']
@@ -2092,7 +2092,7 @@ const cardData = {
             { top: '55%', width: '100%', height: '12%' }, // Area for the second option
             { top: '73%', width: '100%', height: '16%' } // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/106.png`),
+          imagePath : require(`../images/library_deck/106.webp`),
           actions: [
               {
                 type: ['trash']
@@ -2113,7 +2113,7 @@ const cardData = {
             { top: '52%', width: '100%', height: '10%' }, // Area for the first option
             { top: '79%', width: '100%', height: '14%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/107.png`),
+          imagePath : require(`../images/library_deck/107.webp`),
           actions: [
               {
                 type: ['stage'],
@@ -2132,7 +2132,7 @@ const cardData = {
             { top: '52%', width: '100%', height: '12%' }, // Area for the first option
             { top: '82%', width: '100%', height: '14%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/108.png`),
+          imagePath : require(`../images/library_deck/108.webp`),
           actions: [
               {
                 type: ['trash']
@@ -2147,7 +2147,7 @@ const cardData = {
             { top: '60%', width: '100%', height: '9%' }, // Area for the first option
             { top: '84%', width: '100%', height: '14%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/109.png`),
+          imagePath : require(`../images/library_deck/109.webp`),
           actions: [
               {
                 type: ['trash']
@@ -2166,7 +2166,7 @@ const cardData = {
             { top: '78%', width: '100%', height: '8%' }, // Area for the second option
             { top: '93%', width: '100%', height: '8%' } // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/110.png`),
+          imagePath : require(`../images/library_deck/110.webp`),
           actions: [
               {
                 type: ['trash']
@@ -2196,7 +2196,7 @@ const cardData = {
            
             { top: '82%', width: '100%', height: '18%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/111.png`),
+          imagePath : require(`../images/library_deck/111.webp`),
           actions: [
               {
                 type: ['pass']
@@ -2208,7 +2208,7 @@ const cardData = {
             { top: '40%', width: '100%', height: '12%' }, // Area for the first option
             { top: '63%', width: '100%', height: '16%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/112.png`),
+          imagePath : require(`../images/library_deck/112.webp`),
           actions: [
               {
                 type: ['stage'],
@@ -2225,7 +2225,7 @@ const cardData = {
             { top: '44%', width: '100%', height: '11%' }, // Area for the first option
             { top: '71%', width: '100%', height: '16%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/113.png`),
+          imagePath : require(`../images/library_deck/113.webp`),
           actions: [
               {
                 type: ['stage'],
@@ -2242,7 +2242,7 @@ const cardData = {
             { top: '51%', width: '100%', height: '11%' }, // Area for the first option
             { top: '74%', width: '100%', height: '16%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/114.png`),
+          imagePath : require(`../images/library_deck/114.webp`),
           actions: [
               {
                 type: ['stage'],
@@ -2259,7 +2259,7 @@ const cardData = {
             { top: '44%', width: '100%', height: '11%' }, // Area for the first option
             { top: '74%', width: '100%', height: '16%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/115.png`),
+          imagePath : require(`../images/library_deck/115.webp`),
           actions: [
               {
                 type: ['trash'],
@@ -2275,7 +2275,7 @@ const cardData = {
             { top: '41%', width: '100%', height: '11%' }, // Area for the first option
             { top: '64%', width: '100%', height: '16%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/116.png`),
+          imagePath : require(`../images/library_deck/116.webp`),
           actions: [
               {
                 type: ['trash'],
@@ -2291,7 +2291,7 @@ const cardData = {
             { top: '44%', width: '100%', height: '11%' }, // Area for the first option
             { top: '71%', width: '100%', height: '18%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/117.png`),
+          imagePath : require(`../images/library_deck/117.webp`),
           actions: [
               {
                 type: ['stage'],
@@ -2308,7 +2308,7 @@ const cardData = {
             { top: '48%', width: '100%', height: '11%' }, // Area for the first option
             { top: '78%', width: '100%', height: '16%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/118.png`),
+          imagePath : require(`../images/library_deck/118.webp`),
           actions: [
               {
                 type: ['stage'],
@@ -2327,7 +2327,7 @@ const cardData = {
             { top: '56%', width: '100%', height: '14%' }, // Area for the first option
             { top: '90%', width: '100%', height: '11%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/119.png`),
+          imagePath : require(`../images/library_deck/119.webp`),
           actions: [
               {
                 type: ['stage'],
@@ -2344,7 +2344,7 @@ const cardData = {
             { top: '60%', width: '100%', height: '14%' }, // Area for the first option
             { top: '90%', width: '100%', height: '9%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/120.png`),
+          imagePath : require(`../images/library_deck/120.webp`),
           actions: [
               {
                 type: ['trash']
@@ -2360,7 +2360,7 @@ const cardData = {
             { top: '50%', width: '100%', height: '20%' } // Area for the first option
     
           ],
-          imagePath : require(`../images/library_deck/121.png`),
+          imagePath : require(`../images/library_deck/121.webp`),
           actions: [
               {
                 type: ['stage'],
@@ -2375,7 +2375,7 @@ const cardData = {
             { top: '75%', width: '100%', height: '9%' }, // Area for the first option
             { top: '91%', width: '100%', height: '8%' }, // Area for the first option
           ],
-          imagePath : require(`../images/library_deck/122.png`),
+          imagePath : require(`../images/library_deck/122.webp`),
           actions: [
               {
                 type: ['trash']
@@ -2402,7 +2402,7 @@ const cardData = {
             { top: '75%', width: '100%', height: '9%' }, // Area for the first option
             { top: '91%', width: '100%', height: '8%' }, // Area for the first option
           ],
-          imagePath : require(`../images/library_deck/123.png`),
+          imagePath : require(`../images/library_deck/123.webp`),
           actions: [
               {
                 type: ['trash']
@@ -2429,7 +2429,7 @@ const cardData = {
             { top: '72%', width: '100%', height: '9%' }, // Area for the first option
             { top: '88%', width: '100%', height: '10%' }, // Area for the first option
           ],
-          imagePath : require(`../images/library_deck/124.png`),
+          imagePath : require(`../images/library_deck/124.webp`),
           actions: [
               {
                 type: ['trash']
@@ -2454,7 +2454,7 @@ const cardData = {
             { top: '48%', width: '100%', height: '11%' }, // Area for the first option
             { top: '78%', width: '100%', height: '14%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/125.png`),
+          imagePath : require(`../images/library_deck/125.webp`),
           actions: [
             {
                 type: ['stage','add'],
@@ -2475,7 +2475,7 @@ const cardData = {
             { top: '52%', width: '100%', height: '50%' }, // Area for the first option
            
           ],
-          imagePath : require(`../images/library_deck/126.png`),
+          imagePath : require(`../images/library_deck/126.webp`),
           actions: [
             {
                 type: ['trash']
@@ -2488,7 +2488,7 @@ const cardData = {
             { top: '57%', width: '100%', height: '21%' }, // Area for the second option
             { top: '85%', width: '100%', height: '18%' } // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/127.png`),
+          imagePath : require(`../images/library_deck/127.webp`),
           actions: [
             {
                 type: ['add'],
@@ -2510,7 +2510,7 @@ const cardData = {
             { top: '48%', width: '100%', height: '50%' }, // Area for the first option
            
           ],
-          imagePath : require(`../images/library_deck/128.png`),
+          imagePath : require(`../images/library_deck/128.webp`),
           actions: [
             {
                 type: ['trash']
@@ -2523,7 +2523,7 @@ const cardData = {
             { top: '61%', width: '100%', height: '18%' }, // Area for the second option
             { top: '85%', width: '100%', height: '15%' }, // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/129.png`),
+          imagePath : require(`../images/library_deck/129.webp`),
           actions: [
             {
                 type: ['add'],
@@ -2546,7 +2546,7 @@ const cardData = {
               { top: '63%', width: '100%', height: '10%' }, // Area for the second option
               { top: '90%', width: '100%', height: '10%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/130.png`),
+            imagePath : require(`../images/library_deck/130.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -2566,7 +2566,7 @@ const cardData = {
         hoverAreas: [
               { top: '50%', width: '100%', height: '15%' }, // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/131.png`),
+            imagePath : require(`../images/library_deck/131.webp`),
             actions: [
               {
                   type: ['trash']
@@ -2578,7 +2578,7 @@ const cardData = {
         hoverAreas: [
               { top: '58%', width: '100%', height: '15%' }, // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/132.png`),
+            imagePath : require(`../images/library_deck/132.webp`),
             actions: [
                 {
                     type: ['trash']
@@ -2589,7 +2589,7 @@ const cardData = {
         hoverAreas: [
               { top: '50%', width: '100%', height: '15%' }, // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/133.png`),
+            imagePath : require(`../images/library_deck/133.webp`),
             actions: [
                 {
                     type: ['trash']
@@ -2601,7 +2601,7 @@ const cardData = {
               { top: '53%', width: '100%', height: '12%' }, // Area for the first option
               { top: '80%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/134.png`),
+            imagePath : require(`../images/library_deck/134.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -2619,7 +2619,7 @@ const cardData = {
               { top: '75%', width: '100%', height: '15%' }, // Area for the second option
               { top: '90%', width: '100%', height: '09%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/135.png`),
+            imagePath : require(`../images/library_deck/135.webp`),
             actions: [
               {
                   type: ['trash']
@@ -2641,7 +2641,7 @@ const cardData = {
               { top: '48%', width: '100%', height: '13%' }, // Area for the first option
               { top: '75%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/136.png`),
+            imagePath : require(`../images/library_deck/136.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -2657,7 +2657,7 @@ const cardData = {
               { top: '52%', width: '100%', height: '11%' }, // Area for the first option
               { top: '78%', width: '100%', height: '17%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/137.png`),
+            imagePath : require(`../images/library_deck/137.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -2674,7 +2674,7 @@ const cardData = {
               { top: '61%', width: '100%', height: '9%' }, // Area for the first option
               { top: '85%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/138.png`),
+            imagePath : require(`../images/library_deck/138.webp`),
             actions: [
               {
                   type: ['add'],
@@ -2693,7 +2693,7 @@ const cardData = {
               { top: '65%', width: '100%', height: '10%' }, // Area for the first option
               { top: '90%', width: '100%', height: '10%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/139.png`),
+            imagePath : require(`../images/library_deck/139.webp`),
             actions: [
                 {
                     type: ['add'],
@@ -2713,7 +2713,7 @@ const cardData = {
               { top: '65%', width: '100%', height: '8%' }, // Area for the second option
               { top: '73%', width: '100%', height: '23%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/140.png`),
+            imagePath : require(`../images/library_deck/140.webp`),
             actions: [
               {
                   type: ['trash'],
@@ -2732,7 +2732,7 @@ const cardData = {
               { top: '48%', width: '100%', height: '18%' }, // Area for the first option
               { top: '81%', width: '100%', height: '18%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/141.png`),
+            imagePath : require(`../images/library_deck/141.webp`),
             actions: [
                 {
                     type: ['keep','stage'],
@@ -2749,7 +2749,7 @@ const cardData = {
               { top: '45%', width: '100%', height: '18%' }, // Area for the first option
               { top: '78%', width: '100%', height: '18%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/142.png`),
+            imagePath : require(`../images/library_deck/142.webp`),
             actions: [
                 {
                     type: ['keep','stage'],
@@ -2766,7 +2766,7 @@ const cardData = {
               { top: '55%', width: '100%', height: '18%' }, // Area for the first option
               { top: '88%', width: '100%', height: '12%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/143.png`),
+            imagePath : require(`../images/library_deck/143.webp`),
             actions: [
                 {
                     type: ['keep','stage','add'],
@@ -2786,7 +2786,7 @@ const cardData = {
         hoverAreas: [
               { top: '37%', width: '100%', height: '15%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/144.png`),
+            imagePath : require(`../images/library_deck/144.webp`),
             actions: [
                 {
                     type: ['discard'],
@@ -2800,7 +2800,7 @@ const cardData = {
               { top: '62%', width: '100%', height: '18%' }, // Area for the second option
               { top: '80%', width: '100%', height: '20%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/145.png`),
+            imagePath : require(`../images/library_deck/145.webp`),
             actions: [
                 {
                     type: ['discard'],
@@ -2821,7 +2821,7 @@ const cardData = {
               { top: '53%', width: '100%', height: '13%' }, // Area for the first option
               { top: '85%', width: '100%', height: '15%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/146.png`),
+            imagePath : require(`../images/library_deck/146.webp`),
             actions: [
                 {
                     type: ['keep','stage'],
@@ -2837,7 +2837,7 @@ const cardData = {
         hoverAreas: [
               { top: '52%', width: '100%', height: '18%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/147.png`),
+            imagePath : require(`../images/library_deck/147.webp`),
             actions: [
                 {
                     type: ['trash']
@@ -2850,7 +2850,7 @@ const cardData = {
               { top: '56%', width: '100%', height: '11%' }, // Area for the first option
               { top: '80%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/148.png`),
+            imagePath : require(`../images/library_deck/148.webp`),
             actions: [
               {
                   type: ['trash'],
@@ -2865,7 +2865,7 @@ const cardData = {
         hoverAreas: [
               { top: '99%', width: '100%', height: '1%' }, // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/149.png`),
+            imagePath : require(`../images/library_deck/149.webp`),
             actions: [
               {
                   type: ['trash'],
@@ -2877,7 +2877,7 @@ const cardData = {
               { top: '47%', width: '100%', height: '11%' }, // Area for the first option
               { top: '75%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/150.png`),
+            imagePath : require(`../images/library_deck/150.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -2894,7 +2894,7 @@ const cardData = {
               { top: '55%', width: '100%', height: '11%' }, // Area for the first option
               { top: '81%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/151.png`),
+            imagePath : require(`../images/library_deck/151.webp`),
             actions: [
               {
                   type: ['stage','add'],
@@ -2914,7 +2914,7 @@ const cardData = {
               { top: '47%', width: '100%', height: '11%' }, // Area for the first option
               { top: '75%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/152.png`),
+            imagePath : require(`../images/library_deck/152.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -2931,7 +2931,7 @@ const cardData = {
               { top: '47%', width: '100%', height: '11%' }, // Area for the first option
               { top: '75%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/153.png`),
+            imagePath : require(`../images/library_deck/153.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -2950,7 +2950,7 @@ const cardData = {
               { top: '78%', width: '100%', height: '11%' }, // Area for the second option
               { top: '90%', width: '100%', height: '10%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/154.png`),
+            imagePath : require(`../images/library_deck/154.webp`),
             actions: [
               {
                   type: ['trash'],
@@ -2973,7 +2973,7 @@ const cardData = {
         hoverAreas: [
               { top: '61%', width: '100%', height: '11%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/155.png`),
+            imagePath : require(`../images/library_deck/155.webp`),
             actions: [
               {
                   type: ['pass']
@@ -2987,7 +2987,7 @@ const cardData = {
               { top: '72%', width: '100%', height: '11%' }, // Area for the second option
               { top: '83%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/156.png`),
+            imagePath : require(`../images/library_deck/156.webp`),
             actions: [
                 {
                     type: ['discard'],
@@ -3008,7 +3008,7 @@ const cardData = {
               { top: '47%', width: '100%', height: '11%' }, // Area for the first option
               { top: '72%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/157.png`),
+            imagePath : require(`../images/library_deck/157.webp`),
             actions: [
               {
                 type: ['stage'],
@@ -3025,7 +3025,7 @@ const cardData = {
               { top: '45%', width: '100%', height: '13%' }, // Area for the first option
               { top: '88%', width: '100%', height: '12%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/158.png`),
+            imagePath : require(`../images/library_deck/158.webp`),
             actions: [
               {
                   type: ['trash']
@@ -3040,7 +3040,7 @@ const cardData = {
               { top: '45%', width: '100%', height: '11%' }, // Area for the first option
               { top: '71%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/159.png`),
+            imagePath : require(`../images/library_deck/159.webp`),
             actions: [
               {
                   type: ['trash']
@@ -3056,7 +3056,7 @@ const cardData = {
               { top: '30%', width: '100%', height: '12%' }, // Area for the first option
               { top: '51%', width: '100%', height: '25%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/160.png`),
+            imagePath : require(`../images/library_deck/160.webp`),
             actions: [
               {
                   type: ['trash'],
@@ -3073,7 +3073,7 @@ const cardData = {
               { top: '70%', width: '100%', height: '12%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/161.png`),
+            imagePath : require(`../images/library_deck/161.webp`),
             actions: [
               {
                   type: ['trash'],
@@ -3096,7 +3096,7 @@ const cardData = {
               { top: '71%', width: '100%', height: '10%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/162.png`),
+            imagePath : require(`../images/library_deck/162.webp`),
             actions: [
               {
                   type: ['trash'],
@@ -3122,7 +3122,7 @@ const cardData = {
               { top: '82%', width: '100%', height: '15%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/163.png`),
+            imagePath : require(`../images/library_deck/163.webp`),
             actions: [
               {
                   type: ['trash'],
@@ -3145,7 +3145,7 @@ const cardData = {
               { top: '66%', width: '100%', height: '15%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/164.png`),
+            imagePath : require(`../images/library_deck/164.webp`),
             actions: [
               {
                   type: ['discard'],
@@ -3167,7 +3167,7 @@ const cardData = {
               { top: '66%', width: '100%', height: '15%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/165.png`),
+            imagePath : require(`../images/library_deck/165.webp`),
             actions: [
               {
                   type: ['discard'],
@@ -3187,7 +3187,7 @@ const cardData = {
               { top: '38%', width: '100%', height: '11%' }, // Area for the first option
               { top: '60%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/166.png`),
+            imagePath : require(`../images/library_deck/166.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -3206,7 +3206,7 @@ const cardData = {
               { top: '56%', width: '100%', height: '8%' }, // Area for the first option
               { top: '75%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/167.png`),
+            imagePath : require(`../images/library_deck/167.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -3226,7 +3226,7 @@ const cardData = {
               { top: '48%', width: '100%', height: '14%' }, // Area for the first option
               { top: '70%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/168.png`),
+            imagePath : require(`../images/library_deck/168.webp`),
             actions: [
               {
                   type: ['keep'],
@@ -3246,7 +3246,7 @@ const cardData = {
               { top: '52%', width: '100%', height: '10%' }, // Area for the first option
               { top: '72%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/169.png`),
+            imagePath : require(`../images/library_deck/169.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -3265,7 +3265,7 @@ const cardData = {
               { top: '52%', width: '100%', height: '12%' }, // Area for the first option
               { top: '75%', width: '100%', height: '15%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/170.png`),
+            imagePath : require(`../images/library_deck/170.webp`),
             actions: [
               {
                   type: ['stage','add'],
@@ -3287,7 +3287,7 @@ const cardData = {
               { top: '62%', width: '100%', height: '8%' }, // Area for the second option
               { top: '78%', width: '100%', height: '18%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/171.png`),
+            imagePath : require(`../images/library_deck/171.webp`),
             actions: [
               {
                   type: ['trash']
@@ -3307,7 +3307,7 @@ const cardData = {
               { top: '67%', width: '100%', height: '8%' }, // Area for the first option
               { top: '90%', width: '100%', height: '9%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/172.png`),
+            imagePath : require(`../images/library_deck/172.webp`),
             actions: [
                 {
                     type: ['stage','add'],
@@ -3330,7 +3330,7 @@ const cardData = {
               { top: '73%', width: '100%', height: '11%' }, // Area for the second option
               { top: '84%', width: '100%', height: '15%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/173.png`),
+            imagePath : require(`../images/library_deck/173.webp`),
             actions: [
               {
                   type: ['keep']
@@ -3356,7 +3356,7 @@ const cardData = {
               { top: '57%', width: '100%', height: '12%' }, // Area for the second option
               { top: '77%', width: '100%', height: '18%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/174.png`),
+            imagePath : require(`../images/library_deck/174.webp`),
             actions: [
               {
                   type: ['keep']
@@ -3378,7 +3378,7 @@ const cardData = {
               { top: '73%', width: '100%', height: '11%' }, // Area for the second option
               { top: '84%', width: '100%', height: '15%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/175.png`),
+            imagePath : require(`../images/library_deck/175.webp`),
             actions: [
               {
                   type: ['keep']
@@ -3403,7 +3403,7 @@ const cardData = {
               { top: '50%', width: '100%', height: '15%' }, // Area for the first option
               { top: '78%', width: '100%', height: '20%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/176.png`),
+            imagePath : require(`../images/library_deck/176.webp`),
             actions: [
               {
                   type: ['stage','specialShieldAction','add'],
@@ -3429,7 +3429,7 @@ const cardData = {
               { top: '73%', width: '100%', height: '20%' } // Area for the second option
             
             ],
-            imagePath : require(`../images/library_deck/177.png`),
+            imagePath : require(`../images/library_deck/177.webp`),
             actions: [
               {
                   type: ['keep']
@@ -3451,7 +3451,7 @@ const cardData = {
               { top: '77%', width: '100%', height: '20%' } // Area for the second option
             
             ],
-            imagePath : require(`../images/library_deck/178.png`),
+            imagePath : require(`../images/library_deck/178.webp`),
             actions: [
               {
                   type: ['keep']
@@ -3473,7 +3473,7 @@ const cardData = {
               { top: '75%', width: '100%', height: '20%' } // Area for the second option
             
             ],
-            imagePath : require(`../images/library_deck/179.png`),
+            imagePath : require(`../images/library_deck/179.webp`),
             actions: [
               {
                   type: ['keep']
@@ -3494,7 +3494,7 @@ const cardData = {
     
               { top: '68%', width: '100%', height: '18%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/180.png`),
+            imagePath : require(`../images/library_deck/180.webp`),
             actions: [
               {
                 type: ['stage','add'],
@@ -3517,7 +3517,7 @@ const cardData = {
               { top: '55%', width: '100%', height: '18%' }, // Area for the second option
               { top: '73%', width: '100%', height: '18%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/181.png`),
+            imagePath : require(`../images/library_deck/181.webp`),
             actions: [
               {
                   type: ['keep']
@@ -3544,7 +3544,7 @@ const cardData = {
               { top: '58%', width: '100%', height: '14%' }, // Area for the second option
               { top: '72%', width: '100%', height: '18%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/182.png`),
+            imagePath : require(`../images/library_deck/182.webp`),
             actions: [
               {
                   type: ['trash']
@@ -3569,7 +3569,7 @@ const cardData = {
               { top: '36%', width: '100%', height: '12%' }, // Area for the first option
               { top: '79%', width: '100%', height: '18%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/183.png`),
+            imagePath : require(`../images/library_deck/183.webp`),
             actions: [
               {
                   type: ['trash','specialStarAction']
@@ -3584,7 +3584,7 @@ const cardData = {
         hoverAreas: [
               { top: '38%', width: '100%', height: '10%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/184.png`),
+            imagePath : require(`../images/library_deck/184.webp`),
             actions: [
               {
                   type: ['stage','multiAdd'],
@@ -3597,7 +3597,7 @@ const cardData = {
         hoverAreas: [
               { top: '38%', width: '100%', height: '12%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/185.png`),
+            imagePath : require(`../images/library_deck/185.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -3609,7 +3609,7 @@ const cardData = {
         hoverAreas: [
               { top: '57%', width: '100%', height: '21%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/186.png`),
+            imagePath : require(`../images/library_deck/186.webp`),
             actions: [
               {
                   type: ['stage','multiAdd'],
@@ -3622,7 +3622,7 @@ const cardData = {
         hoverAreas: [
               { top: '44%', width: '100%', height: '17%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/187.png`),
+            imagePath : require(`../images/library_deck/187.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -3635,7 +3635,7 @@ const cardData = {
               { top: '44%', width: '100%', height: '6%' }, // Area for the first option
               { top: '64%', width: '100%', height: '15%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/190.png`),
+            imagePath : require(`../images/library_deck/190.webp`),
             actions: [
               {
                   type: ['stage','add'],
@@ -3657,7 +3657,7 @@ const cardData = {
               { top: '39%', width: '100%', height: '15%' }, // Area for the first option
               { top: '60%', width: '100%', height: '20%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/191.png`),
+            imagePath : require(`../images/library_deck/191.webp`),
             actions: [
                 {
                     type: ['keep']
@@ -3679,7 +3679,7 @@ const cardData = {
               { top: '52%', width: '100%', height: '6%' }, // Area for the first option
               { top: '71%', width: '100%', height: '15%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/192.png`),
+            imagePath : require(`../images/library_deck/192.webp`),
             actions: [
               {
                   type: ['stage','add'],
@@ -3699,7 +3699,7 @@ const cardData = {
         hoverAreas: [
               { top: '75%', width: '100%', height: '25%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/193.png`),
+            imagePath : require(`../images/library_deck/193.webp`),
             actions: [
               {
                   type: ['trash','vault7Special']
@@ -3712,7 +3712,7 @@ const cardData = {
               { top: '60%', width: '100%', height: '14%' }, // Area for the first option
               { top: '82%', width: '100%', height: '18%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/194.png`),
+            imagePath : require(`../images/library_deck/194.webp`),
             actions: [
               {
                   type: ['trash']
@@ -3733,7 +3733,7 @@ const cardData = {
               { top: '60%', width: '100%', height: '14%' }, // Area for the first option
               { top: '82%', width: '100%', height: '18%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/195.png`),
+            imagePath : require(`../images/library_deck/195.webp`),
             actions: [
               {
                   type: ['trash']
@@ -3753,7 +3753,7 @@ const cardData = {
               { top: '60%', width: '100%', height: '14%' }, // Area for the first option
               { top: '82%', width: '100%', height: '18%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/196.png`),
+            imagePath : require(`../images/library_deck/196.webp`),
             actions: [
               {
                   type: ['trash']
@@ -3774,7 +3774,7 @@ const cardData = {
               { top: '72%', width: '100%', height: '12%' }, // Area for the first option
               { top: '84%', width: '100%', height: '15%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/197.png`),
+            imagePath : require(`../images/library_deck/197.webp`),
             actions: [
               {
                   type: ['discard'],
@@ -3797,7 +3797,7 @@ const cardData = {
               { top: '66%', width: '100%', height: '14%' }, // Area for the first option
               { top: '80%', width: '100%', height: '15%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/198.png`),
+            imagePath : require(`../images/library_deck/198.webp`),
             actions: [
               {
                   type: ['discard'],
@@ -3820,7 +3820,7 @@ const cardData = {
               { top: '66%', width: '100%', height: '17%' }, // Area for the first option
               { top: '83%', width: '100%', height: '15%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/199.png`),
+            imagePath : require(`../images/library_deck/199.webp`),
             actions: [
               {
                   type: ['discard'],
@@ -3840,7 +3840,7 @@ const cardData = {
               { top: '45%', width: '100%', height: '27%' }, // Area for the first option
               { top: '78%', width: '100%', height: '18%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/200.png`),
+            imagePath : require(`../images/library_deck/200.webp`),
             actions: [
               {
                   type: ['trash']
@@ -3858,7 +3858,7 @@ const cardData = {
               { top: '43%', width: '100%', height: '18%' }, // Area for the first option
               { top: '68%', width: '100%', height: '18%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/201.png`),
+            imagePath : require(`../images/library_deck/201.webp`),
             actions: [
               {
                   type: ['trash']
@@ -3876,7 +3876,7 @@ const cardData = {
               { top: '43%', width: '100%', height: '26%' }, // Area for the first option
               { top: '78%', width: '100%', height: '18%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/202.png`),
+            imagePath : require(`../images/library_deck/202.webp`),
             actions: [
               {
                   type: ['trash']
@@ -3893,7 +3893,7 @@ const cardData = {
         hoverAreas: [
               { top: '85%', width: '100%', height: '15%' } // Area for the first option
             ],
-            imagePath : require(`../images/library_deck/203.png`),
+            imagePath : require(`../images/library_deck/203.webp`),
             actions: [
               {
                   type: ['trash']
@@ -3911,7 +3911,7 @@ const cardData = {
               { top: '74%', width: '100%', height: '6%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/214.png`),
+            imagePath : require(`../images/library_deck/214.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -3940,7 +3940,7 @@ const cardData = {
               { top: '88%', width: '100%', height: '10%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/215.png`),
+            imagePath : require(`../images/library_deck/215.webp`),
             actions: [
               {
                   type: ['trash']
@@ -3969,7 +3969,7 @@ const cardData = {
               { top: '74%', width: '100%', height: '15%' }, // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/216.png`),
+            imagePath : require(`../images/library_deck/216.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -3988,7 +3988,7 @@ const cardData = {
               { top: '64%', width: '100%', height: '6%' }, // Area for the second option
               { top: '84%', width: '100%', height: '16%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/217.png`),
+            imagePath : require(`../images/library_deck/217.webp`),
             actions: [
               {
                   type: ['stage'],
@@ -4009,7 +4009,7 @@ const cardData = {
               { top: '64%', width: '100%', height: '15%' } // Area for the second option
             
             ],
-            imagePath : require(`../images/library_deck/218.png`),
+            imagePath : require(`../images/library_deck/218.webp`),
             actions: [
               {
                   type: ['trash']
@@ -4024,7 +4024,7 @@ const cardData = {
               { top: '61%', width: '100%', height: '15%' } // Area for the second option
              
             ],
-            imagePath : require(`../images/library_deck/219.png`),
+            imagePath : require(`../images/library_deck/219.webp`),
             actions: [
               {
                 type: ['trash']
@@ -4037,7 +4037,7 @@ const cardData = {
               { top: '83%', width: '100%', height: '15%' } // Area for the second option
              
             ],
-            imagePath : require(`../images/library_deck/220.png`),
+            imagePath : require(`../images/library_deck/220.webp`),
             actions: [
               {
                     type: ['stage'],
@@ -4056,7 +4056,7 @@ const cardData = {
               { top: '57%', width: '100%', height: '20%' } // Area for the second option
              
             ],
-            imagePath : require(`../images/library_deck/221.png`),
+            imagePath : require(`../images/library_deck/221.webp`),
             actions: [
               {
                     type: ['stage'],
@@ -4076,7 +4076,7 @@ const cardData = {
               { top: '79%', width: '100%', height: '17%' }, // Area for the second option
              
             ],
-            imagePath : require(`../images/library_deck/222.png`),
+            imagePath : require(`../images/library_deck/222.webp`),
             actions: [
               {
                     type: ['trash']
@@ -4098,7 +4098,7 @@ const cardData = {
               { top: '66%', width: '100%', height: '18%' } // Area for the second option
              
             ],
-            imagePath : require(`../images/library_deck/223.png`),
+            imagePath : require(`../images/library_deck/223.webp`),
             actions: [
               {
                 type: ['trash']
@@ -4115,7 +4115,7 @@ const cardData = {
               { top: '68%', width: '100%', height: '17%' }, // Area for the second option
              
             ],
-            imagePath : require(`../images/library_deck/224.png`),
+            imagePath : require(`../images/library_deck/224.webp`),
             actions: [
               {
                     type: ['trash']
@@ -4138,7 +4138,7 @@ const cardData = {
               { top: '73%', width: '100%', height: '24%' } // Area for the second option
              
             ],
-            imagePath : require(`../images/library_deck/225.png`),
+            imagePath : require(`../images/library_deck/225.webp`),
             actions: [
               {
                     type: ['trash']
@@ -4158,7 +4158,7 @@ const cardData = {
               { top: '89%', width: '100%', height: '10%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/226.png`),
+            imagePath : require(`../images/library_deck/226.webp`),
             actions: [
                 {
                     type: ['trash','add'],
@@ -4185,7 +4185,7 @@ const cardData = {
               { top: '80%', width: '100%', height: '17%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/227.png`),
+            imagePath : require(`../images/library_deck/227.webp`),
             actions: [
                 {
                     type: ['keep']
@@ -4208,7 +4208,7 @@ const cardData = {
               { top: '78%', width: '100%', height: '17%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/228.png`),
+            imagePath : require(`../images/library_deck/228.webp`),
             actions: [
                 {
                     type: ['keep']
@@ -4231,7 +4231,7 @@ const cardData = {
               { top: '78%', width: '100%', height: '18%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/229.png`),
+            imagePath : require(`../images/library_deck/229.webp`),
             actions: [
                 {
                     type: ['keep']
@@ -4253,7 +4253,7 @@ const cardData = {
               { top: '67%', width: '100%', height: '18%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/230.png`),
+            imagePath : require(`../images/library_deck/230.webp`),
             actions: [
                 {
                     type: ['stage','add'],
@@ -4276,7 +4276,7 @@ const cardData = {
               { top: '81%', width: '100%', height: '17%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/231.png`),
+            imagePath : require(`../images/library_deck/231.webp`),
             actions: [
                 {
                     type: ['trash']
@@ -4303,7 +4303,7 @@ const cardData = {
               { top: '87%', width: '100%', height: '12%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/232.png`),
+            imagePath : require(`../images/library_deck/232.webp`),
             actions: [
                 {
                     type: ['trash']
@@ -4322,7 +4322,7 @@ const cardData = {
               { top: '77%', width: '100%', height: '12%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/233.png`),
+            imagePath : require(`../images/library_deck/233.webp`),
             actions: [
                 {
                     type: ['trash']
@@ -4338,7 +4338,7 @@ const cardData = {
               { top: '70%', width: '100%', height: '12%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/234.png`),
+            imagePath : require(`../images/library_deck/234.webp`),
             actions: [
                 {
                     type: ['stage','add'],
@@ -4361,7 +4361,7 @@ const cardData = {
               { top: '88%', width: '100%', height: '11%' } // Area for the second option
               
             ],
-            imagePath : require(`../images/library_deck/235.png`),
+            imagePath : require(`../images/library_deck/235.webp`),
             actions: [
                 {
                     type: ['trash']
@@ -4388,7 +4388,7 @@ const cardData = {
       
               
             ],
-            imagePath : require(`../images/library_deck/236.png`),
+            imagePath : require(`../images/library_deck/236.webp`),
             actions: [
                 {
                     type: ['trash']
@@ -4404,7 +4404,7 @@ const cardData = {
               { top: '46%', width: '100%', height: '9%' }, // Area for the first option
               { top: '72%', width: '100%', height: '12%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/237.png`),
+            imagePath : require(`../images/library_deck/237.webp`),
             actions: [
                 {
                     type: ['trash']
@@ -4420,7 +4420,7 @@ const cardData = {
               { top: '1%', width: '100%', height: '1%' }, // Area for the first option
 
             ],
-            imagePath : require(`../images/library_deck/238.png`),
+            imagePath : require(`../images/library_deck/238.webp`),
             actions: [
                 {
                     type: ['trash']
@@ -4432,7 +4432,7 @@ const cardData = {
               { top: '46%', width: '100%', height: '9%' }, // Area for the first option
               { top: '72%', width: '100%', height: '12%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/239.png`),
+            imagePath : require(`../images/library_deck/239.webp`),
             actions: [
                 {
                     type: ['trash']
@@ -4448,7 +4448,7 @@ const cardData = {
               { top: '31%', width: '100%', height: '12%' }, // Area for the first option
               { top: '48%', width: '100%', height: '18%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/240(1).png`),
+            imagePath : require(`../images/library_deck/240(1).webp`),
             actions: [
                 {
                     type: ['stage'],
@@ -4466,7 +4466,7 @@ const cardData = {
               { top: '31%', width: '100%', height: '12%' }, // Area for the first option
               { top: '48%', width: '100%', height: '18%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/240(2).png`),
+            imagePath : require(`../images/library_deck/240(2).webp`),
             actions: [
                 {
                     type: ['stage'],
@@ -4484,7 +4484,7 @@ const cardData = {
               { top: '31%', width: '100%', height: '12%' }, // Area for the first option
               { top: '48%', width: '100%', height: '18%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/240(3).png`),
+            imagePath : require(`../images/library_deck/240(3).webp`),
             actions: [
                 {
                     type: ['stage'],
@@ -4502,7 +4502,7 @@ const cardData = {
               { top: '31%', width: '100%', height: '12%' }, // Area for the first option
               { top: '48%', width: '100%', height: '18%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/240(4).png`),
+            imagePath : require(`../images/library_deck/240(4).webp`),
             actions: [
                 {
                     type: ['stage'],
@@ -4521,7 +4521,7 @@ const cardData = {
               { top: '42%', width: '100%', height: '12%' }, // Area for the second option
               { top: '60%', width: '100%', height: '20%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/241(1).png`),
+            imagePath : require(`../images/library_deck/241(1).webp`),
             actions: [
                 {
                     type: ['stage'],
@@ -4544,7 +4544,7 @@ const cardData = {
               { top: '28%', width: '100%', height: '14%' }, // Area for the first option
               { top: '49%', width: '100%', height: '30%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/241(2).png`),
+            imagePath : require(`../images/library_deck/241(2).webp`),
             actions: [
                 {
                     type: ['buildVault'],
@@ -4564,7 +4564,7 @@ const cardData = {
               { top: '39%', width: '100%', height: '11%' }, // Area for the first option
               { top: '59%', width: '100%', height: '30%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/242.png`),
+            imagePath : require(`../images/library_deck/242.webp`),
             actions: [
                 {
                     type: ['trash']
@@ -4585,7 +4585,7 @@ const cardData = {
               { top: '30%', width: '100%', height: '9%' }, // Area for the first option
               { top: '45%', width: '100%', height: '30%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/243(1).png`),
+            imagePath : require(`../images/library_deck/243(1).webp`),
             actions: [
                 {
                     type: ['stage'],
@@ -4603,7 +4603,7 @@ const cardData = {
               { top: '30%', width: '100%', height: '9%' }, // Area for the first option
               { top: '45%', width: '100%', height: '30%' }, // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/243(2).png`),
+            imagePath : require(`../images/library_deck/243(2).webp`),
             actions: [
                 {
                     type: ['stage'],
@@ -4621,7 +4621,7 @@ const cardData = {
             { top: '33%', width: '100%', height: '12%' }, // Area for the first option
             { top: '52%', width: '100%', height: '15%' } // Area for the second option
           ],
-          imagePath : require(`../images/library_deck/244(1).png`),
+          imagePath : require(`../images/library_deck/244(1).webp`),
           actions: [
             {
                 type: ['stage'],
@@ -4638,7 +4638,7 @@ const cardData = {
               { top: '33%', width: '100%', height: '12%' }, // Area for the first option
               { top: '52%', width: '100%', height: '15%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/244(2).png`),
+            imagePath : require(`../images/library_deck/244(2).webp`),
             actions: [
               {
                   type: ['stage'],
@@ -4655,7 +4655,7 @@ const cardData = {
               { top: '33%', width: '100%', height: '12%' }, // Area for the first option
               { top: '52%', width: '100%', height: '15%' } // Area for the second option
             ],
-            imagePath : require(`../images/library_deck/244(3).png`),
+            imagePath : require(`../images/library_deck/244(3).webp`),
             actions: [
               {
                   type: ['stage'],
@@ -4673,7 +4673,7 @@ const cardData = {
             { top: '41%', width: '100%', height: '9%' }, // Area for the second option
             { top: '73%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E01.png`),
+          imagePath : require(`../images/encounter_deck/E01.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -4697,7 +4697,7 @@ const cardData = {
             { top: '45%', width: '100%', height: '8%' }, // Area for the second option
 
           ],
-          imagePath : require(`../images/encounter_deck/E02.png`),
+          imagePath : require(`../images/encounter_deck/E02.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -4715,7 +4715,7 @@ const cardData = {
             { top: '53%', width: '100%', height: '6%' }, // Area for the second option
             { top: '69%', width: '100%', height: '6%' }, // Area for the third option
         ],
-        imagePath: require('../images/encounter_deck/E03.png'),
+        imagePath: require('../images/encounter_deck/E03.webp'),
         actions: [
             {
                 type: ['discard'],
@@ -4739,7 +4739,7 @@ const cardData = {
             { top: '47%', width: '100%', height: '8%' }, // Area for the second option
             { top: '71%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E04.png`),
+          imagePath : require(`../images/encounter_deck/E04.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -4762,7 +4762,7 @@ const cardData = {
             { top: '59%', width: '100%', height: '10%' }, // Area for the second option
             { top: '80%', width: '100%', height: '13%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E05.png`),
+          imagePath : require(`../images/encounter_deck/E05.webp`),
           actions: [
             {
                 type: ['trash']
@@ -4788,7 +4788,7 @@ const cardData = {
             { top: '47%', width: '100%', height: '8%' }, // Area for the second option
             { top: '67%', width: '100%', height: '9%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E06.png`),
+          imagePath : require(`../images/encounter_deck/E06.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -4809,7 +4809,7 @@ const cardData = {
             { top: '21%', width: '100%', height: '8%' }, // Area for the first option
             { top: '50%', width: '100%', height: '8%' }, // Area for the second option
           ],
-          imagePath : require(`../images/encounter_deck/E07.png`),
+          imagePath : require(`../images/encounter_deck/E07.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -4832,7 +4832,7 @@ const cardData = {
             { top: '52%', width: '100%', height: '21%' }, // Area for the second option
             { top: '74%', width: '100%', height: '20%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E08.png`),
+          imagePath : require(`../images/encounter_deck/E08.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -4852,7 +4852,7 @@ const cardData = {
             { top: '26%', width: '100%', height: '8%' }, // Area for the first option
             { top: '59%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E09.png`),
+          imagePath : require(`../images/encounter_deck/E09.webp`),
           actions: [
             {
                 type: ['add'],
@@ -4871,7 +4871,7 @@ const cardData = {
             { top: '60%', width: '100%', height: '8%' }, // Area for the second option
             { top: '81%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E10.png`),
+          imagePath : require(`../images/encounter_deck/E10.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -4893,7 +4893,7 @@ const cardData = {
             { top: '55%', width: '100%', height: '8%' }, // Area for the second option
             { top: '77%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E11.png`),
+          imagePath : require(`../images/encounter_deck/E11.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -4915,7 +4915,7 @@ const cardData = {
             { top: '55%', width: '100%', height: '8%' }, // Area for the second option
             { top: '76%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E12.png`),
+          imagePath : require(`../images/encounter_deck/E12.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -4939,7 +4939,7 @@ const cardData = {
             { top: '46%', width: '100%', height: '10%' }, // Area for the second option
             { top: '71%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E13.png`),
+          imagePath : require(`../images/encounter_deck/E13.webp`),
           actions: [
             {
                 type: ['add'],
@@ -4964,7 +4964,7 @@ const cardData = {
             { top: '67%', width: '100%', height: '17%' }, // Area for the second option
             { top: '86%', width: '100%', height: '13%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E14.png`),
+          imagePath : require(`../images/encounter_deck/E14.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -4987,7 +4987,7 @@ const cardData = {
             { top: '57%', width: '100%', height: '18%' }, // Area for the second option
             { top: '76%', width: '100%', height: '18%' }, // Area for the third option
           ],
-          imagePath : require(`../images/encounter_deck/E15.png`),
+          imagePath : require(`../images/encounter_deck/E15.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -5008,7 +5008,7 @@ const cardData = {
             { top: '21%', width: '100%', height: '8%' }, // Area for the first option
             { top: '60%', width: '100%', height: '8%' }, // Area for the second option
           ],
-          imagePath : require(`../images/encounter_deck/E16.png`),
+          imagePath : require(`../images/encounter_deck/E16.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -5019,7 +5019,7 @@ const cardData = {
                 deck: 'encounterDeck',
             }
         ],
-        imagePath : require(`../images/encounter_deck/E16.png`),
+        imagePath : require(`../images/encounter_deck/E16.webp`),
           actions: [
             {
                 type: ['discard'],
@@ -5037,7 +5037,7 @@ const cardData = {
             { top: '43%', width: '100%', height: '8%' }, // Area for the second option
             { top: '60%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/settlement_deck/S01.png`),
+          imagePath : require(`../images/settlement_deck/S01.webp`),
            actions: [
             {
                 type: ['discard'],
@@ -5059,7 +5059,7 @@ const cardData = {
             { top: '27%', width: '100%', height: '8%' }, // Area for the first option
             { top: '45%', width: '100%', height: '8%' }, // Area for the second option
           ],
-          imagePath : require(`../images/settlement_deck/S02.png`),
+          imagePath : require(`../images/settlement_deck/S02.webp`),
            actions: [
             {
                 type: ['discard'],
@@ -5077,7 +5077,7 @@ const cardData = {
             { top: '41%', width: '100%', height: '8%' }, // Area for the second option
             { top: '61%', width: '100%', height: '7%' }, // Area for the third option
         ],
-        imagePath: require('../images/settlement_deck/S03.png'),
+        imagePath: require('../images/settlement_deck/S03.webp'),
         actions: [
             {
                 type: ['discard'],
@@ -5099,7 +5099,7 @@ const cardData = {
             { top: '41%', width: '100%', height: '8%' }, // Area for the second option
             { top: '60%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/settlement_deck/S04.png`),
+          imagePath : require(`../images/settlement_deck/S04.webp`),
         actions: [
             {
                 type: ['discard'],
@@ -5120,7 +5120,7 @@ const cardData = {
             { top: '23%', width: '100%', height: '8%' }, // Area for the first option
             { top: '60%', width: '100%', height: '7%' }, // Area for the second option
            ],
-          imagePath : require(`../images/settlement_deck/S05.png`),
+          imagePath : require(`../images/settlement_deck/S05.webp`),
         actions: [
             {
                 type: ['discard'],
@@ -5137,7 +5137,7 @@ const cardData = {
             { top: '26%', width: '100%', height: '8%' }, // Area for the first option
             { top: '48%', width: '100%', height: '8%' }, // Area for the second option
           ],
-          imagePath : require(`../images/settlement_deck/S06.png`),
+          imagePath : require(`../images/settlement_deck/S06.webp`),
         actions: [
             {
                 type: ['trash','add'],
@@ -5158,7 +5158,7 @@ const cardData = {
             { top: '33%', width: '100%', height: '8%' }, // Area for the first option
             { top: '55%', width: '100%', height: '8%' }, // Area for the second option
           ],
-          imagePath : require(`../images/settlement_deck/S07.png`),
+          imagePath : require(`../images/settlement_deck/S07.webp`),
         actions: [
             {
                 type: ['discard'],
@@ -5175,7 +5175,7 @@ const cardData = {
             { top: '23%', width: '100%', height: '8%' }, // Area for the first option
             { top: '42%', width: '100%', height: '8%' }, // Area for the second option
           ],
-          imagePath : require(`../images/settlement_deck/S08.png`),
+          imagePath : require(`../images/settlement_deck/S08.webp`),
         actions: [
             {
                 type: ['discard'],
@@ -5192,7 +5192,7 @@ const cardData = {
             { top: '26%', width: '100%', height: '8%' }, // Area for the first option
             { top: '46%', width: '100%', height: '8%' }, // Area for the second option
           ],
-          imagePath : require(`../images/settlement_deck/S09.png`),
+          imagePath : require(`../images/settlement_deck/S09.webp`),
         actions: [
             {
                 type: ['discard'],
@@ -5209,7 +5209,7 @@ const cardData = {
             { top: '29%', width: '100%', height: '12%' }, // Area for the first option
             { top: '52%', width: '100%', height: '8%' }, // Area for the second option
           ],
-          imagePath : require(`../images/settlement_deck/S10.png`),
+          imagePath : require(`../images/settlement_deck/S10.webp`),
         actions: [
             {
                 type: ['discard'],
@@ -5227,7 +5227,7 @@ const cardData = {
             { top: '43%', width: '100%', height: '8%' }, // Area for the second option
             { top: '68%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/settlement_deck/S11.png`),
+          imagePath : require(`../images/settlement_deck/S11.webp`),
         actions: [
             {
                 type: ['discard'],
@@ -5251,7 +5251,7 @@ const cardData = {
             { top: '53%', width: '100%', height: '21%' }, // Area for the second option
             { top: '75%', width: '100%', height: '18%' }, // Area for the third option
           ],
-          imagePath : require(`../images/settlement_deck/S12.png`),
+          imagePath : require(`../images/settlement_deck/S12.webp`),
         actions: [
             {
                 type: ['discard'],
@@ -5277,7 +5277,7 @@ const cardData = {
             { top: '42%', width: '100%', height: '8%' }, // Area for the second option
             { top: '74%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/settlement_deck/S13.png`),
+          imagePath : require(`../images/settlement_deck/S13.webp`),
         actions: [
             {
                 type: ['discard'],
@@ -5299,7 +5299,7 @@ const cardData = {
             { top: '48%', width: '100%', height: '8%' }, // Area for the second option
             { top: '79%', width: '100%', height: '7%' }, // Area for the third option
           ],
-          imagePath : require(`../images/settlement_deck/S14.png`),
+          imagePath : require(`../images/settlement_deck/S14.webp`),
         actions: [
             {
                 type: ['trash'],
@@ -5324,7 +5324,7 @@ const cardData = {
             { top: '69%', width: '100%', height: '14%' }, // Area for the third option
             { top: '84%', width: '100%', height: '11%' }, // Area for the third option
           ],
-          imagePath : require(`../images/settlement_deck/S15.png`),
+          imagePath : require(`../images/settlement_deck/S15.webp`),
         actions: [
             {
                 type: ['discard'],
@@ -5353,7 +5353,7 @@ const cardData = {
             { top: '75%', width: '100%', height: '14%' }, // Area for the third option
             { top: '90%', width: '100%', height: '10%' }, // Area for the third option
           ],
-          imagePath : require(`../images/settlement_deck/S16.png`),
+          imagePath : require(`../images/settlement_deck/S16.webp`),
         actions: [
             {
                 type: ['discard'],
