@@ -59,6 +59,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
         if (!action) return; // If no action, do nothing
         if (!isDisabled){
             for(const type of action.type){
+                console.log("Counting");
 
                 switch (type) {
                     case 'discard':
@@ -301,18 +302,25 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
 
                         case 'multiAdd':
                             let newDeck;
+                            let finalDeck;
                             switch(action.card){
                                 case '240':
-                                    newDeck = shuffleDeck(['240(1)','240(2)','240(3)']);
-                                    setStagedCards([...stagedCards, newDeck[0]]);
-                                    showMessage("Resolve 240 immidiately");
+                                    newDeck = shuffleDeck(['240(1)','240(2)','240(3)','240(4)']);
+                                    finalDeck = [newDeck[0],action.cards[0]];
+                                    console.log ("NewDeck: ", finalDeck); 
+                                    setStagedCards([...stagedCards, ...finalDeck]);
+                                    alert("Resolve 240 immidiately");
+                                    removeCardFromStaged(cardNumber);
                                     break;
 
 
                                 case '244':
                                     newDeck = shuffleDeck(['244(1)','244(2)','244(3)']);
-                                    setStagedCards([...stagedCards, newDeck[0]]);
-                                    showMessage("Resolve 244 immidiately");
+                                    finalDeck = [newDeck[0],action.cards[0]];
+                                    console.log ("NewDeck: ", finalDeck); 
+                                    setStagedCards([...stagedCards, ...finalDeck]);
+                                    alert("Resolve 244 immidiately");
+                                    removeCardFromStaged(cardNumber);
                                     break;
                                 }
                             break;
