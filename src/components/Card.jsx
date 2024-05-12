@@ -1,14 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import cardData from '../data/cardData';
 import { discardCard, addCard, shuffleDeck } from '../functions/cardFunctions';
 import { useEncounterDeck } from './EncounterDeck';
 import '../styles/Card.css';
 
 const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
-    const [isFocused, setIsFocused] = useState();
     const { showMessage, promptPlayerForCard, drawCard, encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, vault7Deck, setVault7Deck, vault44Deck, setVault44Deck, vault84Deck, setVault84Deck, vault109Deck, setVault109Deck, hasBeenDrawn74, setHasBeenDrawn74, specialStarDeck, setSpecialStarDeck, specialShieldDeck, setSpecialShieldDeck, storeHistory } = useEncounterDeck(); // Ensure proper destructuring
     const { playerCount } = useEncounterDeck();
     const { stagedCards, setStagedCards } = useEncounterDeck();
+    const [blurVisibility, setBlurVisibility] = useState({});
+    const cardInfo = cardData[cardNumber];
+    
+    useEffect(() => {
+        if (cardInfo && cardInfo.blurAreas) {
+            const initialVisibility = cardInfo.blurAreas.reduce((acc, _, index) => {
+                acc[index] = true;  // Start with all blur areas visible
+                return acc;
+            }, {});
+            setBlurVisibility(initialVisibility);
+        }
+    }, [cardNumber, cardInfo]); 
 
     const removeCardFromStaged = (cardNumber) => {
         setStagedCards((prevStagedCards) => {
@@ -18,15 +29,25 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
 
       
       
-    const cardInfo = cardData[cardNumber]; // Get data for the given card
     if (!cardInfo) {
         return <div>Error: Card data not found for card {cardNumber}</div>; // Handle missing card data
     }
     
+ 
 
 
-    const { hoverAreas, imagePath, actions } = cardInfo; // Get hover areas and actions
+
+
+    const { hoverAreas, imagePath, actions, blurAreas } = cardInfo; // Get hover areas and actions
     
+    // Toggle blur visibility
+    const toggleBlur = (index) => {
+        setBlurVisibility(prev => ({
+            ...prev,
+            [index]: !prev[index] // Toggle the visibility state for the clicked blur area
+        }));
+    };
+
     const getDeckByName = (deckName) => {
    
     switch (deckName) {
@@ -59,7 +80,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
         if (!action) return; // If no action, do nothing
         if (!isDisabled){
             for(const type of action.type){
-                console.log("Counting");
+    
 
                 switch (type) {
                     case 'discard':
@@ -307,7 +328,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                                 case '240':
                                     newDeck = shuffleDeck(['240(1)','240(2)','240(3)','240(4)']);
                                     finalDeck = [newDeck[0],action.cards[0]];
-                                    console.log ("NewDeck: ", finalDeck); 
+                                    
                                     setStagedCards([...stagedCards, ...finalDeck]);
                                     alert("Resolve 240 immidiately");
                                     removeCardFromStaged(cardNumber);
@@ -317,7 +338,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                                 case '244':
                                     newDeck = shuffleDeck(['244(1)','244(2)','244(3)']);
                                     finalDeck = [newDeck[0],action.cards[0]];
-                                    console.log ("NewDeck: ", finalDeck); 
+                                
                                     setStagedCards([...stagedCards, ...finalDeck]);
                                     alert("Resolve 244 immidiately");
                                     removeCardFromStaged(cardNumber);
@@ -335,6 +356,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
 
     return (
 
+        
          
         <div className= "card-wrapper"
             onContextMenu={(e) => {
@@ -343,6 +365,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
             }}
             >
 
+            
             <img
                 src={imagePath}
                 alt={`Card}${cardNumber}`}
@@ -357,6 +380,15 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                     onClick={() => handleHoverClick(index)} // Trigger appropriate action
                 ></div>
             ))}
+            {blurAreas && blurAreas.map((area, index) => (
+                <div
+                    key={index}
+                    className={`blur-overlay ${blurVisibility[index] ? '' : 'disabled'}`}
+                    style={{...area, display: blurVisibility[index] ? 'block' : 'none'}}
+                    onClick={() => toggleBlur(index)} // Disable blur on click
+                ></div>
+            ))}
+            
         </div>
     );
     

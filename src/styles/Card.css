@@ -20,6 +20,7 @@
     /* Ensure images scale properly */
     width: 100%; /* Set to full width */
     height: auto; /* Maintain aspect ratio */
+    z-index: 1;
 }
 
 .overlay {
@@ -34,3 +35,16 @@
   align-items: center;
   z-index: 1000; 
 }
+
+.blur-overlay {
+  position: absolute;
+  width: 100%; /* Ensure it covers the area it needs to */
+  height: 100%; /* Cover the full area */
+  backdrop-filter: blur(4px);
+  z-index: 2; /* Ensure it's above the content it needs to blur */
+}
+
+.blur-overlay.disabled {
+  display: none;
+}
+

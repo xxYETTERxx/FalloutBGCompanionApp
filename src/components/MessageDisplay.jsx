@@ -7,7 +7,7 @@ const MessageDisplay = () => {
     if (!isMessageVisible) return null;
 
     return (
-        <div style={{ top: '10%', left: '30%', color: 'black', marginLeft:'30px', padding: '10px', borderRadius: '10px', zIndex: 1500 }}>
+        <div className="top-10 left-2 text-xl font-semibold text-black p-4 rounded-lg z-50">
             {message}
         </div>
     );

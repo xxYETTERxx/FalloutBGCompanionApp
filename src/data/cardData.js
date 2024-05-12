@@ -4673,9 +4673,14 @@ const cardData = {
       },
     'E01': {
       hoverAreas: [
-            { top: '23%', width: '100%', height: '9%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '9%' }, // Area for the second option
-            { top: '73%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '31%', width: '100%', height: '9%' }, // Area for the first option
+            { top: '48%', width: '100%', height: '25%' }, // Area for the second option
+            { top: '81%', width: '100%', height: '18%' }, // Area for the third option
+          ],
+          blurAreas: [
+            { top: '31%', width: '100%', height: '9%', isVisible: false },  // Example blur area
+            { top: '48%', width: '100%', height: '25%', isVisible: true },  // Example blur area
+            { top: '81%', width: '100%', height: '18%', isVisible: false },  // Example blur area
           ],
           imagePath : require(`../images/encounter_deck/E01.webp`),
           actions: [
