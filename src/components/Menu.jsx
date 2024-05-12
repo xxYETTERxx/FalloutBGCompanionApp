@@ -58,8 +58,7 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
             return;
         }
         const initialCards = scenarios[scenarioKey];
-        if(playerInputs[0] != ''){
-            console.log(playerInputs);
+        if(playerInputs[0] !== ''){
             setPlayers(playerInputs);
         }
         else{
@@ -67,7 +66,6 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
             for(let i = 0; i < playerCount; i++){
                 defNames.push("Player " + (i + 1));
             }
-            console.log("default names:", defNames);
             setPlayers(defNames);
         }
         let currentDeck;
