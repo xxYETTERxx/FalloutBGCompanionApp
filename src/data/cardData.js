@@ -1,11 +1,14 @@
-import { addCard } from '../functions/cardFunctions';
-
 const cardData = {
     '001': {
         hoverAreas: [
             { top: '34%', width: '100%', height: '12%' }, // Area for the first option
             { top: '53%', width: '100%', height: '9%' }, // Area for the second option
             { top: '69%', width: '100%', height: '15%' }, // Area for the third option
+          ],
+          blurAreas: [
+            { top: '33%', width: '100%', height: '14%' },  // Example blur area
+            { top: '54%', width: '100%', height: '8%'},  // Example blur area
+            { top: '68%', width: '100%', height: '18%'}  // Example blur area
           ],
           imagePath : require(`../images/library_deck/001.webp`),
           actions: [
@@ -28,6 +31,11 @@ const cardData = {
             { top: '35%', width: '100%', height: '11%' }, // Area for the first option
             { top: '54%', width: '100%', height: '18%' }, // Area for the second option
             { top: '79%', width: '100%', height: '15%' }, // Area for the third option
+          ],
+          blurAreas: [
+            { top: '33%', width: '100%', height: '14%' },  // Example blur area
+            { top: '54%', width: '100%', height: '18%'},  // Example blur area
+            { top: '78%', width: '100%', height: '15%'}  // Example blur area
           ],
           imagePath : require(`../images/library_deck/002.webp`),
           actions: [
@@ -52,6 +60,11 @@ const cardData = {
             { top: '53%', width: '100%', height: '18%' }, // Area for the second option
             { top: '79%', width: '100%', height: '15%' }, // Area for the third option
           ],
+          blurAreas: [
+            { top: '32%', width: '100%', height: '16%' },  // Example blur area
+            { top: '54%', width: '100%', height: '18%'},  // Example blur area
+            { top: '78%', width: '100%', height: '15%'}  // Example blur area
+          ],
           imagePath : require(`../images/library_deck/003.webp`),
           actions: [
             {
@@ -74,6 +87,11 @@ const cardData = {
             { top: '48%', width: '100%', height: '12%' }, // Area for the second option
             { top: '67%', width: '100%', height: '11%' }, // Area for the third option
             { top: '78%', width: '100%', height: '11%' }, // Area for the third option
+          ],
+          blurAreas: [
+            { top: '29%', width: '100%', height: '12%' },  // Example blur area
+            { top: '48%', width: '100%', height: '12%'},  // Example blur area
+            { top: '66%', width: '100%', height: '23%'}  // Example blur area
           ],
           imagePath : require(`../images/library_deck/004.webp`),
           actions: [
@@ -101,6 +119,10 @@ const cardData = {
             { top: '66%', width: '100%', height: '12%' }, // Area for the second option
             { top: '85%', width: '100%', height: '14%' }, // Area for the third option
           ],
+          blurAreas: [
+            { top: '35%', width: '100%', height: '44%' },  // Example blur area
+            { top: '85%', width: '100%', height: '12%'}  // Example blur area
+          ],
           imagePath : require(`../images/library_deck/005.webp`),
           actions: [
             {
@@ -125,6 +147,10 @@ const cardData = {
             { top: '50%', width: '100%', height: '10%' }, // Area for the second option
             { top: '67%', width: '100%', height: '11%' }, // Area for the third option
             { top: '78%', width: '100%', height: '12%' }, // Area for the third option
+          ],
+          blurAreas: [
+            { top: '32%', width: '100%', height: '29%' },  // Example blur area
+            { top: '67%', width: '100%', height: '25%'}  // Example blur area
           ],
           imagePath : require(`../images/library_deck/006.webp`),
           actions: [
@@ -152,6 +178,11 @@ const cardData = {
             { top: '54%', width: '100%', height: '12%' }, // Area for the second option
             { top: '73%', width: '100%', height: '15%' }, // Area for the third option
           ],
+          blurAreas: [
+            { top: '29%', width: '100%', height: '18%' },  // Example blur area
+            { top: '53%', width: '100%', height: '12%'},  // Example blur area
+            { top: '73%', width: '100%', height: '23%'}  // Example blur area
+          ],
           imagePath : require(`../images/library_deck/007.webp`),
           actions: [
             {
@@ -173,6 +204,11 @@ const cardData = {
             { top: '50%', width: '100%', height: '12%' }, // Area for the second option
             { top: '70%', width: '100%', height: '10%' }, // Area for the third option
             { top: '80%', width: '100%', height: '13%' }, // Area for the third option
+          ],
+          blurAreas: [
+            { top: '30%', width: '100%', height: '15%' },  // Example blur area
+            { top: '50%', width: '100%', height: '12%'},  // Example blur area
+            { top: '70%', width: '100%', height: '25%'}  // Example blur area
           ],
           imagePath : require(`../images/library_deck/008.webp`),
           actions: [
@@ -200,6 +236,11 @@ const cardData = {
             { top: '54%', width: '100%', height: '14%' }, // Area for the second option
             { top: '75%', width: '100%', height: '16%' }, // Area for the third option
           ],
+          blurAreas: [
+            { top: '32%', width: '100%', height: '15%' },  // Example blur area
+            { top: '55%', width: '100%', height: '14%'},  // Example blur area
+            { top: '76%', width: '100%', height: '30%'}  // Example blur area
+          ],
           imagePath : require(`../images/library_deck/009.webp`),
           actions: [
             {
@@ -221,6 +262,10 @@ const cardData = {
             { top: '31%', width: '100%', height: '15%' }, // Area for the first option
             { top: '54%', width: '100%', height: '13%' }, // Area for the second option
           ],
+          blurAreas: [
+            { top: '32%', width: '100%', height: '15%' },  // Example blur area
+            { top: '55%', width: '100%', height: '14%'}  // Example blur area     
+          ],
           imagePath : require(`../images/library_deck/010.webp`),
           actions: [
             {
@@ -237,7 +282,10 @@ const cardData = {
       hoverAreas: [
             { top: '31%', width: '100%', height: '14%' }, // Area for the first option
             { top: '53%', width: '100%', height: '15%' }, // Area for the second option
-     
+          ],
+          blurAreas: [
+            { top: '31%', width: '100%', height: '15%' },  // Example blur area
+            { top: '52%', width: '100%', height: '14%'}  // Example blur area     
           ],
           imagePath : require(`../images/library_deck/011.webp`),
           actions: [
@@ -257,6 +305,11 @@ const cardData = {
             { top: '51%', width: '100%', height: '6%' }, // Area for the second option
             { top: '63%', width: '100%', height: '7%' }, // Area for the third option
             { top: '71%', width: '100%', height: '11%' }, // Area for the third option
+          ],
+          blurAreas: [
+            { top: '32%', width: '100%', height: '12%' },  // Example blur area
+            { top: '50%', width: '100%', height: '6%'},  // Example blur area
+            { top: '63%', width: '100%', height: '30%'}  // Example blur area
           ],
           imagePath : require(`../images/library_deck/012.webp`),
           actions: [
@@ -284,6 +337,11 @@ const cardData = {
             { top: '59%', width: '100%', height: '13%' }, // Area for the third option
             { top: '80%', width: '100%', height: '15%' }, // Area for the third option
           ],
+          blurAreas: [
+            { top: '28%', width: '100%', height: '12%' },  // Example blur area
+            { top: '47%', width: '100%', height: '26%'},  // Example blur area
+            { top: '80%', width: '100%', height: '30%'}  // Example blur area
+          ],
           imagePath : require(`../images/library_deck/013.webp`),
           actions: [
             {
@@ -308,8 +366,8 @@ const cardData = {
       hoverAreas: [
             { top: '52%', width: '100%', height: '10%' }, // Area for the first option
             { top: '82%', width: '100%', height: '15%' }, // Area for the second option
-  
           ],
+          
           imagePath : require(`../images/library_deck/014.webp`),
           actions: [
             {
@@ -369,6 +427,11 @@ const cardData = {
             { top: '60%', width: '100%', height: '9%' }, // Area for the second option
             { top: '78%', width: '100%', height: '7%' }, // Area for the third option
             { top: '85%', width: '100%', height: '15%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '36%', width: '100%', height: '15%' },  // Example blur area
+            { top: '60%', width: '100%', height: '9%'},  // Example blur area
+            { top: '78%', width: '100%', height: '22%'}  // Example blur area
           ],
           imagePath : require(`../images/library_deck/017.webp`),
           actions: [
@@ -476,6 +539,11 @@ const cardData = {
             { top: '74%', width: '100%', height: '9%' }, // Area for the third option
             { top: '91%', width: '100%', height: '9%' }, // Area for the third option
           ],
+          blurAreas: [
+            { top: '39%', width: '100%', height: '20%' },  // Example blur area
+            { top: '66%', width: '100%', height: '16%'},  // Example blur area
+            { top: '91%', width: '100%', height: '10%'}  // Example blur area
+          ],
           imagePath : require(`../images/library_deck/022.webp`),
           actions: [
             {
@@ -538,7 +606,7 @@ const cardData = {
     '025': {
       hoverAreas: [
             { top: '64%', width: '100%', height: '9%' }, // Area for the first option
-            { top: '88%', width: '100%', height: '11%' }, // Area for the second option
+            { top: '788%', width: '100%', height: '11%' }, // Area for the second option
           ],
           imagePath : require(`../images/library_deck/025.webp`),
           actions: [
@@ -555,6 +623,11 @@ const cardData = {
             { top: '32%', width: '100%', height: '18%' }, // Area for the first option
             { top: '57%', width: '100%', height: '15%' }, // Area for the second option
             { top: '78%', width: '100%', height: '17%' }, // Area for the second option
+          ],
+          blurAreas: [
+            { top: '32%', width: '100%', height: '18%' },  // Example blur area
+            { top: '57%', width: '100%', height: '15%'},  // Example blur area
+            { top: '78%', width: '100%', height: '17%'}  // Example blur area
           ],
           imagePath : require(`../images/library_deck/026.webp`),
           actions: [
@@ -575,6 +648,11 @@ const cardData = {
     },
     '027': {
         hoverAreas: [
+            { top: '29%', width: '100%', height: '18%' }, // Area for the first option
+            { top: '54%', width: '100%', height: '12%' }, // Area for the second option
+            { top: '72%', width: '100%', height: '17%' }, // Area for the second option
+          ],
+        blurAreas: [
             { top: '29%', width: '100%', height: '18%' }, // Area for the first option
             { top: '54%', width: '100%', height: '12%' }, // Area for the second option
             { top: '72%', width: '100%', height: '17%' }, // Area for the second option
@@ -640,6 +718,11 @@ const cardData = {
         hoverAreas: [
               { top: '40%', width: '100%', height: '8%' }, // Area for the first option
               { top: '49%', width: '100%', height: '11%' }, // Area for the second option
+              { top: '67%', width: '100%', height: '11%' }, // Area for the second option
+              { top: '86%', width: '100%', height: '11%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '40%', width: '100%', height: '19%' }, // Area for the first option
               { top: '67%', width: '100%', height: '11%' }, // Area for the second option
               { top: '86%', width: '100%', height: '11%' }, // Area for the second option
             ],
@@ -785,7 +868,12 @@ const cardData = {
               { top: '34%', width: '100%', height: '14%' }, // Area for the first option
               { top: '48%', width: '100%', height: '12%' }, // Area for the first option
               { top: '67%', width: '100%', height: '15%' }, // Area for the first option
-              { top: '89%', width: '100%', height: '1%' } // Area for the second option
+              { top: '89%', width: '100%', height: '11%' } // Area for the second option
+            ],
+        blurAreas: [
+              { top: '34%', width: '100%', height: '26%' }, // Area for the first option            
+              { top: '67%', width: '100%', height: '15%' }, // Area for the first option
+              { top: '89%', width: '100%', height: '11%' } // Area for the second option
             ],
             imagePath : require(`../images/library_deck/038.webp`),
             actions: [
@@ -930,6 +1018,11 @@ const cardData = {
               { top: '72%', width: '100%', height: '14%' }, // Area for the first option
               { top: '86%', width: '100%', height: '14%' } // Area for the second option
             ],
+        blurAreas: [
+              { top: '34%', width: '100%', height: '9%' }, // Area for the first option
+              { top: '50%', width: '100%', height: '15%' }, // Area for the second option
+              { top: '72%', width: '100%', height: '28%' }, // Area for the first option
+            ],
             imagePath : require(`../images/library_deck/046.webp`),
             actions: [
               {
@@ -957,6 +1050,12 @@ const cardData = {
       },
       '047': {
         hoverAreas: [
+              { top: '34%', width: '100%', height: '11%' }, // Area for the first option
+              { top: '45%', width: '100%', height: '15%' }, // Area for the first option
+              { top: '67%', width: '100%', height: '15%' }, // Area for the second option
+              { top: '89%', width: '100%', height: '10%' } // Area for the second option
+            ],
+        blurAreas: [
               { top: '34%', width: '100%', height: '26%' }, // Area for the first option
               { top: '67%', width: '100%', height: '15%' }, // Area for the second option
               { top: '89%', width: '100%', height: '10%' } // Area for the second option
@@ -1072,10 +1171,15 @@ const cardData = {
       },
       '053': {
         hoverAreas: [
-              { top: '35%', width: '100%', height: '10%' }, // Area for the first option
+              { top: '36%', width: '100%', height: '9%' }, // Area for the first option
               { top: '52%', width: '100%', height: '16%' }, // Area for the second option
               { top: '77%', width: '100%', height: '12%' }, // Area for the second option
-              { top: '90%', width: '100%', height: '11%' } // Area for the second option
+              { top: '89%', width: '100%', height: '11%' } // Area for the second option
+            ],
+        blurAreas: [
+              { top: '35%', width: '100%', height: '10%' }, // Area for the first option
+              { top: '52%', width: '100%', height: '16%' }, // Area for the second option
+              { top: '77%', width: '100%', height: '23%' }, // Area for the second option
             ],
             imagePath : require(`../images/library_deck/053.webp`),
             actions: [
@@ -1261,6 +1365,12 @@ const cardData = {
               { top: '80%', width: '100%', height: '9%' }, // Area for the second option
               { top: '89%', width: '100%', height: '10%' } // Area for the second option
             ],
+        blurAreas: [
+              { top: '34%', width: '100%', height: '9%' }, // Area for the first option
+              { top: '50%', width: '100%', height: '24%' }, // Area for the second option
+              
+              { top: '80%', width: '100%', height: '20%' } // Area for the second option
+            ],
             imagePath : require(`../images/library_deck/063.webp`),
             actions: [
                 {
@@ -1396,8 +1506,12 @@ const cardData = {
       },
       '070': {
         hoverAreas: [
-              { top: '33%', width: '100%', height: '31%' }, // Area for the first option
+              { top: '34%', width: '100%', height: '31%' }, // Area for the first option
               { top: '65%', width: '100%', height: '8%' }, // Area for the second option
+              { top: '79%', width: '100%', height: '13%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '34%', width: '100%', height: '39%' }, // Area for the first option
               { top: '79%', width: '100%', height: '13%' }, // Area for the second option
             ],
             imagePath : require(`../images/library_deck/070.webp`),
@@ -1423,7 +1537,11 @@ const cardData = {
       },
       '071': {
         hoverAreas: [
-              { top: '47%', width: '100%', height: '23%' }, // Area for the first option
+              { top: '46%', width: '100%', height: '24%' }, // Area for the first option
+              { top: '78%', width: '100%', height: '20%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '46%', width: '100%', height: '24%' }, // Area for the first option
               { top: '78%', width: '100%', height: '20%' }, // Area for the second option
             ],
             imagePath : require(`../images/library_deck/071.webp`),
@@ -1443,9 +1561,13 @@ const cardData = {
       },
       '072': {
         hoverAreas: [
-              { top: '35%', width: '100%', height: '8%' }, // Area for the first option
-              { top: '63%', width: '100%', height: '20%' }, // Area for the second option
+              { top: '43%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '63%', width: '100%', height: '21%' }, // Area for the second option
               { top: '84%', width: '100%', height: '16%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '43%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '63%', width: '100%', height: '40%' }, // Area for the second option
             ],
             imagePath : require(`../images/library_deck/072.webp`),
             actions: [
@@ -1465,9 +1587,14 @@ const cardData = {
       },
       '073': {
         hoverAreas: [
-              { top: '47%', width: '100%', height: '14%' }, // Area for the first option
-              { top: '69%', width: '100%', height: '11%' }, // Area for the second option
-              { top: '80%', width: '100%', height: '18%' }, // Area for the second option
+              { top: '46%', width: '100%', height: '15%' }, // Area for the first option
+              { top: '70%', width: '100%', height: '11%' }, // Area for the second option
+              { top: '81%', width: '100%', height: '18%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '46%', width: '100%', height: '15%' }, // Area for the first option
+              { top: '70%', width: '100%', height: '36%' }, // Area for the second option
+              
             ],
             imagePath : require(`../images/library_deck/073.webp`),
             actions: [
@@ -1488,14 +1615,20 @@ const cardData = {
       },
       '074': {
         hoverAreas: [
-            { top: '43%', width: '100%', height: '23%' }, // Area for the first option
+            { top: '42%', width: '100%', height: '24%' }, // Area for the first option
             { top: '76%', width: '100%', height: '11%' }, // Area for the second option
             { top: '87%', width: '100%', height: '11%' }, // Area for the second option
           ],
+        blurAreas: [
+            { top: '42%', width: '100%', height: '24%' }, // Area for the first option
+            { top: '76%', width: '100%', height: '22%' }, // Area for the second option
+          ],
+      
+      
           imagePath : require(`../images/library_deck/074.webp`),
           actions: [
               {
-                  type: ['checkLast','vault84Special'],
+                  type: ['keep','checkLast','vault84Special'],
                   deckType: 'vault84Deck'
               },
               {
@@ -1510,9 +1643,14 @@ const cardData = {
       },
       '075': {
         hoverAreas: [
-              { top: '41%', width: '100%', height: '14%' }, // Area for the first option
+              { top: '40%', width: '100%', height: '15%' }, // Area for the first option
               { top: '61%', width: '100%', height: '18%' }, // Area for the second option
-              { top: '80%', width: '100%', height: '10%' }, // Area for the second option
+              { top: '79%', width: '100%', height: '11%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '40%', width: '100%', height: '15%' }, // Area for the first option
+              { top: '61%', width: '100%', height: '29%' }, // Area for the second option
+          
             ],
             imagePath : require(`../images/library_deck/075.webp`),
             actions: [
@@ -1534,7 +1672,10 @@ const cardData = {
         hoverAreas: [
               { top: '48%', width: '100%', height: '14%' }, // Area for the first option
               { top: '72%', width: '100%', height: '18%' }, // Area for the second option
-             
+            ],
+        blurAreas: [
+              { top: '48%', width: '100%', height: '14%' }, // Area for the first option
+              { top: '72%', width: '100%', height: '18%' }, // Area for the second option
             ],
             imagePath : require(`../images/library_deck/076.webp`),
             actions: [
@@ -1550,9 +1691,13 @@ const cardData = {
       },
       '077': {
         hoverAreas: [
-              { top: '46%', width: '100%', height: '14%' }, // Area for the first option
-              { top: '71%', width: '100%', height: '16%' }, // Area for the second option
+              { top: '46%', width: '100%', height: '15%' }, // Area for the first option
+              { top: '70%', width: '100%', height: '17%' }, // Area for the second option
               { top: '87%', width: '100%', height: '10%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '46%', width: '100%', height: '14%' }, // Area for the first option
+              { top: '71%', width: '100%', height: '26%' }, // Area for the second option
             ],
             imagePath : require(`../images/library_deck/077.webp`),
             actions: [
@@ -1574,8 +1719,13 @@ const cardData = {
       '078': {
         hoverAreas: [
               { top: '42%', width: '100%', height: '18%' }, // Area for the first option
-              { top: '61%', width: '100%', height: '22%' }, // Area for the second option
+              { top: '70%', width: '100%', height: '13%' }, // Area for the second option
               { top: '83%', width: '100%', height: '10%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '42%', width: '100%', height: '18%' }, // Area for the first option
+              { top: '70%', width: '100%', height: '23%' }, // Area for the second option
+
             ],
             imagePath : require(`../images/library_deck/078.webp`),
             actions: [
@@ -1596,9 +1746,13 @@ const cardData = {
       },
       '079': {
         hoverAreas: [
-              { top: '45%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '46%', width: '100%', height: '12%' }, // Area for the first option
               { top: '65%', width: '100%', height: '14%' }, // Area for the second option
-              { top: '80%', width: '100%', height: '12%' }, // Area for the second option
+              { top: '79%', width: '100%', height: '12%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '46%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '65%', width: '100%', height: '26%' }, // Area for the second option
             ],
             imagePath : require(`../images/library_deck/079.webp`),
             actions: [
@@ -1621,6 +1775,9 @@ const cardData = {
         hoverAreas: [
               { top: '40%', width: '100%', height: '50%' }, // Area for the first option
             ],
+        blurAreas: [
+              { top: '40%', width: '100%', height: '50%' }, // Area for the first option
+            ],
             imagePath : require(`../images/library_deck/080.webp`),
             actions: [
                 {
@@ -1631,6 +1788,9 @@ const cardData = {
       },
       '081': {
         hoverAreas: [
+              { top: '57%', width: '100%', height: '50%' }, // Area for the first option
+            ],
+        blurAreas: [
               { top: '57%', width: '100%', height: '50%' }, // Area for the first option
             ],
             imagePath : require(`../images/library_deck/081.webp`),
@@ -1720,7 +1880,11 @@ const cardData = {
       '086': {
         hoverAreas: [
             { top: '52%', width: '100%', height: '14%' }, // Area for the first option
-            { top: '67%', width: '100%', height: '11%' }, // Area for the second option
+            { top: '66%', width: '100%', height: '12%' }, // Area for the second option
+            { top: '85%', width: '100%', height: '13%' }, // Area for the second option
+          ],
+        blurAreas: [
+            { top: '52%', width: '100%', height: '26%' }, // Area for the first option
             { top: '85%', width: '100%', height: '13%' }, // Area for the second option
           ],
           imagePath : require(`../images/library_deck/086.webp`),
@@ -1744,8 +1908,12 @@ const cardData = {
       },
       '087': {
         hoverAreas: [
-            { top: '50%', width: '100%', height: '10%' }, // Area for the first option
-            { top: '74%', width: '100%', height: '10%' }, // Area for the second option
+            { top: '60%', width: '100%', height: '14%' }, // Area for the first option
+            { top: '84%', width: '100%', height: '15%' }, // Area for the second option
+          ],
+        blurAreas: [
+            { top: '60%', width: '100%', height: '14%' }, // Area for the first option
+            { top: '84%', width: '100%', height: '15%' }, // Area for the second option
           ],
           imagePath : require(`../images/library_deck/087.webp`),
           actions: [
@@ -1761,6 +1929,10 @@ const cardData = {
         hoverAreas: [
             { top: '55%', width: '100%', height: '15%' }, // Area for the first option
             { top: '70%', width: '100%', height: '12%' }, // Area for the second option
+            { top: '88%', width: '100%', height: '12%' }, // Area for the second option
+          ],
+        blurAreas: [
+            { top: '55%', width: '100%', height: '27%' }, // Area for the first option
             { top: '88%', width: '100%', height: '12%' }, // Area for the second option
           ],
           imagePath : require(`../images/library_deck/088.webp`),
@@ -1784,9 +1956,13 @@ const cardData = {
       },
       '089': {
         hoverAreas: [
-            { top: '43%', width: '100%', height: '15%' }, // Area for the first option
-            { top: '70%', width: '100%', height: '14%' }, // Area for the second option
+            { top: '42%', width: '100%', height: '17%' }, // Area for the first option
+            { top: '69%', width: '100%', height: '14%' }, // Area for the second option
           ],
+        blurAreas: [
+            { top: '42%', width: '100%', height: '17%' }, // Area for the first option
+            { top: '69%', width: '100%', height: '14%' }, // Area for the second option
+        ],
           imagePath : require(`../images/library_deck/089.webp`),
           actions: [
               {
@@ -1801,7 +1977,12 @@ const cardData = {
       '090': {
         hoverAreas: [
             { top: '39%', width: '100%', height: '18%' }, // Area for the first option
-            { top: '57%', width: '100%', height: '23%' }, // Area for the second option
+            { top: '57%', width: '100%', height: '24%' }, // Area for the second option
+            { top: '88%', width: '100%', height: '10%' }, // Area for the second option
+          ],
+        blurAreas: [
+            { top: '39%', width: '100%', height: '42%' }, // Area for the first option
+            
             { top: '88%', width: '100%', height: '10%' }, // Area for the second option
           ],
           imagePath : require(`../images/library_deck/090.webp`),
@@ -1825,7 +2006,11 @@ const cardData = {
       },
       '091': {
         hoverAreas: [
-            { top: '50%', width: '100%', height: '13%' }, // Area for the first option
+            { top: '50%', width: '100%', height: '14%' }, // Area for the first option
+            { top: '71%', width: '100%', height: '13%' }, // Area for the second option
+          ],
+        blurAreas: [
+            { top: '50%', width: '100%', height: '14%' }, // Area for the first option
             { top: '71%', width: '100%', height: '13%' }, // Area for the second option
           ],
           imagePath : require(`../images/library_deck/091.webp`),
@@ -1840,6 +2025,10 @@ const cardData = {
       },
       '092': {
         hoverAreas: [
+            { top: '40%', width: '100%', height: '20%' }, // Area for the first option
+            { top: '68%', width: '100%', height: '16%' }, // Area for the second option
+          ],
+        blurAreas: [
             { top: '40%', width: '100%', height: '20%' }, // Area for the first option
             { top: '68%', width: '100%', height: '16%' }, // Area for the second option
           ],
@@ -1859,6 +2048,10 @@ const cardData = {
       },
       '093': {
         hoverAreas: [
+            { top: '46%', width: '100%', height: '14%' }, // Area for the first option
+            { top: '68%', width: '100%', height: '22%' }, // Area for the second option
+          ],
+        blurAreas: [
             { top: '46%', width: '100%', height: '14%' }, // Area for the first option
             { top: '68%', width: '100%', height: '22%' }, // Area for the second option
           ],
@@ -2021,6 +2214,11 @@ const cardData = {
             { top: '48%', width: '100%', height: '18%' }, // Area for the second option
             { top: '66%', width: '100%', height: '14%' } // Area for the second option
           ],
+        blurAreas: [
+            { top: '30%', width: '100%', height: '9%' }, // Area for the first option
+            { top: '48%', width: '100%', height: '32%' }, // Area for the second option
+          
+          ],
           imagePath : require(`../images/library_deck/103.webp`),
           actions: [
             {
@@ -2067,6 +2265,11 @@ const cardData = {
             { top: '53%', width: '100%', height: '15%' }, // Area for the second option
             { top: '75%', width: '100%', height: '16%' }, // Area for the second option
           ],
+        blurAreas: [
+            { top: '43%', width: '100%', height: '25%' }, // Area for the first option
+            
+            { top: '75%', width: '100%', height: '16%' }, // Area for the second option
+          ],
           imagePath : require(`../images/library_deck/105.webp`),
           actions: [
               {
@@ -2090,6 +2293,11 @@ const cardData = {
         hoverAreas: [
             { top: '38%', width: '100%', height: '17%' }, // Area for the first option
             { top: '55%', width: '100%', height: '12%' }, // Area for the second option
+            { top: '73%', width: '100%', height: '16%' } // Area for the second option
+          ],
+        blurAreas: [
+            { top: '38%', width: '100%', height: '29%' }, // Area for the first option
+        
             { top: '73%', width: '100%', height: '16%' } // Area for the second option
           ],
           imagePath : require(`../images/library_deck/106.webp`),
@@ -2166,6 +2374,13 @@ const cardData = {
             { top: '78%', width: '100%', height: '8%' }, // Area for the second option
             { top: '93%', width: '100%', height: '8%' } // Area for the second option
           ],
+        blurAreas: [
+            { top: '34%', width: '100%', height: '23%' }, // Area for the first option
+            
+            { top: '64%', width: '100%', height: '22%' }, // Area for the second option
+            
+            { top: '93%', width: '100%', height: '8%' } // Area for the second option
+          ],
           imagePath : require(`../images/library_deck/110.webp`),
           actions: [
               {
@@ -2194,12 +2409,12 @@ const cardData = {
       '111': {
         hoverAreas: [
            
-            { top: '82%', width: '100%', height: '18%' }, // Area for the second option
+            { top: '99%', width: '100%', height: '1%' }, // Area for the second option
           ],
           imagePath : require(`../images/library_deck/111.webp`),
           actions: [
               {
-                type: ['pass']
+                type: ['trash']
               }
           ],
       },
@@ -2373,7 +2588,12 @@ const cardData = {
             { top: '34%', width: '100%', height: '14%' }, // Area for the first option
             { top: '64%', width: '100%', height: '11%' }, // Area for the first option
             { top: '75%', width: '100%', height: '9%' }, // Area for the first option
-            { top: '91%', width: '100%', height: '8%' }, // Area for the first option
+            { top: '91%', width: '100%', height: '9%' }, // Area for the first option
+          ],
+        blurAreas: [
+            { top: '34%', width: '100%', height: '23%' }, // Area for the first option
+            { top: '64%', width: '100%', height: '20%' }, // Area for the first option
+            { top: '91%', width: '100%', height: '9%' }, // Area for the first option
           ],
           imagePath : require(`../images/library_deck/122.webp`),
           actions: [
@@ -2402,6 +2622,11 @@ const cardData = {
             { top: '75%', width: '100%', height: '9%' }, // Area for the first option
             { top: '91%', width: '100%', height: '8%' }, // Area for the first option
           ],
+        blurAreas: [
+            { top: '34%', width: '100%', height: '23%' }, // Area for the first option
+            { top: '64%', width: '100%', height: '20%' }, // Area for the first option
+            { top: '91%', width: '100%', height: '9%' }, // Area for the first option
+          ],
           imagePath : require(`../images/library_deck/123.webp`),
           actions: [
               {
@@ -2428,6 +2653,11 @@ const cardData = {
             { top: '61%', width: '100%', height: '11%' }, // Area for the first option
             { top: '72%', width: '100%', height: '9%' }, // Area for the first option
             { top: '88%', width: '100%', height: '10%' }, // Area for the first option
+          ],
+        blurAreas: [
+            { top: '31%', width: '100%', height: '23%' }, // Area for the first option
+            { top: '61%', width: '100%', height: '20%' }, // Area for the first option
+            { top: '88%', width: '100%', height: '11%' }, // Area for the first option
           ],
           imagePath : require(`../images/library_deck/124.webp`),
           actions: [
@@ -2484,10 +2714,16 @@ const cardData = {
       },
       '127': {
         hoverAreas: [
-            { top: '31%', width: '100%', height: '18%' }, // Area for the first option
+            { top: '31%', width: '100%', height: '19%' }, // Area for the first option
             { top: '57%', width: '100%', height: '21%' }, // Area for the second option
             { top: '85%', width: '100%', height: '18%' } // Area for the second option
           ],
+        blurAreas: [
+            { top: '31%', width: '100%', height: '19%' }, // Area for the first option
+            { top: '57%', width: '100%', height: '21%' }, // Area for the second option
+            { top: '85%', width: '100%', height: '18%' } // Area for the second option
+          ],
+          
           imagePath : require(`../images/library_deck/127.webp`),
           actions: [
             {
@@ -2520,7 +2756,12 @@ const cardData = {
       '129': {
         hoverAreas: [
             { top: '38%', width: '100%', height: '15%' }, // Area for the first option
-            { top: '61%', width: '100%', height: '18%' }, // Area for the second option
+            { top: '60%', width: '100%', height: '18%' }, // Area for the second option
+            { top: '85%', width: '100%', height: '15%' }, // Area for the second option
+          ],
+        blurAreas: [
+            { top: '38%', width: '100%', height: '15%' }, // Area for the first option
+            { top: '60%', width: '100%', height: '18%' }, // Area for the second option
             { top: '85%', width: '100%', height: '15%' }, // Area for the second option
           ],
           imagePath : require(`../images/library_deck/129.webp`),
@@ -2619,6 +2860,11 @@ const cardData = {
               { top: '75%', width: '100%', height: '15%' }, // Area for the second option
               { top: '90%', width: '100%', height: '09%' } // Area for the second option
             ],
+        blurAreas: [
+              { top: '41%', width: '100%', height: '27%' }, // Area for the first option
+              { top: '75%', width: '100%', height: '24%' }, // Area for the second option
+              
+            ],
             imagePath : require(`../images/library_deck/135.webp`),
             actions: [
               {
@@ -2713,6 +2959,11 @@ const cardData = {
               { top: '65%', width: '100%', height: '8%' }, // Area for the second option
               { top: '73%', width: '100%', height: '23%' }, // Area for the second option
             ],
+        blurAreas: [
+              { top: '38%', width: '100%', height: '18%' }, // Area for the first option
+              { top: '65%', width: '100%', height: '31%' }, // Area for the second option
+              
+            ],
             imagePath : require(`../images/library_deck/140.webp`),
             actions: [
               {
@@ -2786,6 +3037,9 @@ const cardData = {
         hoverAreas: [
               { top: '37%', width: '100%', height: '15%' } // Area for the first option
             ],
+        blurAreas: [
+              { top: '37%', width: '100%', height: '15%' } // Area for the first option
+            ],
             imagePath : require(`../images/library_deck/144.webp`),
             actions: [
                 {
@@ -2799,6 +3053,10 @@ const cardData = {
               { top: '38%', width: '100%', height: '14%' }, // Area for the first option
               { top: '62%', width: '100%', height: '18%' }, // Area for the second option
               { top: '80%', width: '100%', height: '20%' } // Area for the second option
+            ],
+        blurAreas: [
+              { top: '38%', width: '100%', height: '14%' }, // Area for the first option
+              { top: '62%', width: '100%', height: '38%' }, // Area for the second option
             ],
             imagePath : require(`../images/library_deck/145.webp`),
             actions: [
@@ -2945,8 +3203,13 @@ const cardData = {
         hoverAreas: [
               { top: '37%', width: '100%', height: '12%' }, // Area for the first option
               { top: '56%', width: '100%', height: '17%' }, // Area for the second option
-              { top: '78%', width: '100%', height: '11%' }, // Area for the second option
+              { top: '78%', width: '100%', height: '12%' }, // Area for the second option
               { top: '90%', width: '100%', height: '10%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '37%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '56%', width: '100%', height: '17%' }, // Area for the second option
+              { top: '78%', width: '100%', height: '22%' }, // Area for the second option
             ],
             imagePath : require(`../images/library_deck/154.webp`),
             actions: [
@@ -2984,6 +3247,12 @@ const cardData = {
               { top: '50%', width: '100%', height: '15%' }, // Area for the second option
               { top: '72%', width: '100%', height: '11%' }, // Area for the second option
               { top: '83%', width: '100%', height: '15%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '32%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '50%', width: '100%', height: '15%' }, // Area for the second option
+              { top: '72%', width: '100%', height: '26%' }, // Area for the second option
+         
             ],
             imagePath : require(`../images/library_deck/156.webp`),
             actions: [
@@ -3054,6 +3323,10 @@ const cardData = {
               { top: '30%', width: '100%', height: '12%' }, // Area for the first option
               { top: '51%', width: '100%', height: '25%' } // Area for the second option
             ],
+        blurAreas: [
+              { top: '30%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '51%', width: '100%', height: '25%' } // Area for the second option
+            ],
             imagePath : require(`../images/library_deck/160.webp`),
             actions: [
               {
@@ -3067,7 +3340,13 @@ const cardData = {
       '161': {
         hoverAreas: [
               { top: '35%', width: '100%', height: '13%' }, // Area for the first option
-              { top: '49%', width: '100%', height: '13%' }, // Area for the second option
+              { top: '49%', width: '100%', height: '14%' }, // Area for the second option
+              { top: '70%', width: '100%', height: '12%' } // Area for the second option
+              
+            ],
+        blurAreas: [
+              { top: '35%', width: '100%', height: '28%' }, // Area for the first option
+              
               { top: '70%', width: '100%', height: '12%' } // Area for the second option
               
             ],
@@ -3094,6 +3373,13 @@ const cardData = {
               { top: '71%', width: '100%', height: '10%' } // Area for the second option
               
             ],
+        blurAreas: [
+              { top: '43%', width: '100%', height: '21%' }, // Area for the first option
+              
+              { top: '71%', width: '100%', height: '10%' } // Area for the second option
+              
+            ],
+        
             imagePath : require(`../images/library_deck/162.webp`),
             actions: [
               {
@@ -3115,8 +3401,14 @@ const cardData = {
       },
       '163': {
         hoverAreas: [
-              { top: '28%', width: '100%', height: '20%' }, // Area for the first option
-              { top: '57%', width: '100%', height: '15%' }, // Area for the second option
+              { top: '28%', width: '100%', height: '22%' }, // Area for the first option
+              { top: '57%', width: '100%', height: '18%' }, // Area for the second option
+              { top: '82%', width: '100%', height: '15%' } // Area for the second option
+              
+            ],
+        blurAreas: [
+              { top: '28%', width: '100%', height: '22%' }, // Area for the first option
+              { top: '57%', width: '100%', height: '18%' }, // Area for the second option
               { top: '82%', width: '100%', height: '15%' } // Area for the second option
               
             ],
@@ -3143,6 +3435,12 @@ const cardData = {
               { top: '66%', width: '100%', height: '15%' } // Area for the second option
               
             ],
+        blurAreas: [
+              { top: '28%', width: '100%', height: '15%' }, // Area for the first option
+              { top: '52%', width: '100%', height: '29%' }, // Area for the second option
+              
+              
+            ],
             imagePath : require(`../images/library_deck/164.webp`),
             actions: [
               {
@@ -3163,6 +3461,12 @@ const cardData = {
               { top: '28%', width: '100%', height: '15%' }, // Area for the first option
               { top: '52%', width: '100%', height: '14%' }, // Area for the second option
               { top: '66%', width: '100%', height: '15%' } // Area for the second option
+              
+            ],
+        blurAreas: [
+              { top: '28%', width: '100%', height: '15%' }, // Area for the first option
+              { top: '52%', width: '100%', height: '29%' }, // Area for the second option
+            
               
             ],
             imagePath : require(`../images/library_deck/165.webp`),
@@ -3224,6 +3528,11 @@ const cardData = {
               { top: '48%', width: '100%', height: '14%' }, // Area for the first option
               { top: '70%', width: '100%', height: '15%' }, // Area for the second option
             ],
+        blurAreas: [
+              { top: '34%', width: '100%', height: '28%' }, // Area for the first option
+              
+              { top: '70%', width: '100%', height: '15%' }, // Area for the second option
+            ],
             imagePath : require(`../images/library_deck/168.webp`),
             actions: [
               {
@@ -3282,7 +3591,12 @@ const cardData = {
       '171': {
         hoverAreas: [
               { top: '48%', width: '100%', height: '13%' }, // Area for the first option
-              { top: '62%', width: '100%', height: '8%' }, // Area for the second option
+              { top: '61%', width: '100%', height: '9%' }, // Area for the second option
+              { top: '78%', width: '100%', height: '18%' } // Area for the second option
+            ],
+        blurAreas: [
+              { top: '48%', width: '100%', height: '22%' }, // Area for the first option
+              
               { top: '78%', width: '100%', height: '18%' } // Area for the second option
             ],
             imagePath : require(`../images/library_deck/171.webp`),
@@ -3328,6 +3642,12 @@ const cardData = {
               { top: '73%', width: '100%', height: '11%' }, // Area for the second option
               { top: '84%', width: '100%', height: '15%' } // Area for the second option
             ],
+        blurAreas: [
+              { top: '48%', width: '100%', height: '17%' }, // Area for the first option
+             
+              { top: '73%', width: '100%', height: '26%' }, // Area for the second option
+             
+            ],
             imagePath : require(`../images/library_deck/173.webp`),
             actions: [
               {
@@ -3350,8 +3670,13 @@ const cardData = {
       },
       '174': {
         hoverAreas: [
-              { top: '48%', width: '100%', height: '8%' }, // Area for the first option
-              { top: '57%', width: '100%', height: '12%' }, // Area for the second option
+              { top: '48%', width: '100%', height: '9%' }, // Area for the first option
+              { top: '57%', width: '100%', height: '11%' }, // Area for the second option
+              { top: '77%', width: '100%', height: '18%' } // Area for the second option
+            ],
+        blurAreas: [
+              { top: '48%', width: '100%', height: '20%' }, // Area for the first option
+              
               { top: '77%', width: '100%', height: '18%' } // Area for the second option
             ],
             imagePath : require(`../images/library_deck/174.webp`),
@@ -3375,6 +3700,12 @@ const cardData = {
               { top: '56%', width: '100%', height: '8%' }, // Area for the second option
               { top: '73%', width: '100%', height: '11%' }, // Area for the second option
               { top: '84%', width: '100%', height: '15%' } // Area for the second option
+            ],
+        blurAreas: [
+              { top: '48%', width: '100%', height: '16%' }, // Area for the first option
+              
+              { top: '73%', width: '100%', height: '26%' }, // Area for the second option
+              
             ],
             imagePath : require(`../images/library_deck/175.webp`),
             actions: [
@@ -3424,7 +3755,13 @@ const cardData = {
         hoverAreas: [
               { top: '51%', width: '100%', height: '9%' }, // Area for the first option
               { top: '60%', width: '100%', height: '8%' }, // Area for the second option
-              { top: '73%', width: '100%', height: '20%' } // Area for the second option
+              { top: '74%', width: '100%', height: '20%' } // Area for the second option
+            
+            ],
+        blurAreas: [
+              { top: '51%', width: '100%', height: '17%' }, // Area for the first option
+              
+              { top: '74%', width: '100%', height: '20%' } // Area for the second option
             
             ],
             imagePath : require(`../images/library_deck/177.webp`),
@@ -3445,7 +3782,13 @@ const cardData = {
       '178': {
         hoverAreas: [
               { top: '48%', width: '100%', height: '11%' }, // Area for the first option
-              { top: '60%', width: '100%', height: '11%' }, // Area for the second option
+              { top: '59%', width: '100%', height: '11%' }, // Area for the second option
+              { top: '77%', width: '100%', height: '20%' } // Area for the second option
+            
+            ],
+         blurAreas: [
+              { top: '48%', width: '100%', height: '22%' }, // Area for the first option
+            
               { top: '77%', width: '100%', height: '20%' } // Area for the second option
             
             ],
@@ -3468,6 +3811,12 @@ const cardData = {
         hoverAreas: [
               { top: '46%', width: '100%', height: '14%' }, // Area for the first option
               { top: '60%', width: '100%', height: '8%' }, // Area for the second option
+              { top: '75%', width: '100%', height: '20%' } // Area for the second option
+            
+            ],
+        blurAreas: [
+              { top: '46%', width: '100%', height: '22%' }, // Area for the first option
+              
               { top: '75%', width: '100%', height: '20%' } // Area for the second option
             
             ],
@@ -3512,8 +3861,14 @@ const cardData = {
         hoverAreas: [
               { top: '29%', width: '100%', height: '5%' }, // Area for the first option
               { top: '42%', width: '100%', height: '5%' }, // Area for the second option
-              { top: '55%', width: '100%', height: '18%' }, // Area for the second option
-              { top: '73%', width: '100%', height: '18%' } // Area for the second option
+              { top: '56%', width: '100%', height: '18%' }, // Area for the second option
+              { top: '74%', width: '100%', height: '18%' } // Area for the second option
+            ],
+        blurAreas: [
+              { top: '29%', width: '100%', height: '5%' }, // Area for the first option
+              { top: '42%', width: '100%', height: '5%' }, // Area for the second option
+              { top: '56%', width: '100%', height: '36%' }, // Area for the second option
+              
             ],
             imagePath : require(`../images/library_deck/181.webp`),
             actions: [
@@ -3541,6 +3896,12 @@ const cardData = {
               { top: '43%', width: '100%', height: '7%' }, // Area for the second option
               { top: '58%', width: '100%', height: '14%' }, // Area for the second option
               { top: '72%', width: '100%', height: '18%' } // Area for the second option
+            ],
+        blurAreas: [
+              { top: '26%', width: '100%', height: '24%' }, // Area for the first option
+              
+              { top: '58%', width: '100%', height: '35%' }, // Area for the second option
+              
             ],
             imagePath : require(`../images/library_deck/182.webp`),
             actions: [
@@ -3661,6 +4022,11 @@ const cardData = {
               { top: '39%', width: '100%', height: '15%' }, // Area for the first option
               { top: '60%', width: '100%', height: '20%' } // Area for the first option
             ],
+        blurAreas: [
+              { top: '28%', width: '100%', height: '26%' },// Area for the first option
+              
+              { top: '60%', width: '100%', height: '20%' } // Area for the first option
+            ],
             imagePath : require(`../images/library_deck/191.webp`),
             actions: [
                 {
@@ -3716,6 +4082,11 @@ const cardData = {
               { top: '60%', width: '100%', height: '14%' }, // Area for the first option
               { top: '82%', width: '100%', height: '18%' } // Area for the first option
             ],
+        blurAreas: [
+              { top: '39%', width: '100%', height: '35%' }, // Area for the first option
+              
+              { top: '82%', width: '100%', height: '18%' } // Area for the first option
+            ],
             imagePath : require(`../images/library_deck/194.webp`),
             actions: [
               {
@@ -3737,6 +4108,11 @@ const cardData = {
               { top: '60%', width: '100%', height: '14%' }, // Area for the first option
               { top: '82%', width: '100%', height: '18%' } // Area for the first option
             ],
+        blurAreas: [
+              { top: '39%', width: '100%', height: '35%' }, // Area for the first option
+              
+              { top: '82%', width: '100%', height: '18%' } // Area for the first option
+            ],
             imagePath : require(`../images/library_deck/195.webp`),
             actions: [
               {
@@ -3754,7 +4130,12 @@ const cardData = {
       '196': {
         hoverAreas: [
               { top: '39%', width: '100%', height: '21%' }, // Area for the first option
-              { top: '60%', width: '100%', height: '14%' }, // Area for the first option
+              { top: '60%', width: '100%', height: '15%' }, // Area for the first option
+              { top: '82%', width: '100%', height: '18%' } // Area for the first option
+            ],
+        blurAreas: [
+              { top: '39%', width: '100%', height: '36%' }, // Area for the first option
+             
               { top: '82%', width: '100%', height: '18%' } // Area for the first option
             ],
             imagePath : require(`../images/library_deck/196.webp`),
@@ -3777,6 +4158,11 @@ const cardData = {
               { top: '45%', width: '100%', height: '21%' }, // Area for the first option
               { top: '72%', width: '100%', height: '12%' }, // Area for the first option
               { top: '84%', width: '100%', height: '15%' } // Area for the first option
+            ],
+        blurAreas: [
+              { top: '45%', width: '100%', height: '21%' }, // Area for the first option
+              { top: '72%', width: '100%', height: '28%' } // Area for the first option
+              
             ],
             imagePath : require(`../images/library_deck/197.webp`),
             actions: [
@@ -3801,6 +4187,11 @@ const cardData = {
               { top: '66%', width: '100%', height: '14%' }, // Area for the first option
               { top: '80%', width: '100%', height: '15%' } // Area for the first option
             ],
+        blurAreas: [
+              { top: '45%', width: '100%', height: '15%' }, // Area for the first option
+              { top: '66%', width: '100%', height: '29%' }, // Area for the first option
+              
+            ],
             imagePath : require(`../images/library_deck/198.webp`),
             actions: [
               {
@@ -3824,6 +4215,10 @@ const cardData = {
               { top: '66%', width: '100%', height: '17%' }, // Area for the first option
               { top: '83%', width: '100%', height: '15%' } // Area for the first option
             ],
+        blurAreas: [
+              { top: '45%', width: '100%', height: '15%' }, // Area for the first option
+              { top: '66%', width: '100%', height: '32%' }, // Area for the first option
+            ],
             imagePath : require(`../images/library_deck/199.webp`),
             actions: [
               {
@@ -3841,6 +4236,10 @@ const cardData = {
       },
       '200': {
         hoverAreas: [
+              { top: '45%', width: '100%', height: '27%' }, // Area for the first option
+              { top: '78%', width: '100%', height: '18%' } // Area for the first option
+            ],
+        blurAreas: [
               { top: '45%', width: '100%', height: '27%' }, // Area for the first option
               { top: '78%', width: '100%', height: '18%' } // Area for the first option
             ],
@@ -3862,6 +4261,10 @@ const cardData = {
               { top: '43%', width: '100%', height: '18%' }, // Area for the first option
               { top: '68%', width: '100%', height: '18%' } // Area for the first option
             ],
+        blurAreas: [
+              { top: '43%', width: '100%', height: '18%' }, // Area for the first option
+              { top: '68%', width: '100%', height: '18%' } // Area for the first option
+            ],
             imagePath : require(`../images/library_deck/201.webp`),
             actions: [
               {
@@ -3877,7 +4280,11 @@ const cardData = {
       },
       '202': {
         hoverAreas: [
-              { top: '43%', width: '100%', height: '26%' }, // Area for the first option
+              { top: '43%', width: '100%', height: '28%' }, // Area for the first option
+              { top: '78%', width: '100%', height: '18%' } // Area for the first option
+            ],
+        blurAreas: [
+              { top: '43%', width: '100%', height: '28%' }, // Area for the first option
               { top: '78%', width: '100%', height: '18%' } // Area for the first option
             ],
             imagePath : require(`../images/library_deck/202.webp`),
@@ -3939,9 +4346,16 @@ const cardData = {
       '215': {
         hoverAreas: [
               { top: '40%', width: '100%', height: '10%' }, // Area for the first option
-              { top: '51%', width: '100%', height: '9%' }, // Area for the second option
+              { top: '50%', width: '100%', height: '12%' }, // Area for the second option
               { top: '74%', width: '100%', height: '13%' }, // Area for the second option
-              { top: '88%', width: '100%', height: '10%' } // Area for the second option
+              { top: '87%', width: '100%', height: '12%' } // Area for the second option
+              
+            ],
+        blurAreas: [
+              { top: '40%', width: '100%', height: '21%' }, // Area for the first option
+            
+              { top: '74%', width: '100%', height: '23%' }, // Area for the second option
+            
               
             ],
             imagePath : require(`../images/library_deck/215.webp`),
@@ -3969,6 +4383,11 @@ const cardData = {
         },
       '216': {
         hoverAreas: [
+              { top: '30%', width: '100%', height: '38%' }, // Area for the first option
+              { top: '74%', width: '100%', height: '15%' }, // Area for the second option
+              
+            ],
+        blurAreas: [
               { top: '30%', width: '100%', height: '38%' }, // Area for the first option
               { top: '74%', width: '100%', height: '15%' }, // Area for the second option
               
@@ -4080,6 +4499,11 @@ const cardData = {
               { top: '79%', width: '100%', height: '17%' }, // Area for the second option
              
             ],
+        blurAreas: [
+              { top: '41%', width: '100%', height: '32%' }, // Area for the second option
+              { top: '79%', width: '100%', height: '17%' }, // Area for the second option
+             
+            ],
             imagePath : require(`../images/library_deck/222.webp`),
             actions: [
               {
@@ -4116,6 +4540,12 @@ const cardData = {
         hoverAreas: [
               { top: '33%', width: '100%', height: '18%' }, // Area for the second option
               { top: '51%', width: '100%', height: '12%' }, // Area for the second option
+              { top: '68%', width: '100%', height: '17%' }, // Area for the second option
+             
+            ],
+        blurAreas: [
+              { top: '33%', width: '100%', height: '30%' }, // Area for the second option
+            
               { top: '68%', width: '100%', height: '17%' }, // Area for the second option
              
             ],
@@ -4184,9 +4614,15 @@ const cardData = {
       },
       '227': {
         hoverAreas: [
-              { top: '45%', width: '100%', height: '13%' }, // Area for the first option
+              { top: '44%', width: '100%', height: '14%' }, // Area for the first option
               { top: '58%', width: '100%', height: '15%' }, // Area for the first option
-              { top: '80%', width: '100%', height: '17%' } // Area for the second option
+              { top: '79%', width: '100%', height: '18%' } // Area for the second option
+              
+            ],
+        blurAreas: [
+              { top: '44%', width: '100%', height: '29%' }, // Area for the first option
+              
+              { top: '79%', width: '100%', height: '18%' } // Area for the second option
               
             ],
             imagePath : require(`../images/library_deck/227.webp`),
@@ -4212,6 +4648,12 @@ const cardData = {
               { top: '78%', width: '100%', height: '17%' } // Area for the second option
               
             ],
+        blurAreas: [
+              { top: '40%', width: '100%', height: '30%' }, // Area for the first option
+            
+              { top: '78%', width: '100%', height: '17%' } // Area for the second option
+              
+            ],
             imagePath : require(`../images/library_deck/228.webp`),
             actions: [
                 {
@@ -4232,6 +4674,12 @@ const cardData = {
         hoverAreas: [
               { top: '40%', width: '100%', height: '15%' }, // Area for the first option
               { top: '55%', width: '100%', height: '17%' }, // Area for the first option
+              { top: '78%', width: '100%', height: '18%' } // Area for the second option
+              
+            ],
+        blurAreas: [
+              { top: '40%', width: '100%', height: '32%' }, // Area for the first option
+              
               { top: '78%', width: '100%', height: '18%' } // Area for the second option
               
             ],
@@ -4278,6 +4726,13 @@ const cardData = {
               { top: '45%', width: '100%', height: '12%' }, // Area for the first option
               { top: '64%', width: '100%', height: '17%' }, // Area for the second option
               { top: '81%', width: '100%', height: '17%' } // Area for the second option
+              
+            ],
+        blurAreas: [
+              { top: '31%', width: '100%', height: '26%' }, // Area for the first option
+              
+              { top: '64%', width: '100%', height: '34%' }, // Area for the second option
+              
               
             ],
             imagePath : require(`../images/library_deck/231.webp`),
@@ -4361,6 +4816,13 @@ const cardData = {
         hoverAreas: [
               { top: '39%', width: '100%', height: '11%' }, // Area for the first option
               { top: '50%', width: '100%', height: '10%' }, // Area for the second option
+              { top: '66%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '88%', width: '100%', height: '11%' } // Area for the second option
+              
+            ],
+        blurAreas: [
+              { top: '39%', width: '100%', height: '21%' }, // Area for the first option
+              
               { top: '66%', width: '100%', height: '12%' }, // Area for the first option
               { top: '88%', width: '100%', height: '11%' } // Area for the second option
               
@@ -4449,7 +4911,11 @@ const cardData = {
       },
       '240(1)': {
         hoverAreas: [
-              { top: '31%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '30%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '48%', width: '100%', height: '18%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '30%', width: '100%', height: '12%' }, // Area for the first option
               { top: '48%', width: '100%', height: '18%' }, // Area for the second option
             ],
             imagePath : require(`../images/library_deck/240(1).webp`),
@@ -4470,6 +4936,10 @@ const cardData = {
               { top: '31%', width: '100%', height: '12%' }, // Area for the first option
               { top: '48%', width: '100%', height: '18%' }, // Area for the second option
             ],
+        blurAreas: [
+              { top: '30%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '48%', width: '100%', height: '18%' }, // Area for the second option
+            ],
             imagePath : require(`../images/library_deck/240(2).webp`),
             actions: [
                 {
@@ -4486,6 +4956,10 @@ const cardData = {
       '240(3)': {
         hoverAreas: [
               { top: '31%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '48%', width: '100%', height: '18%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '30%', width: '100%', height: '12%' }, // Area for the first option
               { top: '48%', width: '100%', height: '18%' }, // Area for the second option
             ],
             imagePath : require(`../images/library_deck/240(3).webp`),
@@ -4506,6 +4980,10 @@ const cardData = {
               { top: '31%', width: '100%', height: '12%' }, // Area for the first option
               { top: '48%', width: '100%', height: '18%' }, // Area for the second option
             ],
+        blurAreas: [
+              { top: '30%', width: '100%', height: '12%' }, // Area for the first option
+              { top: '48%', width: '100%', height: '18%' }, // Area for the second option
+            ],
             imagePath : require(`../images/library_deck/240(4).webp`),
             actions: [
                 {
@@ -4523,6 +5001,11 @@ const cardData = {
         hoverAreas: [
               { top: '31%', width: '100%', height: '11%' }, // Area for the first option
               { top: '42%', width: '100%', height: '12%' }, // Area for the second option
+              { top: '60%', width: '100%', height: '20%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '31%', width: '100%', height: '23%' }, // Area for the first option
+              
               { top: '60%', width: '100%', height: '20%' }, // Area for the second option
             ],
             imagePath : require(`../images/library_deck/241(1).webp`),
@@ -4548,6 +5031,11 @@ const cardData = {
               { top: '28%', width: '100%', height: '14%' }, // Area for the first option
               { top: '49%', width: '100%', height: '30%' }, // Area for the second option
             ],
+        blurAreas: [
+              { top: '28%', width: '100%', height: '14%' }, // Area for the first option
+              { top: '49%', width: '100%', height: '30%' }, // Area for the second option
+            ],
+        
             imagePath : require(`../images/library_deck/241(2).webp`),
             actions: [
                 {
@@ -4566,6 +5054,10 @@ const cardData = {
         hoverAreas: [
               { top: '30%', width: '100%', height: '9%' }, // Area for the first option
               { top: '39%', width: '100%', height: '11%' }, // Area for the first option
+              { top: '59%', width: '100%', height: '30%' }, // Area for the second option
+            ],
+        blurAreas: [
+              { top: '30%', width: '100%', height: '20%' }, // Area for the first option
               { top: '59%', width: '100%', height: '30%' }, // Area for the second option
             ],
             imagePath : require(`../images/library_deck/242.webp`),
@@ -4589,6 +5081,10 @@ const cardData = {
               { top: '30%', width: '100%', height: '9%' }, // Area for the first option
               { top: '45%', width: '100%', height: '30%' }, // Area for the second option
             ],
+        blurAreas: [
+              { top: '30%', width: '100%', height: '9%' }, // Area for the first option
+              { top: '45%', width: '100%', height: '30%' }, // Area for the second option
+            ],
             imagePath : require(`../images/library_deck/243(1).webp`),
             actions: [
                 {
@@ -4604,6 +5100,10 @@ const cardData = {
       },
       '243(2)': {
         hoverAreas: [
+              { top: '30%', width: '100%', height: '9%' }, // Area for the first option
+              { top: '45%', width: '100%', height: '30%' }, // Area for the second option
+            ],
+        blurAreas: [
               { top: '30%', width: '100%', height: '9%' }, // Area for the first option
               { top: '45%', width: '100%', height: '30%' }, // Area for the second option
             ],
@@ -4625,6 +5125,10 @@ const cardData = {
             { top: '33%', width: '100%', height: '12%' }, // Area for the first option
             { top: '52%', width: '100%', height: '15%' } // Area for the second option
           ],
+      blurAreas: [
+            { top: '33%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '52%', width: '100%', height: '15%' } // Area for the second option
+          ],
           imagePath : require(`../images/library_deck/244(1).webp`),
           actions: [
             {
@@ -4642,6 +5146,10 @@ const cardData = {
               { top: '33%', width: '100%', height: '12%' }, // Area for the first option
               { top: '52%', width: '100%', height: '15%' } // Area for the second option
             ],
+        blurAreas: [
+            { top: '33%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '52%', width: '100%', height: '15%' } // Area for the second option
+          ],
             imagePath : require(`../images/library_deck/244(2).webp`),
             actions: [
               {
@@ -4659,6 +5167,10 @@ const cardData = {
               { top: '33%', width: '100%', height: '12%' }, // Area for the first option
               { top: '52%', width: '100%', height: '15%' } // Area for the second option
             ],
+        blurAreas: [
+            { top: '33%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '52%', width: '100%', height: '15%' } // Area for the second option
+          ],
             imagePath : require(`../images/library_deck/244(3).webp`),
             actions: [
               {
@@ -4702,8 +5214,15 @@ const cardData = {
     },
     'E02': {
       hoverAreas: [
-            { top: '26%', width: '100%', height: '9%' }, // Area for the first option
-            { top: '45%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '34%', width: '100%', height: '11%' }, // Area for the first option
+            { top: '52%', width: '100%', height: '15%' }, // Area for the second option
+            { top: '67%', width: '100%', height: '20%' }, // Area for the second option
+
+          ],
+      blurAreas: [
+            { top: '34%', width: '100%', height: '11%' }, // Area for the first option
+            { top: '52%', width: '100%', height: '35%' }, // Area for the second option
+            
 
           ],
           imagePath : require(`../images/encounter_deck/E02.webp`),
@@ -4716,13 +5235,24 @@ const cardData = {
                 type: ['stage'],
                 cards: ['214'],
             },
+            {
+              type: ['stage'],
+              cards: ['214'],
+            }
         ],
     },
     'E03': {
         hoverAreas: [
-            { top: '22%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '53%', width: '100%', height: '6%' }, // Area for the second option
-            { top: '69%', width: '100%', height: '6%' }, // Area for the third option
+            { top: '30%', width: '100%', height: '11%' }, // Area for the first option
+            { top: '41%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '60%', width: '100%', height: '9%' }, // Area for the second option
+            { top: '76%', width: '100%', height: '15%' }, // Area for the third option
+        ],
+        blurAreas: [
+            { top: '30%', width: '100%', height: '23%' }, // Area for the first option
+          
+            { top: '60%', width: '100%', height: '9%' }, // Area for the second option
+            { top: '76%', width: '100%', height: '15%' }, // Area for the third option
         ],
         imagePath: require('../images/encounter_deck/E03.webp'),
         actions: [
@@ -4744,9 +5274,14 @@ const cardData = {
     },
     'E04': {
       hoverAreas: [
-            { top: '26%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '47%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '71%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '34%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '56%', width: '100%', height: '14%' }, // Area for the second option
+            { top: '79%', width: '100%', height: '17%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '34%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '56%', width: '100%', height: '14%' }, // Area for the second option
+            { top: '79%', width: '100%', height: '17%' }, // Area for the third option
           ],
           imagePath : require(`../images/encounter_deck/E04.webp`),
           actions: [
@@ -4767,8 +5302,14 @@ const cardData = {
     'E05': {
       hoverAreas: [
             { top: '28%', width: '100%', height: '12%' }, // Area for the first option
-            { top: '48%', width: '100%', height: '10%' }, // Area for the second option
-            { top: '59%', width: '100%', height: '10%' }, // Area for the second option
+            { top: '48%', width: '100%', height: '11%' }, // Area for the second option
+            { top: '59%', width: '100%', height: '11%' }, // Area for the second option
+            { top: '80%', width: '100%', height: '13%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '28%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '48%', width: '100%', height: '21%' }, // Area for the second option
+            
             { top: '80%', width: '100%', height: '13%' }, // Area for the third option
           ],
           imagePath : require(`../images/encounter_deck/E05.webp`),
@@ -4793,9 +5334,14 @@ const cardData = {
     },
     'E06': {
       hoverAreas: [
-            { top: '26%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '47%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '67%', width: '100%', height: '9%' }, // Area for the third option
+            { top: '34%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '56%', width: '100%', height: '11%' }, // Area for the second option
+            { top: '76%', width: '100%', height: '15%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '34%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '56%', width: '100%', height: '11%' }, // Area for the second option
+            { top: '76%', width: '100%', height: '15%' }, // Area for the third option
           ],
           imagePath : require(`../images/encounter_deck/E06.webp`),
           actions: [
@@ -4815,9 +5361,15 @@ const cardData = {
     },
     'E07': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '50%', width: '100%', height: '8%' }, // Area for the second option
-          ],
+        { top: '28%', width: '100%', height: '11%' }, // Area for the first option
+        { top: '39%', width: '100%', height: '12%' }, // Area for the second option
+        { top: '58%', width: '100%', height: '25%' }, // Area for the third option
+      ],
+      blurAreas: [
+        { top: '28%', width: '100%', height: '24%' }, // Area for the first option
+        
+        { top: '58%', width: '100%', height: '25%' }, // Area for the third option
+      ],
           imagePath : require(`../images/encounter_deck/E07.webp`),
           actions: [
             {
@@ -4837,9 +5389,14 @@ const cardData = {
     },
     'E08': {
       hoverAreas: [
-            { top: '26%', width: '100%', height: '8%' }, // Area for the first option
+            { top: '34%', width: '100%', height: '12%' }, // Area for the first option
             { top: '52%', width: '100%', height: '21%' }, // Area for the second option
-            { top: '74%', width: '100%', height: '20%' }, // Area for the third option
+            { top: '73%', width: '100%', height: '20%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '34%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '52%', width: '100%', height: '42%' }, // Area for the second option
+            
           ],
           imagePath : require(`../images/encounter_deck/E08.webp`),
           actions: [
@@ -4858,8 +5415,14 @@ const cardData = {
     },
     'E09': {
       hoverAreas: [
-            { top: '26%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '59%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '34%', width: '100%', height: '25%' }, // Area for the first option
+            { top: '66%', width: '100%', height: '11%' }, // Area for the third option
+            { top: '77%', width: '100%', height: '15%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '34%', width: '100%', height: '25%' }, // Area for the first option
+            { top: '66%', width: '100%', height: '26%' }, // Area for the third option
+            
           ],
           imagePath : require(`../images/encounter_deck/E09.webp`),
           actions: [
@@ -4876,9 +5439,16 @@ const cardData = {
     },
     'E10': {
       hoverAreas: [
-            { top: '27%', width: '100%', height: '10%' }, // Area for the first option
-            { top: '60%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '81%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '37%', width: '100%', height: '15%' }, // Area for the first option
+            { top: '52%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '68%', width: '100%', height: '13%' }, // Area for the second option
+            { top: '88%', width: '100%', height: '11%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '37%', width: '100%', height: '23%' }, // Area for the first option
+            
+            { top: '68%', width: '100%', height: '13%' }, // Area for the second option
+            { top: '88%', width: '100%', height: '11%' }, // Area for the third option
           ],
           imagePath : require(`../images/encounter_deck/E10.webp`),
           actions: [
@@ -4898,9 +5468,16 @@ const cardData = {
     },
     'E11': {
       hoverAreas: [
-            { top: '22%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '55%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '77%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '31%', width: '100%', height: '14%' }, // Area for the first option
+            { top: '45%', width: '100%', height: '12%' }, // Area for the second option
+            { top: '64%', width: '100%', height: '13%' }, // Area for the third option
+            { top: '84%', width: '100%', height: '15%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '31%', width: '100%', height: '26%' }, // Area for the first option
+            
+            { top: '64%', width: '100%', height: '13%' }, // Area for the third option
+            { top: '84%', width: '100%', height: '15%' }, // Area for the third option
           ],
           imagePath : require(`../images/encounter_deck/E11.webp`),
           actions: [
@@ -4920,9 +5497,16 @@ const cardData = {
     },
     'E12': {
       hoverAreas: [
-            { top: '23%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '55%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '76%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '32%', width: '100%', height: '10%' }, // Area for the first option
+            { top: '42%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '62%', width: '100%', height: '14%' }, // Area for the second option
+            { top: '83%', width: '100%', height: '16%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '32%', width: '100%', height: '22%' }, // Area for the first option
+          
+            { top: '62%', width: '100%', height: '14%' }, // Area for the second option
+            { top: '83%', width: '100%', height: '16%' }, // Area for the third option
           ],
           imagePath : require(`../images/encounter_deck/E12.webp`),
           actions: [
@@ -4944,9 +5528,14 @@ const cardData = {
     },
     'E13': {
       hoverAreas: [
-            { top: '23%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '46%', width: '100%', height: '10%' }, // Area for the second option
-            { top: '71%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '32%', width: '100%', height: '15%' }, // Area for the first option
+            { top: '56%', width: '100%', height: '15%' }, // Area for the second option
+            { top: '78%', width: '100%', height: '17%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '32%', width: '100%', height: '15%' }, // Area for the first option
+            { top: '56%', width: '100%', height: '15%' }, // Area for the second option
+            { top: '78%', width: '100%', height: '17%' }, // Area for the third option
           ],
           imagePath : require(`../images/encounter_deck/E13.webp`),
           actions: [
@@ -4969,9 +5558,16 @@ const cardData = {
     },
     'E14': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '67%', width: '100%', height: '17%' }, // Area for the second option
-            { top: '86%', width: '100%', height: '13%' }, // Area for the third option
+            { top: '29%', width: '100%', height: '10%' }, // Area for the first option
+            { top: '39%', width: '100%', height: '21%' }, // Area for the first option
+            { top: '67%', width: '100%', height: '18%' }, // Area for the second option
+            { top: '85%', width: '100%', height: '14%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '29%', width: '100%', height: '31%' }, // Area for the first option
+            
+            { top: '67%', width: '100%', height: '32%' }, // Area for the second option
+         
           ],
           imagePath : require(`../images/encounter_deck/E14.webp`),
           actions: [
@@ -4992,9 +5588,14 @@ const cardData = {
     },
     'E15': {
       hoverAreas: [
-            { top: '28%', width: '100%', height: '8%' }, // Area for the first option
+            { top: '36%', width: '100%', height: '13%' }, // Area for the first option
             { top: '57%', width: '100%', height: '18%' }, // Area for the second option
-            { top: '76%', width: '100%', height: '18%' }, // Area for the third option
+            { top: '75%', width: '100%', height: '18%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '36%', width: '100%', height: '13%' }, // Area for the first option
+            { top: '57%', width: '100%', height: '36%' }, // Area for the second option
+          
           ],
           imagePath : require(`../images/encounter_deck/E15.webp`),
           actions: [
@@ -5014,9 +5615,17 @@ const cardData = {
     },
     'E16': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '60%', width: '100%', height: '8%' }, // Area for the second option
-          ],
+        { top: '29%', width: '100%', height: '13%' }, // Area for the first option
+        { top: '42%', width: '100%', height: '19%' }, // Area for the first option
+        { top: '67%', width: '100%', height: '18%' }, // Area for the second option
+        { top: '85%', width: '100%', height: '14%' }, // Area for the third option
+      ],
+  blurAreas: [
+        { top: '29%', width: '100%', height: '31%' }, // Area for the first option
+        
+        { top: '67%', width: '100%', height: '32%' }, // Area for the second option
+     
+      ],
           imagePath : require(`../images/encounter_deck/E16.webp`),
           actions: [
             {
@@ -5042,9 +5651,14 @@ const cardData = {
     },
     'S01': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '43%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '30%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '51%', width: '100%', height: '9%' }, // Area for the second option
+            { top: '67%', width: '100%', height: '15%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '30%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '51%', width: '100%', height: '9%' }, // Area for the second option
+            { top: '67%', width: '100%', height: '15%' }, // Area for the third option
           ],
           imagePath : require(`../images/settlement_deck/S01.webp`),
            actions: [
@@ -5065,8 +5679,12 @@ const cardData = {
     },
     'S02': {
       hoverAreas: [
-            { top: '27%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '45%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '35%', width: '100%', height: '11%' }, // Area for the first option
+            { top: '53%', width: '100%', height: '21%' }, // Area for the second option
+          ],
+      blurAreas: [
+            { top: '35%', width: '100%', height: '11%' }, // Area for the first option
+            { top: '53%', width: '100%', height: '21%' }, // Area for the second option
           ],
           imagePath : require(`../images/settlement_deck/S02.webp`),
            actions: [
@@ -5082,9 +5700,14 @@ const cardData = {
     },
     'S03': {
         hoverAreas: [
-            { top: '21%', width: '100%', height: '7%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '61%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '28%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '49%', width: '100%', height: '12%' }, // Area for the second option
+            { top: '68%', width: '100%', height: '15%' }, // Area for the third option
+        ],
+        blurAreas: [
+            { top: '28%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '49%', width: '100%', height: '12%' }, // Area for the second option
+            { top: '68%', width: '100%', height: '15%' }, // Area for the third option
         ],
         imagePath: require('../images/settlement_deck/S03.webp'),
         actions: [
@@ -5104,10 +5727,15 @@ const cardData = {
     },
     'S04': {
       hoverAreas: [
-            { top: '21%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '41%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the third option
-          ],
+        { top: '28%', width: '100%', height: '12%' }, // Area for the first option
+        { top: '49%', width: '100%', height: '12%' }, // Area for the second option
+        { top: '68%', width: '100%', height: '15%' }, // Area for the third option
+    ],
+    blurAreas: [
+        { top: '28%', width: '100%', height: '12%' }, // Area for the first option
+        { top: '49%', width: '100%', height: '12%' }, // Area for the second option
+        { top: '68%', width: '100%', height: '15%' }, // Area for the third option
+    ],
           imagePath : require(`../images/settlement_deck/S04.webp`),
         actions: [
             {
@@ -5126,8 +5754,14 @@ const cardData = {
     },
     'S05': {
       hoverAreas: [
-            { top: '23%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '60%', width: '100%', height: '7%' }, // Area for the second option
+            { top: '31%', width: '100%', height: '14%' }, // Area for the first option
+            { top: '45%', width: '100%', height: '15%' }, // Area for the first option
+            { top: '67%', width: '100%', height: '15%' }, // Area for the second option
+           ],
+      blurAreas: [
+            { top: '31%', width: '100%', height: '29%' }, // Area for the first option
+           
+            { top: '67%', width: '100%', height: '15%' }, // Area for the second option
            ],
           imagePath : require(`../images/settlement_deck/S05.webp`),
         actions: [
@@ -5143,8 +5777,13 @@ const cardData = {
     },
     'S06': {
       hoverAreas: [
-            { top: '26%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '48%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '34%', width: '100%', height: '15%' }, // Area for the first option
+            { top: '55%', width: '100%', height: '18%' }, // Area for the second option
+          ],
+
+      blurAreas: [
+            { top: '34%', width: '100%', height: '15%' }, // Area for the first option
+            { top: '55%', width: '100%', height: '18%' }, // Area for the second option
           ],
           imagePath : require(`../images/settlement_deck/S06.webp`),
         actions: [
@@ -5164,8 +5803,12 @@ const cardData = {
     },
     'S07': {
       hoverAreas: [
-            { top: '33%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '55%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '41%', width: '100%', height: '14%' }, // Area for the first option
+            { top: '62%', width: '100%', height: '100%' }, // Area for the second option
+          ],
+      blurAreas: [
+            { top: '41%', width: '100%', height: '14%' }, // Area for the first option
+            { top: '62%', width: '100%', height: '100%' }, // Area for the second option
           ],
           imagePath : require(`../images/settlement_deck/S07.webp`),
         actions: [
@@ -5174,15 +5817,19 @@ const cardData = {
                 deck: 'settlementDeck',
             },
             {
-                type: ['trash'],
+                type: ['trash','keep'],
                 deck: 'settlementDeck',
             },
         ],
     },
     'S08': {
       hoverAreas: [
-            { top: '23%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '42%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '31%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '50%', width: '100%', height: '12%' }, // Area for the second option
+          ],
+      blurAreas: [
+            { top: '31%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '50%', width: '100%', height: '12%' }, // Area for the second option
           ],
           imagePath : require(`../images/settlement_deck/S08.webp`),
         actions: [
@@ -5198,8 +5845,14 @@ const cardData = {
     },
     'S09': {
       hoverAreas: [
-            { top: '26%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '46%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '35%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '54%', width: '100%', height: '18%' }, // Area for the second option
+            { top: '72%', width: '100%', height: '20%' }, // Area for the second option
+          ],
+      blurAreas: [
+            { top: '35%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '54%', width: '100%', height: '38%' }, // Area for the second option
+            
           ],
           imagePath : require(`../images/settlement_deck/S09.webp`),
         actions: [
@@ -5215,8 +5868,14 @@ const cardData = {
     },
     'S10': {
       hoverAreas: [
-            { top: '29%', width: '100%', height: '12%' }, // Area for the first option
-            { top: '52%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '41%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '60%', width: '100%', height: '11%' }, // Area for the second option
+            { top: '71%', width: '100%', height: '11%' }, // Area for the second option
+          ],
+      blurAreas: [
+            { top: '41%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '60%', width: '100%', height: '22%' }, // Area for the second option
+            
           ],
           imagePath : require(`../images/settlement_deck/S10.webp`),
         actions: [
@@ -5232,9 +5891,14 @@ const cardData = {
     },
     'S11': {
       hoverAreas: [
-            { top: '27%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '43%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '68%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '35%', width: '100%', height: '8%' }, // Area for the first option
+            { top: '51%', width: '100%', height: '17%' }, // Area for the second option
+            { top: '76%', width: '100%', height: '17%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '35%', width: '100%', height: '8%' }, // Area for the first option
+            { top: '51%', width: '100%', height: '17%' }, // Area for the second option
+            { top: '76%', width: '100%', height: '17%' }, // Area for the third option
           ],
           imagePath : require(`../images/settlement_deck/S11.webp`),
         actions: [
@@ -5256,9 +5920,14 @@ const cardData = {
     },
     'S12': {
       hoverAreas: [
-            { top: '23%', width: '100%', height: '8%' }, // Area for the first option
+            { top: '31%', width: '100%', height: '15%' }, // Area for the first option
             { top: '53%', width: '100%', height: '21%' }, // Area for the second option
-            { top: '75%', width: '100%', height: '18%' }, // Area for the third option
+            { top: '74%', width: '100%', height: '19%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '31%', width: '100%', height: '15%' }, // Area for the first option
+            { top: '53%', width: '100%', height: '40%' }, // Area for the second option
+            
           ],
           imagePath : require(`../images/settlement_deck/S12.webp`),
         actions: [
@@ -5282,9 +5951,16 @@ const cardData = {
     },
     'S13': {
       hoverAreas: [
-            { top: '23%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '42%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '74%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '32%', width: '100%', height: '11%' }, // Area for the first option
+            { top: '51%', width: '100%', height: '11%' }, // Area for the second option
+            { top: '62%', width: '100%', height: '12%' }, // Area for the second option
+            { top: '80%', width: '100%', height: '13%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '32%', width: '100%', height: '11%' }, // Area for the first option
+            { top: '51%', width: '100%', height: '23%' }, // Area for the second option
+            
+            { top: '80%', width: '100%', height: '13%' }, // Area for the third option
           ],
           imagePath : require(`../images/settlement_deck/S13.webp`),
         actions: [
@@ -5304,9 +5980,16 @@ const cardData = {
     },
     'S14': {
       hoverAreas: [
-            { top: '23%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '48%', width: '100%', height: '8%' }, // Area for the second option
-            { top: '79%', width: '100%', height: '7%' }, // Area for the third option
+            { top: '31%', width: '100%', height: '19%' }, // Area for the first option
+            { top: '56%', width: '100%', height: '11%' }, // Area for the second option
+            { top: '67%', width: '100%', height: '12%' }, // Area for the second option
+            { top: '86%', width: '100%', height: '12%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '31%', width: '100%', height: '19%' }, // Area for the first option
+            { top: '56%', width: '100%', height: '23%' }, // Area for the second option
+            
+            { top: '86%', width: '100%', height: '12%' }, // Area for the third option
           ],
           imagePath : require(`../images/settlement_deck/S14.webp`),
         actions: [
@@ -5328,10 +6011,16 @@ const cardData = {
     },
     'S15': {
       hoverAreas: [
-            { top: '23%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '42%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '31%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '50%', width: '100%', height: '12%' }, // Area for the second option
             { top: '69%', width: '100%', height: '14%' }, // Area for the third option
-            { top: '84%', width: '100%', height: '11%' }, // Area for the third option
+            { top: '83%', width: '100%', height: '12%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '31%', width: '100%', height: '12%' }, // Area for the first option
+            { top: '50%', width: '100%', height: '12%' }, // Area for the second option
+            { top: '69%', width: '100%', height: '26%' }, // Area for the third option
+            
           ],
           imagePath : require(`../images/settlement_deck/S15.webp`),
         actions: [
@@ -5357,10 +6046,16 @@ const cardData = {
     },
     'S16': {
       hoverAreas: [
-            { top: '26%', width: '100%', height: '8%' }, // Area for the first option
-            { top: '49%', width: '100%', height: '8%' }, // Area for the second option
+            { top: '34%', width: '100%', height: '15%' }, // Area for the first option
+            { top: '56%', width: '100%', height: '9%' }, // Area for the second option
             { top: '75%', width: '100%', height: '14%' }, // Area for the third option
-            { top: '90%', width: '100%', height: '10%' }, // Area for the third option
+            { top: '89%', width: '100%', height: '11%' }, // Area for the third option
+          ],
+      blurAreas: [
+            { top: '34%', width: '100%', height: '15%' }, // Area for the first option
+            { top: '56%', width: '100%', height: '9%' }, // Area for the second option
+            { top: '75%', width: '100%', height: '25%' }, // Area for the third option
+            
           ],
           imagePath : require(`../images/settlement_deck/S16.webp`),
         actions: [
