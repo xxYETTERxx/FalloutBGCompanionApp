@@ -41,10 +41,10 @@ const StagingArea = ({ onCardFocus }) => {
         setTestNumber(testNumber+1);
         onCardFocus(numberArray[testNumber]);
     };
-    const testingR = () => {
+   /*  const testingR = () => {
         setTestNumber(testNumber-1);
         onCardFocus(numberArray[testNumber]);
-    };
+    }; */
     
     const [inputText, setInputText] = useState('');
     const handleChange = (event) => {

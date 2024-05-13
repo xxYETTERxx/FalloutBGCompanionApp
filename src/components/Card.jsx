@@ -131,6 +131,8 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                                 case 'settlementDeck':
                                     setSettlementDeck(currentDeck);
                                     break;
+                                default:
+                                    console.log('not a deck');
                                 }
                                 showMessage(action.addCardsIDS[i] + " added to " + action.addDeck[i]);
                                 i++;
@@ -168,6 +170,8 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                                 case 'specialShieldDeck':
                                     setSpecialShieldDeck(currentDeck);
                                     break;
+                                default:
+                                    console.log('not a deck');
                             }
                             showMessage(action.addCardIDS + " added to " + action.addDeck[0]);
 
@@ -203,6 +207,8 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                                 case 'set':
                                     setVault109Deck(newTDeck);
                                     break;
+                                default:
+                                    console.log('not a deck');
                             }
 
                         
@@ -267,6 +273,8 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                                 const gameV109Deck = shuffleV109Deck.slice(0,playerCount);
                                 setVault109Deck(gameV109Deck);
                                 break;
+                            default:
+                                console.log('not a deck');
                         }
                         showMessage(action.deckType + " Built");
                         break;
@@ -274,7 +282,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                         case 'checkLast':
                             switch(action.deckType){
                                 case 'vault84Deck':
-                                    if(vault84Deck.length == 0){
+                                    if(vault84Deck.length === 0){
                                         if(hasBeenDrawn74){ 
                                             setVault84Deck(['081']);
                                             showMessage("081 Added to Vault 84 Deck");
@@ -343,6 +351,8 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                                     alert("Resolve 244 immidiately");
                                     removeCardFromStaged(cardNumber);
                                     break;
+                                default:
+                                    console.log("no card found");
                                 }
                             break;
 

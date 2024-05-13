@@ -5637,17 +5637,6 @@ const cardData = {
                 deck: 'encounterDeck',
             }
         ],
-        imagePath : require(`../images/encounter_deck/E16.webp`),
-          actions: [
-            {
-                type: ['discard'],
-                deck: 'encounterDeck',
-            },
-            {
-                type: ['discard'],
-                deck: 'encounterDeck',
-            }
-        ],
     },
     'S01': {
       hoverAreas: [

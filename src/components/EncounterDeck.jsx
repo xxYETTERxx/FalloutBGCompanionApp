@@ -31,7 +31,7 @@ export const EncounterDeckProvider = ({ children }) => {
     const [overlayContent, setOverlayContent] = useState(null);
     const [message, setMessage] = useState(null); // Stores the current message
     const [isMessageVisible, setIsMessageVisible] = useState(false);
-    const [ debug, setDebug ] = useState(true);
+    //const [ debug, setDebug ] = useState(true);
     
     const showMessage = (msg) => {
         setMessage(msg);
