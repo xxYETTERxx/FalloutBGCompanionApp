@@ -25,6 +25,8 @@
   }
   
   .player-buttons {
+    position: absolute;
+    top: 20%;
     display: flex;
     gap: 10px; /* Space between player buttons */
   }
