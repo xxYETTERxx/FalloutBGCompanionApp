@@ -4,6 +4,7 @@ Welcome to the companion app for **Fallout: The Board Game**. This project aims 
 
 ## Table of Contents
 - [Features](#features)
+- [Gameplay Instructions](#gameplay-instructions)
 - [Getting Started](#getting-started)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -16,6 +17,22 @@ Welcome to the companion app for **Fallout: The Board Game**. This project aims 
 - **Quest Markers**: Create digital questmarkers that match the physical markers for the board
 - **Player Inventory**: Keep track of the 'Take' cards throughout a campaign
 -  **Undo**: Every action is tracked from the start of the game till the end
+-  **Card Focus**: Right-click on any card to focus on it at native size. This is useful when there are several staged cards
+-  **Blurred Result**: All encounter/settlements/Vault cards have the results to the choices blurred for solo play and better co-op play
+
+## Gameplay instructions
+- Selet the number of players (mandatory), and enter their names (optional). Then choose the desired scenario. Please note you may need the physical cards 104, 204-213 and 238 from the library deck depending on the scenario chosen. 
+- Left click on any action on any card to trigger the listed action (i.e.: stage, add, discard, trash)
+- Left click on any encounter/settlement/vault/special deck to draw a card
+- Left click the blurred area to remove the blur effect
+- Right click any staged cards to focus on it. Right click again to defocus
+- Use the Questmarker button to create new quest markers. The colors cycle every time the button is pressed.
+- Click and drag Questmarkers to place them on cards. note: when cards are moved, the questmarker must be manually moved
+- Remove Questmarkers by right clicking on them
+- Click the Undo button to restore the last stored deck history. Note: Every time a deck is changed that history is stored. The undo button takes one step back in that history. It does not affect questmarkers or focused cards or removing blur effects.
+- Use the Player Inventory button to display any cards aquired by the players
+- (Debug Purposes) Type a number in the input text field below the Stage Card button. Press Enter to focus on that card. Click the Stage Card button to stage that card. Note: the format must be 'xxx' i.e. 006
+
 
 ## Getting Started
 To get started with the project, clone the repository to your local machine:
