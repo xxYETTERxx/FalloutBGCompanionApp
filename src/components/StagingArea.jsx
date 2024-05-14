@@ -1,5 +1,5 @@
 // StagingArea.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Card from './Card'; // Importing other required components
 import '../styles/StagingArea.css'; // Importing CSS
 import {  useEncounterDeck } from './EncounterDeck';
@@ -9,13 +9,18 @@ import PlayerInventory from './PlayerInventory';
 import MessageDisplay from './MessageDisplay';
 
 const StagingArea = ({ onCardFocus }) => {
-    
-    
     const { setShowOverlay, showOverlay, overlayContent, players, playerCards, setPlayerCards, stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active, specialStarActive, specialShieldActive, setStagedCards, storeHistory, restoreHistory} = useEncounterDeck();
     const [ questMarkers,  ] = useState(['Y','LB','B','P','R','O']);
     const [currentMarkerIndex, setCurrentMarkerIndex] = useState(0); // To track current index
     const [renderedMarkers, setRenderedMarkers] = useState([]);
     const [playerInventoryActive, setPlayerInventoryActive] = useState(false);
+    const stagingAreaRef = useRef(null);
+
+    useEffect(() => {
+        if (stagingAreaRef.current) {
+            stagingAreaRef.current.scrollLeft = 0; // Adjust scroll to the start on component mount
+        }
+    }, []);
     
     
     const togglePlayerInventory = () => {
@@ -88,9 +93,9 @@ const StagingArea = ({ onCardFocus }) => {
                 <button onClick={() => setShowOverlay(false)}>Cancel</button>
             </div>
             )}
-        <div className="staging-area"> {/* Ensure context access */}
+        <div ref= {stagingAreaRef} className="staging-area"> {/* Ensure context access */}
             {stagedCards.map((card) => (
-                <div className='p-2.5' key={card} onContextMenu={() => onCardFocus(card)}>
+                <div className='card-container' key={card} onContextMenu={() => onCardFocus(card)}>
                     <Card cardNumber={card} onCardFocus={onCardFocus}/> {/* Render the card */}
                 </div>
             ))}

@@ -1,7 +1,5 @@
 .card-wrapper {
     position: relative; /* Relative positioning for overlay effects */
-    
-    
   }
   
   .option-overlay {
@@ -48,3 +46,8 @@
   display: none;
 }
 
+.card-container {
+  min-width: 250px; /* Adjust based on your content needs */
+  margin: 5px; /* Provides a little space between cards */
+  flex-shrink: 0; /* Prevents the card from shrinking */
+}

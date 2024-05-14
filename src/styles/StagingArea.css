@@ -1,17 +1,19 @@
 
 .staging-area {
     display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    align-items: center;
     border: 10px solid silver; 
     padding: 20px;
     background: url('../images/misc_assets/logo.webp') no-repeat center center;
     height: 75vh;
     width: 100vw;
-    justify-content: center;
     box-sizing: border-box;
     background-size:cover;
     border-radius: 15px;
-    background-color: #e8e8e8;
-    align-items: center; 
+    /* justify-content: center; */
+    background-color: #e8e8e8; 
 }
 
 .quest-marker{
@@ -156,4 +158,10 @@
 
 .cancel-button:hover {
   background-color: #c82333; /* Darker red on hover */
+}
+
+.card-container {
+  min-width: 250px; /* Adjust based on your content needs */
+  margin: 5px; /* Provides a little space between cards */
+  flex-shrink: 0; /* Prevents the card from shrinking */
 }

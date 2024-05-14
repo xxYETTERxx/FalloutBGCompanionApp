@@ -114,7 +114,8 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                         let i =0;
                         let currentDeck; 
                 
-                        if (action.addDeck.length > 1){  
+                        if (action.addDeck.length > 1){ 
+                            console.log('running'); 
                           
                             for(const cardID of action.addCardIDS){
         
@@ -134,7 +135,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
                                 default:
                                     console.log('not a deck');
                                 }
-                                showMessage(action.addCardsIDS[i] + " added to " + action.addDeck[i]);
+                                /* showMessage(action.addCardsIDS[i] + " added to " + action.addDeck[i]); */
                                 i++;
                             }
 
