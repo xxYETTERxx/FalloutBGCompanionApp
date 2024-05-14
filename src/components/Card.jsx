@@ -27,18 +27,11 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
         });
       };
 
-      
-      
     if (!cardInfo) {
         return <div>Error: Card data not found for card {cardNumber}</div>; // Handle missing card data
     }
     
- 
-
-
-
-
-    const { hoverAreas, imagePath, actions, blurAreas } = cardInfo; // Get hover areas and actions
+     const { hoverAreas, imagePath, actions, blurAreas } = cardInfo; // Get hover areas and actions
     
     // Toggle blur visibility
     const toggleBlur = (index) => {
@@ -369,18 +362,12 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
 
         
          
-        <div className= "card-wrapper"
-            onContextMenu={(e) => {
-                e.preventDefault();
-                onCardFocus(cardNumber);
-            }}
-            >
-
-            
+        <div className= "card-wrapper">
+ 
             <img
                 src={imagePath}
                 alt={`Card}${cardNumber}`}
-                style={{ width:'380px', height:'auto', }}
+                style={{ width:'auto', height:'auto', }}
            
             />
             {hoverAreas.map((area, index) => (

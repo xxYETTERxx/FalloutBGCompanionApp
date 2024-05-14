@@ -12,7 +12,6 @@
     box-sizing: border-box;
     background-size:cover;
     border-radius: 15px;
-    /* justify-content: center; */
     background-color: #e8e8e8; 
 }
 
@@ -20,7 +19,15 @@
     justify-content: right;
 }
 
-
+.bottom-segment {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap; /* Ensures items stay in a single line */
+  justify-content: space-between; /* Adjust as needed (flex-start, center, flex-end, etc.) */
+  align-items: center;
+  position: relative;
+}
 
 .button-area{
     display:flex;
@@ -32,9 +39,20 @@
 }
 
 .utility-buttons {
-    display: flex;
+    position: absolute;
+    right: 0;
+    top: 1%;
     flex-direction: column;
-    padding: 10px; /* Extra padding */
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.message {
+  position: absolute;
+  padding: 10px;
+  background-color: rgba(116, 111, 111, 0.9);
+  border-radius: 10px;
+  z-index: 1000;
 }
 
 .card-wrapper{
@@ -89,6 +107,8 @@
   touch-action: manipulation;
 }
 
+
+
 .button-84:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
   opacity: .85;
@@ -102,11 +122,6 @@
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
-@media (max-width: 420px) {
-  .button-84 {
-    height: 48px;
-  }
-}
 
 /* Overlay styles to darken the background and center content */
 .overlay {
@@ -164,4 +179,68 @@
   min-width: 250px; /* Adjust based on your content needs */
   margin: 5px; /* Provides a little space between cards */
   flex-shrink: 0; /* Prevents the card from shrinking */
+}
+
+
+@media (max-width: 1450px) {
+  .utility-buttons {
+    left: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .button-area {
+      display: none;
+  }
+  .button-84 {
+    width: 100%; /* Full width on small screens */
+    height: 40px;
+    margin-bottom: 5px; /* Add margin-bottom for spacing */
+  }
+
+  .bottom-segment{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .utility-buttons {
+    position: relative;
+    left: 0%;
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+
+  .staging-area {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    align-items: center;
+    border: 10px solid silver; 
+    padding: 20px;
+    background: url('../images/misc_assets/logo.webp') no-repeat center center;
+    height: auto;
+    width: auto;
+    box-sizing: border-box;
+    background-size:cover;
+    border-radius: 15px;
+    background-color: #e8e8e8; 
+ }
+ .card-container{
+ flex: 1 0 auto;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 10px;
+ }
+
+ .card {
+  width: 100%; /* Makes sure cards take the full width of the container */
+  max-width: 200px; /* Sets a max width to prevent cards from being too large */
+  margin: 5px;
+  flex: 1 1 auto; /* Allows the card to shrink and grow */
+ }
 }

@@ -5524,6 +5524,11 @@ const cardData = {
                 addDeck: ['encounterDeck'],
                 addCardIDS: ['003']
             },
+            {
+              type: ['add'],
+              addDeck: ['encounterDeck'],
+              addCardIDS: ['003']
+            },
         ],
     },
     'E13': {

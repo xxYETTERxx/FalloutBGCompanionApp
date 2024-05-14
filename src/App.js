@@ -29,13 +29,13 @@ const App = () => {
                         position: 'fixed', // Position fixed to overlay everything
                         top: '50%',
                         left: '50%',
+                        width: '370px', // Set a fixed width
+                        height: '600px', // Set a fixed height
                         transform: 'translate(-50%, -50%)', // Center the card
                         zIndex: 999, // Ensure it overlaps everything
-                        backgroundColor: 'white', // Optional: Background color
-                        border: '1px solid black', // Optional: Border for emphasis
                         overflow: 'hidden'
                     }}
-                    onContextMenu={() => setFocusedCard(null)} // Right-click to unfocus
+       
                 >
                     <Card cardNumber={focusedCard} onCardFocus={toggleFocusCard}/> {/* Render a cloned card */}
                 </div>

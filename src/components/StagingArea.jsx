@@ -14,12 +14,24 @@ const StagingArea = ({ onCardFocus }) => {
     const [currentMarkerIndex, setCurrentMarkerIndex] = useState(0); // To track current index
     const [renderedMarkers, setRenderedMarkers] = useState([]);
     const [playerInventoryActive, setPlayerInventoryActive] = useState(false);
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const stagingAreaRef = useRef(null);
+    
 
     useEffect(() => {
         if (stagingAreaRef.current) {
-            stagingAreaRef.current.scrollLeft = 0; // Adjust scroll to the start on component mount
+            // Center the scroll position on the first load
+            const firstCard = stagingAreaRef.current.querySelector('.card');
+            if (firstCard) {
+                stagingAreaRef.current.scrollLeft = firstCard.offsetLeft - (stagingAreaRef.current.offsetWidth / 2) + (firstCard.offsetWidth / 2);
+            }
         }
+    }, []);
+
+    useEffect(() => {
+        const handleResize = () => setScreenWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
     
     
@@ -38,7 +50,7 @@ const StagingArea = ({ onCardFocus }) => {
         return arr;
     };
     
-    const numberArray = generateNumberArray(1, 244); // Array from '001' to '244'
+    const numberArray = generateNumberArray(1, 244); 
     
     const [testNumber, setTestNumber] = useState(0);
     
@@ -46,10 +58,6 @@ const StagingArea = ({ onCardFocus }) => {
         setTestNumber(testNumber+1);
         onCardFocus(numberArray[testNumber]);
     };
-   /*  const testingR = () => {
-        setTestNumber(testNumber-1);
-        onCardFocus(numberArray[testNumber]);
-    }; */
     
     const [inputText, setInputText] = useState('');
     const handleChange = (event) => {
@@ -59,7 +67,7 @@ const StagingArea = ({ onCardFocus }) => {
 
     const handleKeyDown = (event) => {
         if (event.key === 'Enter') {
-            event.preventDefault(); // Prevents the default behavior of the Enter key (e.g., adding new lines)
+            event.preventDefault();
             setTestNumber(parseInt(inputText, 10));
             onCardFocus(inputText);
         }
@@ -93,10 +101,10 @@ const StagingArea = ({ onCardFocus }) => {
                 <button onClick={() => setShowOverlay(false)}>Cancel</button>
             </div>
             )}
-        <div ref= {stagingAreaRef} className="staging-area"> {/* Ensure context access */}
+        <div ref= {stagingAreaRef} className="staging-area">
             {stagedCards.map((card) => (
-                <div className='card-container' key={card} onContextMenu={() => onCardFocus(card)}>
-                    <Card cardNumber={card} onCardFocus={onCardFocus}/> {/* Render the card */}
+                <div className='card-container' key={card}>
+                    <Card className='card' cardNumber={card} onCardFocus={onCardFocus}/> {/* Render the card */}
                 </div>
             ))}
             {/* Conditionally render PlayerInventory as an overlay */}
@@ -112,82 +120,106 @@ const StagingArea = ({ onCardFocus }) => {
                     
                 
             </div>
-            <div className="button-area flex flex-row"> {/* Inline button area below the play area */}
-            <DrawCardButton
-                    type="encounter"
-                    onClick={() => {onCardFocus(drawCard('encounter'));storeHistory();}} // Placeholder
-                />
+            <div className="bottom-segment">
+                <div className={`button-area ${screenWidth <= 600 ? 'hidden' : ''} flex flex-row`}>
                 <DrawCardButton
-                    type="settlement"
-                    onClick={() => {onCardFocus(drawCard('settlement'));storeHistory();}} // Placeholder
-                />
-                {vault7Active && ( /* Conditional rendering for vault buttons */
-                    <>
-                        <DrawCardButton
-                            type="vault7"
-                            onClick={() => {onCardFocus(drawCard('vault7'));storeHistory();}} // Placeholder
-                        />
-                    </>
-                )}    
-                {vault84Active && ( /* Conditional rendering for vault buttons */
-                    <>
-                        <DrawCardButton
-                            type="vault84"
-                            onClick={() => {onCardFocus(drawCard('vault84'));storeHistory();}} // Placeholder
-                        />
-                    </>
-                )}    
-                {vault109Active && ( /* Conditional rendering for vault buttons */
-                    <>
-                        <DrawCardButton
-                            type="vault109"
-                            onClick={() => {onCardFocus(drawCard('vault109'));storeHistory();}} // Placeholder
-                        />
-                    </>
-                )}    
-                {vault44Active && ( /* Conditional rendering for vault buttons */
-                    <>
-                        <DrawCardButton
-                            type="vault44"
-                            onClick={() => {onCardFocus(drawCard('vault44'));storeHistory();}} // Placeholder
-                        />
-                    </>
-                )}
-                {specialStarActive && ( /* Conditional rendering for vault buttons */
-                    <>
-                        <DrawCardButton
-                            type="specialStar"
-                            onClick={() => {onCardFocus(drawCard('specialStar'));storeHistory();}} // Placeholder
-                        />
-                    </>
-                )}
-                {specialShieldActive && ( /* Conditional rendering for vault buttons */
-                    <>
-                        <DrawCardButton
-                            type="specialShield"
-                            onClick={() => {onCardFocus(drawCard('specialShield'));storeHistory();}} // Placeholder
-                        />
-                    </>
-                )}
-
-                <div className='utility-buttons'> 
-                    <button className='button-84' onClick={createMarker}>Quest Marker</button>
-                    <button className='button-84'onClick={restoreHistory}>Undo</button>
-                    {/* <button className='button-84' onClick={testingF}>Fwd</button> */}
-                    <button className='button-84' onClick={togglePlayerInventory}>Player Inventory</button>
-                    <button className='button-84' onClick={setInputCard}>Stage Card</button>
-                    <input
-                        className ="border-solid"
-                        type="text" // Specifies a text input field
-                        value={inputText} // Binds the state variable to the input field
-                        onChange={handleChange} // Updates state when the input changes
-                        onKeyDown={handleKeyDown}
+                        type="encounter"
+                        onClick={() => {onCardFocus(drawCard('encounter'));storeHistory();}} // Placeholder
                     />
-                </div>
-            
-                
-                <MessageDisplay />
-        </div>
+                    <DrawCardButton
+                        type="settlement"
+                        onClick={() => {onCardFocus(drawCard('settlement'));storeHistory();}} // Placeholder
+                    />
+                    {vault7Active && ( /* Conditional rendering for vault buttons */
+                        <>
+                            <DrawCardButton
+                                type="vault7"
+                                onClick={() => {onCardFocus(drawCard('vault7'));storeHistory();}} // Placeholder
+                            />
+                        </>
+                    )}    
+                    {vault84Active && ( /* Conditional rendering for vault buttons */
+                        <>
+                            <DrawCardButton
+                                type="vault84"
+                                onClick={() => {onCardFocus(drawCard('vault84'));storeHistory();}} // Placeholder
+                            />
+                        </>
+                    )}    
+                    {vault109Active && ( /* Conditional rendering for vault buttons */
+                        <>
+                            <DrawCardButton
+                                type="vault109"
+                                onClick={() => {onCardFocus(drawCard('vault109'));storeHistory();}} // Placeholder
+                            />
+                        </>
+                    )}    
+                    {vault44Active && ( /* Conditional rendering for vault buttons */
+                        <>
+                            <DrawCardButton
+                                type="vault44"
+                                onClick={() => {onCardFocus(drawCard('vault44'));storeHistory();}} // Placeholder
+                            />
+                        </>
+                    )}
+                    {specialStarActive && ( /* Conditional rendering for vault buttons */
+                        <>
+                            <DrawCardButton
+                                type="specialStar"
+                                onClick={() => {onCardFocus(drawCard('specialStar'));storeHistory();}} // Placeholder
+                            />
+                        </>
+                    )}
+                    {specialShieldActive && ( /* Conditional rendering for vault buttons */
+                        <>
+                            <DrawCardButton
+                                type="specialShield"
+                                onClick={() => {onCardFocus(drawCard('specialShield'));storeHistory();}} // Placeholder
+                            />
+                        </>
+                    )}
+                    </div>
+                    
+                    <div className={`utility-buttons ${screenWidth <= 600 ? 'responsive-buttons' : ''}`}>
+                    {screenWidth <= 600 && (
+                        <>
+                            <button className='button-84' onClick={() => { onCardFocus(drawCard('encounter')); storeHistory(); }}>Encounter</button>
+                            <button className='button-84' onClick={() => { onCardFocus(drawCard('settlement')); storeHistory(); }}>Settlement</button>
+                            {vault7Active && (
+                                <button className='button-84' onClick={() => { onCardFocus(drawCard('vault7')); storeHistory(); }}>Vault 7</button>
+                            )}
+                            {vault84Active && (
+                                <button className='button-84' onClick={() => { onCardFocus(drawCard('vault84')); storeHistory(); }}>Vault 84</button>
+                            )}
+                            {vault109Active && (
+                                <button className='button-84' onClick={() => { onCardFocus(drawCard('vault109')); storeHistory(); }}>Vault 109</button>
+                            )}
+                            {vault44Active && (
+                                <button className='button-84' onClick={() => { onCardFocus(drawCard('vault44')); storeHistory(); }}>Vault 44</button>
+                            )}
+                            {specialStarActive && (
+                                <button className='button-84' onClick={() => { onCardFocus(drawCard('specialStar')); storeHistory(); }}>Special Star</button>
+                            )}
+                            {specialShieldActive && (
+                                <button className='button-84' onClick={() => { onCardFocus(drawCard('specialShield')); storeHistory(); }}>Special Shield</button>
+                            )}
+                        </>
+                    )}
+                        <button className='button-84' onClick={createMarker}>Quest Marker</button>
+                        <button className='button-84'onClick={restoreHistory}>Undo</button>
+                        {/* <button className='button-84' onClick={testingF}>Fwd</button> */}
+                        <button className='button-84' onClick={togglePlayerInventory}>Player Inventory</button>
+                        <button className='button-84' onClick={setInputCard}>Stage Card</button>
+                        <input
+                            className ="border-solid"
+                            type="text" // Specifies a text input field
+                            value={inputText} // Binds the state variable to the input field
+                            onChange={handleChange} // Updates state when the input changes
+                            onKeyDown={handleKeyDown}
+                        />
+                    
+                    </div>
+                </div>  
         {renderedMarkers.map((markerId, index) => (
                 <QuestMarkers className='quest-marker'
                     key={markerId} 

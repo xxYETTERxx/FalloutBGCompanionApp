@@ -39,7 +39,7 @@ export const EncounterDeckProvider = ({ children }) => {
         setTimeout(() => {
             setIsMessageVisible(false); // Hide the message after 2 seconds
             setMessage(null); // Reset message state
-        }, 2500);
+        }, 225000);
     };
 
 
