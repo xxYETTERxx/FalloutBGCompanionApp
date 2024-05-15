@@ -46,8 +46,14 @@
   display: none;
 }
 
-.card-container {
-  min-width: 250px; /* Adjust based on your content needs */
-  margin: 5px; /* Provides a little space between cards */
-  flex-shrink: 0; /* Prevents the card from shrinking */
+@media (max-width: 400px) {
+  .card-wrapper img {
+      width: 80%;
+  }
+  .blur-overlay {
+    width: 80%;
+  }
+  .overlay{
+    width: 80%;
+  }
 }
