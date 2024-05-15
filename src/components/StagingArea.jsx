@@ -147,7 +147,7 @@ const StagingArea = ({ onCardFocus }) => {
                                 )}
                             </>
                         )}
-                            <button className='button-84' onClick={createMarker}>Quest Marker</button>
+                            {screenWidth > 600 && ( <button className='button-84' onClick={createMarker}>Quest Marker</button>)}
                             <button className='button-84'onClick={restoreHistory}>Undo</button>
                             {/* <button className='button-84' onClick={testingF}>Fwd</button> */}
                             <button className='button-84' onClick={togglePlayerInventory}>Player Inventory</button>
