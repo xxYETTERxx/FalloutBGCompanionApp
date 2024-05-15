@@ -5265,11 +5265,15 @@ const cardData = {
                 deck: 'encounterDeck',
             },
             {
-                type: ['trash','add'],
-                deck: 'encounterDeck',
-                addDeck: ['settlementDeck'],
-                addCardIDS: ['161'],
+              type: ['discard'],
+              deck: 'encounterDeck',
             },
+            {
+              type: ['trash','add'],
+              deck: 'encounterDeck',
+              addDeck: ['settlementDeck'],
+              addCardIDS: ['161'],
+            }
         ],
     },
     'E04': {
@@ -5330,6 +5334,7 @@ const cardData = {
                 addDeck: ['settlementDeck'],
                 addCardIDS: ['163']
             },
+            
         ],
     },
     'E06': {
@@ -5435,6 +5440,10 @@ const cardData = {
                 type: ['discard'],
                 deck: 'encounterDeck',
             },
+            {
+              type: ['discard'],
+              deck: 'encounterDeck',
+            },
         ],
     },
     'E10': {
@@ -5464,6 +5473,10 @@ const cardData = {
                 type: ['discard'],
                 deck: 'encounterDeck',
             },
+            {
+              type: ['discard'],
+              deck: 'encounterDeck',
+            }
         ],
     },
     'E11': {
@@ -5492,6 +5505,10 @@ const cardData = {
             {
                 type: ['discard'],
                 deck: 'encounterDeck',
+            },
+            {
+              type: ['discard'],
+              deck: 'encounterDeck',
             },
         ],
     },
@@ -5581,6 +5598,10 @@ const cardData = {
                 deck: 'encounterDeck',
             },
             {
+              type: ['discard'],
+              deck: 'encounterDeck',
+            },
+            {
                 type: ['add'],
                 addDeck: ['encounterDeck'],
                 addCardIDS: ['001']
@@ -5640,6 +5661,14 @@ const cardData = {
             {
                 type: ['discard'],
                 deck: 'encounterDeck',
+            },
+            {
+              type: ['discard'],
+              deck: 'encounterDeck',
+            },
+            {
+              type: ['discard'],
+              deck: 'encounterDeck',
             }
         ],
     },
@@ -5767,6 +5796,10 @@ const cardData = {
                 type: ['discard'],
                 deck: 'settlementDeck',
             },
+            {
+                type: ['discard'],
+                deck: 'settlementDeck',
+            },
         ],
     },
     'S06': {
@@ -5858,6 +5891,10 @@ const cardData = {
                 type: ['discard'],
                 deck: 'settlementDeck',
             },
+            {
+                type: ['discard'],
+                deck: 'settlementDeck',
+            },
         ],
     },
     'S10': {
@@ -5873,6 +5910,10 @@ const cardData = {
           ],
           imagePath : require(`../images/settlement_deck/S10.webp`),
         actions: [
+            {
+                type: ['discard'],
+                deck: 'settlementDeck',
+            },
             {
                 type: ['discard'],
                 deck: 'settlementDeck',
@@ -5970,6 +6011,10 @@ const cardData = {
                 type: ['discard'],
                 deck: 'settlementDeck'
             },
+            {
+                type: ['discard'],
+                deck: 'settlementDeck'
+            },
         ],
     },
     'S14': {
@@ -5998,9 +6043,16 @@ const cardData = {
                 addCardIDS: ['013'],
             },
             {
+                type: ['trash','add'],
+                deck: 'settlementDeck',
+                addDeck: ['settlementDeck'],
+                addCardIDS: ['013'],
+            },
+            {
                 type: ['discard'],
                 deck: 'settlementDeck'
             },
+        
         ],
     },
     'S15': {
