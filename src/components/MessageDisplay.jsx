@@ -7,7 +7,7 @@ const MessageDisplay = () => {
     if (!isMessageVisible) return null;
 
     return (
-        <div className="text-xl font-semibold text-black">
+        <div>
             {message}
         </div>
     );

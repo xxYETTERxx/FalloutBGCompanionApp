@@ -15,7 +15,7 @@ export const EncounterDeckProvider = ({ children }) => {
     const [vault109Deck, setVault109Deck] = useState([]);
     const [specialStarDeck, setSpecialStarDeck] = useState([]);
     const [specialShieldDeck, setSpecialShieldDeck] = useState([]);
-    const [playerCount, setPlayerCount] = useState(0);
+    const [playerCount, setPlayerCount] = useState(1);
     const [stagedCards, setStagedCards] = useState([]);
     const [vault7Active, setVault7Active] = useState(false);
     const [vault44Active, setVault44Active] = useState(false);
@@ -39,7 +39,7 @@ export const EncounterDeckProvider = ({ children }) => {
         setTimeout(() => {
             setIsMessageVisible(false); // Hide the message after 2 seconds
             setMessage(null); // Reset message state
-        }, 225000);
+        }, 4000);
     };
 
 

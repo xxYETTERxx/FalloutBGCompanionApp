@@ -4,6 +4,7 @@ import StagingArea from './components/StagingArea';
 import Menu from './components/Menu';
 import Card from './components/Card';
 
+
 const App = () => {
     const [isScenarioSet, setIsScenarioSet] = useState(false); // New state to track if a scenario is set
     const [focusedCard, setFocusedCard] = useState(null);

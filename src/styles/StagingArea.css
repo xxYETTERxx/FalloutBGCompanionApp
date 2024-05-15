@@ -33,11 +33,19 @@
 } 
 
 .message {
+  display: flex;
   position: absolute;
-  padding: 10px;
-  background-color: rgba(116, 111, 111, 0.9);
+  font-size: 2rem;
+  font-family: 'Gerogia', serif;
+  white-space: nowrap;
+  overflow: visible;
+  top: 3%;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to account for its own width */
+  align-self: center;
   border-radius: 10px;
   z-index: 1000;
+  color: white;
 }
 
 .card-wrapper{
@@ -189,6 +197,12 @@
     width: 95%;
     flex-direction: column;
     margin-top: 10px;
+}
+.message {
+
+  top: 1%;
+  flex-wrap: nowrap;
+  font-size: 1.2rem;
 }
 
 

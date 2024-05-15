@@ -95,6 +95,7 @@ const StagingArea = ({ onCardFocus }) => {
 
     return (
        <div>
+         <div className= "message"><MessageDisplay /></div>
         {showOverlay && (
             <div className="overlay">
                 {overlayContent}
