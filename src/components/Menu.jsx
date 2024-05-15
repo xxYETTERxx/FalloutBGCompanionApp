@@ -12,7 +12,7 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
         TheCommonWealth:['014'],
         FarHarbor: ['029','030'],
         RiseOfTheMaster:['166'],
-        TheCapitalWastelandE:['044'],
+        TheCapitalWastelandExpanded:['044'],
         ThePittExpanded:['056'],
         TheCommonWealthExpanded:['014'],
         FarHarborExpanded:['029','030'],
@@ -26,7 +26,7 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
         ThePitt: 'ThePitt.jpg',
         FarHarborExpanded: 'FarHarborE.png',
         RiseOfTheMaster: 'RiseOfMaster.png',
-        TheCapitalWastelandE: 'CapitalWastelandE.png',
+        TheCapitalWastelandExpanded: 'CapitalWastelandE.png',
         ThePittExpanded: 'ThePittE.png',
         TheCommonWealthExpanded: 'CommonWealthE.png',
         NewCalifornia: 'NewCalifornia.png'
@@ -139,12 +139,12 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
     <div className="p-8 bg-white shadow-lg rounded-lg text-center">
         <h1 className="text-2xl font-bold mb-4">Choose Scenario</h1>
         {/* Adjust the grid-cols to change number of columns */}
-        <div className="grid grid-cols-5 gap-4 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 mb-6">
             {Object.keys(scenarios).map((scenarioKey) => (
                 <button
                     key={scenarioKey}
                     onClick={() => handleScenarioClick(scenarioKey)}
-                    className="h-60 w-75 flex flex-col items-center justify-center bg-cover bg-center rounded-lg shadow hover:bg-opacity-90"
+                    className="sm:h-60 h-20 w-75 flex flex-col items-center justify-center bg-cover bg-center rounded-lg shadow hover:bg-opacity-90"
                     style={{ backgroundImage: `url(${require(`../images/misc_assets/${scenarioImages[scenarioKey]}`)})` }}
                 >
                     <span className="top-0 w-full bg-black bg-opacity-50 text-white text-lg font-semibold text-center py-1">
