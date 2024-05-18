@@ -8,14 +8,13 @@ import QuestMarkers from './QuestMarkers';
 import PlayerInventory from './PlayerInventory';
 import MessageDisplay from './MessageDisplay';
 
-const StagingArea = ({ drawDisabled, onCardFocus }) => {
+const StagingArea = ({ onCardFocus }) => {
     const { autoSave, setShowOverlay, showOverlay, overlayContent, players, playerCards, setPlayerCards, stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active, specialStarActive, specialShieldActive, setStagedCards, storeHistory, restoreHistory} = useEncounterDeck();
     const [ questMarkers,  ] = useState(['Y','LB','B','P','R','O']);
     const [currentMarkerIndex, setCurrentMarkerIndex] = useState(0); // To track current index
     const [renderedMarkers, setRenderedMarkers] = useState([]);
     const [playerInventoryActive, setPlayerInventoryActive] = useState(false);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-    const [screenHeight, setScreenHeight] = useState(window.innerHeight);
     const stagingAreaRef = useRef(null);
     
 
@@ -30,10 +29,7 @@ const StagingArea = ({ drawDisabled, onCardFocus }) => {
     }, []);
 
     useEffect(() => {
-        const handleResize = () => {
-            setScreenWidth(window.innerWidth);
-            setScreenHeight(window.innerHeight);
-        };
+        const handleResize = () => setScreenWidth(window.innerWidth);
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
@@ -127,7 +123,7 @@ const StagingArea = ({ drawDisabled, onCardFocus }) => {
             </div>
             <div className= 'utility-container'>
                 <div className='utility-buttons'>
-                        {(screenWidth <= 600 || screenHeight <= 990) && (
+                        {screenWidth <= 600 && (
                             <>
                                 <button className='button-84' onClick={() => { onCardFocus(drawCard('encounter')); storeHistory(); }}>Encounter</button>
                                 <button className='button-84' onClick={() => { onCardFocus(drawCard('settlement')); storeHistory(); }}>Settlement</button>
@@ -167,7 +163,7 @@ const StagingArea = ({ drawDisabled, onCardFocus }) => {
                 </div>
             </div>
             <div className="bottom-segment">
-                <div className={`button-area ${screenWidth <= 600 ? 'hidden' : ''}`}>
+                <div className={`button-area ${screenWidth <= 600 ? 'hidden' : ''} flex flex-row`}>
                 <DrawCardButton
                         type="encounter"
                         onClick={() => {onCardFocus(drawCard('encounter'));storeHistory();}} // Placeholder

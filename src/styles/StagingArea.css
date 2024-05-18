@@ -174,52 +174,36 @@
   flex-shrink: 0; /* Prevents the card from shrinking */
 }
 
-@media (max-height: 990px) {
-  .staging-area {
-    height: 95vh;
-  }
-  .button-area {
-    display: none;
-  }
-  .button-84 {
-    height: 40px;
-    margin-bottom: 5px; /* Add margin-bottom for spacing */
-  }
-}
-
-
 @media (max-width: 600px) {
   .button-area {
-    display: none;
+      display: none;
   }
-
-  .utility-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; /* Ensure the parent container allows full-width buttons */
-    margin-top: 10px;
-  }
-
   .button-84 {
     width: 100%; /* Full width on small screens */
     height: 40px;
     margin-bottom: 5px; /* Add margin-bottom for spacing */
   }
 
-  .bottom-segment {
+  .bottom-segment{
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    width: 100%;
   }
+  .utility-buttons {
+    position: relative;
+    left: 0%;
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.message {
 
-  .message {
-    top: 1%;
-    flex-wrap: nowrap;
-    font-size: 1.2rem;
-  }
+  top: 1%;
+  flex-wrap: nowrap;
+  font-size: 1.2rem;
+}
 
   .staging-area {
     display: flex;
@@ -232,23 +216,27 @@
     height: auto;
     width: auto;
     box-sizing: border-box;
-    background-size: cover;
+    background-size:cover;
     border-radius: 15px;
     background-color: #e8e8e8; 
-  }
+ }
+ .card-container{
+ flex: 1 0 auto;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 10px;
+ }
 
-  .card-container {
-    flex: 1 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-  }
+ .card {
+  width: 100%; /* Makes sure cards take the full width of the container */
+  max-width: 200px; /* Sets a max width to prevent cards from being too large */
+  margin: 5px;
+  flex: 1 1 auto; /* Allows the card to shrink and grow */
+ }
+}
 
-  .card {
-    width: 100%; /* Makes sure cards take the full width of the container */
-    max-width: 200px; /* Sets a max width to prevent cards from being too large */
-    margin: 5px;
-    flex: 1 1 auto; /* Allows the card to shrink and grow */
-  }
+.utility-container{
+  display: flex;
+  justify-content: center;
 }
