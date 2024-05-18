@@ -145,13 +145,18 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
         prepDeck();
         onScenarioSet(true); // Set the scenario status to true
         }
-        
+
         return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-                <p className='font-serif text-xl'>You may require cards: 104, 204-213 and 238</p>
+                <p className='font-serif text-xl'>You may require cards:</p><p className='font-serif text-xl'> 104, 204-213 and 238</p>
     <div className="p-8 bg-white shadow-lg rounded-lg text-center">
+        <p>This webapp saves session data on your browser in case you lose connection or close the browser tab</p>
         {savedData && (
-            <button onClick={loadOldGame}>Resume Session</button>
+            <button
+             onClick={loadOldGame}
+             className="px-4 py-1 my-2 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-300"
+             >Resume Session
+             </button>
         )}
         <h1 className="text-2xl font-bold mb-4">Choose Scenario</h1>
         {/* Adjust the grid-cols to change number of columns */}
