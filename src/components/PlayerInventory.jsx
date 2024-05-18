@@ -1,28 +1,14 @@
-// PlayerInventory.jsx
 import React, { useState } from 'react';
 import Card from './Card'; // Component for individual cards
 import '../styles/PlayerInventory.css'; // Ensure proper overlay styles
 import { useEncounterDeck } from './EncounterDeck';
 
 const PlayerInventory = ({ players, playerCards, setPlayerCards, onClose, onCardFocus }) => {
-  const [selectedPlayer, setSelectedPlayer] = useState(null); // State for the selected player
-  const {storeHistory} = useEncounterDeck();
-  const handlePlayerSelect = (player) => {
-    setSelectedPlayer(player);
+  const [selectedPlayerIndex, setSelectedPlayerIndex] = useState(null); // State for the selected player index
+
+  const handlePlayerSelect = (index) => {
+    setSelectedPlayerIndex(index);
   };
-
-  //function to delete card from inventory
-  /* const handleCardClick = ( player, cardNumber) => {
-
-     setPlayerCards((prevPlayerCards) => {
-        storeHistory();
-        const updatedCards = { ...prevPlayerCards };
-        updatedCards[player] = updatedCards[player].filter((card) => card !== cardNumber);
-        return updatedCards; // Return the updated cards without the one that was right-clicked
-      });
-    }; */
-
-
 
   return (
     <div className="player-inventory-overlay">
@@ -32,21 +18,18 @@ const PlayerInventory = ({ players, playerCards, setPlayerCards, onClose, onCard
       {/* Player selection buttons */}
       <div className="player-buttons">
         {players.map((player, index) => (
-          <button className="button-84" key={index} onClick={() => handlePlayerSelect(player)}>
-            {players[index]}
+          <button className="button-84" key={index} onClick={() => handlePlayerSelect(index)}>
+            {player}
           </button>
         ))}
       </div>
 
       {/* Display the selected player's cards */}
-      {selectedPlayer && (
+      {selectedPlayerIndex !== null && (
         <div className="player-cards">
-          {playerCards[selectedPlayer]?.map((cardNumber) => (
-            <div 
-            key={cardNumber} 
-            //onClick={(event) => handleCardClick(selectedPlayer, cardNumber)} // Attach right-click handler
-          >
-            <Card cardNumber={cardNumber} onCardFocus={onCardFocus} isDisabled={true}/>
+          {playerCards[selectedPlayerIndex]?.map((cardNumber, cardIndex) => (
+            <div key={cardIndex}>
+              <Card cardNumber={cardNumber} onCardFocus={onCardFocus} isDisabled={true} />
             </div>
           ))}
         </div>

@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useEncounterDeck } from './EncounterDeck';
 import { addCard, shuffleDeck } from '../functions/cardFunctions';
+import '../styles/Menu.css';
 
 const Menu = ({ onScenarioSelect, onScenarioSet }) => {
-    const { setPlayerCount, playerCount, setStagedCards, encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, setPlayers } = useEncounterDeck();
+    const { prepDeck, loadGame, setHistory, setPlayerCount, playerCount, setStagedCards, encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, setPlayers } = useEncounterDeck();
     const [playerInputs, setPlayerInputs] = useState([]);
+    const [savedData,setSavedData] = useState(false);
 
      const scenarios = {
         TheCapitalWasteland: ['044'],
@@ -32,7 +34,17 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
         NewCalifornia: 'NewCalifornia.png'
     };
 
-    
+    useEffect(() => {
+        if(localStorage.getItem('falloutGameState')){    
+            setSavedData(true);
+        }
+    }, []);
+
+    const loadOldGame = () => {
+        onScenarioSet(true);
+        loadGame();
+    }
+
     const handlePlayerCount = (count) => {
         setPlayerCount(count);
         // Update playerInputs array to match the count
@@ -130,13 +142,17 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
         }
         
         setStagedCards(initialCards);
+        prepDeck();
         onScenarioSet(true); // Set the scenario status to true
         }
-
+        
         return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
                 <p className='font-serif text-xl'>You may require cards: 104, 204-213 and 238</p>
     <div className="p-8 bg-white shadow-lg rounded-lg text-center">
+        {savedData && (
+            <button onClick={loadOldGame}>Resume Session</button>
+        )}
         <h1 className="text-2xl font-bold mb-4">Choose Scenario</h1>
         {/* Adjust the grid-cols to change number of columns */}
         <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 mb-6">

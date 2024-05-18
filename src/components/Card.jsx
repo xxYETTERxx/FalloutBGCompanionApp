@@ -5,11 +5,12 @@ import { useEncounterDeck } from './EncounterDeck';
 import '../styles/Card.css';
 
 const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
-    const { showMessage, promptPlayerForCard, drawCard, encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, vault7Deck, setVault7Deck, vault44Deck, setVault44Deck, vault84Deck, setVault84Deck, vault109Deck, setVault109Deck, hasBeenDrawn74, setHasBeenDrawn74, specialStarDeck, setSpecialStarDeck, specialShieldDeck, setSpecialShieldDeck, storeHistory } = useEncounterDeck(); // Ensure proper destructuring
+    const { autoSave, showMessage, promptPlayerForCard, drawCard, encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, vault7Deck, setVault7Deck, vault44Deck, setVault44Deck, vault84Deck, setVault84Deck, vault109Deck, setVault109Deck, hasBeenDrawn74, setHasBeenDrawn74, specialStarDeck, setSpecialStarDeck, specialShieldDeck, setSpecialShieldDeck, storeHistory } = useEncounterDeck(); // Ensure proper destructuring
     const { playerCount } = useEncounterDeck();
     const { stagedCards, setStagedCards } = useEncounterDeck();
     const [blurVisibility, setBlurVisibility] = useState({});
     const cardInfo = cardData[cardNumber];
+    
     
     useEffect(() => {
         if (cardInfo && cardInfo.blurAreas) {
@@ -19,7 +20,13 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
             }, {});
             setBlurVisibility(initialVisibility);
         }
-    }, [cardNumber, cardInfo]); 
+    }, [cardNumber, cardInfo]);
+    
+    useEffect(() => {
+        autoSave();
+    },[encounterDeck, settlementDeck, vault7Deck, vault44Deck, vault84Deck, 
+        vault109Deck, specialStarDeck, specialShieldDeck, stagedCards])
+    
 
     const removeCardFromStaged = (cardNumber) => {
         setStagedCards((prevStagedCards) => {
