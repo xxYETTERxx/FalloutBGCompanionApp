@@ -83,6 +83,7 @@
   font-size: 18px;
   height: 30px;
   width: 100%;
+  max-width: none;
   justify-content: center;
   line-height: 1;
   margin: 2px;
@@ -194,26 +195,23 @@
       display: none;
   }
   .button-84 {
-    width: 100px; /* Full width on small screens */
+    width: 100%; /* Full width on small screens */
     height: 40px;
+    display: flex;
+    flex: stretch;
     margin-bottom: 5px; /* Add margin-bottom for spacing */
   }
 
-  .bottom-segment{
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .utility-buttons {
+  /* .utility-buttons {
     display: flex;
-    position: relative;
+    align-items: stretch;
     flex-direction: column;
     margin-top: 10px;
-  }
+  } */
+
   .utility-container{
-    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
   }
 .message {
@@ -243,7 +241,7 @@
  display: flex;
  justify-content: center;
  align-items: center;
- padding: 10px;
+ padding: 5px;
  }
 
  .card {

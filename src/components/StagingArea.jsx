@@ -126,35 +126,104 @@ const StagingArea = ({ onCardFocus }) => {
                 
             </div>
             <div className= 'utility-container'>
-                <div className='utility-buttons'>
+            {/* <div
+                className="utility-buttons"
+                style={{
+                width: '100%',
+                maxWidth: '100%'
+                }}
+                > */}
                         {(screenWidth <= 600 || screenHeight <= 990) && (
                             <>
-                                <button className='button-84' onClick={() => { onCardFocus(drawCard('encounter')); storeHistory(); }}>Encounter</button>
-                                <button className='button-84' onClick={() => { onCardFocus(drawCard('settlement')); storeHistory(); }}>Settlement</button>
-                                {vault7Active && (
-                                    <button className='button-84' onClick={() => { onCardFocus(drawCard('vault7')); storeHistory(); }}>Vault 7</button>
-                                )}
-                                {vault84Active && (
-                                    <button className='button-84' onClick={() => { onCardFocus(drawCard('vault84')); storeHistory(); }}>Vault 84</button>
-                                )}
-                                {vault109Active && (
-                                    <button className='button-84' onClick={() => { onCardFocus(drawCard('vault109')); storeHistory(); }}>Vault 109</button>
-                                )}
-                                {vault44Active && (
-                                    <button className='button-84' onClick={() => { onCardFocus(drawCard('vault44')); storeHistory(); }}>Vault 44</button>
-                                )}
-                                {specialStarActive && (
-                                    <button className='button-84' onClick={() => { onCardFocus(drawCard('specialStar')); storeHistory(); }}>Special Star</button>
-                                )}
-                                {specialShieldActive && (
-                                    <button className='button-84' onClick={() => { onCardFocus(drawCard('specialShield')); storeHistory(); }}>Special Shield</button>
-                                )}
+                                <button
+                                    className="button-84"
+                                    style={{ width: '100%' }}
+                                    onClick={() => { onCardFocus(drawCard('encounter')); storeHistory(); }}
+                                    >
+                                    Encounter
+                                    </button>
+                                    <button
+                                    className="button-84"
+                                    style={{ width: '100%' }}
+                                    onClick={() => { onCardFocus(drawCard('settlement')); storeHistory(); }}
+                                    >
+                                    Settlement
+                                    </button>
+                                    {vault7Active && (
+                                    <button
+                                        className="button-84"
+                                        style={{ width: '100%' }}
+                                        onClick={() => { onCardFocus(drawCard('vault7')); storeHistory(); }}
+                                    >
+                                        Vault 7
+                                    </button>
+                                    )}
+                                    {vault84Active && (
+                                    <button
+                                        className="button-84"
+                                        style={{ width: '100%' }}
+                                        onClick={() => { onCardFocus(drawCard('vault84')); storeHistory(); }}
+                                    >
+                                        Vault 84
+                                    </button>
+                                    )}
+                                    {vault109Active && (
+                                    <button
+                                        className="button-84"
+                                        style={{ width: '100%' }}
+                                        onClick={() => { onCardFocus(drawCard('vault109')); storeHistory(); }}
+                                    >
+                                        Vault 109
+                                    </button>
+                                    )}
+                                    {vault44Active && (
+                                    <button
+                                        className="button-84"
+                                        style={{ width: '100%' }}
+                                        onClick={() => { onCardFocus(drawCard('vault44')); storeHistory(); }}
+                                    >
+                                        Vault 44
+                                    </button>
+                                    )}
+                                    {specialStarActive && (
+                                    <button
+                                        className="button-84"
+                                        style={{ width: '100%' }}
+                                        onClick={() => { onCardFocus(drawCard('specialStar')); storeHistory(); }}
+                                    >
+                                        Special Star
+                                    </button>
+                                    )}
+                                    {specialShieldActive && (
+                                    <button
+                                        className="button-84"
+                                        style={{ width: '100%' }}
+                                        onClick={() => { onCardFocus(drawCard('specialShield')); storeHistory(); }}
+                                    >
+                                        Special Shield
+                                    </button>
+                                    )}
+                                    <button
+                                    className="button-84"
+                                    style={{ width: '100%' }}
+                                    onClick={restoreHistory}
+                                    >
+                                    Undo
+                                    </button>
+                                    <button
+                                    className="button-84"
+                                    style={{ width: '100%' }}
+                                    onClick={togglePlayerInventory}
+                                    >Inventory</button>
                             </>
                         )}
-                            {screenWidth > 600 && ( <button className='button-84' onClick={createMarker}>Quest Marker</button>)}
-                            <button className='button-84'onClick={restoreHistory}>Undo</button>
-                            {/* <button className='button-84' onClick={testingF}>Fwd</button> */}
-                            <button className='button-84' onClick={togglePlayerInventory}>Player Inventory</button>
+                            {(screenWidth > 600 && screenHeight > 990) && (
+                            <> 
+                                <button className='button-84' onClick={createMarker}>Quest Marker</button>
+                                <button className='button-84' onClick={restoreHistory}>Undo</button>
+                                <button className='button-84' onClick={togglePlayerInventory}>Player Inventory</button>
+                            </>
+                            )}
                             {/* <button className='button-84' onClick={setInputCard}>Stage Card</button> */}
                             {/* <input
                                 className ="border-solid"
@@ -164,7 +233,7 @@ const StagingArea = ({ onCardFocus }) => {
                                 onKeyDown={handleKeyDown}
                             /> */}
                         
-                </div>
+                {/* </div> */}
             </div>
             <div className="bottom-segment">
                 <div className={`button-area ${screenWidth <= 600} flex flex-row`}>
@@ -240,3 +309,5 @@ const StagingArea = ({ onCardFocus }) => {
 };
 
 export default StagingArea; // Default export
+
+
