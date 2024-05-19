@@ -82,7 +82,7 @@
   font-family: expo-brand-demi,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   font-size: 18px;
   height: 30px;
-  width: 150px;
+  width: 100%;
   justify-content: center;
   line-height: 1;
   margin: 2px;
@@ -99,7 +99,6 @@
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-
 
 
 .button-84:hover {
@@ -173,13 +172,29 @@
   margin: 5px; /* Provides a little space between cards */
   flex-shrink: 0; /* Prevents the card from shrinking */
 }
+.utility-container{
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+}
+
+@media (max-height: 990px){
+  .button-area {
+    display: none;
+  }
+
+  .staging-area{
+    height: 95vh;
+  }
+}
 
 @media (max-width: 600px) {
   .button-area {
       display: none;
   }
   .button-84 {
-    width: 100%; /* Full width on small screens */
+    width: 100px; /* Full width on small screens */
     height: 40px;
     margin-bottom: 5px; /* Add margin-bottom for spacing */
   }
@@ -191,13 +206,16 @@
     align-items: center;
   }
   .utility-buttons {
-    position: relative;
-    left: 0%;
     display: flex;
-    width: 95%;
+    position: relative;
     flex-direction: column;
     margin-top: 10px;
-}
+  }
+  .utility-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 .message {
 
   top: 1%;
@@ -213,7 +231,7 @@
     border: 10px solid silver; 
     padding: 20px;
     background: url('../images/misc_assets/logo.webp') no-repeat center center;
-    height: auto;
+    height: 80vh;
     width: auto;
     box-sizing: border-box;
     background-size:cover;
@@ -234,9 +252,4 @@
   margin: 5px;
   flex: 1 1 auto; /* Allows the card to shrink and grow */
  }
-}
-
-.utility-container{
-  display: flex;
-  justify-content: center;
 }

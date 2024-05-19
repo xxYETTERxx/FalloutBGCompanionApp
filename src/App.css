@@ -18,6 +18,10 @@
   }
 }
 
+.app-container{
+  width: 100%;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -26,14 +30,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.message {
-  position: fixed;
-  top: 5%;
-  border-radius: 10px;
-  z-index: 1000;
   color: white;
 }
 
