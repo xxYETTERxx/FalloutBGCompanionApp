@@ -160,7 +160,7 @@ const StagingArea = ({ onCardFocus }) => {
                 
             </div>
             <div className= 'utility-container'>
-                        {(screenWidth <= 600 || screenHeight < 950) && (
+                        {(screenWidth <= 600 || screenHeight < 850) && (
                             <>
                                 <button
                                     className="button-84"
@@ -249,7 +249,7 @@ const StagingArea = ({ onCardFocus }) => {
                                     >QuestMarker</button>
                             </>
                         )}
-                            {(screenWidth > 600 && screenHeight > 950) && (
+                            {(screenWidth > 600 && screenHeight > 850) && (
                             <> 
                                 <button className='button-84' onClick={createMarker}>Quest Marker</button>
                                 <button className='button-84' onClick={restoreHistory}>Undo</button>
