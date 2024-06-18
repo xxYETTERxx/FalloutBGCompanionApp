@@ -85,3 +85,7 @@ There still is a lot of testing required
 
 ## Acknowledgments
 Special thanks to the developers of Fallout: The Board Game and the open-source community for their invaluable resources.
+
+## Contact
+For bug reports, feedback and suggestions
+Email: nosnetto@hotmail.com
