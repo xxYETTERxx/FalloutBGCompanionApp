@@ -202,6 +202,8 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
             ))}
         </div>
     </div>
+    <span><p>For bug reports, feedback and suggestions</p></span>
+    <span>Email: nosnetto@hotmail.com </span>
 </div>
 
         );
