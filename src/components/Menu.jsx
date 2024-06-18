@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useEncounterDeck } from './EncounterDeck';
 import { addCard, shuffleDeck } from '../functions/cardFunctions';
 import '../styles/Menu.css';
+import Popup from './Popup';
 
 const Menu = ({ onScenarioSelect, onScenarioSet }) => {
     const { prepDeck, loadGame, setHistory, setPlayerCount, playerCount, setStagedCards, encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, setPlayers } = useEncounterDeck();
     const [playerInputs, setPlayerInputs] = useState([]);
     const [savedData,setSavedData] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
 
      const scenarios = {
         TheCapitalWasteland: ['044'],
@@ -44,6 +46,10 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
         onScenarioSet(true);
         loadGame();
     }
+
+    const togglePopup = () => {
+        setShowPopup(!showPopup);
+      };
 
     const handlePlayerCount = (count) => {
         setPlayerCount(count);
@@ -200,6 +206,15 @@ const Menu = ({ onScenarioSelect, onScenarioSet }) => {
                     placeholder={`Player ${index + 1} Name`}
                 />
             ))}
+        </div>
+        <div>
+        <button
+            onClick={togglePopup}
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+        >
+            Instructions
+        </button>
+        <Popup show={showPopup} onClose={togglePopup} />
         </div>
     </div>
     <span><p>For bug reports, feedback and suggestions</p></span>
