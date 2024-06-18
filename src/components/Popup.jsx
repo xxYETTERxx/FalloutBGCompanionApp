@@ -11,7 +11,7 @@ const Popup = ({ show, onClose }) => {
         <h2 className="text-2xl mb-4">Instructions</h2>
         <p className="mb-4">- Select Staged Card option to trigger event (stage, add, etc..) </p>
         <p className="mb-4">- Use encounter/settlement and vault/special decks (when available) to draw the corresponding card </p>
-        <p className="mb-4">- Create digital Quest markers that correspond with the physical markers </p>
+        <p className="mb-4">- Create digital Quest markers that corresponds with the physical markers </p>
         <p className="mb-4">- Click and drag to move Quest Markers </p>
         <p className="mb-4">- Right-click or double tap to remove Quest-markers </p>
         <p className="mb-4">- Set players names (optional) and track the 'keep' cards through-out the game</p>
@@ -25,7 +25,7 @@ const Popup = ({ show, onClose }) => {
 
         <h2 className="text-2xl mb-4">Contributions To the Project Welcome!</h2>
         <p className="mb-4"><a href = "https://github.com/xxYETTERxx/FalloutBGCompanionApp">GitHub </a></p>
-        <p className="mb-4">PR required</p>
+
         
         <button
           onClick={onClose}
