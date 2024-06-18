@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-const QuestMarkers = ({ markerId, onRemove }) => {
+const QuestMarkers = ({ onDragEnd, onDragStart, markerId, onRemove }) => {
     const [position, setPosition] = useState({ x: 0, y: 0 }); // Initial position
     const [isDragging, setIsDragging] = useState(false);
     const markerRef = useRef(null); // Reference to the marker element
@@ -71,12 +71,17 @@ const QuestMarkers = ({ markerId, onRemove }) => {
 
     const handleDragStart = (e) => {
         //e.preventDefault(); // Prevent the default drag behavior
+
         setIsDragging(true); // Start dragging
         const clientX = e.clientX || e.touches[0].clientX;
         const clientY = e.clientY || e.touches[0].clientY;
 
         markerRef.current.startX = clientX;
         markerRef.current.startY = clientY;
+
+        if (onDragStart) {
+            onDragStart();
+        }
     };
 
     const handleDrag = (e) => {
@@ -105,6 +110,10 @@ const QuestMarkers = ({ markerId, onRemove }) => {
 
     const handleDragEnd = () => {
         setIsDragging(false); // stop dragging
+        
+        if (onDragEnd) {
+            onDragEnd(markerRef.current);
+        }
     };
 
     const handleTouchEndInternal = (e) => {

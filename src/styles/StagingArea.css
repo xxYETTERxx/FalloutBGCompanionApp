@@ -180,7 +180,7 @@
   justify-content: center;
 }
 
-@media (max-height: 990px){
+@media (max-height: 950px){
   .button-area {
     display: none;
   }

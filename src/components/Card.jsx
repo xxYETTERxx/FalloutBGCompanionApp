@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, forwardRef } from 'react';
 import cardData from '../data/cardData';
 import { discardCard, addCard, shuffleDeck } from '../functions/cardFunctions';
 import { useEncounterDeck } from './EncounterDeck';
 import '../styles/Card.css';
 
-const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
+const Card = forwardRef(({ cardNumber, onCardFocus, isDisabled }, ref) => {
     const { autoSave, showMessage, promptPlayerForCard, drawCard, encounterDeck, setEncounterDeck, settlementDeck, setSettlementDeck, vault7Deck, setVault7Deck, vault44Deck, setVault44Deck, vault84Deck, setVault84Deck, vault109Deck, setVault109Deck, hasBeenDrawn74, setHasBeenDrawn74, specialStarDeck, setSpecialStarDeck, specialShieldDeck, setSpecialShieldDeck, storeHistory } = useEncounterDeck(); // Ensure proper destructuring
     const { playerCount } = useEncounterDeck();
     const { stagedCards, setStagedCards } = useEncounterDeck();
     const [blurVisibility, setBlurVisibility] = useState({});
     const cardInfo = cardData[cardNumber];
+    const cardRef = useRef(null);
     
     
     useEffect(() => {
@@ -372,6 +373,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
         <div className= "card-wrapper">
  
             <img
+                ref ={cardRef}
                 src={imagePath}
                 alt={`Card}${cardNumber}`}
                 style={{ width:'auto', height:'auto', }}
@@ -397,7 +399,7 @@ const Card = ({ cardNumber, onCardFocus, isDisabled }) => {
         </div>
     );
     
-};
+});
 
 export default Card;
 

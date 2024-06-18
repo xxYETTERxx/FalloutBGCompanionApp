@@ -17,7 +17,41 @@ const StagingArea = ({ onCardFocus }) => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [screenHeight, setScreenHeight] = useState(window.innerHeight);
     const stagingAreaRef = useRef(null);
+    const cardRefs = useRef([]);
     
+
+    const onMarkerDragEnd = (markerRef) => {
+        const markerRect = markerRef.getBoundingClientRect();
+        console.log(cardRefs.current.length); 
+        for (let i = 0; i < cardRefs.current.length; i++) {
+            const cardRef = cardRefs.current[i];
+            console.log(cardRef);
+            if (cardRef) { // Check if cardRef is defined
+                const cardRect = cardRef.getBoundingClientRect();
+                if (
+                    markerRect.left < cardRect.right &&
+                    markerRect.right > cardRect.left &&
+                    markerRect.top < cardRect.bottom &&
+                    markerRect.bottom > cardRect.top
+                ) {
+                    // Collision detected, append marker to card
+                    cardRef.appendChild(markerRef);
+                    markerRef.style.position = 'relative';
+                    markerRef.style.left = '0px';
+                    markerRef.style.top = '0px';
+                    break;
+                }
+            }
+        }
+    };
+
+    const onMarkerDragStart = (markerRef) => {
+        if (markerRef && markerRef.parentElement !== stagingAreaRef.current) {
+            
+            stagingAreaRef.current.appendChild(markerRef);
+            markerRef.style.position = 'absolute';
+        }
+    };
 
     useEffect(() => {
         if (stagingAreaRef.current) {
@@ -107,9 +141,9 @@ const StagingArea = ({ onCardFocus }) => {
             </div>
             )}
         <div ref= {stagingAreaRef} className="staging-area">
-            {stagedCards.map((card) => (
+            {stagedCards.map((card, index) => (
                 <div className='card-container' key={card}>
-                    <Card className='card' cardNumber={card} onCardFocus={onCardFocus}/> {/* Render the card */}
+                    <Card ref={(el) => (cardRefs.current[index] = el)} className='card' cardNumber={card} onCardFocus={onCardFocus} />
                 </div>
             ))}
             {/* Conditionally render PlayerInventory as an overlay */}
@@ -126,14 +160,7 @@ const StagingArea = ({ onCardFocus }) => {
                 
             </div>
             <div className= 'utility-container'>
-            {/* <div
-                className="utility-buttons"
-                style={{
-                width: '100%',
-                maxWidth: '100%'
-                }}
-                > */}
-                        {(screenWidth <= 600 || screenHeight <= 990) && (
+                        {(screenWidth <= 600 || screenHeight < 950) && (
                             <>
                                 <button
                                     className="button-84"
@@ -215,9 +242,14 @@ const StagingArea = ({ onCardFocus }) => {
                                     style={{ width: '100%' }}
                                     onClick={togglePlayerInventory}
                                     >Inventory</button>
+                                    <button
+                                    className="button-84"
+                                    style={{ width: '100%' }}
+                                    onClick={createMarker}
+                                    >QuestMarker</button>
                             </>
                         )}
-                            {(screenWidth > 600 && screenHeight > 990) && (
+                            {(screenWidth > 600 && screenHeight > 950) && (
                             <> 
                                 <button className='button-84' onClick={createMarker}>Quest Marker</button>
                                 <button className='button-84' onClick={restoreHistory}>Undo</button>
@@ -298,11 +330,14 @@ const StagingArea = ({ onCardFocus }) => {
                    
                 </div>  
         {renderedMarkers.map((markerId, index) => (
-                <QuestMarkers className='quest-marker'
-                    key={markerId} 
-                    markerId={markerId}
-                    onRemove={() => removeMarker(index)}
-                />
+                <QuestMarkers
+                className='quest-marker'
+                key={markerId}
+                markerId={markerId}
+                onRemove={() => removeMarker(index)}
+                onDragEnd={onMarkerDragEnd}
+                onDragStart={onMarkerDragStart}
+            />
             ))}
     </div>
     );
