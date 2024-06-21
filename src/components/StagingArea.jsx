@@ -20,28 +20,22 @@ const StagingArea = ({ onCardFocus }) => {
     const cardRefs = useRef([]);
     
 
-    const onMarkerDragEnd = (markerRef) => {
-        const markerRect = markerRef.getBoundingClientRect();
-        console.log(cardRefs.current.length); 
-        for (let i = 0; i < cardRefs.current.length; i++) {
-            const cardRef = cardRefs.current[i];
-            console.log(cardRef);
-            if (cardRef) { // Check if cardRef is defined
-                const cardRect = cardRef.getBoundingClientRect();
-                if (
-                    markerRect.left < cardRect.right &&
-                    markerRect.right > cardRect.left &&
-                    markerRect.top < cardRect.bottom &&
-                    markerRect.bottom > cardRect.top
-                ) {
-                    // Collision detected, append marker to card
-                    cardRef.appendChild(markerRef);
-                    markerRef.style.position = 'relative';
-                    markerRef.style.left = '0px';
-                    markerRef.style.top = '0px';
-                    break;
-                }
+    const onMarkerDragEnd = (markerRef, collidedCard) => {
+        if (collidedCard) {
+            console.log('Marker collided with a card:', collidedCard);
+    
+            if (markerRef instanceof Node && collidedCard instanceof Node) {
+                // Update marker position relative to the container
+                const markerRect = markerRef.getBoundingClientRect();
+                const containerRect = document.querySelector('.quest-marker-container').getBoundingClientRect();
+    
+                markerRef.style.left = `${markerRect.left - containerRect.left}px`;
+                markerRef.style.top = `${markerRect.top - containerRect.top}px`;
+    
+                // Your existing logic for appending the marker to the card
             }
+        } else {
+            console.log('No collision detected, marker dropped in staging area');
         }
     };
 
@@ -256,16 +250,16 @@ const StagingArea = ({ onCardFocus }) => {
                                 <button className='button-84' onClick={togglePlayerInventory}>Player Inventory</button>
                             </>
                             )}
-                            {/* <button className='button-84' onClick={setInputCard}>Stage Card</button> */}
-                            {/* <input
+                            {/* <button className='button-84' onClick={setInputCard}>Stage Card</button>
+                            <input
                                 className ="border-solid"
                                 type="text" // Specifies a text input field
                                 value={inputText} // Binds the state variable to the input field
                                 onChange={handleChange} // Updates state when the input changes
                                 onKeyDown={handleKeyDown}
-                            /> */}
+                            />  */}
                         
-                {/* </div> */}
+               
             </div>
             <div className="bottom-segment">
                 <div className={`button-area ${screenWidth <= 600} flex flex-row`}>
@@ -329,16 +323,19 @@ const StagingArea = ({ onCardFocus }) => {
                     
                    
                 </div>  
-        {renderedMarkers.map((markerId, index) => (
-                <QuestMarkers
-                className='quest-marker'
-                key={markerId}
-                markerId={markerId}
-                onRemove={() => removeMarker(index)}
-                onDragEnd={onMarkerDragEnd}
-                onDragStart={onMarkerDragStart}
-            />
-            ))}
+             
+                {renderedMarkers.map((markerId, index) => (
+                    <QuestMarkers
+                        className='quest-marker'
+                        key={markerId}
+                        markerId={markerId}
+                        onRemove={() => removeMarker(index)}
+                        onDragEnd={onMarkerDragEnd}
+                        onDragStart={onMarkerDragStart}
+                        cardRefs={cardRefs.current} // Pass cardRefs.current as an array
+                    />
+                ))}
+        
     </div>
     );
 };

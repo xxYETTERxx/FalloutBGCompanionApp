@@ -3991,6 +3991,17 @@ const cardData = {
               },
           ],
       },
+      '188': {
+        hoverAreas: [
+              { top: '51%', width: '100%', height: '9%' } // Area for the first option
+            ],
+            imagePath : require(`../images/library_deck/188.webp`),
+            actions: [
+              {
+                  type: ['trash']
+              }
+          ],
+      },
       '190': {
         hoverAreas: [
               { top: '44%', width: '100%', height: '6%' }, // Area for the first option
