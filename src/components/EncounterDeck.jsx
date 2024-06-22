@@ -31,19 +31,44 @@ export const EncounterDeckProvider = ({ children }) => {
     const [overlayContent, setOverlayContent] = useState(null);
     const [message, setMessage] = useState(null); // Stores the current message
     const [isMessageVisible, setIsMessageVisible] = useState(false);
+    const [messageLog, setMessageLog] = useState([]);
+    const [messageBuffer, setMessageBuffer] = useState([]);
+    const [bufferActive, setBufferActive] = useState(false);
     const [sessionSaving, setSessionSaving] = useState(true);
     
     //const [ debug, setDebug ] = useState(true);
     
     const showMessage = (msg) => {
-        setMessage(msg);
-        setIsMessageVisible(true);
-        setTimeout(() => {
-            setIsMessageVisible(false); // Hide the message after 2 seconds
-            setMessage(null); // Reset message state
-        }, 4000);
+        setMessageBuffer((prevArray) => {
+            const newArray = [...prevArray, msg];
+            if (!bufferActive) waitBuffer(newArray);
+            return newArray;
+        });
+        setMessageLog((prevArray) => [...prevArray, msg]);
     };
-
+    
+    const waitBuffer = (initialBuffer) => {
+        setBufferActive(true);
+        displayMessage(initialBuffer);
+    };
+    
+    const displayMessage = (currentBuffer) => {
+        if (currentBuffer.length === 0) {
+            setBufferActive(false);
+            return;
+        }
+    
+        const [currentMessage, ...restMessages] = currentBuffer;
+        setMessageBuffer(restMessages);
+        setMessage(currentMessage);
+        setIsMessageVisible(true);
+    
+        setTimeout(() => {
+            setIsMessageVisible(false);
+            setMessage(null);
+            setTimeout(() => displayMessage(restMessages), 600); // Time between messages
+        }, 2000); // Time each message is visible
+    };
 
     const prepDeck = () => {
         const shuffledEDeck = shuffleDeck(initialEDeck);   
@@ -155,6 +180,8 @@ export const EncounterDeckProvider = ({ children }) => {
             setPlayerCount(prevState.storedPlayerCount);
             setPlayers(prevState.storedPlayers);
             setHistory(newHistory);
+
+            showMessage("Undo " + messageLog[messageLog.length -1]);
 
     }
         useEffect(() => {
@@ -319,7 +346,8 @@ export const EncounterDeckProvider = ({ children }) => {
             isMessageVisible,
             loadGame,
             autoSave,
-            prepDeck
+            prepDeck,
+            messageLog
              }}>
             {children}
         </EncounterDeckContext.Provider>

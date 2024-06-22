@@ -7,6 +7,7 @@ import DrawCardButton from './DrawCardButton'; // Import draw card button
 import QuestMarkers from './QuestMarkers';
 import PlayerInventory from './PlayerInventory';
 import MessageDisplay from './MessageDisplay';
+import MessageLog from './MessageLog';
 
 const StagingArea = ({ onCardFocus }) => {
     const { autoSave, setShowOverlay, showOverlay, overlayContent, players, playerCards, setPlayerCards, stagedCards, drawCard, vault7Active, vault44Active, vault84Active, vault109Active, specialStarActive, specialShieldActive, setStagedCards, storeHistory, restoreHistory} = useEncounterDeck();
@@ -16,9 +17,16 @@ const StagingArea = ({ onCardFocus }) => {
     const [playerInventoryActive, setPlayerInventoryActive] = useState(false);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+    const [showMessageLog, setShowMessageLog] = useState(false);
     const stagingAreaRef = useRef(null);
     const cardRefs = useRef([]);
     
+    
+    
+    const toggleMessageLog = () => {
+        setShowMessageLog(!showMessageLog);
+      };
+
 
     const onMarkerDragEnd = (markerRef, collidedCard) => {
         if (collidedCard) {
@@ -258,6 +266,12 @@ const StagingArea = ({ onCardFocus }) => {
                                 onChange={handleChange} // Updates state when the input changes
                                 onKeyDown={handleKeyDown}
                             />  */}
+                            <button
+                    onClick={toggleMessageLog}
+                    className="button-84"
+                >
+                    History Log
+                </button>
                         
                
             </div>
@@ -320,10 +334,14 @@ const StagingArea = ({ onCardFocus }) => {
                         </>
                     )}
                     </div>
-                    
                    
                 </div>  
-             
+                
+                
+                <div>
+                
+                <MessageLog show={showMessageLog} onClose={toggleMessageLog} />
+                </div>
                 {renderedMarkers.map((markerId, index) => (
                     <QuestMarkers
                         className='quest-marker'
