@@ -337,6 +337,7 @@ const StagingArea = ({ onCardFocus }) => {
                 
                 <MessageLog show={showMessageLog} onClose={toggleMessageLog} />
                 </div>
+                <div>
                 {renderedMarkers.map((markerId, index) => (
                     <QuestMarkers
                         className='quest-marker'
@@ -348,6 +349,7 @@ const StagingArea = ({ onCardFocus }) => {
                         cardRefs={cardRefs.current} // Pass cardRefs.current as an array
                     />
                 ))}
+                </div>
         
     </div>
     );

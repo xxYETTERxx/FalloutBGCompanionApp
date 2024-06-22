@@ -165,7 +165,7 @@ const QuestMarkers = ({ onDragEnd, onDragStart, markerId, onRemove }) => {
             onMouseDown={handleDragStart} // Start drag for mouse
             onTouchStart={handleDragStart} // Start drag for touch
             style={{
-                position: 'relative', // Ensure it can be positioned absolutely
+                position: 'absolute', // Ensure it can be positioned absolutely
                 width: '200px',
                 height: 'auto',
                 left: `${position.x}px`, // Use position state for left

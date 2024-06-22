@@ -5838,11 +5838,11 @@ const cardData = {
     'S07': {
       hoverAreas: [
             { top: '41%', width: '100%', height: '14%' }, // Area for the first option
-            { top: '62%', width: '100%', height: '100%' }, // Area for the second option
+            { top: '62%', width: '100%', height: '14%' }, // Area for the second option
           ],
       blurAreas: [
             { top: '41%', width: '100%', height: '14%' }, // Area for the first option
-            { top: '62%', width: '100%', height: '100%' }, // Area for the second option
+            { top: '62%', width: '100%', height: '14%' }, // Area for the second option
           ],
           imagePath : require(`../images/settlement_deck/S07.webp`),
         actions: [

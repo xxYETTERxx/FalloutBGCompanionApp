@@ -64,6 +64,7 @@
 }
 
 .quest-marker{
+    position: absolute;
     width: 200px;
 }
 
