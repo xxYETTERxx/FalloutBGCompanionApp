@@ -256,6 +256,7 @@ const StagingArea = ({ onCardFocus }) => {
                                 <button className='button-84' onClick={createMarker}>Quest Marker</button>
                                 <button className='button-84' onClick={restoreHistory}>Undo</button>
                                 <button className='button-84' onClick={togglePlayerInventory}>Player Inventory</button>
+                                <button className="button-84" onClick={toggleMessageLog}>History Log</button>
                             </>
                             )}
                             {/* <button className='button-84' onClick={setInputCard}>Stage Card</button>
@@ -266,12 +267,6 @@ const StagingArea = ({ onCardFocus }) => {
                                 onChange={handleChange} // Updates state when the input changes
                                 onKeyDown={handleKeyDown}
                             />  */}
-                            <button
-                    onClick={toggleMessageLog}
-                    className="button-84"
-                >
-                    History Log
-                </button>
                         
                
             </div>
