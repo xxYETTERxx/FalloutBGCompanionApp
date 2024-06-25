@@ -3508,11 +3508,11 @@ const cardData = {
             actions: [
               {
                   type: ['stage'],
-                  cards: ['170','226']
+                  cards: ['170','226','230']
               },
               {
                 type: ['stage','add'],
-                cards: ['172','226'],
+                cards: ['172','226','230'],
                 addCardIDS: ['171'],
                 addDeck: ['encounterDeck']
             }
@@ -3553,11 +3553,11 @@ const cardData = {
             actions: [
               {
                   type: ['stage'],
-                  cards: ['170','226']
+                  cards: ['170','226','230']
               },
               {
                 type: ['stage','add'],
-                cards: ['172','226'],
+                cards: ['172','226','230'],
                 addCardIDS: ['171'],
                 addDeck: ['encounterDeck']
             }
